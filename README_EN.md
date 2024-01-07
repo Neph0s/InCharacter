@@ -1,4 +1,4 @@
- English| [中文](https://github.com/LC1332/Chat-Haruhi-Suzumiya/blob/main/research/personality/README.md) |[💡Paper](https://arxiv.org/abs/2310.17976)
+ English| [中文](https://github.com/Neph0s/InCharacter-Personality-Assessments-on-Role-Playing-Agents/README.md) |[💡Paper](https://arxiv.org/abs/2310.17976)
 
 
 # Does Role-Playing Chatbots Capture the Character Personalities? Assessing Personality Traits for Role-Playing Chatbots
