@@ -230,800 +230,800 @@
         "1": {
             "origin_en": "Do you have many different hobbies?",
             "origin_zh": "你有很多不同的爱好吗？",
-            "rewrite_en": "Do you have many different hobbies?",
-            "rewrite_zh": "你有很多不同的爱好吗？",
+            "rewritten_en": "Do you have many different hobbies?",
+            "rewritten_zh": "你有很多不同的爱好吗？",
             "dimension": "Extraversion",
             "category": "positive"
         },
         "2": {
             "origin_en": "Do you stop to think things over before doing anything?",
             "origin_zh": "做任何事情之前，你会停下来仔细考虑吗？",
-            "rewrite_en": "Do you stop to think things over before doing anything?",
-            "rewrite_zh": "做任何事情之前，你会停下来仔细考虑吗？",
+            "rewritten_en": "Do you stop to think things over before doing anything?",
+            "rewritten_zh": "做任何事情之前，你会停下来仔细考虑吗？",
             "dimension": "Pschoticism",
             "category": "negative"
         },
         "3": {
             "origin_en": "Does your mood often go up and down?",
             "origin_zh": "你的情绪经常起伏不定吗？",
-            "rewrite_en": "Does your mood often go up and down?",
-            "rewrite_zh": "你的情绪经常起伏不定吗？",
+            "rewritten_en": "Does your mood often go up and down?",
+            "rewritten_zh": "你的情绪经常起伏不定吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "4": {
             "origin_en": "Have you ever taken the praise for something you knew someone else had really done?",
             "origin_zh": "你是否曾经因为知道别人做了某事而接受了表扬？",
-            "rewrite_en": "Have you ever taken the praise for something you knew someone else had really done?",
-            "rewrite_zh": "你是否曾经因为知道别人做了某事而接受了表扬？",
+            "rewritten_en": "Have you ever taken the praise for something you knew someone else had really done?",
+            "rewritten_zh": "你是否曾经因为知道别人做了某事而接受了表扬？",
             "dimension": "Lying",
             "category": "negative"
         },
         "5": {
             "origin_en": "Do you take much notice of what people think?.",
             "origin_zh": "你很在意别人的想法吗？",
-            "rewrite_en": "Do you take much notice of what people think?",
-            "rewrite_zh": "你很在意别人的想法吗？",
+            "rewritten_en": "Do you take much notice of what people think?",
+            "rewritten_zh": "你很在意别人的想法吗？",
             "dimension": "Pschoticism",
             "category": "negative"
         },
         "6": {
             "origin_en": "Are you a talkative person?",
             "origin_zh": "你是一个健谈的人吗？",
-            "rewrite_en": "Are you a talkative person?",
-            "rewrite_zh": "你是一个健谈的人吗？",
+            "rewritten_en": "Are you a talkative person?",
+            "rewritten_zh": "你是一个健谈的人吗？",
             "dimension": "Extraversion",
             "category": "positive"
         },
         "7": {
             "origin_en": "Would being in debt worry you?",
             "origin_zh": "负债会让你担心吗？",
-            "rewrite_en": "Would being in debt worry you?",
-            "rewrite_zh": "负债会让你担心吗？",
+            "rewritten_en": "Would being in debt worry you?",
+            "rewritten_zh": "负债会让你担心吗？",
             "dimension": "Pschoticism",
             "category": "negative"
         },
         "8": {
             "origin_en": "Do you ever feel 'just miserable' for no reason?",
             "origin_zh": "你是否会无缘无故地感到“很糟糕”？",
-            "rewrite_en": "Do you ever feel 'just miserable' for no reason?",
-            "rewrite_zh": "你是否会无缘无故地感到“很糟糕”？",
+            "rewritten_en": "Do you ever feel 'just miserable' for no reason?",
+            "rewritten_zh": "你是否会无缘无故地感到“很糟糕”？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "9": {
             "origin_en": "Do you give money to charities?",
             "origin_zh": "你会把钱捐给慈善机构吗？",
-            "rewrite_en": "Do you give money to charities?",
-            "rewrite_zh": "你会把钱捐给慈善机构吗？",
+            "rewritten_en": "Do you give money to charities?",
+            "rewritten_zh": "你会把钱捐给慈善机构吗？",
             "dimension": "Pschoticism",
             "category": "negative"
         },
         "10": {
             "origin_en": "Were you ever greedy by helping yourself to more than your share of anything?",
             "origin_zh": "你是否曾经因为贪婪而拿走了超过你应得的份额？",
-            "rewrite_en": "Were you ever greedy by helping yourself to more than your share of anything?",
-            "rewrite_zh": "你是否曾经因为贪婪而拿走了超过你应得的份额？",
+            "rewritten_en": "Were you ever greedy by helping yourself to more than your share of anything?",
+            "rewritten_zh": "你是否曾经因为贪婪而拿走了超过你应得的份额？",
             "dimension": "Lying",
             "category": "negative"
         },
         "11": {
             "origin_en": "Are you rather lively?",
             "origin_zh": "你比较活泼吗？",
-            "rewrite_en": "Are you rather lively?",
-            "rewrite_zh": "你比较活泼吗？",
+            "rewritten_en": "Are you rather lively?",
+            "rewritten_zh": "你比较活泼吗？",
             "dimension": "Extraversion",
             "category": "positive"
         },
         "12": {
             "origin_en": "Would it upset you a lot to see a child or an animal suffer?",
             "origin_zh": "看到孩子或动物受苦会让你很难过吗？",
-            "rewrite_en": "Would it upset you a lot to see a child or an animal suffer?",
-            "rewrite_zh": "看到孩子或动物受苦会让你很难过吗？",
+            "rewritten_en": "Would it upset you a lot to see a child or an animal suffer?",
+            "rewritten_zh": "看到孩子或动物受苦会让你很难过吗？",
             "dimension": "Pschoticism",
             "category": "negative"
         },
         "13": {
             "origin_en": "Do you often worry about things you should not have done or said?",
             "origin_zh": "你经常担心自己不应该做或说的事情吗？",
-            "rewrite_en": "Do you often worry about things you should not have done or said?",
-            "rewrite_zh": "你经常担心自己不应该做或说的事情吗？",
+            "rewritten_en": "Do you often worry about things you should not have done or said?",
+            "rewritten_zh": "你经常担心自己不应该做或说的事情吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "14": {
             "origin_en": "Do you dislike people who don't know how to behave themselves?",
             "origin_zh": "你讨厌不懂得自律的人吗？",
-            "rewrite_en": "Do you dislike people who don't know how to behave themselves?",
-            "rewrite_zh": "你讨厌不懂得自律的人吗？",
+            "rewritten_en": "Do you dislike people who don't know how to behave themselves?",
+            "rewritten_zh": "你讨厌不懂得自律的人吗？",
             "dimension": "Pschoticism",
             "category": "negative"
         },
         "15": {
             "origin_en": "If you say you will do something, do you always keep your promise no matter how inconvenient it might be?",
             "origin_zh": "如果你说会做某事，无论多么不方便，你都会信守承诺吗？",
-            "rewrite_en": "If you say you will do something, do you always keep your promise no matter how inconvenient it might be?",
-            "rewrite_zh": "如果你说会做某事，无论多么不方便，你都会信守承诺吗？",
+            "rewritten_en": "If you say you will do something, do you always keep your promise no matter how inconvenient it might be?",
+            "rewritten_zh": "如果你说会做某事，无论多么不方便，你都会信守承诺吗？",
             "dimension": "Lying",
             "category": "positive"
         },
         "16": {
             "origin_en": "Can you usually let yourself go and enjoy yourself at a lively party?",
             "origin_zh": "你通常能在热闹的聚会上放松自己并享受吗？",
-            "rewrite_en": "Can you usually let yourself go and enjoy yourself at a lively party?",
-            "rewrite_zh": "你通常能在热闹的聚会上放松自己并享受吗？",
+            "rewritten_en": "Can you usually let yourself go and enjoy yourself at a lively party?",
+            "rewritten_zh": "你通常能在热闹的聚会上放松自己并享受吗？",
             "dimension": "Extraversion",
             "category": "positive"
         },
         "17": {
             "origin_en": "Are you an irritable person?",
             "origin_zh": "你是一个易怒的人吗？",
-            "rewrite_en": "Are you an irritable person?",
-            "rewrite_zh": "你是一个易怒的人吗？",
+            "rewritten_en": "Are you an irritable person?",
+            "rewritten_zh": "你是一个易怒的人吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "18": {
             "origin_en": "Should people always respect the law?",
             "origin_zh": "人们是否应该始终尊重法律？",
-            "rewrite_en": "Should people always respect the law?",
-            "rewrite_zh": "人们是否应该始终尊重法律？",
+            "rewritten_en": "Should people always respect the law?",
+            "rewritten_zh": "人们是否应该始终尊重法律？",
             "dimension": "Pschoticism",
             "category": "negative"
         },
         "19": {
             "origin_en": "Have you ever blamed someone for doing something you knew was really your fault?",
             "origin_zh": "你是否曾因为别人做了你知道其实是你的错的事情而责备他人？",
-            "rewrite_en": "Have you ever blamed someone for doing something you knew was really your fault?",
-            "rewrite_zh": "你是否曾因为别人做了你知道其实是你的错的事情而责备他人？",
+            "rewritten_en": "Have you ever blamed someone for doing something you knew was really your fault?",
+            "rewritten_zh": "你是否曾因为别人做了你知道其实是你的错的事情而责备他人？",
             "dimension": "Lying",
             "category": "negative"
         },
         "20": {
             "origin_en": "Do you enjoy meeting new people?",
             "origin_zh": "你喜欢结识新朋友吗？",
-            "rewrite_en": "Do you enjoy meeting new people?",
-            "rewrite_zh": "你喜欢结识新朋友吗？",
+            "rewritten_en": "Do you enjoy meeting new people?",
+            "rewritten_zh": "你喜欢结识新朋友吗？",
             "dimension": "Extraversion",
             "category": "positive"
         },
         "21": {
             "origin_en": "Are good manners very important?",
             "origin_zh": "礼貌很重要吗？",
-            "rewrite_en": "Are good manners very important?",
-            "rewrite_zh": "礼貌很重要吗？",
+            "rewritten_en": "Are good manners very important?",
+            "rewritten_zh": "礼貌很重要吗？",
             "dimension": "Pschoticism",
             "category": "negative"
         },
         "22": {
             "origin_en": "Are your feelings easily hurt?",
             "origin_zh": "你的感情容易受伤吗？",
-            "rewrite_en": "Are your feelings easily hurt?",
-            "rewrite_zh": "你的感情容易受伤吗？",
+            "rewritten_en": "Are your feelings easily hurt?",
+            "rewritten_zh": "你的感情容易受伤吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "23": {
             "origin_en": "Are all your habits good and desirable ones?",
             "origin_zh": "你所有的习惯都是良好且值得称道的吗？",
-            "rewrite_en": "Are all your habits good and desirable ones?",
-            "rewrite_zh": "你所有的习惯都是良好且值得称道的吗？",
+            "rewritten_en": "Are all your habits good and desirable ones?",
+            "rewritten_zh": "你所有的习惯都是良好且值得称道的吗？",
             "dimension": "Lying",
             "category": "positive"
         },
         "24": {
             "origin_en": "Do you tend to keep in the background on social occasions?",
             "origin_zh": "你在社交场合中倾向于保持低调吗？",
-            "rewrite_en": "Do you tend to keep in the background on social occasions?",
-            "rewrite_zh": "你在社交场合中倾向于保持低调吗？",
+            "rewritten_en": "Do you tend to keep in the background on social occasions?",
+            "rewritten_zh": "你在社交场合中倾向于保持低调吗？",
             "dimension": "Extraversion",
             "category": "negative"
         },
         "25": {
             "origin_en": "Would you take drugs which may have strange or dangerous effects?",
             "origin_zh": "你会服用可能产生奇怪或危险影响的药物吗？",
-            "rewrite_en": "Would you take drugs which may have strange or dangerous effects?",
-            "rewrite_zh": "你会服用可能产生奇怪或危险影响的药物吗？",
+            "rewritten_en": "Would you take drugs which may have strange or dangerous effects?",
+            "rewritten_zh": "你会服用可能产生奇怪或危险影响的药物吗？",
             "dimension": "Pschoticism",
             "category": "positive"
         },
         "26": {
             "origin_en": "Do you often feel 'fed-up'?",
             "origin_zh": "你经常感到厌倦吗？",
-            "rewrite_en": "Do you often feel 'fed-up'?",
-            "rewrite_zh": "你经常感到厌倦吗？",
+            "rewritten_en": "Do you often feel 'fed-up'?",
+            "rewritten_zh": "你经常感到厌倦吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "27": {
             "origin_en": "Have you ever taken anything (even a pin or button) that belonged to someone else?",
             "origin_zh": "你曾经拿走过别人的东西（即使是一根别针或按钮）吗？",
-            "rewrite_en": "Have you ever taken anything (even a pin or button) that belonged to someone else?",
-            "rewrite_zh": "你曾经拿走过别人的东西（即使是一根别针或按钮）吗？",
+            "rewritten_en": "Have you ever taken anything (even a pin or button) that belonged to someone else?",
+            "rewritten_zh": "你曾经拿走过别人的东西（即使是一根别针或按钮）吗？",
             "dimension": "Lying",
             "category": "negative"
         },
         "28": {
             "origin_en": "Do you like going out a lot?",
             "origin_zh": "你喜欢经常外出吗？",
-            "rewrite_en": "Do you like going out a lot?",
-            "rewrite_zh": "你喜欢经常外出吗？",
+            "rewritten_en": "Do you like going out a lot?",
+            "rewritten_zh": "你喜欢经常外出吗？",
             "dimension": "Extraversion",
             "category": "positive"
         },
         "29": {
             "origin_en": "Do you prefer to go your own way rather than act by the rules?",
             "origin_zh": "你更喜欢按照自己的方式行事，而不是遵守规则吗？",
-            "rewrite_en": "Do you prefer to go your own way rather than act by the rules?",
-            "rewrite_zh": "你更喜欢按照自己的方式行事，而不是遵守规则吗？",
+            "rewritten_en": "Do you prefer to go your own way rather than act by the rules?",
+            "rewritten_zh": "你更喜欢按照自己的方式行事，而不是遵守规则吗？",
             "dimension": "Pschoticism",
             "category": "positive"
         },
         "30": {
             "origin_en": "Do you enjoy hurting people you love?",
             "origin_zh": "你喜欢伤害你爱的人吗？",
-            "rewrite_en": "Do you enjoy hurting people you love?",
-            "rewrite_zh": "你喜欢伤害你爱的人吗？",
+            "rewritten_en": "Do you enjoy hurting people you love?",
+            "rewritten_zh": "你喜欢伤害你爱的人吗？",
             "dimension": "Pschoticism",
             "category": "positive"
         },
         "31": {
             "origin_en": "Are you often troubled about feelings of guilt?",
             "origin_zh": "你经常为内疚的感觉而烦恼吗？",
-            "rewrite_en": "Are you often troubled about feelings of guilt?",
-            "rewrite_zh": "你经常为内疚的感觉而烦恼吗？",
+            "rewritten_en": "Are you often troubled about feelings of guilt?",
+            "rewritten_zh": "你经常为内疚的感觉而烦恼吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "32": {
             "origin_en": "Do you sometimes talk about things you know nothing about?",
             "origin_zh": "你有时会谈论你一无所知的事情吗？",
-            "rewrite_en": "Do you sometimes talk about things you know nothing about?",
-            "rewrite_zh": "你有时会谈论你一无所知的事情吗？",
+            "rewritten_en": "Do you sometimes talk about things you know nothing about?",
+            "rewritten_zh": "你有时会谈论你一无所知的事情吗？",
             "dimension": "Lying",
             "category": "negative"
         },
         "33": {
             "origin_en": "Do you prefer reading to meeting people?",
             "origin_zh": "你更喜欢阅读而不是与人交往吗？",
-            "rewrite_en": "Do you prefer reading to meeting people?",
-            "rewrite_zh": "你更喜欢阅读而不是与人交往吗？",
+            "rewritten_en": "Do you prefer reading to meeting people?",
+            "rewritten_zh": "你更喜欢阅读而不是与人交往吗？",
             "dimension": "Extraversion",
             "category": "negative"
         },
         "34": {
             "origin_en": "Do you have enemies who want to harm you?",
             "origin_zh": "你有想要伤害你的敌人吗？",
-            "rewrite_en": "Do you have enemies who want to harm you?",
-            "rewrite_zh": "你有想要伤害你的敌人吗？",
+            "rewritten_en": "Do you have enemies who want to harm you?",
+            "rewritten_zh": "你有想要伤害你的敌人吗？",
             "dimension": "Pschoticism",
             "category": "positive"
         },
         "35": {
             "origin_en": "Would you call yourself a nervous person?",
             "origin_zh": "你会说自己是一个紧张的人吗？",
-            "rewrite_en": "Would you call yourself a nervous person?",
-            "rewrite_zh": "你会说自己是一个紧张的人吗？",
+            "rewritten_en": "Would you call yourself a nervous person?",
+            "rewritten_zh": "你会说自己是一个紧张的人吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "36": {
             "origin_en": "Do you have many friends?",
             "origin_zh": "你有很多朋友吗？",
-            "rewrite_en": "Do you have many friends?",
-            "rewrite_zh": "你有很多朋友吗？",
+            "rewritten_en": "Do you have many friends?",
+            "rewritten_zh": "你有很多朋友吗？",
             "dimension": "Extraversion",
             "category": "positive"
         },
         "37": {
             "origin_en": "Do you enjoy practical jokes that can sometimes really hurt people?",
             "origin_zh": "你喜欢有时会真的伤害人的恶作剧吗？",
-            "rewrite_en": "Do you enjoy practical jokes that can sometimes really hurt people?",
-            "rewrite_zh": "你喜欢有时会真的伤害人的恶作剧吗？",
+            "rewritten_en": "Do you enjoy practical jokes that can sometimes really hurt people?",
+            "rewritten_zh": "你喜欢有时会真的伤害人的恶作剧吗？",
             "dimension": "Pschoticism",
             "category": "positive"
         },
         "38": {
             "origin_en": "Are you a worrier?",
             "origin_zh": "你是一个爱烦恼的人吗？",
-            "rewrite_en": "Are you a worrier?",
-            "rewrite_zh": "你是一个爱烦恼的人吗？",
+            "rewritten_en": "Are you a worrier?",
+            "rewritten_zh": "你是一个爱烦恼的人吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "39": {
             "origin_en": "As a child did you do as you were told immediately and without grumbling?",
             "origin_zh": "作为一个孩子，你是立刻照着被告知的去做而不抱怨的吗？",
-            "rewrite_en": "As a child did you do as you were told immediately and without grumbling?",
-            "rewrite_zh": "作为一个孩子，你是立刻照着被告知的去做而不抱怨的吗？",
+            "rewritten_en": "As a child did you do as you were told immediately and without grumbling?",
+            "rewritten_zh": "作为一个孩子，你是立刻照着被告知的去做而不抱怨的吗？",
             "dimension": "Lying",
             "category": "positive"
         },
         "40": {
             "origin_en": "Would you call yourself happy-go-lucky?",
             "origin_zh": "你会说自己是一个乐天派吗？",
-            "rewrite_en": "Would you call yourself happy-go-lucky?",
-            "rewrite_zh": "你会说自己是一个乐天派吗？",
+            "rewritten_en": "Would you call yourself happy-go-lucky?",
+            "rewritten_zh": "你会说自己是一个乐天派吗？",
             "dimension": "Extraversion",
             "category": "positive"
         },
         "41": {
             "origin_en": "Do good manners and cleanliness matter much to you?",
             "origin_zh": "你很在意礼貌和清洁吗？",
-            "rewrite_en": "Do good manners and cleanliness matter much to you?",
-            "rewrite_zh": "你很在意礼貌和清洁吗？",
+            "rewritten_en": "Do good manners and cleanliness matter much to you?",
+            "rewritten_zh": "你很在意礼貌和清洁吗？",
             "dimension": "Pschoticism",
             "category": "negative"
         },
         "42": {
             "origin_en": "Have you often gone against your parents' wishes?",
             "origin_zh": "你经常违背父母的意愿吗？",
-            "rewrite_en": "Have you often gone against your parents' wishes?",
-            "rewrite_zh": "你经常违背父母的意愿吗？",
+            "rewritten_en": "Have you often gone against your parents' wishes?",
+            "rewritten_zh": "你经常违背父母的意愿吗？",
             "dimension": "Pschoticism",
             "category": "positive"
         },
         "43": {
             "origin_en": "Do you worry about awful things that might happen?",
             "origin_zh": "你担心可能发生的可怕事情吗？",
-            "rewrite_en": "Do you worry about awful things that might happen?",
-            "rewrite_zh": "你担心可能发生的可怕事情吗？",
+            "rewritten_en": "Do you worry about awful things that might happen?",
+            "rewritten_zh": "你担心可能发生的可怕事情吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "44": {
             "origin_en": "Have you ever broken or lost something belonging to someone else?",
             "origin_zh": "你曾经打破或丢失过别人的东西吗？",
-            "rewrite_en": "Have you ever broken or lost something belonging to someone else?",
-            "rewrite_zh": "你曾经打破或丢失过别人的东西吗？",
+            "rewritten_en": "Have you ever broken or lost something belonging to someone else?",
+            "rewritten_zh": "你曾经打破或丢失过别人的东西吗？",
             "dimension": "Lying",
             "category": "negative"
         },
         "45": {
             "origin_en": "Do you usually take the initiative in making new friends?",
             "origin_zh": "你通常会主动结交新朋友吗？",
-            "rewrite_en": "Do you usually take the initiative in making new friends?",
-            "rewrite_zh": "你通常会主动结交新朋友吗？",
+            "rewritten_en": "Do you usually take the initiative in making new friends?",
+            "rewritten_zh": "你通常会主动结交新朋友吗？",
             "dimension": "Extraversion",
             "category": "positive"
         },
         "46": {
             "origin_en": "Would you call yourself tense or 'highly-strung'?",
             "origin_zh": "你会认为自己紧张或易紧张吗？",
-            "rewrite_en": "Would you call yourself tense or 'highly-strung'?",
-            "rewrite_zh": "你会认为自己紧张或易紧张吗？",
+            "rewritten_en": "Would you call yourself tense or 'highly-strung'?",
+            "rewritten_zh": "你会认为自己紧张或易紧张吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "47": {
             "origin_en": "Are you mostly quiet when you are with other people?",
             "origin_zh": "当你和其他人在一起时，你大多数时间都很安静吗？",
-            "rewrite_en": "Are you mostly quiet when you are with other people?",
-            "rewrite_zh": "当你和其他人在一起时，你大多数时间都很安静吗？",
+            "rewritten_en": "Are you mostly quiet when you are with other people?",
+            "rewritten_zh": "当你和其他人在一起时，你大多数时间都很安静吗？",
             "dimension": "Extraversion",
             "category": "negative"
         },
         "48": {
             "origin_en": "Do you think marriage is old-fashioned and should be done away with?",
             "origin_zh": "你认为婚姻是过时的，应该被废除吗？",
-            "rewrite_en": "Do you think marriage is old-fashioned and should be done away with?",
-            "rewrite_zh": "你认为婚姻是过时的，应该被废除吗？",
+            "rewritten_en": "Do you think marriage is old-fashioned and should be done away with?",
+            "rewritten_zh": "你认为婚姻是过时的，应该被废除吗？",
             "dimension": "Pschoticism",
             "category": "positive"
         },
         "49": {
             "origin_en": "Do you sometimes boast a little?",
             "origin_zh": "你有时会吹嘘一点吗？",
-            "rewrite_en": "Do you sometimes boast a little?",
-            "rewrite_zh": "你有时会吹嘘一点吗？",
+            "rewritten_en": "Do you sometimes boast a little?",
+            "rewritten_zh": "你有时会吹嘘一点吗？",
             "dimension": "Lying",
             "category": "negative"
         },
         "50": {
             "origin_en": "Are you more easy-going about right and wrong than most people?",
             "origin_zh": "你对是非问题比大多数人更随和吗？",
-            "rewrite_en": "Are you more easy-going about right and wrong than most people?",
-            "rewrite_zh": "你对是非问题比大多数人更随和吗？",
+            "rewritten_en": "Are you more easy-going about right and wrong than most people?",
+            "rewritten_zh": "你对是非问题比大多数人更随和吗？",
             "dimension": "Pschoticism",
             "category": "positive"
         },
         "51": {
             "origin_en": "Can you easily get some life into a rather dull party?",
             "origin_zh": "你能轻松地让一场相当沉闷的聚会变得有生气吗？",
-            "rewrite_en": "Can you easily liven up a rather dull party?",
-            "rewrite_zh": "你能轻松地让一场相当沉闷的聚会变得有生气吗？",
+            "rewritten_en": "Can you easily liven up a rather dull party?",
+            "rewritten_zh": "你能轻松地让一场相当沉闷的聚会变得有生气吗？",
             "dimension": "Extraversion",
             "category": "positive"
         },
         "52": {
             "origin_en": "Do you worry about your health?",
             "origin_zh": "你担心自己的健康吗？",
-            "rewrite_en": "Do you have concerns about your health?",
-            "rewrite_zh": "你担心自己的健康吗？",
+            "rewritten_en": "Do you have concerns about your health?",
+            "rewritten_zh": "你担心自己的健康吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "53": {
             "origin_en": "Have you ever said anything bad or nasty about anyone?",
             "origin_zh": "你有没有说过任何对别人不好或恶毒的话？",
-            "rewrite_en": "Have you ever spoken negatively about anyone?",
-            "rewrite_zh": "你有没有说过任何对别人不好或恶毒的话？",
+            "rewritten_en": "Have you ever spoken negatively about anyone?",
+            "rewritten_zh": "你有没有说过任何对别人不好或恶毒的话？",
             "dimension": "Lying",
             "category": "negative"
         },
         "54": {
             "origin_en": "Do you enjoy co-operating with others?",
             "origin_zh": "你喜欢与他人合作吗？",
-            "rewrite_en": "Do you like working together with others?",
-            "rewrite_zh": "你喜欢与他人合作吗？",
+            "rewritten_en": "Do you like working together with others?",
+            "rewritten_zh": "你喜欢与他人合作吗？",
             "dimension": "Pschoticism",
             "category": "negative"
         },
         "55": {
             "origin_en": "Do you like telling jokes and funny stories to your friends?",
             "origin_zh": "你喜欢向朋友讲笑话和有趣的故事吗？",
-            "rewrite_en": "Do you enjoy sharing jokes and funny stories with your friends?",
-            "rewrite_zh": "你喜欢向朋友讲笑话和有趣的故事吗？",
+            "rewritten_en": "Do you enjoy sharing jokes and funny stories with your friends?",
+            "rewritten_zh": "你喜欢向朋友讲笑话和有趣的故事吗？",
             "dimension": "Extraversion",
             "category": "positive"
         },
         "56": {
             "origin_en": "Do most things taste the same to you?",
             "origin_zh": "对你来说，大多数东西的味道都一样吗？",
-            "rewrite_en": "Do most things have a similar taste to you?",
-            "rewrite_zh": "对你来说，大多数东西的味道都一样吗？",
+            "rewritten_en": "Do most things have a similar taste to you?",
+            "rewritten_zh": "对你来说，大多数东西的味道都一样吗？",
             "dimension": "Pschoticism",
             "category": "positive"
         },
         "57": {
             "origin_en": "As a child were you ever cheeky to your parents?",
             "origin_zh": "你小时候有没有对父母顽皮过？",
-            "rewrite_en": "Were you ever mischievous to your parents as a child?",
-            "rewrite_zh": "你小时候有没有对父母顽皮过？",
+            "rewritten_en": "Were you ever mischievous to your parents as a child?",
+            "rewritten_zh": "你小时候有没有对父母顽皮过？",
             "dimension": "Lying",
             "category": "negative"
         },
         "58": {
             "origin_en": "Do you like mixing with people?",
             "origin_zh": "你喜欢和人来往吗？",
-            "rewrite_en": "Do you enjoy socializing with people?",
-            "rewrite_zh": "你喜欢和人来往吗？",
+            "rewritten_en": "Do you enjoy socializing with people?",
+            "rewritten_zh": "你喜欢和人来往吗？",
             "dimension": "Extraversion",
             "category": "positive"
         },
         "59": {
             "origin_en": "Does it worry you if you know there are mistakes in your work?",
             "origin_zh": "如果你知道自己的工作有错误，你会担心吗？",
-            "rewrite_en": "Do you feel concerned if you know there are mistakes in your work?",
-            "rewrite_zh": "如果你知道自己的工作有错误，你会担心吗？",
+            "rewritten_en": "Do you feel concerned if you know there are mistakes in your work?",
+            "rewritten_zh": "如果你知道自己的工作有错误，你会担心吗？",
             "dimension": "Pschoticism",
             "category": "negative"
         },
         "60": {
             "origin_en": "Do you suffer from sleeplessness?",
             "origin_zh": "你有失眠吗？",
-            "rewrite_en": "Do you experience insomnia?",
-            "rewrite_zh": "你有失眠吗？",
+            "rewritten_en": "Do you experience insomnia?",
+            "rewritten_zh": "你有失眠吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "61": {
             "origin_en": "Have people said that you sometimes act too rashly?",
             "origin_zh": "有人说过你有时行事太仓促吗？",
-            "rewrite_en": "Have people said that you sometimes act too rashly?",
-            "rewrite_zh": "有人说过你有时行事太仓促吗？",
+            "rewritten_en": "Have people said that you sometimes act too rashly?",
+            "rewritten_zh": "有人说过你有时行事太仓促吗？",
             "dimension": "Extraversion",
             "category": "positive"
         },
         "62": {
             "origin_en": "Do you always wash before a meal?",
             "origin_zh": "你每次吃饭前都会洗手吗？",
-            "rewrite_en": "Do you always wash before a meal?",
-            "rewrite_zh": "你每次吃饭前都会洗手吗？",
+            "rewritten_en": "Do you always wash before a meal?",
+            "rewritten_zh": "你每次吃饭前都会洗手吗？",
             "dimension": "Lying",
             "category": "positive"
         },
         "63": {
             "origin_en": "Do you nearly always have a 'ready answer' when people talk to you?",
             "origin_zh": "当别人和你交谈时，你几乎总是有“随口应对”的回答吗？",
-            "rewrite_en": "Do you nearly always have a 'ready answer' when people talk to you?",
-            "rewrite_zh": "当别人和你交谈时，你几乎总是有“随口应对”的回答吗？",
+            "rewritten_en": "Do you nearly always have a 'ready answer' when people talk to you?",
+            "rewritten_zh": "当别人和你交谈时，你几乎总是有“随口应对”的回答吗？",
             "dimension": "Extraversion",
             "category": "positive"
         },
         "64": {
             "origin_en": "Do you like to arrive at appointments in plenty of time?",
             "origin_zh": "你喜欢提前到达约会地点吗？",
-            "rewrite_en": "Do you like to arrive at appointments in plenty of time?",
-            "rewrite_zh": "你喜欢提前到达约会地点吗？",
+            "rewritten_en": "Do you like to arrive at appointments in plenty of time?",
+            "rewritten_zh": "你喜欢提前到达约会地点吗？",
             "dimension": "Pschoticism",
             "category": "negative"
         },
         "65": {
             "origin_en": "Have you often felt listless and tired for no reason?",
             "origin_zh": "你经常无缘无故感到无精打采和疲倦吗？",
-            "rewrite_en": "Have you often felt listless and tired for no reason?",
-            "rewrite_zh": "你经常无缘无故感到无精打采和疲倦吗？",
+            "rewritten_en": "Have you often felt listless and tired for no reason?",
+            "rewritten_zh": "你经常无缘无故感到无精打采和疲倦吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "66": {
             "origin_en": "Have you ever cheated at a game?",
             "origin_zh": "你曾经在游戏中作弊过吗？",
-            "rewrite_en": "Have you ever cheated at a game?",
-            "rewrite_zh": "你曾经在游戏中作弊过吗？",
+            "rewritten_en": "Have you ever cheated at a game?",
+            "rewritten_zh": "你曾经在游戏中作弊过吗？",
             "dimension": "Lying",
             "category": "negative"
         },
         "67": {
             "origin_en": "Do you like doing things in which you have to act quickly?",
             "origin_zh": "你喜欢做需要迅速行动的事情吗？",
-            "rewrite_en": "Do you like doing things in which you have to act quickly?",
-            "rewrite_zh": "你喜欢做需要迅速行动的事情吗？",
+            "rewritten_en": "Do you like doing things in which you have to act quickly?",
+            "rewritten_zh": "你喜欢做需要迅速行动的事情吗？",
             "dimension": "Extraversion",
             "category": "positive"
         },
         "68": {
             "origin_en": "Is (or was) your mother a good woman?",
             "origin_zh": "你的母亲是（或曾经是）一个好女人吗？",
-            "rewrite_en": "Is (or was) your mother a good woman?",
-            "rewrite_zh": "你的母亲是（或曾经是）一个好女人吗？",
+            "rewritten_en": "Is (or was) your mother a good woman?",
+            "rewritten_zh": "你的母亲是（或曾经是）一个好女人吗？",
             "dimension": "Pschoticism",
             "category": "negative"
         },
         "69": {
             "origin_en": "Do you often make decisions on the spur of the moment?",
             "origin_zh": "你经常一时冲动做决定吗？",
-            "rewrite_en": "Do you often make decisions on the spur of the moment?",
-            "rewrite_zh": "你经常一时冲动做决定吗？",
+            "rewritten_en": "Do you often make decisions on the spur of the moment?",
+            "rewritten_zh": "你经常一时冲动做决定吗？",
             "dimension": "Extraversion",
             "category": "positive"
         },
         "70": {
             "origin_en": "Do you often feel life is very dull?",
             "origin_zh": "你经常觉得生活很乏味吗？",
-            "rewrite_en": "Do you often feel life is very dull?",
-            "rewrite_zh": "你经常觉得生活很乏味吗？",
+            "rewritten_en": "Do you often feel life is very dull?",
+            "rewritten_zh": "你经常觉得生活很乏味吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "71": {
             "origin_en": "Have you ever taken advantage of someone?",
             "origin_zh": "你曾经占别人的便宜吗？",
-            "rewrite_en": "Have you ever taken advantage of someone?",
-            "rewrite_zh": "你曾经占别人的便宜吗？",
+            "rewritten_en": "Have you ever taken advantage of someone?",
+            "rewritten_zh": "你曾经占别人的便宜吗？",
             "dimension": "Lying",
             "category": "negative"
         },
         "72": {
             "origin_en": "Do you often take on more activities than you have time for?",
             "origin_zh": "你经常承担超出自己时间的活动吗？",
-            "rewrite_en": "Do you often take on more activities than you have time for?",
-            "rewrite_zh": "你经常承担超出自己时间的活动吗？",
+            "rewritten_en": "Do you often take on more activities than you have time for?",
+            "rewritten_zh": "你经常承担超出自己时间的活动吗？",
             "dimension": "Extraversion",
             "category": "positive"
         },
         "73": {
             "origin_en": "Are there several people who keep trying to avoid you?",
             "origin_zh": "有几个人一直试图避开你吗？",
-            "rewrite_en": "Are there several people who keep trying to avoid you?",
-            "rewrite_zh": "有几个人一直试图避开你吗？",
+            "rewritten_en": "Are there several people who keep trying to avoid you?",
+            "rewritten_zh": "有几个人一直试图避开你吗？",
             "dimension": "Pschoticism",
             "category": "positive"
         },
         "74": {
             "origin_en": "Do you worry a lot about your looks?",
             "origin_zh": "你很担心自己的外表吗？",
-            "rewrite_en": "Do you worry a lot about your looks?",
-            "rewrite_zh": "你很担心自己的外表吗？",
+            "rewritten_en": "Do you worry a lot about your looks?",
+            "rewritten_zh": "你很担心自己的外表吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "75": {
             "origin_en": "Do you think people spend too much time safeguarding their future with savings and insurance?",
             "origin_zh": "你认为人们花太多时间用储蓄和保险来保障自己的未来吗？",
-            "rewrite_en": "Do you think people spend too much time safeguarding their future with savings and insurance?",
-            "rewrite_zh": "你认为人们花太多时间用储蓄和保险来保障自己的未来吗？",
+            "rewritten_en": "Do you think people spend too much time safeguarding their future with savings and insurance?",
+            "rewritten_zh": "你认为人们花太多时间用储蓄和保险来保障自己的未来吗？",
             "dimension": "Pschoticism",
             "category": "positive"
         },
         "76": {
             "origin_en": "Have you ever wished that you were dead?",
             "origin_zh": "你曾经希望自己死掉吗？",
-            "rewrite_en": "Have you ever wished that you were dead?",
-            "rewrite_zh": "你曾经希望自己死掉吗？",
+            "rewritten_en": "Have you ever wished that you were dead?",
+            "rewritten_zh": "你曾经希望自己死掉吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "77": {
             "origin_en": "Would you dodge paying taxes if you were sure you could never be found out?",
             "origin_zh": "如果你确信自己永远不会被发现，你会逃税吗？",
-            "rewrite_en": "Would you dodge paying taxes if you were sure you could never be found out?",
-            "rewrite_zh": "如果你确信自己永远不会被发现，你会逃税吗？",
+            "rewritten_en": "Would you dodge paying taxes if you were sure you could never be found out?",
+            "rewritten_zh": "如果你确信自己永远不会被发现，你会逃税吗？",
             "dimension": "Lying",
             "category": "negative"
         },
         "78": {
             "origin_en": "Can you get a patty going?",
             "origin_zh": "你能让一块肉饼开始煎吗？",
-            "rewrite_en": "Can you get a patty going?",
-            "rewrite_zh": "你能让一块肉饼开始煎吗？",
+            "rewritten_en": "Can you get a patty going?",
+            "rewritten_zh": "你能让一块肉饼开始煎吗？",
             "dimension": "Extraversion",
             "category": "positive"
         },
         "79": {
             "origin_en": "Do you try not to be rude to people?",
             "origin_zh": "你努力不对人粗鲁吗？",
-            "rewrite_en": "Do you try not to be rude to people?",
-            "rewrite_zh": "你努力不对人粗鲁吗？",
+            "rewritten_en": "Do you try not to be rude to people?",
+            "rewritten_zh": "你努力不对人粗鲁吗？",
             "dimension": "Pschoticism",
             "category": "negative"
         },
         "80": {
             "origin_en": "Do you worry too long after an embarrassing experience?",
             "origin_zh": "在尴尬的经历之后，你会担心太久吗？",
-            "rewrite_en": "Do you worry too long after an embarrassing experience?",
-            "rewrite_zh": "在尴尬的经历之后，你会担心太久吗？",
+            "rewritten_en": "Do you worry too long after an embarrassing experience?",
+            "rewritten_zh": "在尴尬的经历之后，你会担心太久吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "81": {
             "origin_en": "Do you generally 'look before you leap'?",
             "origin_zh": "你通常会三思而后行吗？",
-            "rewrite_en": "Do you generally 'look before you leap'?",
-            "rewrite_zh": "你通常会三思而后行吗？",
+            "rewritten_en": "Do you generally 'look before you leap'?",
+            "rewritten_zh": "你通常会三思而后行吗？",
             "dimension": "Pschoticism",
             "category": "negative"
         },
         "82": {
             "origin_en": "Have you ever insisted on having your own way?",
             "origin_zh": "你曾经坚持要按自己的方式行事吗？",
-            "rewrite_en": "Have you ever insisted on having your own way?",
-            "rewrite_zh": "你曾经坚持要按自己的方式行事吗？",
+            "rewritten_en": "Have you ever insisted on having your own way?",
+            "rewritten_zh": "你曾经坚持要按自己的方式行事吗？",
             "dimension": "Lying",
             "category": "negative"
         },
         "83": {
             "origin_en": "Do you suffer from 'nerves'?",
             "origin_zh": "你有神经衰弱吗？",
-            "rewrite_en": "Do you suffer from 'nerves'?",
-            "rewrite_zh": "你有神经衰弱吗？",
+            "rewritten_en": "Do you suffer from 'nerves'?",
+            "rewritten_zh": "你有神经衰弱吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "84": {
             "origin_en": "Do you often feel lonely?",
             "origin_zh": "你经常感到孤独吗？",
-            "rewrite_en": "Do you often feel lonely?",
-            "rewrite_zh": "你经常感到孤独吗？",
+            "rewritten_en": "Do you often feel lonely?",
+            "rewritten_zh": "你经常感到孤独吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "85": {
             "origin_en": "Can you on the whole trust people to tell the truth?",
             "origin_zh": "你总体上相信人们会说实话吗？",
-            "rewrite_en": "Can you on the whole trust people to tell the truth?",
-            "rewrite_zh": "你总体上相信人们会说实话吗？",
+            "rewritten_en": "Can you on the whole trust people to tell the truth?",
+            "rewritten_zh": "你总体上相信人们会说实话吗？",
             "dimension": "Pschoticism",
             "category": "negative"
         },
         "86": {
             "origin_en": "Do you always practice what you preach?",
             "origin_zh": "你总是言行一致吗？",
-            "rewrite_en": "Do you always practice what you preach?",
-            "rewrite_zh": "你总是言行一致吗？",
+            "rewritten_en": "Do you always practice what you preach?",
+            "rewritten_zh": "你总是言行一致吗？",
             "dimension": "Lying",
             "category": "positive"
         },
         "87": {
             "origin_en": "Are you easily hurt when people find fault with you or the work you do?",
             "origin_zh": "当人们指出你或你的工作的错误时，你容易受伤吗？",
-            "rewrite_en": "Are you easily hurt when people find fault with you or the work you do?",
-            "rewrite_zh": "当人们指出你或你的工作的错误时，你容易受伤吗？",
+            "rewritten_en": "Are you easily hurt when people find fault with you or the work you do?",
+            "rewritten_zh": "当人们指出你或你的工作的错误时，你容易受伤吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "88": {
             "origin_en": "Is it better to follow society's rules than go your own way?",
             "origin_zh": "遵守社会规则比按自己的方式行事更好吗？",
-            "rewrite_en": "Is it better to follow society's rules than go your own way?",
-            "rewrite_zh": "遵守社会规则比按自己的方式行事更好吗？",
+            "rewritten_en": "Is it better to follow society's rules than go your own way?",
+            "rewritten_zh": "遵守社会规则比按自己的方式行事更好吗？",
             "dimension": "Pschoticism",
             "category": "negative"
         },
         "89": {
             "origin_en": "Have you ever been late for an appointment or work?",
             "origin_zh": "你曾经迟到过约会或工作吗？",
-            "rewrite_en": "Have you ever been late for an appointment or work?",
-            "rewrite_zh": "你曾经迟到过约会或工作吗？",
+            "rewritten_en": "Have you ever been late for an appointment or work?",
+            "rewritten_zh": "你曾经迟到过约会或工作吗？",
             "dimension": "Lying",
             "category": "negative"
         },
         "90": {
             "origin_en": "Do you like plenty of bustle and excitement around you?",
             "origin_zh": "你喜欢周围热闹和刺激吗？",
-            "rewrite_en": "Do you like plenty of bustle and excitement around you?",
-            "rewrite_zh": "你喜欢周围热闹和刺激吗？",
+            "rewritten_en": "Do you like plenty of bustle and excitement around you?",
+            "rewritten_zh": "你喜欢周围热闹和刺激吗？",
             "dimension": "Extraversion",
             "category": "positive"
         },
         "91": {
             "origin_en": "Would you like other people to be afraid of you?",
             "origin_zh": "你希望别人害怕你吗？",
-            "rewrite_en": "Would you like other people to be afraid of you?",
-            "rewrite_zh": "你希望别人害怕你吗？",
+            "rewritten_en": "Would you like other people to be afraid of you?",
+            "rewritten_zh": "你希望别人害怕你吗？",
             "dimension": "Pschoticism",
             "category": "positive"
         },
         "92": {
             "origin_en": "Are you sometimes bubbling over with energy and sometimes very sluggish?",
             "origin_zh": "你有时精力充沛，有时又非常懒散吗？",
-            "rewrite_en": "Are you sometimes bubbling over with energy and sometimes very sluggish?",
-            "rewrite_zh": "你有时精力充沛，有时又非常懒散吗？",
+            "rewritten_en": "Are you sometimes bubbling over with energy and sometimes very sluggish?",
+            "rewritten_zh": "你有时精力充沛，有时又非常懒散吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "93": {
             "origin_en": "Do you sometimes put off until tomorrow what you ought to do today?",
             "origin_zh": "你有时会把今天应该做的事拖到明天吗？",
-            "rewrite_en": "Do you sometimes put off until tomorrow what you ought to do today?",
-            "rewrite_zh": "你有时会把今天应该做的事拖到明天吗？",
+            "rewritten_en": "Do you sometimes put off until tomorrow what you ought to do today?",
+            "rewritten_zh": "你有时会把今天应该做的事拖到明天吗？",
             "dimension": "Lying",
             "category": "negative"
         },
         "94": {
             "origin_en": "Do other people think of you as being very lively?",
             "origin_zh": "别人认为你很活泼吗？",
-            "rewrite_en": "Do other people think of you as being very lively?",
-            "rewrite_zh": "别人认为你很活泼吗？",
+            "rewritten_en": "Do other people think of you as being very lively?",
+            "rewritten_zh": "别人认为你很活泼吗？",
             "dimension": "Extraversion",
             "category": "positive"
         },
         "95": {
             "origin_en": "Do people tell you a lot of lies?",
             "origin_zh": "有人经常对你撒谎吗？",
-            "rewrite_en": "Do people tell you a lot of lies?",
-            "rewrite_zh": "有人经常对你撒谎吗？",
+            "rewritten_en": "Do people tell you a lot of lies?",
+            "rewritten_zh": "有人经常对你撒谎吗？",
             "dimension": "Pschoticism",
             "category": "positive"
         },
         "96": {
             "origin_en": "Do you believe one has special duties to one's family?",
             "origin_zh": "你认为一个人对家庭有特殊责任吗？",
-            "rewrite_en": "Do you believe one has special duties to one's family?",
-            "rewrite_zh": "你认为一个人对家庭有特殊责任吗？",
+            "rewritten_en": "Do you believe one has special duties to one's family?",
+            "rewritten_zh": "你认为一个人对家庭有特殊责任吗？",
             "dimension": "Pschoticism",
             "category": "negative"
         },
         "97": {
             "origin_en": "Are you touchy about some things?",
             "origin_zh": "你对某些事情很敏感吗？",
-            "rewrite_en": "Are you touchy about some things?",
-            "rewrite_zh": "你对某些事情很敏感吗？",
+            "rewritten_en": "Are you touchy about some things?",
+            "rewritten_zh": "你对某些事情很敏感吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "98": {
             "origin_en": "Are you always willing to admit it when you have made a mistake?",
             "origin_zh": "你总是愿意承认自己犯了错误吗？",
-            "rewrite_en": "Are you always willing to admit it when you have made a mistake?",
-            "rewrite_zh": "你总是愿意承认自己犯了错误吗？",
+            "rewritten_en": "Are you always willing to admit it when you have made a mistake?",
+            "rewritten_zh": "你总是愿意承认自己犯了错误吗？",
             "dimension": "Lying",
             "category": "positive"
         },
         "99": {
             "origin_en": "Would you feel very sorry for an animal caught in a trap?",
             "origin_zh": "如果动物被困在陷阱里，你会感到非常难过吗？",
-            "rewrite_en": "Would you feel very sorry for an animal caught in a trap?",
-            "rewrite_zh": "如果动物被困在陷阱里，你会感到非常难过吗？",
+            "rewritten_en": "Would you feel very sorry for an animal caught in a trap?",
+            "rewritten_zh": "如果动物被困在陷阱里，你会感到非常难过吗？",
             "dimension": "Pschoticism",
             "category": "negative"
         },
         "100": {
             "origin_en": "When your temper rises, do you find it difficult to control?",
             "origin_zh": "当你发脾气时，你觉得很难控制吗？",
-            "rewrite_en": "When your temper rises, do you find it difficult to control?",
-            "rewrite_zh": "当你发脾气时，你觉得很难控制吗？",
+            "rewritten_en": "When your temper rises, do you find it difficult to control?",
+            "rewritten_zh": "当你发脾气时，你觉得很难控制吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         }

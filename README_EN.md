@@ -5,6 +5,8 @@
 
 ### Setup
 
+No need to install ChatHaruhi separately; a fixed version of ChatHaruhi is already included in the code/ directory of this repository.
+
 Ensure you have correctly installed `ChatHaruhi2` and all necessary dependencies. If not yet installed, you can do so with the following commands:
 
 ```bash

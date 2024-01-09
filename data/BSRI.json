@@ -118,480 +118,480 @@
         "1": {
             "origin_en": "Acts as a leader.",
             "origin_zh": "表现得像一个领导者。",
-            "rewrite_en": "Do you act as a leader?",
-            "rewrite_zh": "你表现得像一个领导者吗？",
+            "rewritten_en": "Do you act as a leader?",
+            "rewritten_zh": "你表现得像一个领导者吗？",
             "dimension": "Masculine",
             "category": "positive"
         },
         "2": {
             "origin_en": "Aggressive.",
             "origin_zh": "好斗。",
-            "rewrite_en": "Are you aggressive?",
-            "rewrite_zh": "你是好斗的吗？",
+            "rewritten_en": "Are you aggressive?",
+            "rewritten_zh": "你是好斗的吗？",
             "dimension": "Masculine",
             "category": "positive"
         },
         "3": {
             "origin_en": "Ambitious.",
             "origin_zh": "有雄心壮志。",
-            "rewrite_en": "Are you ambitious?",
-            "rewrite_zh": "你有雄心壮志吗？",
+            "rewritten_en": "Are you ambitious?",
+            "rewritten_zh": "你有雄心壮志吗？",
             "dimension": "Masculine",
             "category": "positive"
         },
         "4": {
             "origin_en": "Analytical.",
             "origin_zh": "善于分析的。",
-            "rewrite_en": "Are you analytical?",
-            "rewrite_zh": "你善于分析吗？",
+            "rewritten_en": "Are you analytical?",
+            "rewritten_zh": "你善于分析吗？",
             "dimension": "Masculine",
             "category": "positive"
         },
         "5": {
             "origin_en": "Assertive.",
             "origin_zh": "坚定自信的。",
-            "rewrite_en": "Are you assertive?",
-            "rewrite_zh": "你是坚定自信的吗？",
+            "rewritten_en": "Are you assertive?",
+            "rewritten_zh": "你是坚定自信的吗？",
             "dimension": "Masculine",
             "category": "positive"
         },
         "6": {
             "origin_en": "Athletic.",
             "origin_zh": "运动型的。",
-            "rewrite_en": "Are you athletic?",
-            "rewrite_zh": "你是运动型的吗？",
+            "rewritten_en": "Are you athletic?",
+            "rewritten_zh": "你是运动型的吗？",
             "dimension": "Masculine",
             "category": "positive"
         },
         "7": {
             "origin_en": "Competitive.",
             "origin_zh": "有竞争意识的。",
-            "rewrite_en": "Are you competitive?",
-            "rewrite_zh": "你有竞争意识吗？",
+            "rewritten_en": "Are you competitive?",
+            "rewritten_zh": "你有竞争意识吗？",
             "dimension": "Masculine",
             "category": "positive"
         },
         "8": {
             "origin_en": "Defends own beliefs.",
             "origin_zh": "捍卫自己的信仰。",
-            "rewrite_en": "Do you defend your own beliefs?",
-            "rewrite_zh": "你捍卫自己的信仰吗？",
+            "rewritten_en": "Do you defend your own beliefs?",
+            "rewritten_zh": "你捍卫自己的信仰吗？",
             "dimension": "Masculine",
             "category": "positive"
         },
         "9": {
             "origin_en": "Dominant.",
             "origin_zh": "占主导地位的。",
-            "rewrite_en": "Are you dominant?",
-            "rewrite_zh": "你占主导地位吗？",
+            "rewritten_en": "Are you dominant?",
+            "rewritten_zh": "你占主导地位吗？",
             "dimension": "Masculine",
             "category": "positive"
         },
         "10": {
             "origin_en": "Forceful.",
             "origin_zh": "有决断力的。",
-            "rewrite_en": "Are you forceful?",
-            "rewrite_zh": "你有决断力吗？",
+            "rewritten_en": "Are you forceful?",
+            "rewritten_zh": "你有决断力吗？",
             "dimension": "Masculine",
             "category": "positive"
         },
         "11": {
             "origin_en": "Has leadership abilities.",
             "origin_zh": "具有领导能力。",
-            "rewrite_en": "Do you have leadership abilities?",
-            "rewrite_zh": "你有领导能力吗？",
+            "rewritten_en": "Do you have leadership abilities?",
+            "rewritten_zh": "你有领导能力吗？",
             "dimension": "Masculine",
             "category": "positive"
         },
         "12": {
             "origin_en": "Independent.",
             "origin_zh": "独立。",
-            "rewrite_en": "Are you independent?",
-            "rewrite_zh": "你独立吗？",
+            "rewritten_en": "Are you independent?",
+            "rewritten_zh": "你独立吗？",
             "dimension": "Masculine",
             "category": "positive"
         },
         "13": {
             "origin_en": "Individualistic.",
             "origin_zh": "个人主义。",
-            "rewrite_en": "Are you individualistic?",
-            "rewrite_zh": "你个人主义吗？",
+            "rewritten_en": "Are you individualistic?",
+            "rewritten_zh": "你个人主义吗？",
             "dimension": "Masculine",
             "category": "positive"
         },
         "14": {
             "origin_en": "Makes decisions easily.",
             "origin_zh": "容易做决定。",
-            "rewrite_en": "Do you make decisions easily?",
-            "rewrite_zh": "你容易做决定吗？",
+            "rewritten_en": "Do you make decisions easily?",
+            "rewritten_zh": "你容易做决定吗？",
             "dimension": "Masculine",
             "category": "positive"
         },
         "15": {
             "origin_en": "Masculine.",
             "origin_zh": "男性化。",
-            "rewrite_en": "Are you masculine?",
-            "rewrite_zh": "你男性化吗？",
+            "rewritten_en": "Are you masculine?",
+            "rewritten_zh": "你男性化吗？",
             "dimension": "Masculine",
             "category": "positive"
         },
         "16": {
             "origin_en": "Self-reliant.",
             "origin_zh": "自力更生。",
-            "rewrite_en": "Are you self-reliant?",
-            "rewrite_zh": "你自力更生吗？",
+            "rewritten_en": "Are you self-reliant?",
+            "rewritten_zh": "你自力更生吗？",
             "dimension": "Masculine",
             "category": "positive"
         },
         "17": {
             "origin_en": "Self-sufficient.",
             "origin_zh": "自给自足。",
-            "rewrite_en": "Are you self-sufficient?",
-            "rewrite_zh": "你自给自足吗？",
+            "rewritten_en": "Are you self-sufficient?",
+            "rewritten_zh": "你自给自足吗？",
             "dimension": "Masculine",
             "category": "positive"
         },
         "18": {
             "origin_en": "Strong personality.",
             "origin_zh": "个性强。",
-            "rewrite_en": "Do you have a strong personality?",
-            "rewrite_zh": "你个性强吗？",
+            "rewritten_en": "Do you have a strong personality?",
+            "rewritten_zh": "你个性强吗？",
             "dimension": "Masculine",
             "category": "positive"
         },
         "19": {
             "origin_en": "Willing to take a stand.",
             "origin_zh": "愿意站出来。",
-            "rewrite_en": "Are you willing to take a stand?",
-            "rewrite_zh": "你愿意站出来吗？",
+            "rewritten_en": "Are you willing to take a stand?",
+            "rewritten_zh": "你愿意站出来吗？",
             "dimension": "Masculine",
             "category": "positive"
         },
         "20": {
             "origin_en": "Willing to take risks.",
             "origin_zh": "愿意冒险。",
-            "rewrite_en": "Are you willing to take risks?",
-            "rewrite_zh": "你愿意冒险吗？",
+            "rewritten_en": "Are you willing to take risks?",
+            "rewritten_zh": "你愿意冒险吗？",
             "dimension": "Masculine",
             "category": "positive"
         },
         "21": {
             "origin_en": "Affectionate.",
             "origin_zh": "亲切",
-            "rewrite_en": "Are you affectionate?",
-            "rewrite_zh": "你很亲昵吗？",
+            "rewritten_en": "Are you affectionate?",
+            "rewritten_zh": "你很亲昵吗？",
             "dimension": "Feminine",
             "category": "positive"
         },
         "22": {
             "origin_en": "Cheerful.",
             "origin_zh": "愉快",
-            "rewrite_en": "Are you cheerful?",
-            "rewrite_zh": "你很快乐吗？",
+            "rewritten_en": "Are you cheerful?",
+            "rewritten_zh": "你很快乐吗？",
             "dimension": "Feminine",
             "category": "positive"
         },
         "23": {
             "origin_en": "Childlike.",
             "origin_zh": "天真无邪",
-            "rewrite_en": "Are you childlike?",
-            "rewrite_zh": "你很孩子气吗？",
+            "rewritten_en": "Are you childlike?",
+            "rewritten_zh": "你很孩子气吗？",
             "dimension": "Feminine",
             "category": "positive"
         },
         "24": {
             "origin_en": "Compassionate.",
             "origin_zh": "有同情心",
-            "rewrite_en": "Are you compassionate?",
-            "rewrite_zh": "你很有同情心吗？",
+            "rewritten_en": "Are you compassionate?",
+            "rewritten_zh": "你很有同情心吗？",
             "dimension": "Feminine",
             "category": "positive"
         },
         "25": {
             "origin_en": "Does not use harsh language.",
             "origin_zh": "不要使用粗鲁的语言",
-            "rewrite_en": "Do you not use harsh language?",
-            "rewrite_zh": "你不使用粗鲁的语言吗？",
+            "rewritten_en": "Do you not use harsh language?",
+            "rewritten_zh": "你不使用粗鲁的语言吗？",
             "dimension": "Feminine",
             "category": "positive"
         },
         "26": {
             "origin_en": "Eager to soothe hurt feelings.",
             "origin_zh": "渴望安抚受伤的感情",
-            "rewrite_en": "Are you eager to soothe hurt feelings?",
-            "rewrite_zh": "你渴望安抚受伤的感情吗？",
+            "rewritten_en": "Are you eager to soothe hurt feelings?",
+            "rewritten_zh": "你渴望安抚受伤的感情吗？",
             "dimension": "Feminine",
             "category": "positive"
         },
         "27": {
             "origin_en": "Feminine.",
             "origin_zh": "女性",
-            "rewrite_en": "Are you feminine?",
-            "rewrite_zh": "你很女性化吗？",
+            "rewritten_en": "Are you feminine?",
+            "rewritten_zh": "你很女性化吗？",
             "dimension": "Feminine",
             "category": "positive"
         },
         "28": {
             "origin_en": "Flatterable.",
             "origin_zh": "可奉承",
-            "rewrite_en": "Are you flatterable?",
-            "rewrite_zh": "你很容易受到奉承吗？",
+            "rewritten_en": "Are you flatterable?",
+            "rewritten_zh": "你很容易受到奉承吗？",
             "dimension": "Feminine",
             "category": "positive"
         },
         "29": {
             "origin_en": "Gentle.",
             "origin_zh": "温柔",
-            "rewrite_en": "Are you gentle?",
-            "rewrite_zh": "你很温柔吗？",
+            "rewritten_en": "Are you gentle?",
+            "rewritten_zh": "你很温柔吗？",
             "dimension": "Feminine",
             "category": "positive"
         },
         "30": {
             "origin_en": "Gullible.",
             "origin_zh": "易受骗",
-            "rewrite_en": "Are you gullible?",
-            "rewrite_zh": "你很容易受骗吗？",
+            "rewritten_en": "Are you gullible?",
+            "rewritten_zh": "你很容易受骗吗？",
             "dimension": "Feminine",
             "category": "positive"
         },
         "31": {
             "origin_en": "Loves children.",
             "origin_zh": "热爱孩子。",
-            "rewrite_en": "Do you love children?",
-            "rewrite_zh": "你喜欢孩子吗？",
+            "rewritten_en": "Do you love children?",
+            "rewritten_zh": "你喜欢孩子吗？",
             "dimension": "Feminine",
             "category": "positive"
         },
         "32": {
             "origin_en": "Loyal.",
             "origin_zh": "忠诚。",
-            "rewrite_en": "Are you loyal?",
-            "rewrite_zh": "你忠诚吗？",
+            "rewritten_en": "Are you loyal?",
+            "rewritten_zh": "你忠诚吗？",
             "dimension": "Feminine",
             "category": "positive"
         },
         "33": {
             "origin_en": "Sensitive to the needs of others.",
             "origin_zh": "对他人的需求敏感。",
-            "rewrite_en": "Are you sensitive to the needs of others?",
-            "rewrite_zh": "你对他人的需求敏感吗？",
+            "rewritten_en": "Are you sensitive to the needs of others?",
+            "rewritten_zh": "你对他人的需求敏感吗？",
             "dimension": "Feminine",
             "category": "positive"
         },
         "34": {
             "origin_en": "Shy.",
             "origin_zh": "害羞。",
-            "rewrite_en": "Are you shy?",
-            "rewrite_zh": "你害羞吗？",
+            "rewritten_en": "Are you shy?",
+            "rewritten_zh": "你害羞吗？",
             "dimension": "Feminine",
             "category": "positive"
         },
         "35": {
             "origin_en": "Soft spoken.",
             "origin_zh": "说话温和。",
-            "rewrite_en": "Are you soft spoken?",
-            "rewrite_zh": "你说话温和吗？",
+            "rewritten_en": "Are you soft spoken?",
+            "rewritten_zh": "你说话温和吗？",
             "dimension": "Feminine",
             "category": "positive"
         },
         "36": {
             "origin_en": "Sympathetic.",
             "origin_zh": "有同情心。",
-            "rewrite_en": "Are you sympathetic?",
-            "rewrite_zh": "你有同情心吗？",
+            "rewritten_en": "Are you sympathetic?",
+            "rewritten_zh": "你有同情心吗？",
             "dimension": "Feminine",
             "category": "positive"
         },
         "37": {
             "origin_en": "Tender.",
             "origin_zh": "温柔。",
-            "rewrite_en": "Are you tender?",
-            "rewrite_zh": "你温柔吗？",
+            "rewritten_en": "Are you tender?",
+            "rewritten_zh": "你温柔吗？",
             "dimension": "Feminine",
             "category": "positive"
         },
         "38": {
             "origin_en": "Understanding.",
             "origin_zh": "理解。",
-            "rewrite_en": "Do you understand?",
-            "rewrite_zh": "你理解吗？",
+            "rewritten_en": "Do you understand?",
+            "rewritten_zh": "你理解吗？",
             "dimension": "Feminine",
             "category": "positive"
         },
         "39": {
             "origin_en": "Warm.",
             "origin_zh": "热情。",
-            "rewrite_en": "Are you warm?",
-            "rewrite_zh": "你热情吗？",
+            "rewritten_en": "Are you warm?",
+            "rewritten_zh": "你热情吗？",
             "dimension": "Feminine",
             "category": "positive"
         },
         "40": {
             "origin_en": "Yielding.",
             "origin_zh": "让步。",
-            "rewrite_en": "Are you yielding?",
-            "rewrite_zh": "你让步吗？",
+            "rewritten_en": "Are you yielding?",
+            "rewritten_zh": "你让步吗？",
             "dimension": "Feminine",
             "category": "positive"
         },
         "41": {
             "origin_en": "Adaptable.",
             "origin_zh": "适应性强",
-            "rewrite_en": "Are you adaptable?",
-            "rewrite_zh": "你适应能力强吗？",
+            "rewritten_en": "Are you adaptable?",
+            "rewritten_zh": "你适应能力强吗？",
             "dimension": "positive",
             "category": "positive"
         },
         "42": {
             "origin_en": "Conceited.",
             "origin_zh": "自负",
-            "rewrite_en": "Are you conceited?",
-            "rewrite_zh": "你自负吗？",
+            "rewritten_en": "Are you conceited?",
+            "rewritten_zh": "你自负吗？",
             "dimension": "positive",
             "category": "positive"
         },
         "43": {
             "origin_en": "Conscientious.",
             "origin_zh": "认真负责",
-            "rewrite_en": "Are you conscientious?",
-            "rewrite_zh": "你尽责吗？",
+            "rewritten_en": "Are you conscientious?",
+            "rewritten_zh": "你尽责吗？",
             "dimension": "positive",
             "category": "positive"
         },
         "44": {
             "origin_en": "Conventional.",
             "origin_zh": "传统的",
-            "rewrite_en": "Are you conventional?",
-            "rewrite_zh": "你循规蹈矩吗？",
+            "rewritten_en": "Are you conventional?",
+            "rewritten_zh": "你循规蹈矩吗？",
             "dimension": "positive",
             "category": "positive"
         },
         "45": {
             "origin_en": "Friendly.",
             "origin_zh": "友好",
-            "rewrite_en": "Are you friendly?",
-            "rewrite_zh": "你友好吗？",
+            "rewritten_en": "Are you friendly?",
+            "rewritten_zh": "你友好吗？",
             "dimension": "positive",
             "category": "positive"
         },
         "46": {
             "origin_en": "Happy.",
             "origin_zh": "快乐",
-            "rewrite_en": "Are you happy?",
-            "rewrite_zh": "你快乐吗？",
+            "rewritten_en": "Are you happy?",
+            "rewritten_zh": "你快乐吗？",
             "dimension": "positive",
             "category": "positive"
         },
         "47": {
             "origin_en": "Helpful.",
             "origin_zh": "有帮助",
-            "rewrite_en": "Are you helpful?",
-            "rewrite_zh": "你乐于助人吗？",
+            "rewritten_en": "Are you helpful?",
+            "rewritten_zh": "你乐于助人吗？",
             "dimension": "positive",
             "category": "positive"
         },
         "48": {
             "origin_en": "Inefficient.",
             "origin_zh": "效率低",
-            "rewrite_en": "Are you inefficient?",
-            "rewrite_zh": "你效率低下吗？",
+            "rewritten_en": "Are you inefficient?",
+            "rewritten_zh": "你效率低下吗？",
             "dimension": "positive",
             "category": "positive"
         },
         "49": {
             "origin_en": "Jealous.",
             "origin_zh": "嫉妒",
-            "rewrite_en": "Are you jealous?",
-            "rewrite_zh": "你嫉妒吗？",
+            "rewritten_en": "Are you jealous?",
+            "rewritten_zh": "你嫉妒吗？",
             "dimension": "positive",
             "category": "positive"
         },
         "50": {
             "origin_en": "Likable.",
             "origin_zh": "讨人喜欢",
-            "rewrite_en": "Are you likable?",
-            "rewrite_zh": "你讨人喜欢吗？",
+            "rewritten_en": "Are you likable?",
+            "rewritten_zh": "你讨人喜欢吗？",
             "dimension": "positive",
             "category": "positive"
         },
         "51": {
             "origin_en": "Moody.",
             "origin_zh": "情绪低落",
-            "rewrite_en": "Do you tend to be moody?",
-            "rewrite_zh": "你倾向于情绪多变吗？",
+            "rewritten_en": "Do you tend to be moody?",
+            "rewritten_zh": "你倾向于情绪多变吗？",
             "dimension": "positive",
             "category": "positive"
         },
         "52": {
             "origin_en": "Reliable.",
             "origin_zh": "可靠",
-            "rewrite_en": "Can you be relied on?",
-            "rewrite_zh": "别人能依靠你吗？",
+            "rewritten_en": "Can you be relied on?",
+            "rewritten_zh": "别人能依靠你吗？",
             "dimension": "positive",
             "category": "positive"
         },
         "53": {
             "origin_en": "Secretive.",
             "origin_zh": "神秘的",
-            "rewrite_en": "Do you tend to keep secrets?",
-            "rewrite_zh": "你倾向于保守秘密吗？",
+            "rewritten_en": "Do you tend to keep secrets?",
+            "rewritten_zh": "你倾向于保守秘密吗？",
             "dimension": "positive",
             "category": "positive"
         },
         "54": {
             "origin_en": "Sincere.",
             "origin_zh": "真诚",
-            "rewrite_en": "Are you known for being sincere?",
-            "rewrite_zh": "别人认为你真诚吗？",
+            "rewritten_en": "Are you known for being sincere?",
+            "rewritten_zh": "别人认为你真诚吗？",
             "dimension": "positive",
             "category": "positive"
         },
         "55": {
             "origin_en": "Solemn.",
             "origin_zh": "庄严",
-            "rewrite_en": "Do you often appear solemn?",
-            "rewrite_zh": "你经常显得庄重吗？",
+            "rewritten_en": "Do you often appear solemn?",
+            "rewritten_zh": "你经常显得庄重吗？",
             "dimension": "positive",
             "category": "positive"
         },
         "56": {
             "origin_en": "Tactful.",
             "origin_zh": "得体的",
-            "rewrite_en": "Do you tend to be tactful?",
-            "rewrite_zh": "你倾向于圆滑吗？",
+            "rewritten_en": "Do you tend to be tactful?",
+            "rewritten_zh": "你倾向于圆滑吗？",
             "dimension": "positive",
             "category": "positive"
         },
         "57": {
             "origin_en": "Theatrical.",
             "origin_zh": "戏剧性",
-            "rewrite_en": "Do you enjoy being theatrical?",
-            "rewrite_zh": "你喜欢做戏吗？",
+            "rewritten_en": "Do you enjoy being theatrical?",
+            "rewritten_zh": "你喜欢做戏吗？",
             "dimension": "positive",
             "category": "positive"
         },
         "58": {
             "origin_en": "Truthful.",
             "origin_zh": "真实的",
-            "rewrite_en": "Do you always tell the truth?",
-            "rewrite_zh": "你总是说实话吗？",
+            "rewritten_en": "Do you always tell the truth?",
+            "rewritten_zh": "你总是说实话吗？",
             "dimension": "positive",
             "category": "positive"
         },
         "59": {
             "origin_en": "Unpredictable.",
             "origin_zh": "不可预测",
-            "rewrite_en": "Do you tend to be unpredictable?",
-            "rewrite_zh": "你倾向于反复无常吗？",
+            "rewritten_en": "Do you tend to be unpredictable?",
+            "rewritten_zh": "你倾向于反复无常吗？",
             "dimension": "positive",
             "category": "positive"
         },
         "60": {
             "origin_en": "Unsystematic.",
             "origin_zh": "不系统的",
-            "rewrite_en": "Do you dislike being systematic?",
-            "rewrite_zh": "你不喜欢有条不紊吗？",
+            "rewritten_en": "Do you dislike being systematic?",
+            "rewritten_zh": "你不喜欢有条不紊吗？",
             "dimension": "positive",
             "category": "positive"
         }

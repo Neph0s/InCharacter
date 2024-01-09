@@ -39,80 +39,80 @@
         "1": {
             "origin_en": "In uncertain times, I usually expect the best.",
             "origin_zh": "在不确定的时候，我通常期待最好的结果。",
-            "rewrite_en": "Do you usually expect the best in uncertain times?",
-            "rewrite_zh": "在不确定的时候，你通常期待最好的结果吗？",
+            "rewritten_en": "Do you usually expect the best in uncertain times?",
+            "rewritten_zh": "在不确定的时候，你通常期待最好的结果吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "2": {
             "origin_en": "It's easy for me to relax.",
             "origin_zh": "我很容易放松。",
-            "rewrite_en": "Is it easy for you to relax?",
-            "rewrite_zh": "你很容易放松吗？",
+            "rewritten_en": "Is it easy for you to relax?",
+            "rewritten_zh": "你很容易放松吗？",
             "dimension": "positive",
             "category": "positive"
         },
         "3": {
             "origin_en": "If something can go wrong for me, it will.",
             "origin_zh": "如果对我来说有什么事情可能会出错，那它就会出错。",
-            "rewrite_en": "Will it go wrong if something can go wrong for you?",
-            "rewrite_zh": "如果对你来说有什么事情可能会出错，那它就会出错吗？",
+            "rewritten_en": "Will it go wrong if something can go wrong for you?",
+            "rewritten_zh": "如果对你来说有什么事情可能会出错，那它就会出错吗？",
             "dimension": "Overall",
             "category": "negative"
         },
         "4": {
             "origin_en": "I'm always optimistic about my future.",
             "origin_zh": "我对我的未来总是充满乐观。",
-            "rewrite_en": "Are you always optimistic about your future?",
-            "rewrite_zh": "你对你的未来总是充满乐观吗？",
+            "rewritten_en": "Are you always optimistic about your future?",
+            "rewritten_zh": "你对你的未来总是充满乐观吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "5": {
             "origin_en": "I enjoy my friends a lot.",
             "origin_zh": "我非常喜欢我的朋友。",
-            "rewrite_en": "Do you enjoy your friends a lot?",
-            "rewrite_zh": "你非常喜欢你的朋友吗？",
+            "rewritten_en": "Do you enjoy your friends a lot?",
+            "rewritten_zh": "你非常喜欢你的朋友吗？",
             "dimension": "positive",
             "category": "positive"
         },
         "6": {
             "origin_en": "It's important for me to keep busy.",
             "origin_zh": "对我来说保持忙碌很重要。",
-            "rewrite_en": "Is it important for you to keep busy?",
-            "rewrite_zh": "对你来说保持忙碌很重要吗？",
+            "rewritten_en": "Is it important for you to keep busy?",
+            "rewritten_zh": "对你来说保持忙碌很重要吗？",
             "dimension": "positive",
             "category": "positive"
         },
         "7": {
             "origin_en": "I hardly ever expect things to go my way.",
             "origin_zh": "我几乎从不指望事情会朝着我的方向发展。",
-            "rewrite_en": "Do you hardly ever expect things to go your way?",
-            "rewrite_zh": "你几乎从不指望事情会朝着你的方向发展吗？",
+            "rewritten_en": "Do you hardly ever expect things to go your way?",
+            "rewritten_zh": "你几乎从不指望事情会朝着你的方向发展吗？",
             "dimension": "Overall",
             "category": "negative"
         },
         "8": {
             "origin_en": "I don't get upset too easily.",
             "origin_zh": "我不太容易生气。",
-            "rewrite_en": "Do you not get upset too easily?",
-            "rewrite_zh": "你不太容易生气吗？",
+            "rewritten_en": "Do you not get upset too easily?",
+            "rewritten_zh": "你不太容易生气吗？",
             "dimension": "positive",
             "category": "positive"
         },
         "9": {
             "origin_en": "I rarely count on good things happening to me.",
             "origin_zh": "我很少指望好事发生在我身上。",
-            "rewrite_en": "Do you rarely count on good things happening to you?",
-            "rewrite_zh": "你很少指望好事发生在你身上吗？",
+            "rewritten_en": "Do you rarely count on good things happening to you?",
+            "rewritten_zh": "你很少指望好事发生在你身上吗？",
             "dimension": "Overall",
             "category": "negative"
         },
         "10": {
             "origin_en": "Overall, I expect more good things to happen to me than bad.",
             "origin_zh": "总的来说，我期待发生在我身上的好事比坏事多。",
-            "rewrite_en": "Do you expect more good things to happen to you than bad overall?",
-            "rewrite_zh": "总的来说，你期待发生在你身上的好事比坏事多吗？",
+            "rewritten_en": "Do you expect more good things to happen to you than bad overall?",
+            "rewritten_zh": "总的来说，你期待发生在你身上的好事比坏事多吗？",
             "dimension": "Overall",
             "category": "positive"
         }

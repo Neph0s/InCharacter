@@ -142,352 +142,352 @@
         "1": {
             "origin_en": "Is talkative.",
             "origin_zh": "健谈。",
-            "rewrite_en": "Are you talkative?",
-            "rewrite_zh": "你健谈吗？",
+            "rewritten_en": "Are you talkative?",
+            "rewritten_zh": "你健谈吗？",
             "dimension": "Extraversion",
             "category": "positive"
         },
         "2": {
             "origin_en": "Tends to find fault with others.",
             "origin_zh": "倾向于找别人的错。",
-            "rewrite_en": "Do you tend to find fault with others?",
-            "rewrite_zh": "你倾向于找别人的错吗？",
+            "rewritten_en": "Do you tend to find fault with others?",
+            "rewritten_zh": "你倾向于找别人的错吗？",
             "dimension": "Agreeableness",
             "category": "negative"
         },
         "3": {
             "origin_en": "Does a thorough job.",
             "origin_zh": "做事彻底。",
-            "rewrite_en": "Do you do a thorough job?",
-            "rewrite_zh": "你做事彻底吗？",
+            "rewritten_en": "Do you do a thorough job?",
+            "rewritten_zh": "你做事彻底吗？",
             "dimension": "Conscientiousness",
             "category": "positive"
         },
         "4": {
             "origin_en": "Is depressed, blue.",
             "origin_zh": "情绪低落，沮丧。",
-            "rewrite_en": "Are you depressed, blue?",
-            "rewrite_zh": "你情绪低落，沮丧吗？",
+            "rewritten_en": "Are you depressed, blue?",
+            "rewritten_zh": "你情绪低落，沮丧吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "5": {
             "origin_en": "Is original, comes up with new ideas.",
             "origin_zh": "富有创意，能提出新主意。",
-            "rewrite_en": "Do you come up with new ideas?",
-            "rewrite_zh": "你能提出新主意吗？",
+            "rewritten_en": "Do you come up with new ideas?",
+            "rewritten_zh": "你能提出新主意吗？",
             "dimension": "Openness",
             "category": "positive"
         },
         "6": {
             "origin_en": "Is reserved.",
             "origin_zh": "内向。",
-            "rewrite_en": "Are you reserved?",
-            "rewrite_zh": "你内向吗？",
+            "rewritten_en": "Are you reserved?",
+            "rewritten_zh": "你内向吗？",
             "dimension": "Extraversion",
             "category": "negative"
         },
         "7": {
             "origin_en": "Is helpful and unselfish with others.",
             "origin_zh": "乐于助人，无私。",
-            "rewrite_en": "Are you helpful and unselfish with others?",
-            "rewrite_zh": "你乐于助人，无私吗？",
+            "rewritten_en": "Are you helpful and unselfish with others?",
+            "rewritten_zh": "你乐于助人，无私吗？",
             "dimension": "Agreeableness",
             "category": "positive"
         },
         "8": {
             "origin_en": "Can be somewhat careless.",
             "origin_zh": "有点粗心。",
-            "rewrite_en": "Can you be somewhat careless?",
-            "rewrite_zh": "你有点粗心吗？",
+            "rewritten_en": "Can you be somewhat careless?",
+            "rewritten_zh": "你有点粗心吗？",
             "dimension": "Conscientiousness",
             "category": "negative"
         },
         "9": {
             "origin_en": "Is relaxed, handles stress well.",
             "origin_zh": "放松，应对压力良好。",
-            "rewrite_en": "Are you relaxed and handle stress well?",
-            "rewrite_zh": "你放松，应对压力良好吗？",
+            "rewritten_en": "Are you relaxed and handle stress well?",
+            "rewritten_zh": "你放松，应对压力良好吗？",
             "dimension": "Neuroticism",
             "category": "negative"
         },
         "10": {
             "origin_en": "Is curious about many different things.",
             "origin_zh": "对许多不同的事情感到好奇。",
-            "rewrite_en": "Are you curious about many different things?",
-            "rewrite_zh": "你对许多不同的事情感到好奇吗？",
+            "rewritten_en": "Are you curious about many different things?",
+            "rewritten_zh": "你对许多不同的事情感到好奇吗？",
             "dimension": "Openness",
             "category": "positive"
         },
         "11": {
             "origin_en": "Is full of energy.",
             "origin_zh": "充满活力。",
-            "rewrite_en": "Are you full of energy?",
-            "rewrite_zh": "你充满活力吗？",
+            "rewritten_en": "Are you full of energy?",
+            "rewritten_zh": "你充满活力吗？",
             "dimension": "Extraversion",
             "category": "positive"
         },
         "12": {
             "origin_en": "Starts quarrels with others.",
             "origin_zh": "经常与他人争吵。",
-            "rewrite_en": "Do you start quarrels with others?",
-            "rewrite_zh": "你经常与他人争吵吗？",
+            "rewritten_en": "Do you start quarrels with others?",
+            "rewritten_zh": "你经常与他人争吵吗？",
             "dimension": "Agreeableness",
             "category": "negative"
         },
         "13": {
             "origin_en": "Is a reliable worker.",
             "origin_zh": "是一个可靠的工作者。",
-            "rewrite_en": "Are you a reliable worker?",
-            "rewrite_zh": "你是一个可靠的工作者吗？",
+            "rewritten_en": "Are you a reliable worker?",
+            "rewritten_zh": "你是一个可靠的工作者吗？",
             "dimension": "Conscientiousness",
             "category": "positive"
         },
         "14": {
             "origin_en": "Can be tense.",
             "origin_zh": "可能会感到紧张。",
-            "rewrite_en": "Can you be tense?",
-            "rewrite_zh": "你可能会感到紧张吗？",
+            "rewritten_en": "Can you be tense?",
+            "rewritten_zh": "你可能会感到紧张吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "15": {
             "origin_en": "Is ingenious, a deep thinker.",
             "origin_zh": "很有创造力，思维深刻。",
-            "rewrite_en": "Are you ingenious, a deep thinker?",
-            "rewrite_zh": "你很有创造力，思维深刻吗？",
+            "rewritten_en": "Are you ingenious, a deep thinker?",
+            "rewritten_zh": "你很有创造力，思维深刻吗？",
             "dimension": "Openness",
             "category": "positive"
         },
         "16": {
             "origin_en": "Generates a lot of enthusiasm.",
             "origin_zh": "能激发很多热情。",
-            "rewrite_en": "Do you generate a lot of enthusiasm?",
-            "rewrite_zh": "你能激发很多热情吗？",
+            "rewritten_en": "Do you generate a lot of enthusiasm?",
+            "rewritten_zh": "你能激发很多热情吗？",
             "dimension": "Extraversion",
             "category": "positive"
         },
         "17": {
             "origin_en": "Has a forgiving nature.",
             "origin_zh": "具有宽容的天性。",
-            "rewrite_en": "Do you have a forgiving nature?",
-            "rewrite_zh": "你具有宽容的天性吗？",
+            "rewritten_en": "Do you have a forgiving nature?",
+            "rewritten_zh": "你具有宽容的天性吗？",
             "dimension": "Agreeableness",
             "category": "positive"
         },
         "18": {
             "origin_en": "Tends to be disorganized.",
             "origin_zh": "倾向于杂乱无章。",
-            "rewrite_en": "Do you tend to be disorganized?",
-            "rewrite_zh": "你倾向于杂乱无章吗？",
+            "rewritten_en": "Do you tend to be disorganized?",
+            "rewritten_zh": "你倾向于杂乱无章吗？",
             "dimension": "Conscientiousness",
             "category": "negative"
         },
         "19": {
             "origin_en": "Worries a lot.",
             "origin_zh": "经常担心。",
-            "rewrite_en": "Do you worry a lot?",
-            "rewrite_zh": "你经常担心吗？",
+            "rewritten_en": "Do you worry a lot?",
+            "rewritten_zh": "你经常担心吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "20": {
             "origin_en": "Has an active imagination.",
             "origin_zh": "想象力丰富。",
-            "rewrite_en": "Do you have an active imagination?",
-            "rewrite_zh": "你想象力丰富吗？",
+            "rewritten_en": "Do you have an active imagination?",
+            "rewritten_zh": "你想象力丰富吗？",
             "dimension": "Openness",
             "category": "positive"
         },
         "21": {
             "origin_en": "Tends to be quiet.",
             "origin_zh": "倾向于安静。",
-            "rewrite_en": "Do you tend to be quiet?",
-            "rewrite_zh": "你倾向于安静吗？",
+            "rewritten_en": "Do you tend to be quiet?",
+            "rewritten_zh": "你倾向于安静吗？",
             "dimension": "Extraversion",
             "category": "negative"
         },
         "22": {
             "origin_en": "Is generally trusting.",
             "origin_zh": "一般来说是信任他人的。",
-            "rewrite_en": "Are you generally trusting?",
-            "rewrite_zh": "你一般来说是信任他人的吗？",
+            "rewritten_en": "Are you generally trusting?",
+            "rewritten_zh": "你一般来说是信任他人的吗？",
             "dimension": "Agreeableness",
             "category": "positive"
         },
         "23": {
             "origin_en": "Tends to be lazy.",
             "origin_zh": "倾向于懒惰。",
-            "rewrite_en": "Do you tend to be lazy?",
-            "rewrite_zh": "你倾向于懒惰吗？",
+            "rewritten_en": "Do you tend to be lazy?",
+            "rewritten_zh": "你倾向于懒惰吗？",
             "dimension": "Conscientiousness",
             "category": "negative"
         },
         "24": {
             "origin_en": "Is emotionally stable, not easily upset.",
             "origin_zh": "情绪稳定，不容易心烦意乱。",
-            "rewrite_en": "Are you emotionally stable, not easily upset?",
-            "rewrite_zh": "你情绪稳定，不容易心烦意乱吗？",
+            "rewritten_en": "Are you emotionally stable, not easily upset?",
+            "rewritten_zh": "你情绪稳定，不容易心烦意乱吗？",
             "dimension": "Neuroticism",
             "category": "negative"
         },
         "25": {
             "origin_en": "Is inventive.",
             "origin_zh": "富有创造力。",
-            "rewrite_en": "Are you inventive?",
-            "rewrite_zh": "你富有创造力吗？",
+            "rewritten_en": "Are you inventive?",
+            "rewritten_zh": "你富有创造力吗？",
             "dimension": "Openness",
             "category": "positive"
         },
         "26": {
             "origin_en": "Has an assertive personality.",
             "origin_zh": "性格坚定。",
-            "rewrite_en": "Do you have an assertive personality?",
-            "rewrite_zh": "你性格坚定吗？",
+            "rewritten_en": "Do you have an assertive personality?",
+            "rewritten_zh": "你性格坚定吗？",
             "dimension": "Extraversion",
             "category": "positive"
         },
         "27": {
             "origin_en": "Can be cold and aloof.",
             "origin_zh": "可能冷漠孤僻。",
-            "rewrite_en": "Can you be cold and aloof?",
-            "rewrite_zh": "你可能冷漠孤僻吗？",
+            "rewritten_en": "Can you be cold and aloof?",
+            "rewritten_zh": "你可能冷漠孤僻吗？",
             "dimension": "Agreeableness",
             "category": "negative"
         },
         "28": {
             "origin_en": "Perseveres until the task is finished.",
             "origin_zh": "坚持直到任务完成。",
-            "rewrite_en": "Do you persevere until the task is finished?",
-            "rewrite_zh": "你坚持直到任务完成吗？",
+            "rewritten_en": "Do you persevere until the task is finished?",
+            "rewritten_zh": "你坚持直到任务完成吗？",
             "dimension": "Conscientiousness",
             "category": "positive"
         },
         "29": {
             "origin_en": "Can be moody.",
             "origin_zh": "可能情绪多变。",
-            "rewrite_en": "Can you be moody?",
-            "rewrite_zh": "你可能情绪多变吗？",
+            "rewritten_en": "Can you be moody?",
+            "rewritten_zh": "你可能情绪多变吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "30": {
             "origin_en": "Values artistic, aesthetic experiences.",
             "origin_zh": "重视艺术和审美体验。",
-            "rewrite_en": "Do you value artistic, aesthetic experiences?",
-            "rewrite_zh": "你重视艺术和审美体验吗？",
+            "rewritten_en": "Do you value artistic, aesthetic experiences?",
+            "rewritten_zh": "你重视艺术和审美体验吗？",
             "dimension": "Openness",
             "category": "positive"
         },
         "31": {
             "origin_en": "Is sometimes shy, inhibited.",
             "origin_zh": "有时害羞，拘谨。",
-            "rewrite_en": "Is it sometimes shy, inhibited?",
-            "rewrite_zh": "有时害羞，拘谨吗？",
+            "rewritten_en": "Is it sometimes shy, inhibited?",
+            "rewritten_zh": "有时害羞，拘谨吗？",
             "dimension": "Extraversion",
             "category": "negative"
         },
         "32": {
             "origin_en": "Is considerate and kind to almost everyone.",
             "origin_zh": "对几乎所有人都考虑周到和友善。",
-            "rewrite_en": "Is it considerate and kind to almost everyone?",
-            "rewrite_zh": "对几乎所有人都考虑周到和友善吗？",
+            "rewritten_en": "Is it considerate and kind to almost everyone?",
+            "rewritten_zh": "对几乎所有人都考虑周到和友善吗？",
             "dimension": "Agreeableness",
             "category": "positive"
         },
         "33": {
             "origin_en": "Does things efficiently.",
             "origin_zh": "高效地做事。",
-            "rewrite_en": "Does it do things efficiently?",
-            "rewrite_zh": "高效地做事吗？",
+            "rewritten_en": "Does it do things efficiently?",
+            "rewritten_zh": "高效地做事吗？",
             "dimension": "Conscientiousness",
             "category": "positive"
         },
         "34": {
             "origin_en": "Remains calm in tense situations.",
             "origin_zh": "在紧张的情况下保持冷静。",
-            "rewrite_en": "Does it remain calm in tense situations?",
-            "rewrite_zh": "在紧张的情况下保持冷静吗？",
+            "rewritten_en": "Does it remain calm in tense situations?",
+            "rewritten_zh": "在紧张的情况下保持冷静吗？",
             "dimension": "Neuroticism",
             "category": "negative"
         },
         "35": {
             "origin_en": "Prefers work that is routine.",
             "origin_zh": "喜欢例行公事。",
-            "rewrite_en": "Does it prefer work that is routine?",
-            "rewrite_zh": "喜欢例行公事吗？",
+            "rewritten_en": "Does it prefer work that is routine?",
+            "rewritten_zh": "喜欢例行公事吗？",
             "dimension": "Openness",
             "category": "negative"
         },
         "36": {
             "origin_en": "Is outgoing, sociable.",
             "origin_zh": "外向，善于交际。",
-            "rewrite_en": "Is it outgoing, sociable?",
-            "rewrite_zh": "外向，善于交际吗？",
+            "rewritten_en": "Is it outgoing, sociable?",
+            "rewritten_zh": "外向，善于交际吗？",
             "dimension": "Extraversion",
             "category": "positive"
         },
         "37": {
             "origin_en": "Is sometimes rude to others.",
             "origin_zh": "有时对别人粗鲁。",
-            "rewrite_en": "Is it sometimes rude to others?",
-            "rewrite_zh": "有时对别人粗鲁吗？",
+            "rewritten_en": "Is it sometimes rude to others?",
+            "rewritten_zh": "有时对别人粗鲁吗？",
             "dimension": "Agreeableness",
             "category": "negative"
         },
         "38": {
             "origin_en": "Makes plans and follows through with them.",
             "origin_zh": "制定计划并付诸实施。",
-            "rewrite_en": "Does it make plans and follow through with them?",
-            "rewrite_zh": "制定计划并付诸实施吗？",
+            "rewritten_en": "Does it make plans and follow through with them?",
+            "rewritten_zh": "制定计划并付诸实施吗？",
             "dimension": "Conscientiousness",
             "category": "positive"
         },
         "39": {
             "origin_en": "Gets nervous easily.",
             "origin_zh": "容易紧张。",
-            "rewrite_en": "Does it get nervous easily?",
-            "rewrite_zh": "容易紧张吗？",
+            "rewritten_en": "Does it get nervous easily?",
+            "rewritten_zh": "容易紧张吗？",
             "dimension": "Neuroticism",
             "category": "positive"
         },
         "40": {
             "origin_en": "Likes to reflect, play with ideas.",
             "origin_zh": "喜欢反思，玩弄想法。",
-            "rewrite_en": "Does it like to reflect, play with ideas?",
-            "rewrite_zh": "喜欢反思，玩弄想法吗？",
+            "rewritten_en": "Does it like to reflect, play with ideas?",
+            "rewritten_zh": "喜欢反思，玩弄想法吗？",
             "dimension": "Openness",
             "category": "positive"
         },
         "41": {
             "origin_en": "Has few artistic interests.",
             "origin_zh": "艺术兴趣不多。",
-            "rewrite_en": "Do you have few artistic interests?",
-            "rewrite_zh": "你有很少的艺术兴趣吗？",
+            "rewritten_en": "Do you have few artistic interests?",
+            "rewritten_zh": "你有很少的艺术兴趣吗？",
             "dimension": "Openness",
             "category": "negative"
         },
         "42": {
             "origin_en": "Likes to cooperate with others.",
             "origin_zh": "喜欢与他人合作。",
-            "rewrite_en": "Do you like to cooperate with others?",
-            "rewrite_zh": "你喜欢与他人合作吗？",
+            "rewritten_en": "Do you like to cooperate with others?",
+            "rewritten_zh": "你喜欢与他人合作吗？",
             "dimension": "Agreeableness",
             "category": "positive"
         },
         "43": {
             "origin_en": "Is easily distracted.",
             "origin_zh": "容易分心。",
-            "rewrite_en": "Are you easily distracted?",
-            "rewrite_zh": "你容易分心吗？",
+            "rewritten_en": "Are you easily distracted?",
+            "rewritten_zh": "你容易分心吗？",
             "dimension": "Conscientiousness",
             "category": "negative"
         },
         "44": {
             "origin_en": "Is sophisticated in art, music, or literature.",
             "origin_zh": "在艺术、音乐或文学方面很有造诣。",
-            "rewrite_en": "Are you sophisticated in art, music, or literature?",
-            "rewrite_zh": "你在艺术、音乐或文学方面很有造诣吗？",
+            "rewritten_en": "Are you sophisticated in art, music, or literature?",
+            "rewritten_zh": "你在艺术、音乐或文学方面很有造诣吗？",
             "dimension": "Openness",
             "category": "positive"
         }
