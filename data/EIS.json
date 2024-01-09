@@ -343,9 +343,13 @@
             "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> agrees with the statement. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n",
             "zh": "我已经和<character>进行了许多对话。我将输入一个包含许多样本的字典，其中每个样本包括一个陈述和一段对话。\n你的任务是将每段对话转换为一个选择，指示<character>是否同意该陈述。你应该输出一个字典，其中键与输入字典相同，值为选择。\n===输出格式===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===选择指示==="
         },
-        "choice_instruction": {
+        "llm_choice_instruction": {
             "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'Does not match at all', 2 denotes 'Does not match very well', 3 denotes 'Not sure', 4 denotes 'Matches quite well', 5 denotes 'Matches perfectly'.",
             "zh": "每个选择都是从1到5的数字。请根据对话使用以下评分标准评估<character>：1代表“完全不匹配”，2代表“不太匹配”，3代表“不确定”，4代表“相当匹配”，5代表“完全匹配”。"
+        },
+        "rpa_choice_instruction": {
+            "en": "Reply a number from 1 to 5 using the scales: 1 denotes 'Does not match at all', 2 denotes 'Does not match very well', 3 denotes 'Not sure', 4 denotes 'Matches quite well', 5 denotes 'Matches perfectly'.",
+            "zh": "请用1到5的等级来回答，1代表“完全不匹配”，2代表“不太匹配”，3代表“不确定”，4代表“相当匹配”，5代表“完全匹配”。"
         }
     }
 }

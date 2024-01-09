@@ -219,9 +219,13 @@
             "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> agrees with the statement. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n",
             "zh": "我已经和<character>进行了许多对话。我将输入一个包含许多样本的字典，其中每个样本包括一个陈述和一段对话。\n你的任务是将每段对话转换为一个选择，指示<character>是否同意该陈述。你应该输出一个字典，其中键与输入字典相同，值为选择。\n===输出格式===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===选择指示==="
         },
-        "choice_instruction": {
+        "llm_choice_instruction": {
             "en": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'Strongly Disagree', 2 denotes 'Disagree', 3 denotes 'Slightly Disagree', 4 denotes 'Neither Agree nor Disagree', 5 denotes 'Slightly Agree', 6 denotes 'Agree', 7 denotes 'Strongly Agree'.",
             "zh": "每个选择都是从1到7的数字。请根据对话使用以下评分标准评估<character>：1代表“强烈不同意”，2代表“不同意”，3代表“稍微不同意”，4代表“既不同意也不不同意”，5代表“稍微同意”，6代表“同意”，7代表“强烈同意”。"
+        },
+        "rpa_choice_instruction": {
+            "en": "Reply a number from 1 to 7 using the scales: 1 denotes 'Strongly Disagree', 2 denotes 'Disagree', 3 denotes 'Slightly Disagree', 4 denotes 'Neither Agree nor Disagree', 5 denotes 'Slightly Agree', 6 denotes 'Agree', 7 denotes 'Strongly Agree'.",
+            "zh": "请回复一个1到7之间的数字：1代表“非常不同意”，2代表“不同意”，3代表“稍微不同意”，4代表“既不同意也不不同意”，5代表“稍微同意”，6代表“同意”，7代表“非常同意”。"
         }
     }
 }
