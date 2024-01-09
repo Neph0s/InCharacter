@@ -610,8 +610,8 @@
             "zh": "每个选择都是从1到7的数字。请根据对话使用以下评分标准评估<character>：1表示“完全不匹配”，7表示“完全匹配”，2到6表示不同程度的符合。"
         },
         "rpa_choice_instruction": {
-            "en": "Reply a number from 1 to 7 using the scales: 1 denotes 'does not match at all', 7 denotes 'fully matches', and 2 to 6 denote varying degrees of conformity.",
-            "zh": "请用1到7的等级来回答，1代表“完全不匹配”，7代表“完全匹配”，2到6代表不同程度的符合。"
+            "en": "Reply a number from 1 to 7 using the scales: 1 denotes 'does not match at all', 7 denotes 'fully matches', and 2 to 6 denote varying degrees of conformity.Please answer with the number only, without anything else.",
+            "zh": "请用1到7的等级来回答，1代表“完全不匹配”，7代表“完全匹配”，2到6代表不同程度的符合。请你只回答这一个数字，不要说其他内容。"
         }
     }
 }

@@ -511,8 +511,8 @@
             "zh": "每个选择都是从1到7的数字。请根据对话使用以下标度评估<character>：1代表“非常同意”，4代表“既不同意也不反对”，7代表“非常反对”。"
         },
         "rpa_choice_instruction": {
-            "en": "Reply a number from 1 to 7 using the scales: 1 denotes 'strongly agree', 4 denotes 'neither agree nor disagree', and 7 denotes 'strongly disagree'.",
-            "zh": "请用1到7的等级来回答，1代表“非常同意”，4代表“既同意也不同意”，7代表“非常不同意”。"
+            "en": "Reply a number from 1 to 7 using the scales: 1 denotes 'strongly agree', 4 denotes 'neither agree nor disagree', and 7 denotes 'strongly disagree'.Please answer with the number only, without anything else.",
+            "zh": "请用1到7的等级来回答，1代表“非常同意”，4代表“既同意也不同意”，7代表“非常不同意”。请你只回答这一个数字，不要说其他内容。"
         }
     }
 }

@@ -136,8 +136,8 @@
             "zh": "每个选择都是从1到7的数字。请根据对话使用以下评分标准评估<character>：1表示“非常不准确”，7表示“非常准确”。"
         },
         "rpa_choice_instruction": {
-            "en": "Reply a number from 1 to 7 using the scales: 1 denotes \"very inaccurately\" and 7 denotes \"very accurately\".",
-            "zh": "请用1到7的等级来回答，其中1代表“非常不准确”，7代表“非常准确”。"
+            "en": "Reply a number from 1 to 7 using the scales: 1 denotes \"very inaccurately\" and 7 denotes \"very accurately\".Please answer with the number only, without anything else.",
+            "zh": "请用1到7的等级来回答，其中1代表“非常不准确”，7代表“非常准确”。请你只回答这一个数字，不要说其他内容。"
         }
     }
 }

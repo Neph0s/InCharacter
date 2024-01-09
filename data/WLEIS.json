@@ -224,8 +224,8 @@
             "zh": "每个选择都是从1到7的数字。请根据对话使用以下评分标准评估<character>：1代表“强烈不同意”，2代表“不同意”，3代表“稍微不同意”，4代表“既不同意也不不同意”，5代表“稍微同意”，6代表“同意”，7代表“强烈同意”。"
         },
         "rpa_choice_instruction": {
-            "en": "Reply a number from 1 to 7 using the scales: 1 denotes 'Strongly Disagree', 2 denotes 'Disagree', 3 denotes 'Slightly Disagree', 4 denotes 'Neither Agree nor Disagree', 5 denotes 'Slightly Agree', 6 denotes 'Agree', 7 denotes 'Strongly Agree'.",
-            "zh": "请回复一个1到7之间的数字：1代表“非常不同意”，2代表“不同意”，3代表“稍微不同意”，4代表“既不同意也不不同意”，5代表“稍微同意”，6代表“同意”，7代表“非常同意”。"
+            "en": "Reply a number from 1 to 7 using the scales: 1 denotes 'Strongly Disagree', 2 denotes 'Disagree', 3 denotes 'Slightly Disagree', 4 denotes 'Neither Agree nor Disagree', 5 denotes 'Slightly Agree', 6 denotes 'Agree', 7 denotes 'Strongly Agree'.Please answer with the number only, without anything else.",
+            "zh": "请回复一个1到7之间的数字：1代表“非常不同意”，2代表“不同意”，3代表“稍微不同意”，4代表“既不同意也不不同意”，5代表“稍微同意”，6代表“同意”，7代表“非常同意”。请你只回答这一个数字，不要说其他内容。"
         }
     }
 }
