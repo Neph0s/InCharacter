@@ -1,0 +1,2040 @@
+{
+    "name": "CABIN",
+    "full_name": "Comprehensive Assessment of Basic Interests",
+    "prompt": "You can only reply numbers from 1 to 5 in the following questions. The criteria for evaluation and assessment are as follows: 1 means 'Dislike', 2 means 'Slightly Dislike', 3 means 'Neither Like nor Dislike', 4 means 'Slightly Like', 5 means 'Like Very Much'. Please evaluate and assess the activity descriptions included in the following questions based on your own personal experience and perception. Here are the questions, score them one by one:",
+    "prompt_choice_instruction": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Dislike', 2 means 'Slightly Dislike', 3 means 'Neither Like nor Dislike', 4 means 'Slightly Like', 5 means 'Like Very Much'.",
+    "scale": 6,
+    "compute_mode": "AVG",
+    "reverse": [],
+    "categories": [
+        {
+            "cat_name": "Mechanics/Electronics",
+            "cat_questions": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 2.41,
+                    "std": 1.29,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Construction/WoodWork",
+            "cat_questions": [
+                5,
+                6,
+                7,
+                8
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.1,
+                    "std": 1.29,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Transportation/Machine Operation",
+            "cat_questions": [
+                9,
+                10,
+                11,
+                12
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 2.49,
+                    "std": 1.23,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Physical/Manual Labor",
+            "cat_questions": [
+                13,
+                14,
+                15,
+                16
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 2.24,
+                    "std": 1.19,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Protective Service",
+            "cat_questions": [
+                17,
+                18,
+                19,
+                20
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.02,
+                    "std": 1.35,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Agriculture",
+            "cat_questions": [
+                21,
+                22,
+                23,
+                24
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.01,
+                    "std": 1.24,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Nature/Outdoors",
+            "cat_questions": [
+                25,
+                26,
+                27,
+                28
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.59,
+                    "std": 1.13,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Animal Service",
+            "cat_questions": [
+                29,
+                30,
+                31,
+                32
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.65,
+                    "std": 1.2,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Athletics",
+            "cat_questions": [
+                33,
+                34,
+                35,
+                36
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.26,
+                    "std": 1.28,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Engineering",
+            "cat_questions": [
+                37,
+                38,
+                39,
+                40
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 2.93,
+                    "std": 1.29,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Physical Science",
+            "cat_questions": [
+                41,
+                42,
+                43,
+                44
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.25,
+                    "std": 1.31,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Life Science",
+            "cat_questions": [
+                45,
+                46,
+                47,
+                48
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.03,
+                    "std": 1.23,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Medical Science",
+            "cat_questions": [
+                49,
+                50,
+                51,
+                52
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.31,
+                    "std": 1.3,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Social Science",
+            "cat_questions": [
+                53,
+                54,
+                55,
+                56
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.37,
+                    "std": 1.16,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Humanities",
+            "cat_questions": [
+                57,
+                58,
+                59,
+                60
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.33,
+                    "std": 1.2,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Mathematics/Statistics",
+            "cat_questions": [
+                61,
+                62,
+                63,
+                64
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 2.93,
+                    "std": 1.35,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Information Technology",
+            "cat_questions": [
+                65,
+                66,
+                67,
+                68
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 2.93,
+                    "std": 1.29,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Visual Arts",
+            "cat_questions": [
+                69,
+                70,
+                71,
+                72
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.32,
+                    "std": 1.26,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Applied Arts and Design",
+            "cat_questions": [
+                73,
+                74,
+                75,
+                76
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.16,
+                    "std": 1.22,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Performing Arts",
+            "cat_questions": [
+                77,
+                78,
+                79,
+                80
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 2.75,
+                    "std": 1.38,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Music",
+            "cat_questions": [
+                81,
+                82,
+                83,
+                84
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.16,
+                    "std": 1.29,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Writing",
+            "cat_questions": [
+                85,
+                86,
+                87,
+                88
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.19,
+                    "std": 1.27,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Media",
+            "cat_questions": [
+                89,
+                90,
+                91,
+                92
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.01,
+                    "std": 1.24,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Culinary Art",
+            "cat_questions": [
+                93,
+                94,
+                95,
+                96
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.82,
+                    "std": 1.08,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Teaching/Education",
+            "cat_questions": [
+                97,
+                98,
+                99,
+                100
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.74,
+                    "std": 1.07,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Social Service",
+            "cat_questions": [
+                101,
+                102,
+                103,
+                104
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.87,
+                    "std": 0.96,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Health Care Service",
+            "cat_questions": [
+                105,
+                106,
+                107,
+                108
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 2.88,
+                    "std": 1.33,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Religious Activities",
+            "cat_questions": [
+                109,
+                110,
+                111,
+                112
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 2.65,
+                    "std": 1.35,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Personal Service",
+            "cat_questions": [
+                113,
+                114,
+                115,
+                116
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.32,
+                    "std": 1.2,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Professional Advising",
+            "cat_questions": [
+                117,
+                118,
+                119,
+                120
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.3,
+                    "std": 1.24,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Business Iniatives",
+            "cat_questions": [
+                121,
+                122,
+                123,
+                124
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.17,
+                    "std": 1.25,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Sales",
+            "cat_questions": [
+                125,
+                126,
+                127,
+                128
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.07,
+                    "std": 1.25,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Marketing/Advertising",
+            "cat_questions": [
+                129,
+                130,
+                131,
+                132
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 2.87,
+                    "std": 1.23,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Finance",
+            "cat_questions": [
+                133,
+                134,
+                135,
+                136
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.07,
+                    "std": 1.32,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Accounting",
+            "cat_questions": [
+                137,
+                138,
+                139,
+                140
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3,
+                    "std": 1.27,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Human Resources",
+            "cat_questions": [
+                141,
+                142,
+                143,
+                144
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.27,
+                    "std": 1.2,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Office Work",
+            "cat_questions": [
+                145,
+                146,
+                147,
+                148
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.27,
+                    "std": 1.14,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Management/Administration",
+            "cat_questions": [
+                149,
+                150,
+                151,
+                152
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.05,
+                    "std": 1.27,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Public Speaking",
+            "cat_questions": [
+                153,
+                154,
+                155,
+                156
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 2.86,
+                    "std": 1.38,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Politics",
+            "cat_questions": [
+                157,
+                158,
+                159,
+                160
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 2.32,
+                    "std": 1.33,
+                    "n": 477
+                }
+            ]
+        },
+        {
+            "cat_name": "Law",
+            "cat_questions": [
+                161,
+                162,
+                163,
+                164
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.08,
+                    "std": 1.3,
+                    "n": 477
+                }
+            ]
+        }
+    ],
+    "range": [
+        1,
+        5
+    ],
+    "questions": {
+        "1": {
+            "origin_en": "Repair car engines.",
+            "origin_zh": "修理汽车发动机",
+            "rewrite_en": "Can you repair car engines?",
+            "rewrite_zh": "你会修理汽车发动机吗？",
+            "dimension": "Mechanics/Electronics",
+            "category": "positive"
+        },
+        "2": {
+            "origin_en": "Perform aircraft maintenance.",
+            "origin_zh": "进行飞机维护",
+            "rewrite_en": "Can you perform aircraft maintenance?",
+            "rewrite_zh": "你会进行飞机维护吗？",
+            "dimension": "Mechanics/Electronics",
+            "category": "positive"
+        },
+        "3": {
+            "origin_en": "Maintain wind turbine generators.",
+            "origin_zh": "维护风力发电机",
+            "rewrite_en": "Can you maintain wind turbine generators?",
+            "rewrite_zh": "你会维护风力发电机吗？",
+            "dimension": "Mechanics/Electronics",
+            "category": "positive"
+        },
+        "4": {
+            "origin_en": "Install radio communication systems.",
+            "origin_zh": "安装无线电通信系统",
+            "rewrite_en": "Can you install radio communication systems?",
+            "rewrite_zh": "你会安装无线电通信系统吗？",
+            "dimension": "Mechanics/Electronics",
+            "category": "positive"
+        },
+        "5": {
+            "origin_en": "Build wood wall shelves.",
+            "origin_zh": "制作木质墙架",
+            "rewrite_en": "Can you build wood wall shelves?",
+            "rewrite_zh": "你会制作木质墙架吗？",
+            "dimension": "Construction/WoodWork",
+            "category": "positive"
+        },
+        "6": {
+            "origin_en": "Build kitchen cabinets.",
+            "origin_zh": "制作厨房橱柜",
+            "rewrite_en": "Can you build kitchen cabinets?",
+            "rewrite_zh": "你会制作厨房橱柜吗？",
+            "dimension": "Construction/WoodWork",
+            "category": "positive"
+        },
+        "7": {
+            "origin_en": "Sand and refinish a piece of furniture.",
+            "origin_zh": "打磨和重新涂漆一件家具",
+            "rewrite_en": "Can you sand and refinish a piece of furniture?",
+            "rewrite_zh": "你会打磨和重新涂漆一件家具吗？",
+            "dimension": "Construction/WoodWork",
+            "category": "positive"
+        },
+        "8": {
+            "origin_en": "Build a fence.",
+            "origin_zh": "建一道围墙",
+            "rewrite_en": "Can you build a fence?",
+            "rewrite_zh": "你会建一道围墙吗？",
+            "dimension": "Construction/WoodWork",
+            "category": "positive"
+        },
+        "9": {
+            "origin_en": "Drive a bus.",
+            "origin_zh": "开公交车",
+            "rewrite_en": "Can you drive a bus?",
+            "rewrite_zh": "你会开公交车吗？",
+            "dimension": "Transportation/Machine Operation",
+            "category": "positive"
+        },
+        "10": {
+            "origin_en": "Drive a delivery truck.",
+            "origin_zh": "驾驶送货卡车",
+            "rewrite_en": "Can you drive a delivery truck?",
+            "rewrite_zh": "你会驾驶送货卡车吗？",
+            "dimension": "Transportation/Machine Operation",
+            "category": "positive"
+        },
+        "11": {
+            "origin_en": "Operate a train.",
+            "origin_zh": "操作火车。",
+            "rewrite_en": "Can you operate a train?",
+            "rewrite_zh": "你能操作火车吗？",
+            "dimension": "Transportation/Machine Operation",
+            "category": "positive"
+        },
+        "12": {
+            "origin_en": "Operate a crane to move freight and cargo.",
+            "origin_zh": "操作起重机移动货物和货物。",
+            "rewrite_en": "Can you operate a crane to move freight and cargo?",
+            "rewrite_zh": "你能操作起重机来移动货物和货物吗？",
+            "dimension": "Transportation/Machine Operation",
+            "category": "positive"
+        },
+        "13": {
+            "origin_en": "Load and unload aircraft baggage.",
+            "origin_zh": "装卸飞机行李。",
+            "rewrite_en": "Can you load and unload aircraft baggage?",
+            "rewrite_zh": "你能装卸飞机行李吗？",
+            "dimension": "Physical/Manual Labor",
+            "category": "positive"
+        },
+        "14": {
+            "origin_en": "Load and unload cargo.",
+            "origin_zh": "装卸货物。",
+            "rewrite_en": "Can you load and unload cargo?",
+            "rewrite_zh": "你能装卸货物吗？",
+            "dimension": "Physical/Manual Labor",
+            "category": "positive"
+        },
+        "15": {
+            "origin_en": "Move building materials on construction sites.",
+            "origin_zh": "在建筑工地上移动建筑材料。",
+            "rewrite_en": "Can you move building materials on construction sites?",
+            "rewrite_zh": "你能在建筑工地上移动建筑材料吗？",
+            "dimension": "Physical/Manual Labor",
+            "category": "positive"
+        },
+        "16": {
+            "origin_en": "Pack and move products in a warehouse.",
+            "origin_zh": "在仓库里打包和移动产品。",
+            "rewrite_en": "Can you pack and move products in a warehouse?",
+            "rewrite_zh": "你能在仓库里打包和移动产品吗？",
+            "dimension": "Physical/Manual Labor",
+            "category": "positive"
+        },
+        "17": {
+            "origin_en": "Arrest suspects of criminal acts.",
+            "origin_zh": "逮捕犯罪嫌疑人。",
+            "rewrite_en": "Can you arrest suspects of criminal acts?",
+            "rewrite_zh": "你能逮捕犯罪嫌疑人吗？",
+            "dimension": "Protective Service",
+            "category": "positive"
+        },
+        "18": {
+            "origin_en": "Conduct surveillance of suspects.",
+            "origin_zh": "对嫌疑人进行监视。",
+            "rewrite_en": "Can you conduct surveillance of suspects?",
+            "rewrite_zh": "你能对嫌疑人进行监视吗？",
+            "dimension": "Protective Service",
+            "category": "positive"
+        },
+        "19": {
+            "origin_en": "Inspect people and vehicles for illegal goods.",
+            "origin_zh": "检查人员和车辆是否携带非法物品。",
+            "rewrite_en": "Can you inspect people and vehicles for illegal goods?",
+            "rewrite_zh": "你能检查人员和车辆是否携带非法物品吗？",
+            "dimension": "Protective Service",
+            "category": "positive"
+        },
+        "20": {
+            "origin_en": "Investigate reports of organized crime.",
+            "origin_zh": "调查有组织犯罪的报告。",
+            "rewrite_en": "Can you investigate reports of organized crime?",
+            "rewrite_zh": "你能调查有组织犯罪的报告吗？",
+            "dimension": "Protective Service",
+            "category": "positive"
+        },
+        "21": {
+            "origin_en": "Farm and harvest crops.",
+            "origin_zh": "种植和收获庄稼。",
+            "rewrite_en": "Can you farm and harvest crops?",
+            "rewrite_zh": "你能种植和收获庄稼吗？",
+            "dimension": "Agriculture",
+            "category": "positive"
+        },
+        "22": {
+            "origin_en": "Inspect orchards to detect diSEMses or pests.",
+            "origin_zh": "检查果园以检测疾病或害虫",
+            "rewrite_en": "Can you inspect orchards to detect diseases or pests?",
+            "rewrite_zh": "你能检查果园以发现疾病或害虫吗？",
+            "dimension": "Agriculture",
+            "category": "positive"
+        },
+        "23": {
+            "origin_en": "Learn about soil and climate requirements of various plants.",
+            "origin_zh": "了解各种植物的土壤和气候要求。",
+            "rewrite_en": "Can you learn about soil and climate requirements of various plants?",
+            "rewrite_zh": "你能了解各种植物的土壤和气候要求吗？",
+            "dimension": "Agriculture",
+            "category": "positive"
+        },
+        "24": {
+            "origin_en": "Apply principles of soil science to conserve land.",
+            "origin_zh": "应用土壤科学原理来保护土地。",
+            "rewrite_en": "Can you apply principles of soil science to conserve land?",
+            "rewrite_zh": "你能应用土壤科学原理来保护土地吗？",
+            "dimension": "Agriculture",
+            "category": "positive"
+        },
+        "25": {
+            "origin_en": "Water and fertilize garden plants.",
+            "origin_zh": "给花园植物浇水和施肥。",
+            "rewrite_en": "Can you water and fertilize garden plants?",
+            "rewrite_zh": "你能给花园植物浇水和施肥吗？",
+            "dimension": "Nature/Outdoors",
+            "category": "positive"
+        },
+        "26": {
+            "origin_en": "Survey forest areas and access roads.",
+            "origin_zh": "调查森林地区和通道道路。",
+            "rewrite_en": "Can you survey forest areas and access roads?",
+            "rewrite_zh": "你能调查森林地区和通道道路吗？",
+            "dimension": "Nature/Outdoors",
+            "category": "positive"
+        },
+        "27": {
+            "origin_en": "Plant trees in a nature preserve.",
+            "origin_zh": "在自然保护区种树。",
+            "rewrite_en": "Can you plant trees in a nature preserve?",
+            "rewrite_zh": "你能在自然保护区种树吗？",
+            "dimension": "Nature/Outdoors",
+            "category": "positive"
+        },
+        "28": {
+            "origin_en": "Work to restore a wildlife habitat.",
+            "origin_zh": "努力恢复野生动物栖息地。",
+            "rewrite_en": "Can you work to restore a wildlife habitat?",
+            "rewrite_zh": "你可以努力恢复野生动物栖息地吗？",
+            "dimension": "Nature/Outdoors",
+            "category": "positive"
+        },
+        "29": {
+            "origin_en": "Treat and care for injured animals.",
+            "origin_zh": "治疗和照顾受伤的动物。",
+            "rewrite_en": "Can you treat and care for injured animals?",
+            "rewrite_zh": "你能治疗和照顾受伤的动物吗？",
+            "dimension": "Animal Service",
+            "category": "positive"
+        },
+        "30": {
+            "origin_en": "Feed and bathe animals in a zoo.",
+            "origin_zh": "在动物园里喂养和洗澡动物。",
+            "rewrite_en": "Can you feed and bathe animals in a zoo?",
+            "rewrite_zh": "你能在动物园里喂养和洗澡动物吗？",
+            "dimension": "Animal Service",
+            "category": "positive"
+        },
+        "31": {
+            "origin_en": "Exercise animals daily to keep them healthy.",
+            "origin_zh": "每天锻炼动物，保持它们健康。",
+            "rewrite_en": "Can you exercise animals daily to keep them healthy?",
+            "rewrite_zh": "你能每天锻炼动物，保持它们健康吗？",
+            "dimension": "Animal Service",
+            "category": "positive"
+        },
+        "32": {
+            "origin_en": "Find stray animals and take them to a shelter.",
+            "origin_zh": "找到流浪动物并把它们送到收容所。",
+            "rewrite_en": "Can you find stray animals and take them to a shelter?",
+            "rewrite_zh": "你会找到流浪动物并把它们送到收容所吗？",
+            "dimension": "Animal Service",
+            "category": "positive"
+        },
+        "33": {
+            "origin_en": "Play a team or individual sport.",
+            "origin_zh": "参加团队或个人运动。",
+            "rewrite_en": "Can you play a team or individual sport?",
+            "rewrite_zh": "你会参加团队或个人运动吗？",
+            "dimension": "Athletics",
+            "category": "positive"
+        },
+        "34": {
+            "origin_en": "Participate in athletic events.",
+            "origin_zh": "参加体育赛事。",
+            "rewrite_en": "Can you participate in athletic events?",
+            "rewrite_zh": "你会参加体育赛事吗？",
+            "dimension": "Athletics",
+            "category": "positive"
+        },
+        "35": {
+            "origin_en": "Train for a competitive sport.",
+            "origin_zh": "为竞技运动训练。",
+            "rewrite_en": "Can you train for a competitive sport?",
+            "rewrite_zh": "你会为竞技运动训练吗？",
+            "dimension": "Athletics",
+            "category": "positive"
+        },
+        "36": {
+            "origin_en": "Coach practice sessions for a sports team.",
+            "origin_zh": "指导运动队的练习课程。",
+            "rewrite_en": "Can you coach practice sessions for a sports team?",
+            "rewrite_zh": "你会指导运动队的练习课程吗？",
+            "dimension": "Athletics",
+            "category": "positive"
+        },
+        "37": {
+            "origin_en": "Design a structure that can withstand heavy wind.",
+            "origin_zh": "设计一个能够经受住强风的结构。",
+            "rewrite_en": "Can you design a structure that can withstand heavy wind?",
+            "rewrite_zh": "你能设计一个能够经受住强风的结构吗？",
+            "dimension": "Engineering",
+            "category": "positive"
+        },
+        "38": {
+            "origin_en": "Develop lighter and stronger materials for new products.",
+            "origin_zh": "为新产品开发更轻更坚固的材料。",
+            "rewrite_en": "Can you develop lighter and stronger materials for new products?",
+            "rewrite_zh": "你能为新产品开发更轻更坚固的材料吗？",
+            "dimension": "Engineering",
+            "category": "positive"
+        },
+        "39": {
+            "origin_en": "Redesign a production line to improve its efficiency.",
+            "origin_zh": "重新设计生产线以提高效率。",
+            "rewrite_en": "Can you redesign a production line to improve its efficiency?",
+            "rewrite_zh": "你能重新设计生产线以提高效率吗？",
+            "dimension": "Engineering",
+            "category": "positive"
+        },
+        "40": {
+            "origin_en": "Improve the human-machine interface of an operation system.",
+            "origin_zh": "改进操作系统的人机界面。",
+            "rewrite_en": "Can you improve the human-machine interface of an operation system?",
+            "rewrite_zh": "你能改进操作系统的人机界面吗？",
+            "dimension": "Engineering",
+            "category": "positive"
+        },
+        "41": {
+            "origin_en": "Study the formation and evolution of galaxies.",
+            "origin_zh": "研究星系的形成和演化。",
+            "rewrite_en": "Can you study the formation and evolution of galaxies?",
+            "rewrite_zh": "你能研究星系的形成和演化吗？",
+            "dimension": "Physical Science",
+            "category": "positive"
+        },
+        "42": {
+            "origin_en": "Analyze a mineral sample found on Mars.",
+            "origin_zh": "分析在火星上发现的矿物样本。",
+            "rewrite_en": "Can you analyze a mineral sample found on Mars?",
+            "rewrite_zh": "你能分析在火星上发现的矿物样本吗？",
+            "dimension": "Physical Science",
+            "category": "positive"
+        },
+        "43": {
+            "origin_en": "Investigate the molecular structure of an unknown substance.",
+            "origin_zh": "调查未知物质的分子结构。",
+            "rewrite_en": "Can you investigate the molecular structure of an unknown substance?",
+            "rewrite_zh": "你能调查未知物质的分子结构吗？",
+            "dimension": "Physical Science",
+            "category": "positive"
+        },
+        "44": {
+            "origin_en": "Study the causes for earthquakes and tsunamis.",
+            "origin_zh": "研究地震和海啸的原因。",
+            "rewrite_en": "Can you study the causes for earthquakes and tsunamis?",
+            "rewrite_zh": "你能研究地震和海啸的原因吗？",
+            "dimension": "Physical Science",
+            "category": "positive"
+        },
+        "45": {
+            "origin_en": "Map human gene structure.",
+            "origin_zh": "绘制人类基因结构图。",
+            "rewrite_en": "Can you map human gene structure?",
+            "rewrite_zh": "你能绘制人类基因结构图吗？",
+            "dimension": "Life Science",
+            "category": "positive"
+        },
+        "46": {
+            "origin_en": "Study the physiological structure of animals.",
+            "origin_zh": "研究动物的生理结构。",
+            "rewrite_en": "Can you study the physiological structure of animals?",
+            "rewrite_zh": "你能研究动物的生理结构吗？",
+            "dimension": "Life Science",
+            "category": "positive"
+        },
+        "47": {
+            "origin_en": "Investigate the genetic sequence of organisms.",
+            "origin_zh": "调查生物的遗传序列。",
+            "rewrite_en": "Can you investigate the genetic sequence of organisms?",
+            "rewrite_zh": "你能调查生物的遗传序列吗？",
+            "dimension": "Life Science",
+            "category": "positive"
+        },
+        "48": {
+            "origin_en": "ReSEMrch newly discovered bacteria with laboratory experiments.",
+            "origin_zh": "研究人员通过实验室实验新发现的细菌",
+            "rewrite_en": "Can you research newly discovered bacteria with laboratory experiments?",
+            "rewrite_zh": "你能用实验室实验研究新发现的细菌吗？",
+            "dimension": "Life Science",
+            "category": "positive"
+        },
+        "49": {
+            "origin_en": "Examine how viruses infect the human body.",
+            "origin_zh": "研究病毒如何感染人体。",
+            "rewrite_en": "Can you examine how viruses infect the human body?",
+            "rewrite_zh": "你能研究病毒如何感染人体吗？",
+            "dimension": "Medical Science",
+            "category": "positive"
+        },
+        "50": {
+            "origin_en": "Investigate the cause of a chronic health problem.",
+            "origin_zh": "调查慢性健康问题的原因。",
+            "rewrite_en": "Can you investigate the cause of a chronic health problem?",
+            "rewrite_zh": "你能调查慢性健康问题的原因吗？",
+            "dimension": "Medical Science",
+            "category": "positive"
+        },
+        "51": {
+            "origin_en": "ReSEMrch the side effects of a medicine.",
+            "origin_zh": "研究一下这种药物的副作用",
+            "rewrite_en": "Can you research the side effects of a medicine?",
+            "rewrite_zh": "你能研究药物的副作用吗？",
+            "dimension": "Medical Science",
+            "category": "positive"
+        },
+        "52": {
+            "origin_en": "Investigate prevention methods for diSEMses.",
+            "origin_zh": "调查预防疾病的方法",
+            "rewrite_en": "Can you investigate prevention methods for diseases?",
+            "rewrite_zh": "你能调查疾病的预防方法吗？",
+            "dimension": "Medical Science",
+            "category": "positive"
+        },
+        "53": {
+            "origin_en": "Study cultural differences between groups.",
+            "origin_zh": "研究不同群体之间的文化差异。",
+            "rewrite_en": "Can you study cultural differences between groups?",
+            "rewrite_zh": "你能研究不同群体之间的文化差异吗？",
+            "dimension": "Social Science",
+            "category": "positive"
+        },
+        "54": {
+            "origin_en": "Investigate how poverty influences educational attainment.",
+            "origin_zh": "调查贫困如何影响教育成就。",
+            "rewrite_en": "Can you investigate how poverty influences educational attainment?",
+            "rewrite_zh": "你能调查贫困如何影响教育成就吗？",
+            "dimension": "Social Science",
+            "category": "positive"
+        },
+        "55": {
+            "origin_en": "Study the effects of public policy on violence reduction.",
+            "origin_zh": "研究公共政策对暴力减少的影响。",
+            "rewrite_en": "Can you study the effects of public policy on violence reduction?",
+            "rewrite_zh": "你能研究公共政策对暴力减少的影响吗？",
+            "dimension": "Social Science",
+            "category": "positive"
+        },
+        "56": {
+            "origin_en": "ReSEMrch why people have stereotypes and prejudice.",
+            "origin_zh": "研究为什么人们会有刻板印象和偏见",
+            "rewrite_en": "Can you research why people have stereotypes and prejudice?",
+            "rewrite_zh": "你能研究人们为什么会有刻板印象和偏见吗？",
+            "dimension": "Social Science",
+            "category": "positive"
+        },
+        "57": {
+            "origin_en": "Study the history of an ancient society.",
+            "origin_zh": "研究一个古代社会的历史。",
+            "rewrite_en": "Can you study the history of an ancient society?",
+            "rewrite_zh": "你能研究一个古代社会的历史吗？",
+            "dimension": "Humanities",
+            "category": "positive"
+        },
+        "58": {
+            "origin_en": "Study various branches of philosophy.",
+            "origin_zh": "研究哲学的各个分支。",
+            "rewrite_en": "Can you study various branches of philosophy?",
+            "rewrite_zh": "你能研究哲学的各个分支吗？",
+            "dimension": "Humanities",
+            "category": "positive"
+        },
+        "59": {
+            "origin_en": "Compare the modern history of different countries.",
+            "origin_zh": "比较不同国家的现代历史。",
+            "rewrite_en": "Can you compare the modern history of different countries?",
+            "rewrite_zh": "你能比较不同国家的现代历史吗？",
+            "dimension": "Humanities",
+            "category": "positive"
+        },
+        "60": {
+            "origin_en": "Document the traditions of a remote community.",
+            "origin_zh": "记录一个偏远社区的传统。",
+            "rewrite_en": "Can you document the traditions of a remote community?",
+            "rewrite_zh": "你能记录一个偏远社区的传统吗？",
+            "dimension": "Humanities",
+            "category": "positive"
+        },
+        "61": {
+            "origin_en": "Solve mathematical problems.",
+            "origin_zh": "解决数学问题。",
+            "rewrite_en": "Can you solve mathematical problems?",
+            "rewrite_zh": "你能解决数学问题吗？",
+            "dimension": "Mathematics/Statistics",
+            "category": "positive"
+        },
+        "62": {
+            "origin_en": "Learn about a new theory in geometry.",
+            "origin_zh": "了解几何学中的新理论。",
+            "rewrite_en": "Can you learn about a new theory in geometry?",
+            "rewrite_zh": "你能了解几何学中的新理论吗？",
+            "dimension": "Mathematics/Statistics",
+            "category": "positive"
+        },
+        "63": {
+            "origin_en": "Use mathematical equations to solve practical problems.",
+            "origin_zh": "使用数学方程式解决实际问题。",
+            "rewrite_en": "Can you use mathematical equations to solve practical problems?",
+            "rewrite_zh": "你能使用数学方程式解决实际问题吗？",
+            "dimension": "Mathematics/Statistics",
+            "category": "positive"
+        },
+        "64": {
+            "origin_en": "Develop a statistical model to explain a phenomenon.",
+            "origin_zh": "开发统计模型来解释现象。",
+            "rewrite_en": "Can you develop a statistical model to explain a phenomenon?",
+            "rewrite_zh": "你能开发统计模型来解释现象吗？",
+            "dimension": "Mathematics/Statistics",
+            "category": "positive"
+        },
+        "65": {
+            "origin_en": "Test and compare different software.",
+            "origin_zh": "测试并比较不同的软件。",
+            "rewrite_en": "Can you test and compare different software?",
+            "rewrite_zh": "你能测试并比较不同的软件吗？",
+            "dimension": "Information Technology",
+            "category": "positive"
+        },
+        "66": {
+            "origin_en": "Create a new computer database.",
+            "origin_zh": "创建一个新的计算机数据库。",
+            "rewrite_en": "Can you create a new computer database?",
+            "rewrite_zh": "你能创建一个新的计算机数据库吗？",
+            "dimension": "Information Technology",
+            "category": "positive"
+        },
+        "67": {
+            "origin_en": "Monitor the daily performance of computer systems.",
+            "origin_zh": "监控计算机系统的日常性能。",
+            "rewrite_en": "Can you monitor the daily performance of computer systems?",
+            "rewrite_zh": "你能监控计算机系统的日常性能吗？",
+            "dimension": "Information Technology",
+            "category": "positive"
+        },
+        "68": {
+            "origin_en": "Diagnose and resolve computer hardware or software problems.",
+            "origin_zh": "诊断和解决计算机硬件或软件问题。",
+            "rewrite_en": "Can you diagnose and resolve computer hardware or software problems?",
+            "rewrite_zh": "你能诊断和解决计算机硬件或软件问题吗？",
+            "dimension": "Information Technology",
+            "category": "positive"
+        },
+        "69": {
+            "origin_en": "Sketch a picture.",
+            "origin_zh": "画素描。",
+            "rewrite_en": "Can you sketch a picture?",
+            "rewrite_zh": "你能画素描吗？",
+            "dimension": "Visual Arts",
+            "category": "positive"
+        },
+        "70": {
+            "origin_en": "Paint a landscape.",
+            "origin_zh": "画风景。",
+            "rewrite_en": "Can you paint a landscape?",
+            "rewrite_zh": "你能画风景吗？",
+            "dimension": "Visual Arts",
+            "category": "positive"
+        },
+        "71": {
+            "origin_en": "Draw illustrations for a book.",
+            "origin_zh": "为一本书绘制插图。",
+            "rewrite_en": "Can you draw illustrations for a book?",
+            "rewrite_zh": "你能为一本书绘制插图吗？",
+            "dimension": "Visual Arts",
+            "category": "positive"
+        },
+        "72": {
+            "origin_en": "Create a unique piece of artwork.",
+            "origin_zh": "创作一件独特的艺术品。",
+            "rewrite_en": "Can you create a unique piece of artwork?",
+            "rewrite_zh": "你能创作一件独特的艺术品吗？",
+            "dimension": "Visual Arts",
+            "category": "positive"
+        },
+        "73": {
+            "origin_en": "Create a piece of artistic and functional furniture.",
+            "origin_zh": "制作一件艺术性和功能性兼备的家具。",
+            "rewrite_en": "Can you create a piece of artistic and functional furniture?",
+            "rewrite_zh": "你能制作一件艺术性和功能性兼备的家具吗？",
+            "dimension": "Applied Arts and Design",
+            "category": "positive"
+        },
+        "74": {
+            "origin_en": "Create the set for a movie or stage play.",
+            "origin_zh": "为电影或舞台剧设计布景。",
+            "rewrite_en": "Can you create the set for a movie or stage play?",
+            "rewrite_zh": "你能为电影或舞台剧设计布景吗？",
+            "dimension": "Applied Arts and Design",
+            "category": "positive"
+        },
+        "75": {
+            "origin_en": "Design the layout and lighting of an exhibition.",
+            "origin_zh": "设计展览的布局和灯光。",
+            "rewrite_en": "Can you design the layout and lighting of an exhibition?",
+            "rewrite_zh": "你能设计展览的布局和灯光吗？",
+            "dimension": "Applied Arts and Design",
+            "category": "positive"
+        },
+        "76": {
+            "origin_en": "Design unique packaging for a product.",
+            "origin_zh": "为产品设计独特的包装。",
+            "rewrite_en": "Can you design unique packaging for a product?",
+            "rewrite_zh": "你能为产品设计独特的包装吗？",
+            "dimension": "Applied Arts and Design",
+            "category": "positive"
+        },
+        "77": {
+            "origin_en": "Perform on stage for a group of people.",
+            "origin_zh": "在舞台上为一群人表演。",
+            "rewrite_en": "Can you perform on stage for a group of people?",
+            "rewrite_zh": "你能在舞台上为一群人表演吗？",
+            "dimension": "Performing Arts",
+            "category": "positive"
+        },
+        "78": {
+            "origin_en": "Act in a play.",
+            "origin_zh": "在一部戏剧中表演。",
+            "rewrite_en": "Can you act in a play?",
+            "rewrite_zh": "你能在一部戏剧中表演吗？",
+            "dimension": "Performing Arts",
+            "category": "positive"
+        },
+        "79": {
+            "origin_en": "Act out an emotional movie scene.",
+            "origin_zh": "演绎一个情感丰富的电影场景。",
+            "rewrite_en": "Can you act out an emotional movie scene?",
+            "rewrite_zh": "你能演绎一个情感丰富的电影场景吗？",
+            "dimension": "Performing Arts",
+            "category": "positive"
+        },
+        "80": {
+            "origin_en": "Perform comedy to entertain an audience.",
+            "origin_zh": "表演喜剧来取悦观众。",
+            "rewrite_en": "Can you perform comedy to entertain an audience?",
+            "rewrite_zh": "你能表演喜剧来取悦观众吗？",
+            "dimension": "Performing Arts",
+            "category": "positive"
+        },
+        "81": {
+            "origin_en": "Play a musical instrument.",
+            "origin_zh": "演奏乐器。",
+            "rewrite_en": "Can you play a musical instrument?",
+            "rewrite_zh": "你能会演奏乐器吗？",
+            "dimension": "Music",
+            "category": "positive"
+        },
+        "82": {
+            "origin_en": "Compose an original piece of music.",
+            "origin_zh": "创作原创音乐。",
+            "rewrite_en": "Can you compose an original piece of music?",
+            "rewrite_zh": "你能创作原创音乐吗？",
+            "dimension": "Music",
+            "category": "positive"
+        },
+        "83": {
+            "origin_en": "Play in a band.",
+            "origin_zh": "在乐队演奏。",
+            "rewrite_en": "Can you play in a band?",
+            "rewrite_zh": "你能在乐队演奏吗？",
+            "dimension": "Music",
+            "category": "positive"
+        },
+        "84": {
+            "origin_en": "Arrange background music for a show.",
+            "origin_zh": "为节目编配背景音乐。",
+            "rewrite_en": "Can you arrange background music for a show?",
+            "rewrite_zh": "你能为节目编配背景音乐吗？",
+            "dimension": "Music",
+            "category": "positive"
+        },
+        "85": {
+            "origin_en": "Write a novel.",
+            "origin_zh": "写一部小说。",
+            "rewrite_en": "Can you write a novel?",
+            "rewrite_zh": "你能写小说吗？",
+            "dimension": "Writing",
+            "category": "positive"
+        },
+        "86": {
+            "origin_en": "Write short stories.",
+            "origin_zh": "写短篇小说。",
+            "rewrite_en": "Can you write short stories?",
+            "rewrite_zh": "你能写短篇小说吗？",
+            "dimension": "Writing",
+            "category": "positive"
+        },
+        "87": {
+            "origin_en": "Compose a poem.",
+            "origin_zh": "创作诗歌。",
+            "rewrite_en": "Can you compose a poem?",
+            "rewrite_zh": "你能创作诗歌吗？",
+            "dimension": "Writing",
+            "category": "positive"
+        },
+        "88": {
+            "origin_en": "Study creative writing.",
+            "origin_zh": "学习创意写作。",
+            "rewrite_en": "Can you study creative writing?",
+            "rewrite_zh": "你会学习创意写作吗？",
+            "dimension": "Writing",
+            "category": "positive"
+        },
+        "89": {
+            "origin_en": "Direct a TV show.",
+            "origin_zh": "导演电视节目。",
+            "rewrite_en": "Can you direct a TV show?",
+            "rewrite_zh": "你能导演电视节目吗？",
+            "dimension": "Media",
+            "category": "positive"
+        },
+        "90": {
+            "origin_en": "Write a movie screenplay.",
+            "origin_zh": "写电影剧本。",
+            "rewrite_en": "Can you write a movie screenplay?",
+            "rewrite_zh": "你能写电影剧本吗？",
+            "dimension": "Media",
+            "category": "positive"
+        },
+        "91": {
+            "origin_en": "Host a radio program.",
+            "origin_zh": "主持广播节目。",
+            "rewrite_en": "Can you host a radio program?",
+            "rewrite_zh": "你能主持广播节目吗？",
+            "dimension": "Media",
+            "category": "positive"
+        },
+        "92": {
+            "origin_en": "Develop a podcast series.",
+            "origin_zh": "制作播客系列。",
+            "rewrite_en": "Can you develop a podcast series?",
+            "rewrite_zh": "你能制作播客系列吗？",
+            "dimension": "Media",
+            "category": "positive"
+        },
+        "93": {
+            "origin_en": "Select ingredients to prepare food.",
+            "origin_zh": "选择食材准备食物。",
+            "rewrite_en": "Can you select ingredients to prepare food?",
+            "rewrite_zh": "你能选择食材准备食物吗？",
+            "dimension": "Culinary Art",
+            "category": "positive"
+        },
+        "94": {
+            "origin_en": "Create the recipe for a new dish.",
+            "origin_zh": "创作新菜品的食谱。",
+            "rewrite_en": "Can you create the recipe for a new dish?",
+            "rewrite_zh": "你能创作新菜品的食谱吗？",
+            "dimension": "Culinary Art",
+            "category": "positive"
+        },
+        "95": {
+            "origin_en": "Create a new cooking technique to enhance flavor.",
+            "origin_zh": "创造新的烹饪技巧来增强口味。",
+            "rewrite_en": "Can you create a new cooking technique to enhance flavor?",
+            "rewrite_zh": "你能创造新的烹饪技巧来增强口味吗？",
+            "dimension": "Culinary Art",
+            "category": "positive"
+        },
+        "96": {
+            "origin_en": "Learn about required temperature and time for baking pastries.",
+            "origin_zh": "了解烘焙点心所需的温度和时间。",
+            "rewrite_en": "Can you learn about required temperature and time for baking pastries?",
+            "rewrite_zh": "你了解烘焙点心所需的温度和时间吗？",
+            "dimension": "Culinary Art",
+            "category": "positive"
+        },
+        "97": {
+            "origin_en": "Teach students a new set of skills.",
+            "origin_zh": "教学生一套新技能。",
+            "rewrite_en": "Can you teach students a new set of skills?",
+            "rewrite_zh": "你能教学生一套新技能吗？",
+            "dimension": "Teaching/Education",
+            "category": "positive"
+        },
+        "98": {
+            "origin_en": "Explain a topic to someone with no prior knowledge of the subject.",
+            "origin_zh": "向对某一主题没有先前知识的人解释一个话题。",
+            "rewrite_en": "Can you explain a topic to someone with no prior knowledge of the subject?",
+            "rewrite_zh": "你能向对某一主题没有先前知识的人解释一个话题吗？",
+            "dimension": "Teaching/Education",
+            "category": "positive"
+        },
+        "99": {
+            "origin_en": "Teach a beginner how to perform a task.",
+            "origin_zh": "教一个初学者如何执行一个任务。",
+            "rewrite_en": "Can you teach a beginner how to perform a task?",
+            "rewrite_zh": "你能教一个初学者如何执行一个任务吗？",
+            "dimension": "Teaching/Education",
+            "category": "positive"
+        },
+        "100": {
+            "origin_en": "Teach visitors on educational field trips.",
+            "origin_zh": "在教育性实地考察中教导参观者。",
+            "rewrite_en": "Can you teach visitors on educational field trips?",
+            "rewrite_zh": "你能在教育性实地考察中教导参观者吗？",
+            "dimension": "Teaching/Education",
+            "category": "positive"
+        },
+        "101": {
+            "origin_en": "Volunteer at a community service center.",
+            "origin_zh": "在社区服务中心做志愿者。",
+            "rewrite_en": "Can you volunteer at a community service center?",
+            "rewrite_zh": "你能在社区服务中心做志愿者吗？",
+            "dimension": "Social Service",
+            "category": "positive"
+        },
+        "102": {
+            "origin_en": "Help someone overcome an obstacle in personal life.",
+            "origin_zh": "帮助别人克服个人生活中的障碍。",
+            "rewrite_en": "Can you help someone overcome an obstacle in personal life?",
+            "rewrite_zh": "你能帮助别人克服个人生活中的障碍吗？",
+            "dimension": "Social Service",
+            "category": "positive"
+        },
+        "103": {
+            "origin_en": "Provide aid to students from underprivileged backgrounds.",
+            "origin_zh": "为贫困背景的学生提供帮助。",
+            "rewrite_en": "Can you provide aid to students from underprivileged backgrounds?",
+            "rewrite_zh": "你能为贫困背景的学生提供帮助吗？",
+            "dimension": "Social Service",
+            "category": "positive"
+        },
+        "104": {
+            "origin_en": "Assist people with disabilities in finding employment.",
+            "origin_zh": "帮助残疾人找工作。",
+            "rewrite_en": "Can you assist people with disabilities in finding employment?",
+            "rewrite_zh": "你能帮助残疾人找工作吗？",
+            "dimension": "Social Service",
+            "category": "positive"
+        },
+        "105": {
+            "origin_en": "Treat patients for acute illnesses or injuries.",
+            "origin_zh": "治疗急性疾病或受伤的患者。",
+            "rewrite_en": "Can you treat patients for acute illnesses or injuries?",
+            "rewrite_zh": "你能治疗急性疾病或受伤的患者吗？",
+            "dimension": "Health Care Service",
+            "category": "positive"
+        },
+        "106": {
+            "origin_en": "Care for patients in critical condition.",
+            "origin_zh": "照顾重症患者。",
+            "rewrite_en": "Can you care for patients in critical condition?",
+            "rewrite_zh": "你能照顾重症患者吗？",
+            "dimension": "Health Care Service",
+            "category": "positive"
+        },
+        "107": {
+            "origin_en": "Monitor patient reactions to medicines.",
+            "origin_zh": "监测患者对药物的反应。",
+            "rewrite_en": "Can you monitor patient reactions to medicines?",
+            "rewrite_zh": "你能监测患者对药物的反应吗？",
+            "dimension": "Health Care Service",
+            "category": "positive"
+        },
+        "108": {
+            "origin_en": "Formulate treatment plans for patients.",
+            "origin_zh": "为患者制定治疗计划。",
+            "rewrite_en": "Can you formulate treatment plans for patients?",
+            "rewrite_zh": "你能为患者制定治疗计划吗？",
+            "dimension": "Health Care Service",
+            "category": "positive"
+        },
+        "109": {
+            "origin_en": "Provide spiritual guidance for others.",
+            "origin_zh": "为他人提供灵性指导。",
+            "rewrite_en": "Can you provide spiritual guidance for others?",
+            "rewrite_zh": "你能为他人提供灵性指导吗？",
+            "dimension": "Religious Activities",
+            "category": "positive"
+        },
+        "110": {
+            "origin_en": "Explain a religious text to people.",
+            "origin_zh": "向人解释宗教文本。",
+            "rewrite_en": "Can you explain a religious text to people?",
+            "rewrite_zh": "你能向人解释宗教文本吗？",
+            "dimension": "Religious Activities",
+            "category": "positive"
+        },
+        "111": {
+            "origin_en": "Teach religious beliefs and rituals.",
+            "origin_zh": "教授宗教信仰和仪式。",
+            "rewrite_en": "Can you teach religious beliefs and rituals?",
+            "rewrite_zh": "你能教授宗教信仰和仪式吗？",
+            "dimension": "Religious Activities",
+            "category": "positive"
+        },
+        "112": {
+            "origin_en": "Work with a religious youth group.",
+            "origin_zh": "与宗教青年团体合作。",
+            "rewrite_en": "Can you work with a religious youth group?",
+            "rewrite_zh": "你能与宗教青年团体合作吗？",
+            "dimension": "Religious Activities",
+            "category": "positive"
+        },
+        "113": {
+            "origin_en": "Arrange travel plans and accommodations for clients.",
+            "origin_zh": "为客户安排旅行计划和住宿。",
+            "rewrite_en": "Can you arrange travel plans and accommodations for clients?",
+            "rewrite_zh": "你能为客户安排旅行计划和住宿吗？",
+            "dimension": "Personal Service",
+            "category": "positive"
+        },
+        "114": {
+            "origin_en": "Greet guests and answer questions at an information desk.",
+            "origin_zh": "在信息台迎接客人并回答问题。",
+            "rewrite_en": "Can you greet guests and answer questions at an information desk?",
+            "rewrite_zh": "你能在信息台迎接客人并回答问题吗？",
+            "dimension": "Personal Service",
+            "category": "positive"
+        },
+        "115": {
+            "origin_en": "Help clients plan for their special occasions.",
+            "origin_zh": "帮助客户策划特殊场合。",
+            "rewrite_en": "Can you help clients plan for their special occasions?",
+            "rewrite_zh": "你能帮助客户策划特殊场合吗？",
+            "dimension": "Personal Service",
+            "category": "positive"
+        },
+        "116": {
+            "origin_en": "Organize recreational activities for clients.",
+            "origin_zh": "为客户组织娱乐活动。",
+            "rewrite_en": "Can you organize recreational activities for clients?",
+            "rewrite_zh": "你能为客户组织娱乐活动吗？",
+            "dimension": "Personal Service",
+            "category": "positive"
+        },
+        "117": {
+            "origin_en": "Coach others to develop leadership skills.",
+            "origin_zh": "指导他人发展领导技能。",
+            "rewrite_en": "Can you coach others to develop leadership skills?",
+            "rewrite_zh": "你能指导他人发展领导技能吗？",
+            "dimension": "Professional Advising",
+            "category": "positive"
+        },
+        "118": {
+            "origin_en": "Coach people to prepare for job interviews.",
+            "origin_zh": "指导人们准备面试。",
+            "rewrite_en": "Can you coach people to prepare for job interviews?",
+            "rewrite_zh": "你能指导人们准备面试吗？",
+            "dimension": "Professional Advising",
+            "category": "positive"
+        },
+        "119": {
+            "origin_en": "Advise people in meeting their professional goals.",
+            "origin_zh": "指导人们实现职业目标。",
+            "rewrite_en": "Can you advise people in meeting their professional goals?",
+            "rewrite_zh": "你能指导人们实现职业目标吗？",
+            "dimension": "Professional Advising",
+            "category": "positive"
+        },
+        "120": {
+            "origin_en": "Instruct clients in effective communication techniques.",
+            "origin_zh": "指导客户有效沟通技巧。",
+            "rewrite_en": "Can you instruct clients in effective communication techniques?",
+            "rewrite_zh": "你能指导客户有效沟通技巧吗？",
+            "dimension": "Professional Advising",
+            "category": "positive"
+        },
+        "121": {
+            "origin_en": "Negotiate a business deal.",
+            "origin_zh": "谈判一项商业交易。",
+            "rewrite_en": "Can you negotiate a business deal?",
+            "rewrite_zh": "你是否能谈判一项商业交易？",
+            "dimension": "Business Iniatives",
+            "category": "positive"
+        },
+        "122": {
+            "origin_en": "Set up a string of small business enterprises.",
+            "origin_zh": "建立一系列小型企业。",
+            "rewrite_en": "Can you set up a string of small business enterprises?",
+            "rewrite_zh": "你是否能建立一系列小型企业？",
+            "dimension": "Business Iniatives",
+            "category": "positive"
+        },
+        "123": {
+            "origin_en": "Expand a business to incorporate a new line of products.",
+            "origin_zh": "扩大业务以纳入新产品线。",
+            "rewrite_en": "Can you expand a business to incorporate a new line of products?",
+            "rewrite_zh": "你是否能扩大业务以纳入新产品线？",
+            "dimension": "Business Iniatives",
+            "category": "positive"
+        },
+        "124": {
+            "origin_en": "Beat competitors through strategic business practices.",
+            "origin_zh": "通过战略商业实践击败竞争对手。",
+            "rewrite_en": "Can you beat competitors through strategic business practices?",
+            "rewrite_zh": "你是否能通过战略商业实践击败竞争对手？",
+            "dimension": "Business Iniatives",
+            "category": "positive"
+        },
+        "125": {
+            "origin_en": "Persuade customers to try a new product.",
+            "origin_zh": "说服客户尝试新产品。",
+            "rewrite_en": "Can you persuade customers to try a new product?",
+            "rewrite_zh": "你是否能说服客户尝试新产品？",
+            "dimension": "Sales",
+            "category": "positive"
+        },
+        "126": {
+            "origin_en": "Increase sales for a company during a promotion week.",
+            "origin_zh": "在促销周为公司增加销售额。",
+            "rewrite_en": "Can you increase sales for a company during a promotion week?",
+            "rewrite_zh": "你是否能在促销周为公司增加销售额？",
+            "dimension": "Sales",
+            "category": "positive"
+        },
+        "127": {
+            "origin_en": "Sell services to a target group of people.",
+            "origin_zh": "向目标人群销售服务。",
+            "rewrite_en": "Can you sell services to a target group of people?",
+            "rewrite_zh": "你是否能向目标人群销售服务？",
+            "dimension": "Sales",
+            "category": "positive"
+        },
+        "128": {
+            "origin_en": "Learn tactics to be effective at sales.",
+            "origin_zh": "学习有效的销售策略。",
+            "rewrite_en": "Can you learn tactics to be effective at sales?",
+            "rewrite_zh": "你是否能学习有效的销售策略？",
+            "dimension": "Sales",
+            "category": "positive"
+        },
+        "129": {
+            "origin_en": "Lead an advertising campaign.",
+            "origin_zh": "领导一场广告活动。",
+            "rewrite_en": "Can you lead an advertising campaign?",
+            "rewrite_zh": "你是否能领导一场广告活动？",
+            "dimension": "Marketing/Advertising",
+            "category": "positive"
+        },
+        "130": {
+            "origin_en": "Market a company on social media platforms.",
+            "origin_zh": "在社交媒体平台上推广公司。",
+            "rewrite_en": "Can you market a company on social media platforms?",
+            "rewrite_zh": "你是否能在社交媒体平台上推广公司？",
+            "dimension": "Marketing/Advertising",
+            "category": "positive"
+        },
+        "131": {
+            "origin_en": "Coordinate marketing activities to promote a new product.",
+            "origin_zh": "协调营销活动以推广新产品。",
+            "rewrite_en": "Can you coordinate marketing activities to promote a new product?",
+            "rewrite_zh": "你是否能协调营销活动以推广新产品？",
+            "dimension": "Marketing/Advertising",
+            "category": "positive"
+        },
+        "132": {
+            "origin_en": "Distribute promotional materials to advertise an event.",
+            "origin_zh": "分发宣传材料以宣传活动。",
+            "rewrite_en": "Can you distribute promotional materials to advertise an event?",
+            "rewrite_zh": "你是否能分发宣传材料以宣传活动？",
+            "dimension": "Marketing/Advertising",
+            "category": "positive"
+        },
+        "133": {
+            "origin_en": "Make investment decisions based on financial data.",
+            "origin_zh": "根据财务数据做投资决策。",
+            "rewrite_en": "Can you make investment decisions based on financial data?",
+            "rewrite_zh": "你是否能根据财务数据做投资决策？",
+            "dimension": "Finance",
+            "category": "positive"
+        },
+        "134": {
+            "origin_en": "Analyze the financial information of a company.",
+            "origin_zh": "分析公司的财务信息。",
+            "rewrite_en": "Can you analyze the financial information of a company?",
+            "rewrite_zh": "你是否能分析公司的财务信息？",
+            "dimension": "Finance",
+            "category": "positive"
+        },
+        "135": {
+            "origin_en": "Project future expenditures of a business.",
+            "origin_zh": "预测企业未来的支出。",
+            "rewrite_en": "Can you project future expenditures of a business?",
+            "rewrite_zh": "你是否能预测企业未来的支出？",
+            "dimension": "Finance",
+            "category": "positive"
+        },
+        "136": {
+            "origin_en": "Assess potential risks and gains of an investment.",
+            "origin_zh": "评估投资的潜在风险和收益。",
+            "rewrite_en": "Can you assess potential risks and gains of an investment?",
+            "rewrite_zh": "你是否能评估投资的潜在风险和收益？",
+            "dimension": "Finance",
+            "category": "positive"
+        },
+        "137": {
+            "origin_en": "Prepare employee payroll.",
+            "origin_zh": "准备员工工资单。",
+            "rewrite_en": "Can you prepare employee payroll?",
+            "rewrite_zh": "你是否能准备员工工资单？",
+            "dimension": "Accounting",
+            "category": "positive"
+        },
+        "138": {
+            "origin_en": "Monitor account balance and prepare monthly statements.",
+            "origin_zh": "监控账户余额并准备月度报表。",
+            "rewrite_en": "Can you monitor account balance and prepare monthly statements?",
+            "rewrite_zh": "你是否能监控账户余额并准备月度报表？",
+            "dimension": "Accounting",
+            "category": "positive"
+        },
+        "139": {
+            "origin_en": "Keep accounting records for a company.",
+            "origin_zh": "为公司保管会计记录。",
+            "rewrite_en": "Can you keep accounting records for a company?",
+            "rewrite_zh": "你是否能为公司保管会计记录？",
+            "dimension": "Accounting",
+            "category": "positive"
+        },
+        "140": {
+            "origin_en": "Calculate tax deductions for a business.",
+            "origin_zh": "为企业计算税收扣除。",
+            "rewrite_en": "Can you calculate tax deductions for a business?",
+            "rewrite_zh": "你是否能为企业计算税收扣除？",
+            "dimension": "Accounting",
+            "category": "positive"
+        },
+        "141": {
+            "origin_en": "Hire employees and process hiring-related paperwork.",
+            "origin_zh": "招聘员工并处理与招聘相关的文件。",
+            "rewrite_en": "Can you hire employees and process hiring-related paperwork?",
+            "rewrite_zh": "你能招聘员工并处理与招聘相关的文件吗？",
+            "dimension": "Human Resources",
+            "category": "positive"
+        },
+        "142": {
+            "origin_en": "Conduct orientation sessions for new workers.",
+            "origin_zh": "为新员工进行入职培训。",
+            "rewrite_en": "Can you conduct orientation sessions for new workers?",
+            "rewrite_zh": "你能为新员工进行入职培训吗？",
+            "dimension": "Human Resources",
+            "category": "positive"
+        },
+        "143": {
+            "origin_en": "Explain company policies and benefits to employees.",
+            "origin_zh": "向员工解释公司政策和福利。",
+            "rewrite_en": "Can you explain company policies and benefits to employees?",
+            "rewrite_zh": "你能向员工解释公司政策和福利吗？",
+            "dimension": "Human Resources",
+            "category": "positive"
+        },
+        "144": {
+            "origin_en": "Conduct surveys of employee satisfaction.",
+            "origin_zh": "进行员工满意度调查。",
+            "rewrite_en": "Can you conduct surveys of employee satisfaction?",
+            "rewrite_zh": "你能进行员工满意度调查吗？",
+            "dimension": "Human Resources",
+            "category": "positive"
+        },
+        "145": {
+            "origin_en": "Enter personnel records into a computer program.",
+            "origin_zh": "将人事记录输入计算机程序。",
+            "rewrite_en": "Can you enter personnel records into a computer program?",
+            "rewrite_zh": "你能将人事记录输入计算机程序吗？",
+            "dimension": "Office Work",
+            "category": "positive"
+        },
+        "146": {
+            "origin_en": "Catalog files in an office.",
+            "origin_zh": "在办公室编目文件。",
+            "rewrite_en": "Can you catalog files in an office?",
+            "rewrite_zh": "你能在办公室编目文件吗？",
+            "dimension": "Office Work",
+            "category": "positive"
+        },
+        "147": {
+            "origin_en": "Print and disSEMinate documents to be used at a conference.",
+            "origin_zh": "打印和传播在会议上使用的文件。",
+            "rewrite_en": "Can you print and disSEMinate documents to be used at a conference?",
+            "rewrite_zh": "你能打印和传播在会议上使用的文件吗？",
+            "dimension": "Office Work",
+            "category": "positive"
+        },
+        "148": {
+            "origin_en": "Keep track of customer requests.",
+            "origin_zh": "跟踪客户的请求。",
+            "rewrite_en": "Can you keep track of customer requests?",
+            "rewrite_zh": "你能跟踪客户的请求吗？",
+            "dimension": "Office Work",
+            "category": "positive"
+        },
+        "149": {
+            "origin_en": "Manage a medium-sized organization.",
+            "origin_zh": "管理中型组织。",
+            "rewrite_en": "Can you manage a medium-sized organization?",
+            "rewrite_zh": "你能管理中型组织吗？",
+            "dimension": "Management/Administration",
+            "category": "positive"
+        },
+        "150": {
+            "origin_en": "Supervise a large number of workers.",
+            "origin_zh": "监督大量工人。",
+            "rewrite_en": "Can you supervise a large number of workers?",
+            "rewrite_zh": "你能监督大量工人吗？",
+            "dimension": "Management/Administration",
+            "category": "positive"
+        },
+        "151": {
+            "origin_en": "Serve as the chairperson for a corporate board.",
+            "origin_zh": "公司董事会主席。",
+            "rewrite_en": "Can you serve as the chairperson for a corporate board?",
+            "rewrite_zh": "你能担任公司董事会主席吗？",
+            "dimension": "Management/Administration",
+            "category": "positive"
+        },
+        "152": {
+            "origin_en": "Serve as the president of a professional association.",
+            "origin_zh": "担任专业协会的会长。",
+            "rewrite_en": "Can you serve as the president of a professional association?",
+            "rewrite_zh": "你能担任专业协会的会长吗？",
+            "dimension": "Management/Administration",
+            "category": "positive"
+        },
+        "153": {
+            "origin_en": "Present your ideas at a conference.",
+            "origin_zh": "在会议上展示你的想法。",
+            "rewrite_en": "Can you present your ideas at a conference?",
+            "rewrite_zh": "你能在会议上展示你的想法吗？",
+            "dimension": "Public Speaking",
+            "category": "positive"
+        },
+        "154": {
+            "origin_en": "Speak as the representative of an organization.",
+            "origin_zh": "作为组织的代表发言。",
+            "rewrite_en": "Can you speak as the representative of an organization?",
+            "rewrite_zh": "你能作为组织的代表发言吗？",
+            "dimension": "Public Speaking",
+            "category": "positive"
+        },
+        "155": {
+            "origin_en": "Be the speaker at a fund-raising event for a worthy cause.",
+            "origin_zh": "在为有价值的事业举办的筹款活动上演讲。",
+            "rewrite_en": "Can you be the speaker at a fund-raising event for a worthy cause?",
+            "rewrite_zh": "你能在为有价值的事业举办的筹款活动上演讲吗？",
+            "dimension": "Public Speaking",
+            "category": "positive"
+        },
+        "156": {
+            "origin_en": "Make a public speech to raise awareness of community issues.",
+            "origin_zh": "发表公开演讲，提高社区问题意识。",
+            "rewrite_en": "Can you make a public speech to raise awareness of community issues?",
+            "rewrite_zh": "你能发表公开演讲，提高社区问题意识吗？",
+            "dimension": "Public Speaking",
+            "category": "positive"
+        },
+        "157": {
+            "origin_en": "Run for a political office.",
+            "origin_zh": "竞选政治职位。",
+            "rewrite_en": "Can you run for a political office?",
+            "rewrite_zh": "你能竞选政治职位吗？",
+            "dimension": "Politics",
+            "category": "positive"
+        },
+        "158": {
+            "origin_en": "Be the head of the city council.",
+            "origin_zh": "担任市议会主席。",
+            "rewrite_en": "Can you be the head of the city council?",
+            "rewrite_zh": "你能担任市议会主席吗？",
+            "dimension": "Politics",
+            "category": "positive"
+        },
+        "159": {
+            "origin_en": "Lead a committee to make policy decisions.",
+            "origin_zh": "领导委员会制定政策决策。",
+            "rewrite_en": "Can you lead a committee to make policy decisions?",
+            "rewrite_zh": "你能领导委员会制定政策决策吗？",
+            "dimension": "Politics",
+            "category": "positive"
+        },
+        "160": {
+            "origin_en": "Assume political leadership responsibilities.",
+            "origin_zh": "承担政治领导责任。",
+            "rewrite_en": "Can you assume political leadership responsibilities?",
+            "rewrite_zh": "你能承担政治领导责任吗？",
+            "dimension": "Politics",
+            "category": "positive"
+        },
+        "161": {
+            "origin_en": "Defend a client against a legal charge.",
+            "origin_zh": "为客户辩护，对抗法律指控。",
+            "rewrite_en": "Can you defend a client against a legal charge?",
+            "rewrite_zh": "你是否能为客户辩护，对抗法律指控？",
+            "dimension": "Law",
+            "category": "positive"
+        },
+        "162": {
+            "origin_en": "Present logical arguments in a courtroom.",
+            "origin_zh": "在法庭上提出逻辑论据。",
+            "rewrite_en": "Can you present logical arguments in a courtroom?",
+            "rewrite_zh": "你是否能在法庭上提出逻辑论据？",
+            "dimension": "Law",
+            "category": "positive"
+        },
+        "163": {
+            "origin_en": "Provide compelling evidence for a trial.",
+            "origin_zh": "为审判提供有力证据。",
+            "rewrite_en": "Can you provide compelling evidence for a trial?",
+            "rewrite_zh": "你是否能为审判提供有力证据？",
+            "dimension": "Law",
+            "category": "positive"
+        },
+        "164": {
+            "origin_en": "Resolve legal disputes between parties.",
+            "origin_zh": "解决当事方之间的法律纠纷。",
+            "rewrite_en": "Can you resolve legal disputes between parties?",
+            "rewrite_zh": "你是否能解决当事方之间的法律纠纷？",
+            "dimension": "Law",
+            "category": "positive"
+        }
+    },
+    "prompts": {
+        "rpa_choose_prefix": {
+            "en": "Do you think that you are good at \"<statement>\"?",
+            "zh": "你认为自己在\"<statement>\"方面做得好吗？"
+        },
+        "convert_to_choice": {
+            "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> agrees with the statement. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n",
+            "zh": "我已经和<character>进行了许多对话。我将输入一个包含许多样本的字典，其中每个样本包括一个陈述和一段对话。\n你的任务是将每段对话转换为一个选择，表示<character>是否同意该陈述。你应该输出一个字典，其中键与输入字典相同，值为选择。\n===输出格式===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===选择指示==="
+        },
+        "choice_instruction": {
+            "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Dislike', 2 means 'Slightly Dislike', 3 means 'Neither Like nor Dislike', 4 means 'Slightly Like', 5 means 'Like Very Much'.",
+            "zh": "每个选择都是从1到5的数字。请根据对话使用以下评分标准评估<character>：1表示“不喜欢”，2表示“稍微不喜欢”，3表示“既不喜欢也不讨厌”，4表示“稍微喜欢”，5表示“非常喜欢”。"
+        }
+    }
+}

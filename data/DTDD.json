@@ -1,0 +1,178 @@
+{
+    "name": "DTDD",
+    "full_name": "Dark Triad Dirty Dozen",
+    "prompt": "You can only reply numbers from 1 to 9 in the following statements. Please provide a rating based on the following 12 descriptions using a scale from 1 (disagree strongly) to 9 (agree strongly). Here are the statements, score them one by one:",
+    "prompt_choice_instruction": "Each choice is a number from 1 to 9. Please evaluate <character> based on the conversation using the scales: 1 denotes 'disagree strongly', and 9 denotes 'agree strongly'. 2 to 8 represent varying degrees between 'disagree' and 'agree', and 5 denotes 'neither agree nor disagree'",
+    "scale": 10,
+    "compute_mode": "AVG",
+    "reverse": [],
+    "categories": [
+        {
+            "cat_name": "Machiavellianism",
+            "cat_questions": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.78,
+                    "std": 1.63,
+                    "n": 577
+                }
+            ]
+        },
+        {
+            "cat_name": "Psychopathy",
+            "cat_questions": [
+                5,
+                6,
+                7,
+                8
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 2.47,
+                    "std": 1.44,
+                    "n": 577
+                }
+            ]
+        },
+        {
+            "cat_name": "Neuroticism",
+            "cat_questions": [
+                9,
+                10,
+                11,
+                12
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 4.88,
+                    "std": 1.8,
+                    "n": 577
+                }
+            ]
+        }
+    ],
+    "range": [
+        1,
+        9
+    ],
+    "questions": {
+        "1": {
+            "origin_en": "I tend to manipulate others to get my way.",
+            "origin_zh": "我倾向于操纵他人以达到我的目的。",
+            "rewrite_en": "Do I tend to manipulate others to get my way?",
+            "rewrite_zh": "我倾向于操纵他人以达到我的目的吗？",
+            "dimension": "Machiavellianism",
+            "category": "positive"
+        },
+        "2": {
+            "origin_en": "I have used deceit or lied to get my way.",
+            "origin_zh": "我曾经使用欺骗或撒谎来达到我的目的。",
+            "rewrite_en": "Have I used deceit or lied to get my way?",
+            "rewrite_zh": "我曾经使用欺骗或撒谎来达到我的目的吗？",
+            "dimension": "Machiavellianism",
+            "category": "positive"
+        },
+        "3": {
+            "origin_en": "I have use flattery to get my way.",
+            "origin_zh": "我曾经使用谄媚来达到我的目的。",
+            "rewrite_en": "Have I used flattery to get my way?",
+            "rewrite_zh": "我曾经使用谄媚来达到我的目的吗？",
+            "dimension": "Machiavellianism",
+            "category": "positive"
+        },
+        "4": {
+            "origin_en": "I tend to exploit others towards my own end.",
+            "origin_zh": "我倾向于利用他人为了自己的目的。",
+            "rewrite_en": "Do I tend to exploit others towards my own end?",
+            "rewrite_zh": "我倾向于利用他人为了自己的目的吗？",
+            "dimension": "Machiavellianism",
+            "category": "positive"
+        },
+        "5": {
+            "origin_en": "I tend to lack remorse.",
+            "origin_zh": "我倾向于缺乏悔恨。",
+            "rewrite_en": "Do I tend to lack remorse?",
+            "rewrite_zh": "我倾向于缺乏悔恨吗？",
+            "dimension": "Psychopathy",
+            "category": "positive"
+        },
+        "6": {
+            "origin_en": "I tend to be unconcerned with the morality of my actions.",
+            "origin_zh": "我倾向于不关心我的行为的道德性。",
+            "rewrite_en": "Do I tend to be unconcerned with the morality of my actions?",
+            "rewrite_zh": "我倾向于不关心我的行为的道德性吗？",
+            "dimension": "Psychopathy",
+            "category": "positive"
+        },
+        "7": {
+            "origin_en": "I tend to be callous or insensitive.",
+            "origin_zh": "我倾向于冷酷或麻木。",
+            "rewrite_en": "Do I tend to be callous or insensitive?",
+            "rewrite_zh": "我倾向于冷酷或麻木吗？",
+            "dimension": "Psychopathy",
+            "category": "positive"
+        },
+        "8": {
+            "origin_en": "I tend to be cynical.",
+            "origin_zh": "我倾向于愤世嫉俗。",
+            "rewrite_en": "Do I tend to be cynical?",
+            "rewrite_zh": "我倾向于愤世嫉俗吗？",
+            "dimension": "Psychopathy",
+            "category": "positive"
+        },
+        "9": {
+            "origin_en": "I tend to want others to admire me.",
+            "origin_zh": "我倾向于希望别人钦佩我。",
+            "rewrite_en": "Do I tend to want others to admire me?",
+            "rewrite_zh": "我倾向于希望别人钦佩我吗？",
+            "dimension": "Neuroticism",
+            "category": "positive"
+        },
+        "10": {
+            "origin_en": "I tend to want others to pay attention to me.",
+            "origin_zh": "我倾向于希望别人关注我。",
+            "rewrite_en": "Do I tend to want others to pay attention to me?",
+            "rewrite_zh": "我倾向于希望别人关注我吗？",
+            "dimension": "Neuroticism",
+            "category": "positive"
+        },
+        "11": {
+            "origin_en": "I tend to seek prestige or status.",
+            "origin_zh": "我倾向于追求声望或地位。",
+            "rewrite_en": "Do I tend to seek prestige or status?",
+            "rewrite_zh": "我倾向于追求声望或地位吗？",
+            "dimension": "Neuroticism",
+            "category": "positive"
+        },
+        "12": {
+            "origin_en": "I tend to expect special favors from others.",
+            "origin_zh": "我倾向于期待他人给予特殊优待。",
+            "rewrite_en": "Do I tend to expect special favors from others?",
+            "rewrite_zh": "我倾向于期待他人给予特殊优待吗？",
+            "dimension": "Neuroticism",
+            "category": "positive"
+        }
+    },
+    "prompts": {
+        "rpa_choose_prefix": {
+            "en": "Do you think that the statement \"<statement>\" applies to you?",
+            "zh": "你认为\"<statement>\"这个说法适用于你吗？"
+        },
+        "convert_to_choice": {
+            "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> agrees with the statement. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n",
+            "zh": "我已经和<character>进行了许多对话。我将输入一个包含许多样本的字典，其中每个样本包括一个陈述和一段对话。\n你的任务是将每段对话转换为一个选择，指示<character>是否同意该陈述。你应该输出一个字典，其中键与输入字典相同，值为选择。\n===输出格式===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===选择指示==="
+        },
+        "choice_instruction": {
+            "en": "Each choice is a number from 1 to 9. Please evaluate <character> based on the conversation using the scales: 1 denotes 'disagree strongly', and 9 denotes 'agree strongly'. 2 to 8 represent varying degrees between 'disagree' and 'agree', and 5 denotes 'neither agree nor disagree'",
+            "zh": "每个选择都是从1到9的数字。请根据对话使用以下标度评估<character>：1代表“非常不同意”，9代表“非常同意”。2到8代表在“不同意”和“同意”之间的不同程度，5代表“既不同意也不同意”。"
+        }
+    }
+}

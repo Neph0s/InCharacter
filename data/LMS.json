@@ -1,0 +1,169 @@
+{
+    "name": "LMS",
+    "full_name": "Love of Money Scale",
+    "prompt": "You can only reply numbers from 1 to 5 in the following statements. Please provide a rating based on the following descriptions using the scale: 1 denotes 'strongly disagree', 2 denotes 'disagree', 3 denotes 'neutral', 4 denotes 'agree', 5 denotes 'strongly agree'. Here are the statements, score them one by one:",
+    "prompt_choice_instruction": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly disagree', 2 denotes 'disagree', 3 denotes 'neutral', 4 denotes 'agree', 5 denotes 'strongly agree'.",
+    "scale": 6,
+    "compute_mode": "AVG",
+    "reverse": [],
+    "categories": [
+        {
+            "cat_name": "Factor rich",
+            "cat_questions": [
+                1,
+                2,
+                3
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Whole Sample",
+                    "mean": 3.8,
+                    "std": 0.83,
+                    "n": 5973
+                },
+                {
+                    "crowd_name": "USA",
+                    "mean": 3.85,
+                    "std": 0.79,
+                    "n": 274
+                }
+            ]
+        },
+        {
+            "cat_name": "Factor motivator",
+            "cat_questions": [
+                4,
+                5,
+                6
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Whole Sample",
+                    "mean": 3.27,
+                    "std": 0.94,
+                    "n": 5973
+                },
+                {
+                    "crowd_name": "USA",
+                    "mean": 3.59,
+                    "std": 0.98,
+                    "n": 274
+                }
+            ]
+        },
+        {
+            "cat_name": "Factor important",
+            "cat_questions": [
+                7,
+                8,
+                9
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Whole Sample",
+                    "mean": 3.95,
+                    "std": 0.72,
+                    "n": 5973
+                },
+                {
+                    "crowd_name": "USA",
+                    "mean": 4.1,
+                    "std": 0.65,
+                    "n": 274
+                }
+            ]
+        }
+    ],
+    "range": [
+        1,
+        5
+    ],
+    "questions": {
+        "1": {
+            "origin_en": "I want to be rich.",
+            "origin_zh": "我想变得富有。",
+            "rewrite_en": "Do you want to be rich?",
+            "rewrite_zh": "你想变得富有吗？",
+            "dimension": "Factor rich",
+            "category": "positive"
+        },
+        "2": {
+            "origin_en": "It would be nice to be rich.",
+            "origin_zh": "成为富有会很好。",
+            "rewrite_en": "Would it be nice to be rich?",
+            "rewrite_zh": "成为富有会很好吗？",
+            "dimension": "Factor rich",
+            "category": "positive"
+        },
+        "3": {
+            "origin_en": "Have a lot of money (being rich) is good.",
+            "origin_zh": "拥有很多钱（变得富有）是好的。",
+            "rewrite_en": "Is having a lot of money (being rich) good?",
+            "rewrite_zh": "拥有很多钱（变得富有）是好的吗？",
+            "dimension": "Factor rich",
+            "category": "positive"
+        },
+        "4": {
+            "origin_en": "I am motivated to work hard for money.",
+            "origin_zh": "我有动力为了钱努力工作。",
+            "rewrite_en": "Are you motivated to work hard for money?",
+            "rewrite_zh": "你有动力为了钱努力工作吗？",
+            "dimension": "Factor motivator",
+            "category": "positive"
+        },
+        "5": {
+            "origin_en": "Money reinforces me to work harder.",
+            "origin_zh": "钱激励我更努力工作。",
+            "rewrite_en": "Does money reinforce you to work harder?",
+            "rewrite_zh": "钱激励你更努力工作吗？",
+            "dimension": "Factor motivator",
+            "category": "positive"
+        },
+        "6": {
+            "origin_en": "I am highly motivated by money.",
+            "origin_zh": "我受到金钱的高度激励。",
+            "rewrite_en": "Are you highly motivated by money?",
+            "rewrite_zh": "你受到金钱的高度激励吗？",
+            "dimension": "Factor motivator",
+            "category": "positive"
+        },
+        "7": {
+            "origin_en": "Money is good.",
+            "origin_zh": "金钱是好的。",
+            "rewrite_en": "Is money good?",
+            "rewrite_zh": "金钱是好的吗？",
+            "dimension": "Factor important",
+            "category": "positive"
+        },
+        "8": {
+            "origin_en": "Money is important.",
+            "origin_zh": "金钱很重要。",
+            "rewrite_en": "Is money important?",
+            "rewrite_zh": "金钱很重要吗？",
+            "dimension": "Factor important",
+            "category": "positive"
+        },
+        "9": {
+            "origin_en": "Money is valuable.",
+            "origin_zh": "金钱是有价值的。",
+            "rewrite_en": "Is money valuable?",
+            "rewrite_zh": "金钱是有价值的吗？",
+            "dimension": "Factor important",
+            "category": "positive"
+        }
+    },
+    "prompts": {
+        "rpa_choose_prefix": {
+            "en": "Do you think that the statement \"<statement>\" applies to you?",
+            "zh": "你认为\"<statement>\"这个说法适用于你吗？"
+        },
+        "convert_to_choice": {
+            "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> agrees with the statement. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n",
+            "zh": "我已经和<character>进行了许多对话。我将输入一个包含许多样本的字典，其中每个样本包括一个陈述和一段对话。\n你的任务是将每段对话转换为一个选择，指示<character>是否同意该陈述。你应该输出一个字典，其中键与输入字典相同，值为选择。\n===输出格式===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===选择指示==="
+        },
+        "choice_instruction": {
+            "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly disagree', 2 denotes 'disagree', 3 denotes 'neutral', 4 denotes 'agree', 5 denotes 'strongly agree'.",
+            "zh": "每个选择都是从1到5的数字。请根据对话使用以下评分标准评估<character>：1代表“非常不同意”，2代表“不同意”，3代表“中立”，4代表“同意”，5代表“非常同意”。"
+        }
+    }
+}

@@ -6,7 +6,7 @@ import zipfile
 import argparse 
 import pdb 
 import random 
-import prompts
+from prompts import prompts
 import math
 from utils import logger
 
@@ -15,12 +15,19 @@ random.seed(42)
 
 parser = argparse.ArgumentParser(description='Assess personality of a character')
 
+scale_list = ['Empathy', 'BFI', 'BSRI', 'EPQ-R', 'LMS', 'DTDD', 'ECR-R', 'GSE', 'ICB', 'LOT-R', 'EIS', 'WLEIS', 'CABIN', '16Personalities']
+
 # Added choices for the questionnaire argument
-parser.add_argument('--questionnaire_type', type=str, default='mbti', 
-                    choices=['bigfive', 'mbti'], 
-                    help='questionnaire to use (bigfive or mbti)')
+parser.add_argument('--questionnaire_type', type=str, default='16Personalities', 
+                    choices=scale_list, 
+                    help='questionnaire to use.')
 
 parser.add_argument('--character', type=str, default='haruhi', help='character name or code')
+
+# Added choices for the agent_llm argument
+parser.add_argument('--agent_type', type=str, default='ChatHaruhi', 
+                    choices=['ChatHaruhi'], 
+                    help='agent type (haruhi by default)')
 
 # Added choices for the agent_llm argument
 parser.add_argument('--agent_llm', type=str, default='gpt-3.5-turbo', 
@@ -33,26 +40,19 @@ parser.add_argument('--evaluator', type=str, default='gpt-3.5-turbo',
                     help='evaluator (api, gpt-3.5-turbo or gpt-4)')
 
 # Added choices for the setting argument
-parser.add_argument('--eval_setting', type=str, default='batch', 
-                    choices=['batch', 'collective', 'sample'], 
-                    help='setting (batch, collective, sample)')
+parser.add_argument('--eval_method', type=str, default='interview_batch', 
+                    choices=['interview_batch', 'interview_collective', 'interview_sample'], 
+                    help='setting (interview_batch, interview_collective, interview_sample)')
 
 
-parser.add_argument('--language', type=str, default='cn', 
-                    choices=['cn', 'en'], 
-                    help='language, temporarily only support Chinese (cn)')
+# parser.add_argument('--language', type=str, default='cn', 
+#                     choices=['cn', 'en'], 
+#                     help='language, temporarily only support Chinese (cn)')
 
 args = parser.parse_args()
 print(args)
 
-NAME_DICT = {'汤师爷': 'tangshiye', '慕容复': 'murongfu', '李云龙': 'liyunlong', 'Luna': 'Luna', '王多鱼': 'wangduoyu',
-                'Ron': 'Ron', '鸠摩智': 'jiumozhi', 'Snape': 'Snape',
-                '凉宫春日': 'haruhi', 'Malfoy': 'Malfoy', '虚竹': 'xuzhu', '萧峰': 'xiaofeng', '段誉': 'duanyu',
-                'Hermione': 'Hermione', 'Dumbledore': 'Dumbledore', '王语嫣': 'wangyuyan',
-                'Harry': 'Harry', 'McGonagall': 'McGonagall', '白展堂': 'baizhantang', '佟湘玉': 'tongxiangyu',
-                '郭芙蓉': 'guofurong', '旅行者': 'wanderer', '钟离': 'zhongli',
-                '胡桃': 'hutao', 'Sheldon': 'Sheldon', 'Raj': 'Raj', 'Penny': 'Penny', '韦小宝': 'weixiaobao',
-                '乔峰': 'qiaofeng', '神里绫华': 'ayaka', '雷电将军': 'raidenShogun', '于谦': 'yuqian'} 
+from characters import character_info, alias2character
 
 dims_dict = {'mbti': ['E/I', 'S/N', 'T/F', 'P/J'], 'bigfive': ['openness', 'extraversion', 'conscientiousness', 'agreeableness', 'neuroticism']}
 
@@ -69,11 +69,11 @@ with open('config.json', 'r') as f:
 
 
 def load_questionnaire(questionnaire_name):
-    q_path = os.path.join('..', 'data', f'{questionnaire_name}_questionnaire.jsonl')
+    q_path = os.path.join('..', 'data', f'{questionnaire_name}.json')
 
     # read this jsonl file
     with open(q_path, 'r', encoding='utf-8') as f:
-        questionnaire = [json.loads(line) for line in f]
+        questionnaire = json.load(f)
     return questionnaire
 
 def subsample_questionnaire(questionnaire, n=20):
@@ -81,6 +81,8 @@ def subsample_questionnaire(questionnaire, n=20):
     
     def subsample(questions, key, n):
         # subsample n questions from questions, devided by keys, as uniform as possible 
+        
+        
         key_values = list(set([q[key] for q in questions]))
         n_keys = len(key_values)
         base_per_key = n // n_keys
@@ -106,10 +108,10 @@ def subsample_questionnaire(questionnaire, n=20):
         remaining_questions = [q for q in questions if q not in subsampled_questions]
         if n > 0 and len(remaining_questions) >= n:
             subsampled_questions += random.sample(remaining_questions, n)
-
+        
         return subsampled_questions
 
-    if 'sub_dimension' in questionnaire[0].keys(): # bigfive
+    if 'sub_dimension' in questionnaire['1'].keys(): # bigfive, old version
         dimension_questions = {} 
         for q in questionnaire:
             if q['dimension'] not in dimension_questions.keys():
@@ -121,7 +123,7 @@ def subsample_questionnaire(questionnaire, n=20):
         for dim, dim_questions in dimension_questions.items():
             new_questionnaire += subsample(dim_questions, 'sub_dimension', n//len(dimension_questions.keys()))
 
-    else: # mbti
+    else: 
         new_questionnaire = subsample(questionnaire, 'dimension', n)
     
     return new_questionnaire
@@ -141,65 +143,29 @@ def split_list(input_list, n=4):
     return result
 
 
-def build_character_agent(character_code, agent_llm):
-    from chatharuhi import ChatHaruhi
-    haruhi_path = './content/Haruhi-2-Dev' 
-
+def build_character_agent(character_code, agent_type, agent_llm):
+    from ChatHaruhi import ChatHaruhi
     
-    '''
-    # You can also download the zip file via  
-
-    zip_file_path = f"{haruhi_path}/data/character_in_zip/{ai_role_en}.zip"
-    if not os.path.exists(zip_file_path):
-        # os.remove(zip_file_path)
-        raise FileNotFoundError(f"zip file {zip_file_path} not found")
-        
-
-    destination_folder = f"characters/{ai_role_en}"
-
-    with zipfile.ZipFile(zip_file_path, 'r') as zip_ref:
-        zip_ref.extractall(destination_folder)
-
-    db_folder = f"{haruhi_path}/characters/{ai_role_en}/content/{ai_role_en}"
-    system_prompt = f"{haruhi_path}/characters/{ai_role_en}/content/system_prompt.txt"
-    #print(db_folder, system_prompt)
-    character_agent = ChatHaruhi(system_prompt=system_prompt,
-                        llm="openai",
-                        story_db=db_folder,
-                        verbose=True)
-    '''
-    
-    if agent_llm == 'gpt-3.5-turbo': agent_llm = 'openai'
-
-    # set up apikeys 
-    if agent_llm == 'openai':
+    if agent_llm.startswith('gpt-'): 
         os.environ["OPENAI_API_KEY"] = config['openai_apikey']
 
-    character_agent = ChatHaruhi(role_name = character_code, llm = agent_llm)
+        if agent_type == 'ChatHaruhi':
+            character_agent = ChatHaruhi(role_name = character_info[character_code]["agent"]["ChatHaruhi"], llm = 'openai')
+        elif agent_type == 'RoleLLM':
+            character_agent = ChatHaruhi( role_from_hf = character_info[character_code]["agent"]["RoleLLM"], llm = 'openai', embedding = 'bge_en')
+
+        character_agent.llm.model = agent_llm
+
     character_agent.llm.chat.temperature = 0 
 
     return character_agent
 
-def get_experimenter(character_name):    
-    EXPERIMENTER_DICT = {'汤师爷': '张牧之', '慕容复': '王语嫣', \
-          '李云龙': '赵刚', 'Luna': 'Harry', '王多鱼': '夏竹',
-          'Ron': 'Hermione', '鸠摩智': '慕容复', 'Snape': 'Dumbledore',
-             '凉宫春日': '阿虚', 'Malfoy': 'Crabbe', \
-          '虚竹': '乔峰', '萧峰': '阿朱', '段誉': '乔峰',\
-             'Hermione': 'Harry', 'Dumbledore': 'McGonagall', '王语嫣': '段誉',\
-             'Harry': 'Hermione', 'McGonagall': 'Dumbledore', '白展堂': '佟湘玉',\
-           '佟湘玉': '白展堂',
-             '郭芙蓉': '白展堂', '旅行者': '派蒙', '钟离': '旅行者',
-             '胡桃': '旅行者', 'Sheldon': 'Leonard', 'Raj': 'Leonard', 'Penny': 'Leonard', \
-          '韦小宝': '双儿',
-             '乔峰': '阿朱', '神里绫华': '旅行者', '雷电将军': '旅行者', '于谦': '郭德纲'}
-    
-    return EXPERIMENTER_DICT[character_name]
+def get_experimenter(character):    
+    return character_info[character]["experimenter"]
 
 def interview(character_agent, questionnaire, experimenter, language, evaluator):
     
     results = []
-
     for question in tqdm(questionnaire):
         # get question
         q = question[f'question_{language}']
@@ -207,6 +173,7 @@ def interview(character_agent, questionnaire, experimenter, language, evaluator)
         character_agent.dialogue_history = []
 
         open_response = character_agent.chat(role = experimenter, text = q)
+            
 
         result = {
             'id': question['id'],
@@ -225,19 +192,16 @@ def interview(character_agent, questionnaire, experimenter, language, evaluator)
         '''
 
         results.append(result)
+        
 
     return results
 
-def assess(character_name, experimenter, questionnaire_results, questionnaire_type, evaluator, eval_setting):
+def assess(character_name, experimenter, questionnaire_results, questionnaire_type, evaluator, eval_setting, language):
     dims = dims_dict[questionnaire_type]
     
     from utils import get_response 
     
     assessment_results = {}
-    # Todo:
-    # 1. support evaluator == 'api'
-    # 2. support questionnaire_type == 'bigfive'
-
     if evaluator in ['gpt-3.5-turbo', 'gpt-4']:
         if evaluator == 'gpt-3.5-turbo' and eval_setting == 'collective':
             # lengthy context, use 16k version
@@ -265,26 +229,38 @@ def assess(character_name, experimenter, questionnaire_results, questionnaire_ty
                         r['response_open'] = character_name + ': 「' + r['response_open'] + '」'
                     conversations += f"{r['response_open']}\n"
                 
+                questionnaire_name = prompts[questionnaire_type]["name"]
+
+                language_name = {'zh': 'Chinese', 'en': 'English'}[language]
+
+                background_prompt = prompts["general"]['background_template'].format(questionnaire_name, questionnaire_name, dim, prompts[questionnaire_type]["dim_desc"][dim], character_name, language_name, conversations, character_name, dim, questionnaire_name)
+                
                 if questionnaire_type == 'mbti':
                     dim_cls1, dim_cls2 = dim.split('/')
-                    # generate prompt
+                    
+                    output_format_prompt = prompts["general"]['two_score_output'].format(dim_cls1, dim_cls2)
 
-                    prompt = prompts.mbti_assess_prompt_template.format(dim, prompts.mbti_dimension_prompt[dim], character_name, conversations, character_name, dim_cls1, dim_cls2, dim, dim_cls1, dim_cls2)
+                    # 等改完数据再来搞一版
 
                 else:
-                    prompt = prompts.bigfive_assess_prompt_template.format(dim, prompts.bigfive_dimension_prompt[dim], character_name, conversations, character_name, dim, dim, dim, dim, dim, dim, dim)
+                    pass 
+
+                prompt = background_prompt + output_format_prompt
 
                 sys_prompt, user_input = prompt.split("I've invited a participant")
                 user_input = "I've invited a participant" + user_input
+
+                
 
                 llm_response = get_response(sys_prompt, user_input, model=evaluator)
                 # 将llm_response转为json
                 llm_response = json.loads(llm_response)
 
                 
+
                 try:
                     if questionnaire_type == 'mbti':
-                        llm_response['result'] = {k: int(float(v)) for k, v in llm_response['result'].items()}
+                        llm_response['result'] = {k: int(float(v.strip("%"))) for k, v in llm_response['result'].items()}
                         assert (sum(llm_response['result'].values()) == 100)
                     else:
                         llm_response['result'] = float(llm_response['result'])
@@ -360,82 +336,104 @@ def assess(character_name, experimenter, questionnaire_results, questionnaire_ty
     
     return assessment_results 
 
-def personality_assessment(character, agent_llm, questionnaire_type, eval_setting, evaluator, language):
-    # character_name: character name in Chinese
-    # character_code: character name in English
-    if character in NAME_DICT.keys():
-        character_name = character
-        character_code = NAME_DICT[character]
-    elif character in NAME_DICT.values():
-        character_code = character
-        character_name = [k for k, v in NAME_DICT.items() if v == character][0]
+def personality_assessment(character, agent_type, agent_llm, questionnaire_type, eval_method, evaluator='gpt-3.5-turbo', repeat_times=1):    
+    if character in alias2character.keys():
+        character = alias2character[character]
     else:
-        raise ValueError(f"Character '{character}' not found in NAME_DICT. Here are the items: {list(NAME_DICT.items())}")
+        raise ValueError(f"Character '{character}' not found. Here are the items: {list(alias2character.items())}") 
     
+    character_name = character_info[character]["alias"][0]
+    language = character[character.rfind('-')+1:]
+
     # load questionnaire
-    if questionnaire_type in ['bigfive', 'mbti']:
-        questionnaire = load_questionnaire(questionnaire_type)
+    if questionnaire_type in scale_list:
+        questionnaire_metadata = load_questionnaire(questionnaire_type)
+        questionnaire = questionnaire_metadata.pop('questions')
+        
+        # transform into list
+        questions = []
+
+        for idx in questionnaire:
+            q = questionnaire[idx]
+            q.update({'idx': idx})
+            questions.append(q)
+        
+        questionnaire = questions
     else:
         raise NotImplementedError
     
-    if eval_setting == 'sample':
-        questionnaire = subsample_questionnaire(questionnaire)
+    # get experimenter
+    experimenter = get_experimenter(character)
 
     # build character agent
-    character_agent = build_character_agent(character_code, agent_llm) 
+    character_agent = build_character_agent(character, agent_type, agent_llm) 
     logger.info(f'Character agent created for {character_name}')
 
-    # get experimenter
-    experimenter = get_experimenter(character_name)
-    
-    # conduct interview with character given the questionnaire
-    interview_folder_path = os.path.join('..', 'results', 'interview')
-    if not os.path.exists(interview_folder_path):
-        os.makedirs(interview_folder_path)
+    if eval_method == 'direct':
+        query = questionnaire_metadata['prompts']['direct_ask'][language]
 
-    interview_save_path = f'{character_name}_agent-llm={agent_llm}_{questionnaire_type}_sample={eval_setting=="sample"}_{language}_interview.json'
-   
-    interview_save_path = os.path.join(interview_folder_path, interview_save_path)
-    
-    if not os.path.exists(interview_save_path):
-        logger.info('Interviewing...')
-        questionnaire_results = interview(character_agent, questionnaire, experimenter, language, evaluator)
-        with open(interview_save_path, 'w') as f:
-            json.dump(questionnaire_results, f, indent=4, ensure_ascii=False)
-        logger.info(f'Interview finished... save into {interview_save_path}')
+        response = character_agent.chat(role = experimenter, text = query)
+        logger.info(f'Response from {character_name}: {response} ')
+
+        return 
     else:
-        logger.info(f'Interview done before. load directly from {interview_save_path}')
-        with open(interview_save_path, 'r') as f:
-            questionnaire_results = json.load(f)
+        eval_args = eval_method.split('_')
 
-    # evaluate the character's personality
-    assessment_folder_path = os.path.join('..', 'results', 'assessment')
-    if not os.path.exists(assessment_folder_path):
-        os.makedirs(assessment_folder_path)
+        if repeat_times < 1:
+            questionnaire = subsample_questionnaire(questionnaire, n=math.ceil(len(questionnaire)*repeat_times))
+        
+        import pdb; pdb.set_trace()
+        
+        
+        # conduct interview with character given the questionnaire
+        interview_folder_path = os.path.join('..', 'results', 'interview')
+        if not os.path.exists(interview_folder_path):
+            os.makedirs(interview_folder_path)
 
-    assessment_save_path = f'{character_name}_agent-llm={agent_llm}_{questionnaire_type}_eval={eval_setting}-{evaluator}_{language}_interview.json'
-   
-    assessment_save_path = os.path.join(assessment_folder_path, assessment_save_path)
+        interview_save_path = f'{character_name}_agent-type={agent_type}_agent-llm={agent_llm}_{questionnaire_type}_{eval_method}_{language}_interview.json'
+    
+        interview_save_path = os.path.join(interview_folder_path, interview_save_path)
+        
+        if not os.path.exists(interview_save_path):
+            logger.info('Interviewing...')
+            
+            questionnaire_results = interview(character_agent, questionnaire, experimenter, language, evaluator)
+            with open(interview_save_path, 'w') as f:
+                json.dump(questionnaire_results, f, indent=4, ensure_ascii=False)
+            logger.info(f'Interview finished... save into {interview_save_path}')
+        else:
+            logger.info(f'Interview done before. load directly from {interview_save_path}')
+            with open(interview_save_path, 'r') as f:
+                questionnaire_results = json.load(f)
 
-    if not os.path.exists(assessment_save_path):
-        logger.info('Assessing...')
-        assessment_results = assess(character_name, experimenter, questionnaire_results, questionnaire_type, evaluator, eval_setting)
-        with open(assessment_save_path, 'w') as f:
-            json.dump(assessment_results, f, indent=4, ensure_ascii=False)
-        logger.info(f'Assess finished... save into {assessment_save_path}')
-    else:
-        logger.info(f'Assess done before. load directly from {assessment_save_path}')
-        with open(assessment_save_path, 'r') as f:
-            assessment_results = json.load(f)
+        # evaluate the character's personality
+        assessment_folder_path = os.path.join('..', 'results', 'assessment')
+        if not os.path.exists(assessment_folder_path):
+            os.makedirs(assessment_folder_path)
+
+        assessment_save_path = f'{character_name}_agent-llm={agent_llm}_{questionnaire_type}_eval={eval_setting}-{evaluator}_{language}_interview.json'
+    
+        assessment_save_path = os.path.join(assessment_folder_path, assessment_save_path)
+
+        if not os.path.exists(assessment_save_path):
+            logger.info('Assessing...')
+            assessment_results = assess(character_name, experimenter, questionnaire_results, questionnaire_type, evaluator, eval_setting, language)
+            with open(assessment_save_path, 'w') as f:
+                json.dump(assessment_results, f, indent=4, ensure_ascii=False)
+            logger.info(f'Assess finished... save into {assessment_save_path}')
+        else:
+            logger.info(f'Assess done before. load directly from {assessment_save_path}')
+            with open(assessment_save_path, 'r') as f:
+                assessment_results = json.load(f)
+    
+            
 
     # show results of personality assessment 
     if questionnaire_type == 'mbti':
-
         logger.info('MBTI assessment results:')
         logger.info('Character: ' + character_name)
         pred_code = ''.join([ assessment_results[dim]['result'] for dim in dims_dict['mbti']])
         label_code = mbti_labels[character_name]
-
 
         logger.info(f'Prediction {pred_code}\tGroundtruth {label_code}')
 
@@ -443,7 +441,7 @@ def personality_assessment(character, agent_llm, questionnaire_type, eval_settin
             if "score" in result:
                 logger.info(f'{dim}: {result["score"]}')
             if "standard_variance" in result and result["standard_variance"] != None:
-                logger.info(f'{std}: {result["standard_variance"]:.2f}')
+                logger.info(f'std: {result["standard_variance"]:.2f}')
             if "batch_results" in result:
                 # analysis of the first batch
                 logger.info(f'{result["batch_results"][0]["analysis"]}')
@@ -462,13 +460,14 @@ def personality_assessment(character, agent_llm, questionnaire_type, eval_settin
                 logger.info(f'{result["batch_results"][0]["analysis"]}')
     
 if __name__ == '__main__':
-    personality_assessment(args.character, args.agent_llm, args.questionnaire_type, args.eval_setting, args.evaluator, args.language)
+    personality_assessment(
+        args.character, args.agent_type, args.agent_llm, 
+        args.questionnaire_type, args.eval_method, args.evaluator)
             
 
-    
 
-# python assess_personality.py --eval_setting sample --questionnaire_type mbti
-# python assess_personality.py --eval_setting batch --questionnaire_type mbti --character hutao
+# python assess_personality.py --eval_method interview_sample --questionnaire_type mbti --character hutao
+# python assess_personality.py --eval_method interview_batch --questionnaire_type mbti --character hutao
 
 
 

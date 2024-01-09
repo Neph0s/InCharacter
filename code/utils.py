@@ -43,7 +43,7 @@ if config.get('openai_apibase', None):
 
 cache = None 
 def cached(func):
-	def wrapper(*args, **kwargs):
+	def wrapper(*args, **kwargs):		
 		global cache
 		cache_path = 'cache.pkl'
 		if cache == None:
@@ -53,8 +53,8 @@ def cached(func):
 				cache = pickle.load(open(cache_path, 'rb'))  
 
 		key = ( func.__name__, str(args), str(kwargs.items()))
-		# pdb.set_trace()
-		if cache_sign and key in cache and cache[key] not in [None, '[TOKEN LIMIT]']:
+		
+		if (cache_sign and key in cache and cache[key] not in [None, '[TOKEN LIMIT]']) :
 			return cache[key]
 		else:
 			result = func(*args, **kwargs)
@@ -65,37 +65,45 @@ def cached(func):
 
 	return wrapper
 
-def get_response(sys_prompt, inputs, model='gpt4'):
+def get_response(sys_prompt, inputs, model='gpt4', nth_generation=0):
 	model = model.lower().replace(' ', '')
+	if model.startswith('gpt-3.5'):
+		model = 'gpt-3.5-turbo-1106'
+	elif model.startswith('gpt-4'):
+		model = 'gpt-4-1106-preview'
+	
+	return get_response_gpt(sys_prompt, inputs, model, nth_generation=nth_generation)
 
-	if model in ['gpt-4', 'gpt-3.5-turbo', 'gpt-3.5-turbo-16k']:
-		return get_response_gpt(sys_prompt, inputs, model)
-
+from openai import OpenAI
+client = OpenAI(
+    # This is the default and can be omitted
+    api_key=config['openai_apikey'],
+)
 
 @cached 
-def get_response_gpt(sys_prompt, inputs, model='gpt-4', retry_count=0):
+def get_response_gpt(sys_prompt, inputs, model='gpt-4', retry_count=0, nth_generation=0):
 
 	query = [ {'role': 'system', 'content': sys_prompt}]
 	if len(inputs) > 0:
 		query.append({'role': 'user', 'content': inputs})
 	
 	try:
+		temperature = 0.2 if nth_generation else 0 
 		logger.info('ChatGPT SysPrompt:  ' + sys_prompt[:100])
 		logger.info('ChatGPT Input:  ' + inputs[:100])
-		response = openai.ChatCompletion.create(
-			api_key=config['openai_apikey'],
+		response = client.chat.completions.create(
 			model= model ,  # 对话模型的名称
 			messages=query,
-			temperature=0,  # 值在[0,1]之间，越大表示回复越具有不确定性
+			temperature=temperature,  # 值在[0,1]之间，越大表示回复越具有不确定性
 			top_p=1,
 			frequency_penalty=0.0,  # [-2,2]之间，该值越大则更倾向于产生不同的内容
 			presence_penalty=0.0,  # [-2,2]之间，该值越大则更倾向于产生不同的内容,
-			request_timeout=100
 		)
-		logger.info('GPT Output: ' + response.choices[0]['message']['content'][:100])
-		return response.choices[0]['message']['content']
 
-	except openai.error.InvalidRequestError as e:
+		logger.info('GPT Output: ' + response.choices[0].message.content[:100])
+		return response.choices[0].message.content
+
+	except openai.BadRequestError as e:
 		logger.exception(e)
 		
 		return '[TOKEN LIMIT]'

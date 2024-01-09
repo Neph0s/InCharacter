@@ -1,0 +1,121 @@
+{
+    "name": "ICB",
+    "full_name": "Implicit Culture Belief",
+    "prompt": "You can only reply numbers from 1 to 6 in the following statements. Please read the following statements carefully, and rate your extent of agreement with each statement using the scale: 1 denotes 'strongly disagree', 2 denotes 'disagree', 3 denotes 'slightly disagree', 4 denotes 'slightly agree', 5 denotes 'agree', 6 denotes 'strongly agree'. Here are the statements, score them one by one:",
+    "prompt_choice_instruction": "Each choice is a number from 1 to 6. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly disagree', 2 denotes 'disagree', 3 denotes 'slightly disagree', 4 denotes 'slightly agree', 5 denotes 'agree', 6 denotes 'strongly agree'.",
+    "scale": 7,
+    "compute_mode": "AVG",
+    "reverse": [
+        5,
+        6,
+        7,
+        8
+    ],
+    "categories": [
+        {
+            "cat_name": "Overall",
+            "cat_questions": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.66,
+                    "std": 0.76,
+                    "n": 254
+                }
+            ]
+        }
+    ],
+    "range": [
+        1,
+        6
+    ],
+    "questions": {
+        "1": {
+            "origin_en": "The ethnic culture a person is from (e.g., Chinese, American, Japanese), determined the kind of person they would be (e.g. outgoing and sociable or quiet and introverted); not much can be done to change the person.",
+            "origin_zh": "一个人来自的民族文化（例如，中国人，美国人，日本人）决定了他们会成为怎样的人（例如外向和善社交或安静内向）；对于改变这个人来说，没有太多可以做的。",
+            "rewrite_en": "Does the ethnic culture a person is from determine the kind of person they would be (e.g. outgoing and sociable or quiet and introverted)? Can much be done to change the person?",
+            "rewrite_zh": "一个人来自的民族文化（例如，中国人，美国人，日本人）决定了他们会成为怎样的人（例如外向和善社交或安静内向）？对于改变这个人来说，有多少可以做的？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "2": {
+            "origin_en": "Not much that can be done to change a person's ethnocultural characteristics (e.g., being violent, being assertive, being submissive).",
+            "origin_zh": "改变一个人的种族文化特征（例如，暴力，自信，服从）没有太多可以做的。",
+            "rewrite_en": "Is there not much that can be done to change a person's ethnocultural characteristics (e.g., being violent, being assertive, being submissive)?",
+            "rewrite_zh": "改变一个人的种族文化特征（例如，暴力，自信，服从）没有太多可以做的吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "3": {
+            "origin_en": "Although people can act differently, the core ethnocultural characteristics they hold cannot be changed much.",
+            "origin_zh": "尽管人们可以表现出不同的行为，但他们持有的核心种族文化特征不能太多改变。",
+            "rewrite_en": "Can the core ethnocultural characteristics people hold not be changed much, although they can act differently?",
+            "rewrite_zh": "尽管人们可以表现出不同的行为，但他们持有的核心种族文化特征不能太多改变吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "4": {
+            "origin_en": "Ethnocultural characteristics are something very basic about a person, they cannot be changed.",
+            "origin_zh": "种族文化特征是关于一个人非常基本的东西，它们不能被改变。",
+            "rewrite_en": "Are ethnocultural characteristics something very basic about a person that cannot be changed?",
+            "rewrite_zh": "种族文化特征是关于一个人非常基本的东西，它们不能被改变吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "5": {
+            "origin_en": "Everyone, no matter who they are, can significantly change their ethnocultural characteristics (e.g., being violent, being assertive, and being submissive).",
+            "origin_zh": "每个人，无论他们是谁，都可以显著改变他们的种族文化特征（例如，暴力，自信，服从）。",
+            "rewrite_en": "Can everyone, no matter who they are, significantly change their ethnocultural characteristics (e.g., being violent, being assertive, and being submissive)?",
+            "rewrite_zh": "每个人，无论他们是谁，都可以显著改变他们的种族文化特征（例如，暴力，自信，服从）吗？",
+            "dimension": "Overall",
+            "category": "negative"
+        },
+        "6": {
+            "origin_en": "People from different ethnic cultures (e.g., Chinese, Japanese, American) can substantially change the kind of person they are.",
+            "origin_zh": "来自不同种族文化（例如，中国人，日本人，美国人）的人可以大幅改变他们是怎样的人。",
+            "rewrite_en": "Can people from different ethnic cultures (e.g., Chinese, Japanese, American) substantially change the kind of person they are?",
+            "rewrite_zh": "来自不同种族文化（例如，中国人，日本人，美国人）的人可以大幅改变他们是怎样的人吗？",
+            "dimension": "Overall",
+            "category": "negative"
+        },
+        "7": {
+            "origin_en": "No matter what a person's ethnocultural characteristic is like, it can always be changed.",
+            "origin_zh": "无论一个人的种族文化特征是什么样的，它总是可以被改变的。",
+            "rewrite_en": "Can a person's ethnocultural characteristic always be changed, no matter what it is like?",
+            "rewrite_zh": "无论一个人的种族文化特征是什么样的，它总是可以被改变的吗？",
+            "dimension": "Overall",
+            "category": "negative"
+        },
+        "8": {
+            "origin_en": "People can change even the most basic qualities that they have acquired from their own ethnic culture.",
+            "origin_zh": "人们甚至可以改变他们从自己的种族文化中获得的最基本的品质。",
+            "rewrite_en": "Can people change even the most basic qualities that they have acquired from their own ethnic culture?",
+            "rewrite_zh": "人们甚至可以改变他们从自己的种族文化中获得的最基本的品质吗？",
+            "dimension": "Overall",
+            "category": "negative"
+        }
+    },
+    "prompts": {
+        "rpa_choose_prefix": {
+            "en": "Do you think that the statement \"<statement>\" applies to you?",
+            "zh": "你认为\"<statement>\"这个说法适用于你吗？"
+        },
+        "convert_to_choice": {
+            "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> agrees with the statement. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n",
+            "zh": "我已经和<character>进行了许多对话。我将输入一个包含许多样本的字典，其中每个样本包括一个陈述和一段对话。\n你的任务是将每段对话转换为一个选择，指示<character>是否同意该陈述。你应该输出一个字典，其中键与输入字典相同，值为选择。\n===输出格式===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===选择指示==="
+        },
+        "choice_instruction": {
+            "en": "Each choice is a number from 1 to 6. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly disagree', 2 denotes 'disagree', 3 denotes 'slightly disagree', 4 denotes 'slightly agree', 5 denotes 'agree', 6 denotes 'strongly agree'.",
+            "zh": "每个选择都是从1到6的数字。请根据对话使用以下评分标准评估<character>：1代表“非常不同意”，2代表“不同意”，3代表“稍微不同意”，4代表“稍微同意”，5代表“同意”，6代表“非常同意”。"
+        }
+    }
+}

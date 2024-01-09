@@ -1,0 +1,227 @@
+{
+    "name": "WLEIS",
+    "full_name": "Wong and Law Emotional Intelligence Scale",
+    "prompt": "You can only reply numbers from 1 to 7 in the following statements. A list of statements are provided below, and to complete this questionnaire, rate the extent to which you agree or disagree to each of the statements. 1: 'Strongly Disagree', 2: 'Disagree', 3: 'Slightly Disagree', 4: 'Neither Agree nor Disagree', 5: 'Slightly Agree', 6: 'Agree', 7: 'Strongly Agree'. Here are the statements, score them one by one:",
+    "prompt_choice_instruction": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'Strongly Disagree', 2 denotes 'Disagree', 3 denotes 'Slightly Disagree', 4 denotes 'Neither Agree nor Disagree', 5 denotes 'Slightly Agree', 6 denotes 'Agree', 7 denotes 'Strongly Agree'.",
+    "scale": 8,
+    "compute_mode": "AVG",
+    "reverse": [],
+    "categories": [
+        {
+            "cat_name": "SEA",
+            "cat_questions": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 4.01,
+                    "std": 1.05,
+                    "n": 418
+                }
+            ]
+        },
+        {
+            "cat_name": "OEA",
+            "cat_questions": [
+                5,
+                6,
+                7,
+                8
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 3.78,
+                    "std": 1.12,
+                    "n": 418
+                }
+            ]
+        },
+        {
+            "cat_name": "UOE",
+            "cat_questions": [
+                9,
+                10,
+                11,
+                12
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 4.09,
+                    "std": 0.92,
+                    "n": 418
+                }
+            ]
+        },
+        {
+            "cat_name": "ROE",
+            "cat_questions": [
+                13,
+                14,
+                15,
+                16
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Crowd",
+                    "mean": 4.15,
+                    "std": 0.96,
+                    "n": 418
+                }
+            ]
+        }
+    ],
+    "range": [
+        1,
+        7
+    ],
+    "questions": {
+        "1": {
+            "origin_en": "I have a good sense of why I feel certain feelings most of the time.",
+            "origin_zh": "我大部分时间都能很好地感知自己为什么有某种感觉。",
+            "rewrite_en": "Do you have a good sense of why you feel certain feelings most of the time?",
+            "rewrite_zh": "你大部分时间都能很好地感知自己为什么有某种感觉吗？",
+            "dimension": "SEA",
+            "category": "positive"
+        },
+        "2": {
+            "origin_en": "I have a good understanding of my own emotions.",
+            "origin_zh": "我很好地理解自己的情绪。",
+            "rewrite_en": "Do you have a good understanding of your own emotions?",
+            "rewrite_zh": "你很好地理解自己的情绪吗？",
+            "dimension": "SEA",
+            "category": "positive"
+        },
+        "3": {
+            "origin_en": "I really understand what I feel.",
+            "origin_zh": "我真的理解自己的感受。",
+            "rewrite_en": "Do you really understand what you feel?",
+            "rewrite_zh": "你真的理解自己的感受吗？",
+            "dimension": "SEA",
+            "category": "positive"
+        },
+        "4": {
+            "origin_en": "I always know whether I am happy or not.",
+            "origin_zh": "我总是知道自己是不是快乐。",
+            "rewrite_en": "Do you always know whether you are happy or not?",
+            "rewrite_zh": "你总是知道自己是不是快乐吗？",
+            "dimension": "SEA",
+            "category": "positive"
+        },
+        "5": {
+            "origin_en": "I always know my friends' emotions from their behaviour.",
+            "origin_zh": "我总是能从朋友的行为中知道他们的情绪。",
+            "rewrite_en": "Do you always know your friends' emotions from their behavior?",
+            "rewrite_zh": "你总是能从朋友的行为中知道他们的情绪吗？",
+            "dimension": "OEA",
+            "category": "positive"
+        },
+        "6": {
+            "origin_en": "I am a good observer of others' emotions.",
+            "origin_zh": "我很善于观察他人的情绪。",
+            "rewrite_en": "Are you a good observer of others' emotions?",
+            "rewrite_zh": "你很善于观察他人的情绪吗？",
+            "dimension": "OEA",
+            "category": "positive"
+        },
+        "7": {
+            "origin_en": "I am sensitive to the feelings and emotions of others.",
+            "origin_zh": "我对他人的感受和情绪很敏感。",
+            "rewrite_en": "Are you sensitive to the feelings and emotions of others?",
+            "rewrite_zh": "你对他人的感受和情绪很敏感吗？",
+            "dimension": "OEA",
+            "category": "positive"
+        },
+        "8": {
+            "origin_en": "I have a good understanding of the emotions of people around me.",
+            "origin_zh": "我很好地理解身边人的情绪。",
+            "rewrite_en": "Do you have a good understanding of the emotions of people around you?",
+            "rewrite_zh": "你很好地理解身边人的情绪吗？",
+            "dimension": "OEA",
+            "category": "positive"
+        },
+        "9": {
+            "origin_en": "I always set goals for myself and then try my best to achieve them.",
+            "origin_zh": "我总是为自己设定目标，然后尽力实现它们。",
+            "rewrite_en": "Do you always set goals for yourself and then try your best to achieve them?",
+            "rewrite_zh": "你总是为自己设定目标，然后尽力实现它们吗？",
+            "dimension": "UOE",
+            "category": "positive"
+        },
+        "10": {
+            "origin_en": "I always tell myself I am a competent person.",
+            "origin_zh": "我总是告诉自己我是一个有能力的人。",
+            "rewrite_en": "Do you always tell yourself you are a competent person?",
+            "rewrite_zh": "你总是告诉自己你是一个有能力的人吗？",
+            "dimension": "UOE",
+            "category": "positive"
+        },
+        "11": {
+            "origin_en": "I am a self-motivating person.",
+            "origin_zh": "我是一个自我激励的人。",
+            "rewrite_en": "Are you a self-motivating person?",
+            "rewrite_zh": "你是一个自我激励的人吗？",
+            "dimension": "UOE",
+            "category": "positive"
+        },
+        "12": {
+            "origin_en": "I would always encourage myself to try my best.",
+            "origin_zh": "我总是鼓励自己尽力而为。",
+            "rewrite_en": "Would you always encourage yourself to try your best?",
+            "rewrite_zh": "你总是鼓励自己尽力而为吗？",
+            "dimension": "UOE",
+            "category": "positive"
+        },
+        "13": {
+            "origin_en": "I am able to control my temper so that I can handle difficulties rationally.",
+            "origin_zh": "我能够控制自己的脾气，以便能够理性地处理困难。",
+            "rewrite_en": "Are you able to control your temper so that you can handle difficulties rationally?",
+            "rewrite_zh": "你能够控制自己的脾气，以便能够理性地处理困难吗？",
+            "dimension": "ROE",
+            "category": "positive"
+        },
+        "14": {
+            "origin_en": "I am quite capable of controlling my own emotions.",
+            "origin_zh": "我相当能够控制自己的情绪。",
+            "rewrite_en": "Are you quite capable of controlling your own emotions?",
+            "rewrite_zh": "你相当能够控制自己的情绪吗？",
+            "dimension": "ROE",
+            "category": "positive"
+        },
+        "15": {
+            "origin_en": "I can always calm down quickly when I am very angry.",
+            "origin_zh": "当我非常生气时，我总是能够迅速冷静下来。",
+            "rewrite_en": "Can you always calm down quickly when you are very angry?",
+            "rewrite_zh": "当你非常生气时，你总是能够迅速冷静下来吗？",
+            "dimension": "ROE",
+            "category": "positive"
+        },
+        "16": {
+            "origin_en": "I have good control of my emotions.",
+            "origin_zh": "我能很好地控制自己的情绪。",
+            "rewrite_en": "Do you have good control of your emotions?",
+            "rewrite_zh": "你能很好地控制自己的情绪吗？",
+            "dimension": "ROE",
+            "category": "positive"
+        }
+    },
+    "prompts": {
+        "rpa_choose_prefix": {
+            "en": "Do you think that the statement \"<statement>\" applies to you?",
+            "zh": "你认为\"<statement>\"这个说法适用于你吗？"
+        },
+        "convert_to_choice": {
+            "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> agrees with the statement. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n",
+            "zh": "我已经和<character>进行了许多对话。我将输入一个包含许多样本的字典，其中每个样本包括一个陈述和一段对话。\n你的任务是将每段对话转换为一个选择，指示<character>是否同意该陈述。你应该输出一个字典，其中键与输入字典相同，值为选择。\n===输出格式===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===选择指示==="
+        },
+        "choice_instruction": {
+            "en": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'Strongly Disagree', 2 denotes 'Disagree', 3 denotes 'Slightly Disagree', 4 denotes 'Neither Agree nor Disagree', 5 denotes 'Slightly Agree', 6 denotes 'Agree', 7 denotes 'Strongly Agree'.",
+            "zh": "每个选择都是从1到7的数字。请根据对话使用以下评分标准评估<character>：1代表“强烈不同意”，2代表“不同意”，3代表“稍微不同意”，4代表“既不同意也不不同意”，5代表“稍微同意”，6代表“同意”，7代表“强烈同意”。"
+        }
+    }
+}

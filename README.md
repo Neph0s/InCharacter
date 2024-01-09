@@ -29,19 +29,19 @@ cd code
 最快测试
 
 ```bash
-python assess_personality.py --questionnaire_type mbti --character hutao --eval_setting sample
+python personality_tests.py --questionnaire_type mbti --character hutao --eval_setting sample
 ```
 
 效果和效率折中
 
 ```bash
-python assess_personality.py --questionnaire_type mbti --character hutao --eval_setting collective
+python personality_tests.py --questionnaire_type mbti --character hutao --eval_setting collective
 ```
 
 最佳效果
 
 ```bash
-python assess_personality.py --questionnaire_type mbti --character hutao --eval_setting batch --evaluator gpt-4 
+python personality_tests.py --questionnaire_type mbti --character hutao --eval_setting batch --evaluator gpt-4 
 ```
 
 采用`sample`设置时，系统会从问卷中采样20个问题进行测试，整个流程的时间大约为1-2分钟。完整的MBTI/大五测试流程需要大约8-15分钟，具体时间取决于是否采用分组评估。

@@ -1,0 +1,351 @@
+{
+    "name": "EIS",
+    "full_name": "Emotional Intelligence Scale",
+    "prompt": "You can only reply numbers from 1 to 5 in the following statements. Please compare your actual situation with the situations described in the questions below and choose the answer that best corresponds to your actual situation based on your first impression. There is no right or wrong answer, please answer truthfully based on your first impression. Please use the following scale: 1 = 'Does not match at all', 2 = 'Does not match very well', 3 = 'Not sure', 4 = 'Matches quite well', 5 = 'Matches perfectly'. Here are the statements, score them one by one:",
+    "prompt_choice_instruction": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'Does not match at all', 2 denotes 'Does not match very well', 3 denotes 'Not sure', 4 denotes 'Matches quite well', 5 denotes 'Matches perfectly'.",
+    "scale": 6,
+    "compute_mode": "SUM",
+    "reverse": [
+        5,
+        28,
+        33
+    ],
+    "categories": [
+        {
+            "cat_name": "Overall",
+            "cat_questions": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33
+            ],
+            "crowd": [
+                {
+                    "crowd_name": "Men",
+                    "mean": 124.78,
+                    "std": 16.52,
+                    "n": 111
+                },
+                {
+                    "crowd_name": "Women",
+                    "mean": 130.94,
+                    "std": 15.09,
+                    "n": 218
+                }
+            ]
+        }
+    ],
+    "range": [
+        1,
+        5
+    ],
+    "questions": {
+        "1": {
+            "origin_en": "I know when to speak about my personal problems to others.",
+            "origin_zh": "我知道何时向他人倾诉我的个人问题。",
+            "rewrite_en": "Do I know when to speak about my personal problems to others?",
+            "rewrite_zh": "我知道何时向他人倾诉我的个人问题吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "2": {
+            "origin_en": "When I am faced with obstacles, I remember times I faced similar obstacles and overcame them.",
+            "origin_zh": "当我面临障碍时，我会记得我曾面对类似障碍并克服的时刻。",
+            "rewrite_en": "Do I remember times I faced similar obstacles and overcame them when I am faced with obstacles?",
+            "rewrite_zh": "当我面临障碍时，我会记得我曾面对类似障碍并克服的时刻吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "3": {
+            "origin_en": "I expect that I will do well on most things I try.",
+            "origin_zh": "我期待我在大多数尝试的事情上表现良好。",
+            "rewrite_en": "Do I expect that I will do well on most things I try?",
+            "rewrite_zh": "我期待我在大多数尝试的事情上表现良好吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "4": {
+            "origin_en": "Other people find it easy to confide in me.",
+            "origin_zh": "其他人觉得向我倾诉很容易。",
+            "rewrite_en": "Do other people find it easy to confide in me?",
+            "rewrite_zh": "其他人觉得向我倾诉很容易吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "5": {
+            "origin_en": "I find it hard to understand the non-verbal messages of other people.",
+            "origin_zh": "我发现很难理解其他人的非语言信息。",
+            "rewrite_en": "Do I find it hard to understand the non-verbal messages of other people?",
+            "rewrite_zh": "我发现很难理解其他人的非语言信息吗？",
+            "dimension": "Overall",
+            "category": "negative"
+        },
+        "6": {
+            "origin_en": "Some of the major events of my life have led me to re-evaluate what is important and not important.",
+            "origin_zh": "我生活中的一些重大事件导致我重新评估什么是重要的，什么是不重要的。",
+            "rewrite_en": "Have some of the major events of my life led me to re-evaluate what is important and not important?",
+            "rewrite_zh": "我生活中的一些重大事件导致我重新评估什么是重要的，什么是不重要的吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "7": {
+            "origin_en": "When my mood changes, I see new possibilities.",
+            "origin_zh": "当我的心情改变时，我看到了新的可能性。",
+            "rewrite_en": "Do I see new possibilities when my mood changes?",
+            "rewrite_zh": "当我的心情改变时，我看到了新的可能性吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "8": {
+            "origin_en": "Emotions are one of the things that make my life worth living.",
+            "origin_zh": "情感是让我的生活有意义的事情之一。",
+            "rewrite_en": "Are emotions one of the things that make my life worth living?",
+            "rewrite_zh": "情感是让我的生活有意义的事情之一吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "9": {
+            "origin_en": "I am aware of my emotions as I experience them.",
+            "origin_zh": "当我经历情感时，我意识到我的情绪。",
+            "rewrite_en": "Am I aware of my emotions as I experience them?",
+            "rewrite_zh": "当我经历情感时，我意识到我的情绪吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "10": {
+            "origin_en": "I expect good things to happen.",
+            "origin_zh": "我期待好事发生。",
+            "rewrite_en": "Do I expect good things to happen?",
+            "rewrite_zh": "我期待好事发生吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "11": {
+            "origin_en": "I like to share my emotions with others.",
+            "origin_zh": "我喜欢与他人分享我的情绪。",
+            "rewrite_en": "Do you like to share your emotions with others?",
+            "rewrite_zh": "你喜欢与他人分享你的情绪吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "12": {
+            "origin_en": "When I experience a positive emotion, I know how to make it last.",
+            "origin_zh": "当我经历积极情绪时，我知道如何让它持续下去。",
+            "rewrite_en": "Do you know how to make a positive emotion last when you experience it?",
+            "rewrite_zh": "当你经历积极情绪时，你知道如何让它持续下去吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "13": {
+            "origin_en": "I arrange events others enjoy.",
+            "origin_zh": "我安排其他人喜欢的活动。",
+            "rewrite_en": "Do you arrange events that others enjoy?",
+            "rewrite_zh": "你安排其他人喜欢的活动吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "14": {
+            "origin_en": "I seek out activities that make me happy.",
+            "origin_zh": "我寻找能让我快乐的活动。",
+            "rewrite_en": "Do you seek out activities that make you happy?",
+            "rewrite_zh": "你寻找能让你快乐的活动吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "15": {
+            "origin_en": "I am aware of the non-verbal messages I send to others.",
+            "origin_zh": "我意识到我向他人传达的非语言信息。",
+            "rewrite_en": "Are you aware of the non-verbal messages you send to others?",
+            "rewrite_zh": "你意识到你向他人传达的非语言信息吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "16": {
+            "origin_en": "I present myself in a way that makes a good impression on others.",
+            "origin_zh": "我以一种给他人留下良好印象的方式展现自己。",
+            "rewrite_en": "Do you present yourself in a way that makes a good impression on others?",
+            "rewrite_zh": "你以一种给他人留下良好印象的方式展现自己吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "17": {
+            "origin_en": "When I am in a positive mood, solving problems is easy for me.",
+            "origin_zh": "当我处于积极情绪时，解决问题对我来说很容易。",
+            "rewrite_en": "Is solving problems easy for you when you are in a positive mood?",
+            "rewrite_zh": "当你处于积极情绪时，解决问题对你来说很容易吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "18": {
+            "origin_en": "By looking at their facial expressions, I recognize the emotions people are experiencing.",
+            "origin_zh": "通过观察他们的面部表情，我能识别出人们正在经历的情绪。",
+            "rewrite_en": "Can you recognize the emotions people are experiencing by looking at their facial expressions?",
+            "rewrite_zh": "通过观察他们的面部表情，你能识别出人们正在经历的情绪吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "19": {
+            "origin_en": "I know why my emotions change.",
+            "origin_zh": "我知道我的情绪为什么会改变。",
+            "rewrite_en": "Do you know why your emotions change?",
+            "rewrite_zh": "你知道你的情绪为什么会改变吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "20": {
+            "origin_en": "When I am in a positive mood, I am able to come up with new ideas.",
+            "origin_zh": "当我处于积极情绪时，我能够想出新主意。",
+            "rewrite_en": "Are you able to come up with new ideas when you are in a positive mood?",
+            "rewrite_zh": "当你处于积极情绪时，你能够想出新主意吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "21": {
+            "origin_en": "I have control over my emotions.",
+            "origin_zh": "我能控制自己的情绪。",
+            "rewrite_en": "Do I have control over my emotions?",
+            "rewrite_zh": "我能控制自己的情绪吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "22": {
+            "origin_en": "I easily recognize my emotions as I experience them.",
+            "origin_zh": "我很容易在经历时认识到自己的情绪。",
+            "rewrite_en": "Do I easily recognize my emotions as I experience them?",
+            "rewrite_zh": "我在经历时很容易认识到自己的情绪吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "23": {
+            "origin_en": "I motivate myself by imagining a good outcome to tasks I take on.",
+            "origin_zh": "我通过想象任务的良好结果来激励自己。",
+            "rewrite_en": "Do I motivate myself by imagining a good outcome to tasks I take on?",
+            "rewrite_zh": "我通过想象任务的良好结果来激励自己吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "24": {
+            "origin_en": "I compliment others when they have done something well.",
+            "origin_zh": "当别人做得很好时，我会称赞他们。",
+            "rewrite_en": "Do I compliment others when they have done something well?",
+            "rewrite_zh": "当别人做得很好时，我会称赞他们吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "25": {
+            "origin_en": "I am aware of the non-verbal messages other people send.",
+            "origin_zh": "我意识到别人传达的非言语信息。",
+            "rewrite_en": "Am I aware of the non-verbal messages other people send?",
+            "rewrite_zh": "我意识到别人传达的非言语信息吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "26": {
+            "origin_en": "When another person tells me about an important event in his or her life, I almost feel as though I have experienced this event myself.",
+            "origin_zh": "当别人告诉我他或她生活中的重要事件时，我几乎感觉自己经历了这个事件。",
+            "rewrite_en": "Do I almost feel as though I have experienced an important event in another person's life when they tell me about it?",
+            "rewrite_zh": "当别人告诉我他或她生活中的重要事件时，我几乎感觉自己经历了这个事件吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "27": {
+            "origin_en": "When I feel a change in emotions, I tend to come up with new ideas.",
+            "origin_zh": "当我感到情绪变化时，我倾向于想出新主意。",
+            "rewrite_en": "Do I tend to come up with new ideas when I feel a change in emotions?",
+            "rewrite_zh": "当我感到情绪变化时，我倾向于想出新主意吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "28": {
+            "origin_en": "When I am faced with a challenge, I give up because I believe I will fail.",
+            "origin_zh": "当我面临挑战时，我会放弃，因为我相信我会失败。",
+            "rewrite_en": "Do I give up when I am faced with a challenge because I believe I will fail?",
+            "rewrite_zh": "当我面临挑战时，我会放弃，因为我相信我会失败吗？",
+            "dimension": "Overall",
+            "category": "negative"
+        },
+        "29": {
+            "origin_en": "I know what other people are feeling just by looking at them.",
+            "origin_zh": "我通过看他们就知道别人的感受。",
+            "rewrite_en": "Do I know what other people are feeling just by looking at them?",
+            "rewrite_zh": "我通过看他们就知道别人的感受吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "30": {
+            "origin_en": "I help other people feel better when they are down.",
+            "origin_zh": "当别人情绪低落时，我会帮助他们感觉好一点。",
+            "rewrite_en": "Do I help other people feel better when they are down?",
+            "rewrite_zh": "当别人情绪低落时，我会帮助他们感觉好一点吗？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "31": {
+            "origin_en": "I use good moods to help myself keep trying in the face of obstacles.",
+            "origin_zh": "我利用好心情来帮助自己在面对障碍时继续努力。",
+            "rewrite_en": "Do I use good moods to help myself keep trying in the face of obstacles?",
+            "rewrite_zh": "我是否利用好心情来帮助自己在面对障碍时继续努力？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "32": {
+            "origin_en": "I can tell how people are feeling by listening to the tone of their voice.",
+            "origin_zh": "我可以通过听声音的语调来判断人们的感受。",
+            "rewrite_en": "Can I tell how people are feeling by listening to the tone of their voice?",
+            "rewrite_zh": "我是否可以通过听声音的语调来判断人们的感受？",
+            "dimension": "Overall",
+            "category": "positive"
+        },
+        "33": {
+            "origin_en": "It is difficult for me to understand why people feel the way they do.",
+            "origin_zh": "我很难理解人们为什么会有这样的感受。",
+            "rewrite_en": "Is it difficult for me to understand why people feel the way they do?",
+            "rewrite_zh": "我是否很难理解人们为什么会有这样的感受？",
+            "dimension": "Overall",
+            "category": "negative"
+        }
+    },
+    "prompts": {
+        "rpa_choose_prefix": {
+            "en": "Do you think that the statement \"<statement>\" applies to you?",
+            "zh": "你认为\"<statement>\"这个说法适用于你吗？"
+        },
+        "convert_to_choice": {
+            "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> agrees with the statement. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n",
+            "zh": "我已经和<character>进行了许多对话。我将输入一个包含许多样本的字典，其中每个样本包括一个陈述和一段对话。\n你的任务是将每段对话转换为一个选择，指示<character>是否同意该陈述。你应该输出一个字典，其中键与输入字典相同，值为选择。\n===输出格式===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===选择指示==="
+        },
+        "choice_instruction": {
+            "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'Does not match at all', 2 denotes 'Does not match very well', 3 denotes 'Not sure', 4 denotes 'Matches quite well', 5 denotes 'Matches perfectly'.",
+            "zh": "每个选择都是从1到5的数字。请根据对话使用以下评分标准评估<character>：1代表“完全不匹配”，2代表“不太匹配”，3代表“不确定”，4代表“相当匹配”，5代表“完全匹配”。"
+        }
+    }
+}

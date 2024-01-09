@@ -26,19 +26,19 @@ To assess the personality of a specific ChatHaruhi Bot, use the following comman
 Quick Test:
 
 ```bash
-python assess_personality.py --questionnaire_type mbti --character hutao --eval_setting sample
+python personality_tests.py --questionnaire_type mbti --character hutao --eval_setting sample
 ```
 
 Balanced Effectiveness and Efficiency:
 
 ```bash
-python assess_personality.py --questionnaire_type mbti --character hutao --eval_setting collective
+python personality_tests.py --questionnaire_type mbti --character hutao --eval_setting collective
 ```
 
 Optimal Effectiveness:
 
 ```bash
-python assess_personality.py --questionnaire_type mbti --character hutao --eval_setting batch --evaluator gpt-4 
+python personality_tests.py --questionnaire_type mbti --character hutao --eval_setting batch --evaluator gpt-4 
 ```
 
 Using the `sample` setting, the system will sample 20 questions from the questionnaire for testing. This process takes approximately 1-2 minutes. A full MBTI/Big Five test will take around 8-15 minutes, depending on whether batch evaluation is used.
