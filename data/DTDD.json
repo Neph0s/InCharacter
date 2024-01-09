@@ -175,8 +175,8 @@
             "zh": "每个选择都是从1到9的数字。请根据对话使用以下评分标准评估<character>：1代表“非常不同意”，9代表“非常同意”。2到8代表在“不同意”和“同意”之间的不同程度，5代表“既不同意也不同意”。"
         },
         "rpa_choice_instruction": {
-            "en": "Reply a number from 1 to 9 using the scales: 1 denotes 'disagree strongly', and 9 denotes 'agree strongly'. 2 to 8 represent varying degrees between 'disagree' and 'agree', and 5 denotes 'neither agree nor disagree'.",
-            "zh": "请用1到9的等级来回答，1代表“非常不同意”，9代表“非常同意”。2到8代表在“不同意”和“同意”之间的不同程度，5代表“既不同意也不同意”。"
+            "en": "Reply a number from 1 to 9 using the scales: 1 denotes 'disagree strongly', and 9 denotes 'agree strongly'. 2 to 8 represent varying degrees between 'disagree' and 'agree', and 5 denotes 'neither agree nor disagree'.Please answer with the number only, without anything else.",
+            "zh": "请用1到9的等级来回答，1代表“非常不同意”，9代表“非常同意”。2到8代表在“不同意”和“同意”之间的不同程度，5代表“既不同意也不同意”。请你只回答这一个数字，不要说其他内容。"
         }
     }
 }

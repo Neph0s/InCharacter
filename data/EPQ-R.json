@@ -1042,8 +1042,8 @@
             "zh": "每个选择都是0或1的数字。请根据对话对<character>进行评分：'1'代表'是'，'0'代表'否'。"
         },
         "rpa_choice_instruction": {
-            "en": "Reply a number from 0 to 1 using the scales: '1' denotes 'YES' and '0' denotes 'NO'.",
-            "zh": "回复一个0或1的数字：'1'代表'是'，'0'代表'否'。"
+            "en": "Reply a number from 0 to 1 using the scales: '1' denotes 'YES' and '0' denotes 'NO'.Please answer with the number only, without anything else.",
+            "zh": "回复一个0或1的数字：'1'代表'是'，'0'代表'否'。请你只回答这一个数字，不要说其他内容。"
         }
     }
 }

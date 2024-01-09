@@ -131,8 +131,8 @@
             "zh": "每个选择都是从1到4的数字。请根据对话使用以下评分标准来评估<character>：1代表“不同意”，2代表“有些不同意”，3代表“有些同意”，4代表“同意”。"
         },
         "rpa_choice_instruction": {
-            "en": "Reply a number from 1 to 4 using the scales: 1 denotes 'Disagree', 2 denotes 'Somewhat disagree', 3 denotes 'Somewhat agree', 4 denotes 'Agree'.",
-            "zh": "请用1到4的等级来回答，1代表“不同意”，2代表“有些不同意”，3代表“有些同意”，4代表“同意”。"
+            "en": "Reply a number from 1 to 4 using the scales: 1 denotes 'Disagree', 2 denotes 'Somewhat disagree', 3 denotes 'Somewhat agree', 4 denotes 'Agree'.Please answer with the number only, without anything else.",
+            "zh": "请用1到4的等级来回答，1代表“不同意”，2代表“有些不同意”，3代表“有些同意”，4代表“同意”。请你只回答这一个数字，不要说其他内容。"
         }
     }
 }

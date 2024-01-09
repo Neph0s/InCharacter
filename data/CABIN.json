@@ -2037,8 +2037,8 @@
             "zh": "每个选择都是从1到5的数字。请根据对话使用以下评分标准评估<character>：1表示“不喜欢”，2表示“稍微不喜欢”，3表示“既不喜欢也不讨厌”，4表示“稍微喜欢”，5表示“非常喜欢”。"
         },
         "rpa_choice_instruction": {
-            "en": "Reply a number from 1 to 5 using the scales: 1 means 'Dislike', 2 means 'Slightly Dislike', 3 means 'Neither Like nor Dislike', 4 means 'Slightly Like', 5 means 'Like Very Much'.",
-            "zh": "请用1到5的等级来回答，1代表“不喜欢”，2代表“稍微不喜欢”，3代表“既不喜欢也不讨厌”，4代表“稍微喜欢”，5代表“非常喜欢”。"
+            "en": "Reply a number from 1 to 5 using the scales: 1 means 'Dislike', 2 means 'Slightly Dislike', 3 means 'Neither Like nor Dislike', 4 means 'Slightly Like', 5 means 'Like Very Much'.Please answer with the number only, without anything else.",
+            "zh": "请用1到5的等级来回答，1代表“不喜欢”，2代表“稍微不喜欢”，3代表“既不喜欢也不讨厌”，4代表“稍微喜欢”，5代表“非常喜欢”。请你只回答这一个数字，不要说其他内容。"
         }
     }
 }

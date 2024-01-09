@@ -131,8 +131,8 @@
             "zh": "每个选择都是从0到4的数字。请根据对话使用以下评分标准评估<character>：0代表“强烈不同意”，1代表“不同意”，2代表“中立”，3代表“同意”，4代表“强烈同意”。"
         },
         "rpa_choice_instruction": {
-            "en": "Reply a number from 0 to 4 using the scales: 0 denotes 'strongly disagree', 1 denotes 'disagree', 2 denotes 'neutral', 3 denotes 'agree', 4 denotes 'strongly agree'.",
-            "zh": "请回复一个0到4之间的数字：0代表“非常不同意”，1代表“不同意”，2代表“中立”，3代表“同意”，4代表“非常同意”。"
+            "en": "Reply a number from 0 to 4 using the scales: 0 denotes 'strongly disagree', 1 denotes 'disagree', 2 denotes 'neutral', 3 denotes 'agree', 4 denotes 'strongly agree'.Please answer with the number only, without anything else.",
+            "zh": "请回复一个0到4之间的数字：0代表“非常不同意”，1代表“不同意”，2代表“中立”，3代表“同意”，4代表“非常同意”。请你只回答这一个数字，不要说其他内容。"
         }
     }
 }
