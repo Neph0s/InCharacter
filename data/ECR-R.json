@@ -93,288 +93,288 @@
         "1": {
             "origin_en": "I'm afraid that I will lose my partner's love.",
             "origin_zh": "我害怕会失去我的伴侣的爱。",
-            "rewrite_en": "Are you afraid that you will lose your partner's love?",
-            "rewrite_zh": "你害怕会失去你的伴侣的爱吗？",
+            "rewritten_en": "Are you afraid that you will lose your partner's love?",
+            "rewritten_zh": "你害怕会失去你的伴侣的爱吗？",
             "dimension": "Attachment-related Anxiety",
             "category": "positive"
         },
         "2": {
             "origin_en": "I often worry that my partner will not want to stay with me.",
             "origin_zh": "我经常担心我的伴侣不想和我在一起。",
-            "rewrite_en": "Do you often worry that your partner will not want to stay with you?",
-            "rewrite_zh": "你经常担心你的伴侣不想和你在一起吗？",
+            "rewritten_en": "Do you often worry that your partner will not want to stay with you?",
+            "rewritten_zh": "你经常担心你的伴侣不想和你在一起吗？",
             "dimension": "Attachment-related Anxiety",
             "category": "positive"
         },
         "3": {
             "origin_en": "I often worry that my partner doesn't really love me.",
             "origin_zh": "我经常担心我的伴侣并不真正爱我。",
-            "rewrite_en": "Do you often worry that your partner doesn't really love you?",
-            "rewrite_zh": "你经常担心你的伴侣并不真正爱你吗？",
+            "rewritten_en": "Do you often worry that your partner doesn't really love you?",
+            "rewritten_zh": "你经常担心你的伴侣并不真正爱你吗？",
             "dimension": "Attachment-related Anxiety",
             "category": "positive"
         },
         "4": {
             "origin_en": "I worry that romantic partners won't care about me as much as I care about them.",
             "origin_zh": "我担心浪漫伴侣不会像我关心他们一样关心我。",
-            "rewrite_en": "Do you worry that romantic partners won't care about you as much as you care about them?",
-            "rewrite_zh": "你担心浪漫伴侣不会像你关心他们一样关心你吗？",
+            "rewritten_en": "Do you worry that romantic partners won't care about you as much as you care about them?",
+            "rewritten_zh": "你担心浪漫伴侣不会像你关心他们一样关心你吗？",
             "dimension": "Attachment-related Anxiety",
             "category": "positive"
         },
         "5": {
             "origin_en": "I often wish that my panaer's feelings for me were as strong as my feelings for him or her.",
             "origin_zh": "我经常希望我的伴侣对我的感情能和我对他或她的感情一样强烈",
-            "rewrite_en": "Do you often wish that your partner's feelings for you were as strong as your feelings for him or her?",
-            "rewrite_zh": "你经常希望你的伴侣对你的感情和你对他或她的感情一样强烈吗？",
+            "rewritten_en": "Do you often wish that your partner's feelings for you were as strong as your feelings for him or her?",
+            "rewritten_zh": "你经常希望你的伴侣对你的感情和你对他或她的感情一样强烈吗？",
             "dimension": "Attachment-related Anxiety",
             "category": "positive"
         },
         "6": {
             "origin_en": "I worry a lot about my relationships.",
             "origin_zh": "我非常担心我的关系。",
-            "rewrite_en": "Do you worry a lot about your relationships?",
-            "rewrite_zh": "你非常担心你的关系吗？",
+            "rewritten_en": "Do you worry a lot about your relationships?",
+            "rewritten_zh": "你非常担心你的关系吗？",
             "dimension": "Attachment-related Anxiety",
             "category": "positive"
         },
         "7": {
             "origin_en": "When my partner is out of sight, I worry that he or she might become interested in someone else.",
             "origin_zh": "当我的伴侣不在视线范围内时，我担心他或她可能会对其他人产生兴趣。",
-            "rewrite_en": "Do you worry that when your partner is out of sight, he or she might become interested in someone else?",
-            "rewrite_zh": "你担心当你的伴侣不在视线范围内时，他或她可能会对其他人产生兴趣吗？",
+            "rewritten_en": "Do you worry that when your partner is out of sight, he or she might become interested in someone else?",
+            "rewritten_zh": "你担心当你的伴侣不在视线范围内时，他或她可能会对其他人产生兴趣吗？",
             "dimension": "Attachment-related Anxiety",
             "category": "positive"
         },
         "8": {
             "origin_en": "When I show my feelings for romantic partners, I'm afraid they will not feel the 'same about me.",
             "origin_zh": "当我表达对浪漫伴侣的感情时，我害怕他们不会对我有同样的感觉。",
-            "rewrite_en": "Are you afraid that when you show your feelings for romantic partners, they will not feel the same about you?",
-            "rewrite_zh": "你害怕当你表达对浪漫伴侣的感情时，他们不会对你有同样的感觉吗？",
+            "rewritten_en": "Are you afraid that when you show your feelings for romantic partners, they will not feel the same about you?",
+            "rewritten_zh": "你害怕当你表达对浪漫伴侣的感情时，他们不会对你有同样的感觉吗？",
             "dimension": "Attachment-related Anxiety",
             "category": "positive"
         },
         "9": {
             "origin_en": "I rarely worry about my partner leaving me.",
             "origin_zh": "我很少担心我的伴侣离开我。",
-            "rewrite_en": "Do you rarely worry about your partner leaving you?",
-            "rewrite_zh": "你很少担心你的伴侣离开你吗？",
+            "rewritten_en": "Do you rarely worry about your partner leaving you?",
+            "rewritten_zh": "你很少担心你的伴侣离开你吗？",
             "dimension": "Attachment-related Anxiety",
             "category": "negative"
         },
         "10": {
             "origin_en": "My romantic partner makes me doubt myself.",
             "origin_zh": "我的浪漫伴侣让我怀疑自己。",
-            "rewrite_en": "Does your romantic partner make you doubt yourself?",
-            "rewrite_zh": "你的浪漫伴侣让你怀疑自己吗？",
+            "rewritten_en": "Does your romantic partner make you doubt yourself?",
+            "rewritten_zh": "你的浪漫伴侣让你怀疑自己吗？",
             "dimension": "Attachment-related Anxiety",
             "category": "positive"
         },
         "11": {
             "origin_en": "I do not often worry about being abandoned.",
             "origin_zh": "我不经常担心被抛弃。",
-            "rewrite_en": "Do you often worry about being abandoned?",
-            "rewrite_zh": "你经常担心被抛弃吗？",
+            "rewritten_en": "Do you often worry about being abandoned?",
+            "rewritten_zh": "你经常担心被抛弃吗？",
             "dimension": "Attachment-related Anxiety",
             "category": "negative"
         },
         "12": {
             "origin_en": "I find that my partner(s) don't want to get as close as I would like.",
             "origin_zh": "我发现我的伴侣不想和我一样亲近。",
-            "rewrite_en": "Do you find that your partner(s) want to get as close as you would like?",
-            "rewrite_zh": "你发现你的伴侣想和你一样亲近吗？",
+            "rewritten_en": "Do you find that your partner(s) want to get as close as you would like?",
+            "rewritten_zh": "你发现你的伴侣想和你一样亲近吗？",
             "dimension": "Attachment-related Anxiety",
             "category": "positive"
         },
         "13": {
             "origin_en": "Sometimes romantic partners change their feelings about me for no apparent reason.",
             "origin_zh": "有时浪漫伴侣会毫无明显原因地改变对我的感觉。",
-            "rewrite_en": "Do romantic partners sometimes change their feelings about you for no apparent reason?",
-            "rewrite_zh": "浪漫伴侣有时会毫无明显原因地改变对你的感觉吗？",
+            "rewritten_en": "Do romantic partners sometimes change their feelings about you for no apparent reason?",
+            "rewritten_zh": "浪漫伴侣有时会毫无明显原因地改变对你的感觉吗？",
             "dimension": "Attachment-related Anxiety",
             "category": "positive"
         },
         "14": {
             "origin_en": "My desire to be very close sometimes scares people away.",
             "origin_zh": "我渴望非常亲近有时会吓跑人。",
-            "rewrite_en": "Does your desire to be very close sometimes scare people away?",
-            "rewrite_zh": "你渴望非常亲近有时会吓跑人吗？",
+            "rewritten_en": "Does your desire to be very close sometimes scare people away?",
+            "rewritten_zh": "你渴望非常亲近有时会吓跑人吗？",
             "dimension": "Attachment-related Anxiety",
             "category": "positive"
         },
         "15": {
             "origin_en": "I'm afraid that once a romantic partner gets to know me, he or she won't like who I really am.",
             "origin_zh": "我担心一旦浪漫伴侣了解我，他或她就不会喜欢真正的我。",
-            "rewrite_en": "Are you afraid that once a romantic partner gets to know you, he or she won't like who you really are?",
-            "rewrite_zh": "你担心一旦浪漫伴侣了解你，他或她就不会喜欢真正的你吗？",
+            "rewritten_en": "Are you afraid that once a romantic partner gets to know you, he or she won't like who you really are?",
+            "rewritten_zh": "你担心一旦浪漫伴侣了解你，他或她就不会喜欢真正的你吗？",
             "dimension": "Attachment-related Anxiety",
             "category": "positive"
         },
         "16": {
             "origin_en": "It makes me mad that I don't get the affection and support I need from my partner.",
             "origin_zh": "我生气的是我没有从伴侣那里得到我需要的关爱和支持。",
-            "rewrite_en": "Does it make you mad that you don't get the affection and support you need from your partner?",
-            "rewrite_zh": "你生气的是你没有从伴侣那里得到你需要的关爱和支持吗？",
+            "rewritten_en": "Does it make you mad that you don't get the affection and support you need from your partner?",
+            "rewritten_zh": "你生气的是你没有从伴侣那里得到你需要的关爱和支持吗？",
             "dimension": "Attachment-related Anxiety",
             "category": "positive"
         },
         "17": {
             "origin_en": "I worry that I won't measure up to other people.",
             "origin_zh": "我担心自己无法与他人相提并论。",
-            "rewrite_en": "Do you worry that you won't measure up to other people?",
-            "rewrite_zh": "你担心自己无法与他人相提并论吗？",
+            "rewritten_en": "Do you worry that you won't measure up to other people?",
+            "rewritten_zh": "你担心自己无法与他人相提并论吗？",
             "dimension": "Attachment-related Anxiety",
             "category": "positive"
         },
         "18": {
             "origin_en": "My partner only sEEMs to notice me when I'm angry.",
             "origin_zh": "我的伴侣似乎只在我生气的时候才注意到我",
-            "rewrite_en": "Does your partner only seem to notice you when you're angry?",
-            "rewrite_zh": "你的伴侣似乎只在你生气时注意到你吗？",
+            "rewritten_en": "Does your partner only seem to notice you when you're angry?",
+            "rewritten_zh": "你的伴侣似乎只在你生气时注意到你吗？",
             "dimension": "Attachment-related Anxiety",
             "category": "positive"
         },
         "19": {
             "origin_en": "I prefer not to show a partner how I feel deep down.",
             "origin_zh": "我宁愿不让伴侣知道我内心的感受。",
-            "rewrite_en": "Do you prefer not to show a partner how you feel deep down?",
-            "rewrite_zh": "你宁愿不让伴侣知道你内心的感受吗？",
+            "rewritten_en": "Do you prefer not to show a partner how you feel deep down?",
+            "rewritten_zh": "你宁愿不让伴侣知道你内心的感受吗？",
             "dimension": "Attachment-related Avoidance",
             "category": "positive"
         },
         "20": {
             "origin_en": "I feel comfortable sharing my private thoughts and feelings with my partner.",
             "origin_zh": "我觉得和伴侣分享我的私人想法和感受很舒服。",
-            "rewrite_en": "Do you feel comfortable sharing your private thoughts and feelings with your partner?",
-            "rewrite_zh": "你觉得和伴侣分享你的私人想法和感受很舒服吗？",
+            "rewritten_en": "Do you feel comfortable sharing your private thoughts and feelings with your partner?",
+            "rewritten_zh": "你觉得和伴侣分享你的私人想法和感受很舒服吗？",
             "dimension": "Attachment-related Avoidance",
             "category": "negative"
         },
         "21": {
             "origin_en": "I find it difficult to allow myself to depend on romantic partners.",
             "origin_zh": "我发现很难让自己依赖恋人。",
-            "rewrite_en": "Is it difficult for you to allow yourself to depend on romantic partners?",
-            "rewrite_zh": "你发现很难让自己依赖恋人吗？",
+            "rewritten_en": "Is it difficult for you to allow yourself to depend on romantic partners?",
+            "rewritten_zh": "你发现很难让自己依赖恋人吗？",
             "dimension": "Attachment-related Avoidance",
             "category": "positive"
         },
         "22": {
             "origin_en": "I am very comfortable being close to romantic partners.",
             "origin_zh": "我和恋人亲近时感到非常舒适。",
-            "rewrite_en": "Are you very comfortable being close to romantic partners?",
-            "rewrite_zh": "你和恋人亲近时感到非常舒适吗？",
+            "rewritten_en": "Are you very comfortable being close to romantic partners?",
+            "rewritten_zh": "你和恋人亲近时感到非常舒适吗？",
             "dimension": "Attachment-related Avoidance",
             "category": "negative"
         },
         "23": {
             "origin_en": "I don't feel comfortable opening up to romantic partners.",
             "origin_zh": "我不感到舒适向恋人敞开心扉。",
-            "rewrite_en": "Do you feel comfortable opening up to romantic partners?",
-            "rewrite_zh": "你感到舒适向恋人敞开心扉吗？",
+            "rewritten_en": "Do you feel comfortable opening up to romantic partners?",
+            "rewritten_zh": "你感到舒适向恋人敞开心扉吗？",
             "dimension": "Attachment-related Avoidance",
             "category": "positive"
         },
         "24": {
             "origin_en": "I prefer not to be toa close to romantic partners.",
             "origin_zh": "我更喜欢不要太靠近浪漫伴侣",
-            "rewrite_en": "Do you prefer not to be too close to romantic partners?",
-            "rewrite_zh": "你更喜欢不要和恋人太亲近吗？",
+            "rewritten_en": "Do you prefer not to be too close to romantic partners?",
+            "rewritten_zh": "你更喜欢不要和恋人太亲近吗？",
             "dimension": "Attachment-related Avoidance",
             "category": "positive"
         },
         "25": {
             "origin_en": "I get uncomfortable when a romantic partner wants to be very close.",
             "origin_zh": "当恋人想要非常亲近时，我感到不舒服。",
-            "rewrite_en": "Do you get uncomfortable when a romantic partner wants to be very close?",
-            "rewrite_zh": "当恋人想要非常亲近时，你感到不舒服吗？",
+            "rewritten_en": "Do you get uncomfortable when a romantic partner wants to be very close?",
+            "rewritten_zh": "当恋人想要非常亲近时，你感到不舒服吗？",
             "dimension": "Attachment-related Avoidance",
             "category": "positive"
         },
         "26": {
             "origin_en": "I find it relatively easy to get close to my partner.",
             "origin_zh": "我觉得和我的伴侣亲近相对容易。",
-            "rewrite_en": "Do you find it relatively easy to get close to your partner?",
-            "rewrite_zh": "你觉得和你的伴侣亲近相对容易吗？",
+            "rewritten_en": "Do you find it relatively easy to get close to your partner?",
+            "rewritten_zh": "你觉得和你的伴侣亲近相对容易吗？",
             "dimension": "Attachment-related Avoidance",
             "category": "negative"
         },
         "27": {
             "origin_en": "It's not difficult for me to get close to my parmer.",
             "origin_zh": "对我来说，接近我的伴侣并不困难",
-            "rewrite_en": "Is it not difficult for you to get close to your partner?",
-            "rewrite_zh": "对你来说，和你的伴侣亲近并不困难吗？",
+            "rewritten_en": "Is it not difficult for you to get close to your partner?",
+            "rewritten_zh": "对你来说，和你的伴侣亲近并不困难吗？",
             "dimension": "Attachment-related Avoidance",
             "category": "negative"
         },
         "28": {
             "origin_en": "I usually discuss my problems and concerns with my partner.",
             "origin_zh": "我通常和我的伴侣讨论我的问题和顾虑。",
-            "rewrite_en": "Do you usually discuss your problems and concerns with your partner?",
-            "rewrite_zh": "你通常和你的伴侣讨论你的问题和顾虑吗？",
+            "rewritten_en": "Do you usually discuss your problems and concerns with your partner?",
+            "rewritten_zh": "你通常和你的伴侣讨论你的问题和顾虑吗？",
             "dimension": "Attachment-related Avoidance",
             "category": "negative"
         },
         "29": {
             "origin_en": "It helps to turn to my romantic partner in times of need.",
             "origin_zh": "在需要的时候，求助于我的恋人是有帮助的。",
-            "rewrite_en": "Does it help to turn to your romantic partner in times of need?",
-            "rewrite_zh": "在需要的时候，求助于你的恋人是有帮助的吗？",
+            "rewritten_en": "Does it help to turn to your romantic partner in times of need?",
+            "rewritten_zh": "在需要的时候，求助于你的恋人是有帮助的吗？",
             "dimension": "Attachment-related Avoidance",
             "category": "negative"
         },
         "30": {
             "origin_en": "I tell my partner just about everything.",
             "origin_zh": "我几乎和我的伴侣分享一切。",
-            "rewrite_en": "Do you tell your partner just about everything?",
-            "rewrite_zh": "你几乎和你的伴侣分享一切吗？",
+            "rewritten_en": "Do you tell your partner just about everything?",
+            "rewritten_zh": "你几乎和你的伴侣分享一切吗？",
             "dimension": "Attachment-related Avoidance",
             "category": "negative"
         },
         "31": {
             "origin_en": "I talk things over with my partner.",
             "origin_zh": "我和我的伴侣交流。",
-            "rewrite_en": "Do I talk things over with my partner?",
-            "rewrite_zh": "我和我的伴侣交流吗？",
+            "rewritten_en": "Do I talk things over with my partner?",
+            "rewritten_zh": "我和我的伴侣交流吗？",
             "dimension": "Attachment-related Avoidance",
             "category": "negative"
         },
         "32": {
             "origin_en": "I am nervous when partners get too close to me.",
             "origin_zh": "当伴侣离我太近时，我会感到紧张。",
-            "rewrite_en": "Am I nervous when partners get too close to me?",
-            "rewrite_zh": "当伴侣离我太近时，我会感到紧张吗？",
+            "rewritten_en": "Am I nervous when partners get too close to me?",
+            "rewritten_zh": "当伴侣离我太近时，我会感到紧张吗？",
             "dimension": "Attachment-related Avoidance",
             "category": "positive"
         },
         "33": {
             "origin_en": "I feel comfortable depending on romantic partners.",
             "origin_zh": "我依赖恋爱伴侣时感到舒适。",
-            "rewrite_en": "Do I feel comfortable depending on romantic partners?",
-            "rewrite_zh": "我依赖恋爱伴侣时感到舒适吗？",
+            "rewritten_en": "Do I feel comfortable depending on romantic partners?",
+            "rewritten_zh": "我依赖恋爱伴侣时感到舒适吗？",
             "dimension": "Attachment-related Avoidance",
             "category": "negative"
         },
         "34": {
             "origin_en": "I find it easy to depend on romantic partners.",
             "origin_zh": "我发现依赖恋爱伴侣很容易。",
-            "rewrite_en": "Do I find it easy to depend on romantic partners?",
-            "rewrite_zh": "我发现依赖恋爱伴侣很容易吗？",
+            "rewritten_en": "Do I find it easy to depend on romantic partners?",
+            "rewritten_zh": "我发现依赖恋爱伴侣很容易吗？",
             "dimension": "Attachment-related Avoidance",
             "category": "negative"
         },
         "35": {
             "origin_en": "It's easy for me to be affectionate with my partner.",
             "origin_zh": "我很容易对我的伴侣表现出爱意。",
-            "rewrite_en": "Is it easy for me to be affectionate with my partner?",
-            "rewrite_zh": "我很容易对我的伴侣表现出爱意吗？",
+            "rewritten_en": "Is it easy for me to be affectionate with my partner?",
+            "rewritten_zh": "我很容易对我的伴侣表现出爱意吗？",
             "dimension": "Attachment-related Avoidance",
             "category": "negative"
         },
         "36": {
             "origin_en": "My partner really understands me and my needs.",
             "origin_zh": "我的伴侣真的了解我和我的需求。",
-            "rewrite_en": "Does my partner really understand me and my needs?",
-            "rewrite_zh": "我的伴侣真的了解我和我的需求吗？",
+            "rewritten_en": "Does my partner really understand me and my needs?",
+            "rewritten_zh": "我的伴侣真的了解我和我的需求吗？",
             "dimension": "Attachment-related Avoidance",
             "category": "negative"
         }

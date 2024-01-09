@@ -44,80 +44,80 @@
         "1": {
             "origin_en": "I sometimes find it difficult to see things from the \"other guy's\" perspective.",
             "origin_zh": "我有时发现很难从\"别人\"的角度看事情。",
-            "rewrite_en": "Do you sometimes find it difficult to see things from the \"other guy's\" perspective?",
-            "rewrite_zh": "你有时发现很难从\"别人\"的角度看事情吗？",
+            "rewritten_en": "Do you sometimes find it difficult to see things from the \"other guy's\" perspective?",
+            "rewritten_zh": "你有时发现很难从\"别人\"的角度看事情吗？",
             "dimension": "Overall",
             "category": "negative"
         },
         "2": {
             "origin_en": "I sometimes try to understand my friends better by imagining how things look from their perspective.",
             "origin_zh": "我有时试图通过想象从他们的角度看事情来更好地理解我的朋友。",
-            "rewrite_en": "Do you sometimes try to understand your friends better by imagining how things look from their perspective?",
-            "rewrite_zh": "你有时试图通过想象从他们的角度看事情来更好地理解你的朋友吗？",
+            "rewritten_en": "Do you sometimes try to understand your friends better by imagining how things look from their perspective?",
+            "rewritten_zh": "你有时试图通过想象从他们的角度看事情来更好地理解你的朋友吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "3": {
             "origin_en": "When I'm upset at someone, I usually try to \"put myself in his shoes\" for a while.",
             "origin_zh": "当我对某人感到不快时，我通常会试着\"设身处地\"一段时间。",
-            "rewrite_en": "Do you usually try to \"put yourself in his shoes\" for a while when you're upset at someone?",
-            "rewrite_zh": "当你对某人感到不快时，你通常会试着\"设身处地\"一段时间吗？",
+            "rewritten_en": "Do you usually try to \"put yourself in his shoes\" for a while when you're upset at someone?",
+            "rewritten_zh": "当你对某人感到不快时，你通常会试着\"设身处地\"一段时间吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "4": {
             "origin_en": "Before criticizing somebody, I try to imagine how I would feel if I were in their place.",
             "origin_zh": "在批评某人之前，我会设法想象如果我处在他们的位置会有什么感受。",
-            "rewrite_en": "Do you try to imagine how you would feel if you were in their place before criticizing somebody?",
-            "rewrite_zh": "在批评某人之前，你会设法想象如果你处在他们的位置会有什么感受吗？",
+            "rewritten_en": "Do you try to imagine how you would feel if you were in their place before criticizing somebody?",
+            "rewritten_zh": "在批评某人之前，你会设法想象如果你处在他们的位置会有什么感受吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "5": {
             "origin_en": "I often have tender, concerned feelings for people less fortunate than me",
             "origin_zh": "我经常对比我不幸的人有温柔、关心的感觉",
-            "rewrite_en": "Do you often have tender, concerned feelings for people less fortunate than you?",
-            "rewrite_zh": "你经常对比你不幸的人有温柔、关心的感觉吗？",
+            "rewritten_en": "Do you often have tender, concerned feelings for people less fortunate than you?",
+            "rewritten_zh": "你经常对比你不幸的人有温柔、关心的感觉吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "6": {
             "origin_en": "Sometimes I don't feel very sorry for other people when they are having problems.",
             "origin_zh": "有时当别人遇到问题时，我并不感到很抱歉。",
-            "rewrite_en": "Do you sometimes not feel very sorry for other people when they are having problems?",
-            "rewrite_zh": "当别人遇到问题时，你有时并不感到很抱歉吗？",
+            "rewritten_en": "Do you sometimes not feel very sorry for other people when they are having problems?",
+            "rewritten_zh": "当别人遇到问题时，你有时并不感到很抱歉吗？",
             "dimension": "Overall",
             "category": "negative"
         },
         "7": {
             "origin_en": "When I see someone being taken advantage of, I feel kind of protective towards them.",
             "origin_zh": "当我看到有人被利用时，我会对他们有一种保护的感觉。",
-            "rewrite_en": "Do you feel kind of protective towards someone when you see them being taken advantage of?",
-            "rewrite_zh": "当你看到有人被利用时，你会对他们有一种保护的感觉吗？",
+            "rewritten_en": "Do you feel kind of protective towards someone when you see them being taken advantage of?",
+            "rewritten_zh": "当你看到有人被利用时，你会对他们有一种保护的感觉吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "8": {
             "origin_en": "Other people's misfortunes do not usually disturb me a great deal.",
             "origin_zh": "通常别人的不幸并不会让我感到很不安。",
-            "rewrite_en": "Do other people's misfortunes usually not disturb you a great deal?",
-            "rewrite_zh": "通常别人的不幸并不会让你感到很不安吗？",
+            "rewritten_en": "Do other people's misfortunes usually not disturb you a great deal?",
+            "rewritten_zh": "通常别人的不幸并不会让你感到很不安吗？",
             "dimension": "Overall",
             "category": "negative"
         },
         "9": {
             "origin_en": "When I see someone being treated unfairly, I sometimes don't feel very much pity for them.",
             "origin_zh": "当我看到有人受到不公平对待时，我有时并不怎么同情他们。",
-            "rewrite_en": "Do you sometimes not feel very much pity for someone when you see them being treated unfairly?",
-            "rewrite_zh": "当你看到有人受到不公平对待时，你有时并不怎么同情他们吗？",
+            "rewritten_en": "Do you sometimes not feel very much pity for someone when you see them being treated unfairly?",
+            "rewritten_zh": "当你看到有人受到不公平对待时，你有时并不怎么同情他们吗？",
             "dimension": "Overall",
             "category": "negative"
         },
         "10": {
             "origin_en": "I am often quite touched by things I see happen.",
             "origin_zh": "我经常被我看到的事情感动。",
-            "rewrite_en": "Are you often quite touched by things you see happen?",
-            "rewrite_zh": "你经常被你看到的事情感动吗？",
+            "rewritten_en": "Are you often quite touched by things you see happen?",
+            "rewritten_zh": "你经常被你看到的事情感动吗？",
             "dimension": "Overall",
             "category": "positive"
         }

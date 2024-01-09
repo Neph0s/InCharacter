@@ -7,7 +7,9 @@
 
 ### 准备
 
-确保你已经正确安装了`ChatHaruhi2`及必要的相关依赖。如尚未安装，你可以这样进行安装：
+无需单独安装ChatHaruhi，本仓库的code/目录中已包含一个固定版本的ChatHaruhi.
+
+需要安装了`ChatHaruhi2`必要的相关依赖：
 
     ```bash
     pip install torch torchvision torchaudio

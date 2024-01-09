@@ -39,80 +39,80 @@
         "1": {
             "origin_en": "I can always manage to solve difficult problems if I try hard enough.",
             "origin_zh": "只要我努力，我总能解决困难的问题。",
-            "rewrite_en": "Can you always manage to solve difficult problems if you try hard enough?",
-            "rewrite_zh": "如果你努力，你总能解决困难的问题吗？",
+            "rewritten_en": "Can you always manage to solve difficult problems if you try hard enough?",
+            "rewritten_zh": "如果你努力，你总能解决困难的问题吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "2": {
             "origin_en": "If someone opposes me, I can find the means and ways to get what I want.",
             "origin_zh": "如果有人反对我，我能找到方法得到我想要的。",
-            "rewrite_en": "Can you find the means and ways to get what you want if someone opposes you?",
-            "rewrite_zh": "如果有人反对你，你能找到方法得到你想要的吗？",
+            "rewritten_en": "Can you find the means and ways to get what you want if someone opposes you?",
+            "rewritten_zh": "如果有人反对你，你能找到方法得到你想要的吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "3": {
             "origin_en": "I am certain that I can accomplish my goals.",
             "origin_zh": "我确信我能实现我的目标。",
-            "rewrite_en": "Are you certain that you can accomplish your goals?",
-            "rewrite_zh": "你确信你能实现你的目标吗？",
+            "rewritten_en": "Are you certain that you can accomplish your goals?",
+            "rewritten_zh": "你确信你能实现你的目标吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "4": {
             "origin_en": "I am confident that I could deal efficiently with unexpected events.",
             "origin_zh": "我有信心能有效处理意外事件。",
-            "rewrite_en": "Are you confident that you could deal efficiently with unexpected events?",
-            "rewrite_zh": "你有信心能有效处理意外事件吗？",
+            "rewritten_en": "Are you confident that you could deal efficiently with unexpected events?",
+            "rewritten_zh": "你有信心能有效处理意外事件吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "5": {
             "origin_en": "Thanks to my resourcefulness, I can handle unforeseen situations.",
             "origin_zh": "由于我的足智多谋，我能处理意想不到的情况。",
-            "rewrite_en": "Can you handle unforeseen situations thanks to your resourcefulness?",
-            "rewrite_zh": "由于你的足智多谋，你能处理意想不到的情况吗？",
+            "rewritten_en": "Can you handle unforeseen situations thanks to your resourcefulness?",
+            "rewritten_zh": "由于你的足智多谋，你能处理意想不到的情况吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "6": {
             "origin_en": "I can solve most problems if I invest the necessary effort.",
             "origin_zh": "如果我付出必要的努力，我能解决大多数问题。",
-            "rewrite_en": "Can you solve most problems if you invest the necessary effort?",
-            "rewrite_zh": "如果你付出必要的努力，你能解决大多数问题吗？",
+            "rewritten_en": "Can you solve most problems if you invest the necessary effort?",
+            "rewritten_zh": "如果你付出必要的努力，你能解决大多数问题吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "7": {
             "origin_en": "I can remain calm when facing difficulties because I can rely on my coping abilities.",
             "origin_zh": "面对困难时，我能保持冷静，因为我可以依靠自己的应对能力。",
-            "rewrite_en": "Can you remain calm when facing difficulties because you can rely on your coping abilities?",
-            "rewrite_zh": "面对困难时，你能保持冷静，因为你可以依靠自己的应对能力吗？",
+            "rewritten_en": "Can you remain calm when facing difficulties because you can rely on your coping abilities?",
+            "rewritten_zh": "面对困难时，你能保持冷静，因为你可以依靠自己的应对能力吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "8": {
             "origin_en": "When I am confronted with a problem, I can find several solutions.",
             "origin_zh": "当我面对问题时，我能找到几种解决方案。",
-            "rewrite_en": "Can you find several solutions when you are confronted with a problem?",
-            "rewrite_zh": "当你面对问题时，你能找到几种解决方案吗？",
+            "rewritten_en": "Can you find several solutions when you are confronted with a problem?",
+            "rewritten_zh": "当你面对问题时，你能找到几种解决方案吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "9": {
             "origin_en": "If I am in trouble, I can think of a good solution.",
             "origin_zh": "如果我遇到麻烦，我能想出一个好的解决方案。",
-            "rewrite_en": "Can you think of a good solution if you are in trouble?",
-            "rewrite_zh": "如果你遇到麻烦，你能想出一个好的解决方案吗？",
+            "rewritten_en": "Can you think of a good solution if you are in trouble?",
+            "rewritten_zh": "如果你遇到麻烦，你能想出一个好的解决方案吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "10": {
             "origin_en": "I can handle whatever comes my way.",
             "origin_zh": "无论发生什么事，我都能处理。",
-            "rewrite_en": "Can you handle whatever comes your way?",
-            "rewrite_zh": "无论发生什么事，你都能处理吗？",
+            "rewritten_en": "Can you handle whatever comes your way?",
+            "rewritten_zh": "无论发生什么事，你都能处理吗？",
             "dimension": "Overall",
             "category": "positive"
         }
