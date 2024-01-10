@@ -201,7 +201,7 @@
             "origin_zh": "你更喜欢在放松之前做家务。",
             "rewritten_en": "Do you prefer to do your chores before allowing yourself to relax?",
             "rewritten_zh": "你更喜欢在放松之前做家务吗？",
-            "dimension": "J/P",
+            "dimension": "P/J",
             "category": "positive"
         },
         "25": {
@@ -241,7 +241,7 @@
             "origin_zh": "你经常在最后一刻才做事。",
             "rewritten_en": "Do you often end up doing things at the last possible moment?",
             "rewritten_zh": "你经常在最后一刻才做事吗？",
-            "dimension": "J/P",
+            "dimension": "P/J",
             "category": "positive"
         },
         "30": {
@@ -361,7 +361,7 @@
             "origin_zh": "如果你的计划被打断，你的首要任务是尽快恢复正轨。",
             "rewritten_en": "Is your top priority to get back on track as soon as possible if your plans are interrupted?",
             "rewritten_zh": "如果你的计划被打断，你的首要任务是尽快恢复正轨吗？",
-            "dimension": "J/P",
+            "dimension": "P/J",
             "category": "positive"
         },
         "45": {
@@ -401,7 +401,7 @@
             "origin_zh": "你的个人工作风格更接近于自发的能量爆发，而不是有组织和持续的努力。",
             "rewritten_en": "Is your personal work style closer to spontaneous bursts of energy than organized and consistent efforts?",
             "rewritten_zh": "你的个人工作风格更接近于自发的能量爆发，而不是有组织和持续的努力吗？",
-            "dimension": "J/P",
+            "dimension": "P/J",
             "category": "positive"
         },
         "50": {
@@ -481,7 +481,7 @@
             "origin_zh": "你在截止日期方面感到吃力吗？",
             "rewritten_en": "Do you struggle with deadlines?",
             "rewritten_zh": "你在截止日期方面感到吃力吗？",
-            "dimension": "J/P",
+            "dimension": "P/J",
             "category": "positive"
         },
         "60": {
@@ -489,7 +489,7 @@
             "origin_zh": "你相信事情会对你有好的结果吗？",
             "rewritten_en": "Do you feel confident that things will work out for you?",
             "rewritten_zh": "你相信事情会对你有好的结果吗？",
-            "dimension": "J/P",
+            "dimension": "P/J",
             "category": "positive"
         }
     },
@@ -511,7 +511,7 @@
             "zh": "每个选择都是从1到7的数字。请根据对话使用以下标度评估<character>：1代表“非常同意”，4代表“既不同意也不反对”，7代表“非常反对”。"
         },
         "rpa_choice_instruction": {
-            "en": "Reply a number from 1 to 7 using the scales: 1 denotes 'strongly agree', 4 denotes 'neither agree nor disagree', and 7 denotes 'strongly disagree'.Please answer with the number only, without anything else.",
+            "en": "Reply a number from 1 to 7 using the scales: 1 denotes 'strongly agree', 4 denotes 'neither agree nor disagree', and 7 denotes 'strongly disagree'. Please answer with the number only, without anything else.",
             "zh": "请用1到7的等级来回答，1代表“非常同意”，4代表“既同意也不同意”，7代表“非常不同意”。请你只回答这一个数字，不要说其他内容。"
         }
     }

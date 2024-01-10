@@ -5,14 +5,11 @@ prompts = {
 {}
 ===
 
-I've invited a participant, {}, and had the following conversations in {}:
-===
-{}
-===
+My name is {}. I've invited a participant, {}, and we had many conversations in {}. I will input the conversations.
 
 Please help me assess {}'s score within the {} dimension of {}. 
 ''',
-    "two_score_output": '''You should provide the person's percentage of each category, which sums to 100%, e.g., 30% A and 70% B. 
+    "two_score_output": '''You should provide the percentage of each category, which sums to 100%, e.g., 30% A and 70% B. 
 Please output in the following json format:
 ===
 {{
@@ -22,12 +19,7 @@ Please output in the following json format:
     "one_score_output": '''...'''
     },
     
-    "mbti": {
-        "name": "MBTI",
-        "direct_ask": {
-            "en": "What is your MBTI type?",
-            "zh": "你的MBTI类型是什么？"
-        },
+    "16Personalities": {
         "dim_desc": {
     'E/I': '''E/I Dimension: Extraversion (E) vs Introversion (I)
 
