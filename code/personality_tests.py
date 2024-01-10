@@ -12,7 +12,6 @@ from utils import logger
 
 random.seed(42)
 
-
 parser = argparse.ArgumentParser(description='Assess personality of a character')
 
 scale_list = ['Empathy', 'BFI', 'BSRI', 'EPQ-R', 'LMS', 'DTDD', 'ECR-R', 'GSE', 'ICB', 'LOT-R', 'EIS', 'WLEIS', 'CABIN', '16Personalities']
@@ -34,10 +33,10 @@ parser.add_argument('--agent_llm', type=str, default='gpt-3.5-turbo',
                     choices=['gpt-3.5-turbo', 'openai', 'GLMPro', 'ChatGLM2GPT'], 
                     help='agent LLM (gpt-3.5-turbo)')
 
-# Added choices for the evaluator argument
-parser.add_argument('--evaluator', type=str, default='gpt-3.5-turbo', 
+# Added choices for the evaluator_llm argument
+parser.add_argument('--evaluator_llm', type=str, default='gpt-3.5-turbo', 
                     choices=['api', 'gpt-3.5-turbo', 'gpt-4'], 
-                    help='evaluator (api, gpt-3.5-turbo or gpt-4)')
+                    help='evaluator_llm (api, gpt-3.5-turbo or gpt-4)')
 
 # Added choices for the setting argument
 parser.add_argument('--eval_method', type=str, default='interview_batch', 
@@ -54,7 +53,7 @@ print(args)
 
 from characters import character_info, alias2character
 
-dims_dict = {'mbti': ['E/I', 'S/N', 'T/F', 'P/J'], 'bigfive': ['openness', 'extraversion', 'conscientiousness', 'agreeableness', 'neuroticism']}
+dims_dict = {'16Personalities': ['E/I', 'S/N', 'T/F', 'P/J'], 'bigfive': ['openness', 'extraversion', 'conscientiousness', 'agreeableness', 'neuroticism']} # we want special order
 
 # read mbti groundtruth
 mbti_labels = {}
@@ -81,7 +80,6 @@ def subsample_questionnaire(questionnaire, n=20):
     
     def subsample(questions, key, n):
         # subsample n questions from questions, devided by keys, as uniform as possible 
-        
         
         key_values = list(set([q[key] for q in questions]))
         n_keys = len(key_values)
@@ -111,7 +109,7 @@ def subsample_questionnaire(questionnaire, n=20):
         
         return subsampled_questions
 
-    if 'sub_dimension' in questionnaire['1'].keys(): # bigfive, old version
+    if 'sub_dimension' in questionnaire[0].keys(): # bigfive, old version
         dimension_questions = {} 
         for q in questionnaire:
             if q['dimension'] not in dimension_questions.keys():
@@ -125,6 +123,7 @@ def subsample_questionnaire(questionnaire, n=20):
 
     else: 
         new_questionnaire = subsample(questionnaire, 'dimension', n)
+
     
     return new_questionnaire
 
@@ -163,52 +162,52 @@ def build_character_agent(character_code, agent_type, agent_llm):
 def get_experimenter(character):    
     return character_info[character]["experimenter"]
 
-def interview(character_agent, questionnaire, experimenter, language, evaluator):
+def interview(character_agent, questionnaire, experimenter, questionnaire_prompts, language, query_style):
     
     results = []
+
     for question in tqdm(questionnaire):
-        # get question
-        q = question[f'question_{language}']
+
         # conduct interview
         character_agent.dialogue_history = []
 
-        open_response = character_agent.chat(role = experimenter, text = q)
-            
+        # get question
+        if query_style == 'interview':
+            q = question[f'rewritten_{language}']
+        elif query_style == 'choose':
+            q = questionnaire_prompts["rpa_choose_prefix"][language].replace('<statement>', question[f'origin_{language}']) + questionnaire_prompts["rpa_choice_instruction"][language]
+        
+        response = character_agent.chat(role = experimenter, text = q)
 
         result = {
             'id': question['id'],
             'question':q,
-            'response_open':open_response,
-            'dimension': question['dimension'],
+            'response_open':response,
+            'query_style': query_style,
         }
-
-        '''
-        if evaluator == 'api':
-            # give close-ended options
-            close_prompt_template = prompts.close_prompt_template
-            close_prompt = close_prompt_template.format(q)
-            close_response = character_agent.chat(role = experimenter, text = close_prompt)
-            result['response_close'] = close_response
-        '''
-
+        
         results.append(result)
         
-
     return results
 
-def assess(character_name, experimenter, questionnaire_results, questionnaire_type, evaluator, eval_setting, language):
-    dims = dims_dict[questionnaire_type]
+def assess(character_name, experimenter, questionnaire_results, questionnaire, questionnaire_metadata, eval_method, language, evaluator_llm):
+
+    questionnaire_type = questionnaire_metadata['name']
+
+    dims = dims_dict.get(questionnaire_type, sorted(list(set([q['dimension'] for q in questionnaire]))))
     
     from utils import get_response 
     
-    assessment_results = {}
-    if evaluator in ['gpt-3.5-turbo', 'gpt-4']:
-        if evaluator == 'gpt-3.5-turbo' and eval_setting == 'collective':
-            # lengthy context, use 16k version
-            evaluator = 'gpt-3.5-turbo-16k'
+    eval_args = eval_method.split('_')
 
+    assessment_results = {}
+        
+    if eval_args[1] == 'assess':
         for dim in tqdm(dims):
-            dim_responses = [r for r in questionnaire_results if r['dimension'] == dim]
+            
+            dim_responses = [r for i, r in enumerate(questionnaire_results) if questionnaire[i]['dimension'] == dim]
+
+            eval_setting = eval_args[2]
 
             if eval_setting == 'batch':
                 # 将dim_responses分成多个子列表，每个列表3-4个元素
@@ -229,13 +228,18 @@ def assess(character_name, experimenter, questionnaire_results, questionnaire_ty
                         r['response_open'] = character_name + ': 「' + r['response_open'] + '」'
                     conversations += f"{r['response_open']}\n"
                 
-                questionnaire_name = prompts[questionnaire_type]["name"]
+                questionnaire_name = questionnaire_metadata["name"]
+
 
                 language_name = {'zh': 'Chinese', 'en': 'English'}[language]
 
-                background_prompt = prompts["general"]['background_template'].format(questionnaire_name, questionnaire_name, dim, prompts[questionnaire_type]["dim_desc"][dim], character_name, language_name, conversations, character_name, dim, questionnaire_name)
                 
-                if questionnaire_type == 'mbti':
+                background_prompt = prompts["general"]['background_template'].format(questionnaire_name, questionnaire_name, dim, prompts[questionnaire_type]["dim_desc"][dim], experimenter, character_name, language_name, character_name, dim, questionnaire_name)
+
+                if questionnaire_name == '16Personalities':
+                    background_prompt = background_prompt.replace('16Personalities', '16Personalities (highly similar to MBTI)', 1)
+                
+                if questionnaire_type == '16Personalities':
                     dim_cls1, dim_cls2 = dim.split('/')
                     
                     output_format_prompt = prompts["general"]['two_score_output'].format(dim_cls1, dim_cls2)
@@ -245,21 +249,23 @@ def assess(character_name, experimenter, questionnaire_results, questionnaire_ty
                 else:
                     pass 
 
-                prompt = background_prompt + output_format_prompt
+                sys_prompt = background_prompt + output_format_prompt
 
-                sys_prompt, user_input = prompt.split("I've invited a participant")
-                user_input = "I've invited a participant" + user_input
+                user_input = 'Our conversation is as follows:\n' + conversations + '\n'
 
-                
-
-                llm_response = get_response(sys_prompt, user_input, model=evaluator)
+                llm_response = get_response(sys_prompt, user_input, model=evaluator_llm)
                 # 将llm_response转为json
+
+                llm_response = llm_response.strip("`")
+                if llm_response.startswith('json'):
+                    llm_response = llm_response[4:]
+                
                 llm_response = json.loads(llm_response)
 
                 
 
                 try:
-                    if questionnaire_type == 'mbti':
+                    if questionnaire_type == '16Personalities':
                         llm_response['result'] = {k: int(float(v.strip("%"))) for k, v in llm_response['result'].items()}
                         assert (sum(llm_response['result'].values()) == 100)
                     else:
@@ -270,7 +276,7 @@ def assess(character_name, experimenter, questionnaire_results, questionnaire_ty
                 batch_results.append({'batch_responses': batch_responses, 'result': llm_response['result'], 'analysis': llm_response['analysis']})
 
             # aggregate results
-            if questionnaire_type == 'mbti':
+            if questionnaire_type == '16Personalities':
                 # use scores of dim_cls1
                 all_scores = [ dim_res['result'][dim_cls1] for dim_res in batch_results]
             else:
@@ -284,7 +290,7 @@ def assess(character_name, experimenter, questionnaire_results, questionnaire_ty
             else:
                 std_score = None
             
-            if questionnaire_type == 'mbti':
+            if questionnaire_type == '16Personalities':
                 score = {dim_cls1: avg_score, dim_cls2: 100 - avg_score}
                 pred = max(score, key=score.get)
 
@@ -302,9 +308,9 @@ def assess(character_name, experimenter, questionnaire_results, questionnaire_ty
                     'batch_results': batch_results,
                 }
 
-    elif evaluator == 'api':
+    elif evaluator_llm == 'api':
         # api is only for mbti. it does not support bigfive
-        assert(questionnaire_type == 'mbti')
+        assert(questionnaire_type == '16Personalities')
         options = ['fully agree', 'generally agree', 'partially agree', 'neither agree nor disagree', 'partially disagree', 'generally disagree', 'fully disagree']
         ans_map = { option: i-3 for i, option in enumerate(options)} 
 
@@ -336,7 +342,7 @@ def assess(character_name, experimenter, questionnaire_results, questionnaire_ty
     
     return assessment_results 
 
-def personality_assessment(character, agent_type, agent_llm, questionnaire_type, eval_method, evaluator='gpt-3.5-turbo', repeat_times=1):    
+def personality_assessment(character, agent_type, agent_llm, questionnaire_type, eval_method, evaluator_llm='gpt-3.5-turbo', repeat_times=1):    
     if character in alias2character.keys():
         character = alias2character[character]
     else:
@@ -355,7 +361,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_type,
 
         for idx in questionnaire:
             q = questionnaire[idx]
-            q.update({'idx': idx})
+            q.update({'id': idx})
             questions.append(q)
         
         questionnaire = questions
@@ -378,26 +384,27 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_type,
         return 
     else:
         eval_args = eval_method.split('_')
-
-        if repeat_times < 1:
-            questionnaire = subsample_questionnaire(questionnaire, n=math.ceil(len(questionnaire)*repeat_times))
-        
-        import pdb; pdb.set_trace()
+        query_style = eval_args[0]
         
         
         # conduct interview with character given the questionnaire
-        interview_folder_path = os.path.join('..', 'results', 'interview')
+        interview_folder_path = os.path.join('..', 'results', 'interview', '{questionnaire_type}-agent-type={agent_type}_agent-llm={agent_llm}_query-style={query_style}_repeat-times={repeat_times}')
         if not os.path.exists(interview_folder_path):
             os.makedirs(interview_folder_path)
 
-        interview_save_path = f'{character_name}_agent-type={agent_type}_agent-llm={agent_llm}_{questionnaire_type}_{eval_method}_{language}_interview.json'
+        
+        interview_save_path = f'{character}.json'
     
         interview_save_path = os.path.join(interview_folder_path, interview_save_path)
         
+
         if not os.path.exists(interview_save_path):
             logger.info('Interviewing...')
             
-            questionnaire_results = interview(character_agent, questionnaire, experimenter, language, evaluator)
+            if repeat_times < 1:
+                questionnaire = subsample_questionnaire(questionnaire, n=math.ceil(len(questionnaire)*repeat_times))
+
+            questionnaire_results = interview(character_agent, questionnaire, experimenter, questionnaire_metadata["prompts"], language, query_style)
             with open(interview_save_path, 'w') as f:
                 json.dump(questionnaire_results, f, indent=4, ensure_ascii=False)
             logger.info(f'Interview finished... save into {interview_save_path}')
@@ -406,18 +413,26 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_type,
             with open(interview_save_path, 'r') as f:
                 questionnaire_results = json.load(f)
 
+                # reproduce the same questionnaire
+                questionnaire_idx = [q['id'] for q in questionnaire_results]
+                id2question = {q['id']: q for q in questionnaire}
+                questionnaire = [ id2question[i] for i in questionnaire_idx]
+
+        
         # evaluate the character's personality
-        assessment_folder_path = os.path.join('..', 'results', 'assessment')
+        assessment_folder_path = os.path.join('..', 'results', 'assessment', '{questionnaire_type}_agent-type={agent_type}_agent-llm={agent_llm}_eval-method={eval_method}_repeat-times={repeat_times}')
         if not os.path.exists(assessment_folder_path):
             os.makedirs(assessment_folder_path)
 
-        assessment_save_path = f'{character_name}_agent-llm={agent_llm}_{questionnaire_type}_eval={eval_setting}-{evaluator}_{language}_interview.json'
+        assessment_save_path = f'{character}.json'
     
         assessment_save_path = os.path.join(assessment_folder_path, assessment_save_path)
 
         if not os.path.exists(assessment_save_path):
             logger.info('Assessing...')
-            assessment_results = assess(character_name, experimenter, questionnaire_results, questionnaire_type, evaluator, eval_setting, language)
+            assessment_results = assess(character_name, experimenter, questionnaire_results, questionnaire, questionnaire_metadata, eval_method, language, evaluator_llm)
+       
+            
             with open(assessment_save_path, 'w') as f:
                 json.dump(assessment_results, f, indent=4, ensure_ascii=False)
             logger.info(f'Assess finished... save into {assessment_save_path}')
@@ -429,10 +444,11 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_type,
             
 
     # show results of personality assessment 
-    if questionnaire_type == 'mbti':
+    if questionnaire_type == '16Personalities':
         logger.info('MBTI assessment results:')
         logger.info('Character: ' + character_name)
-        pred_code = ''.join([ assessment_results[dim]['result'] for dim in dims_dict['mbti']])
+        dims = sorted(list(set([q['dimension'] for q in questionnaire])))
+        pred_code = ''.join([ assessment_results[dim]['result'] for dim in dims])
         label_code = mbti_labels[character_name]
 
         logger.info(f'Prediction {pred_code}\tGroundtruth {label_code}')
@@ -462,12 +478,12 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_type,
 if __name__ == '__main__':
     personality_assessment(
         args.character, args.agent_type, args.agent_llm, 
-        args.questionnaire_type, args.eval_method, args.evaluator)
+        args.questionnaire_type, args.eval_method, args.evaluator_llm)
             
 
-
-# python assess_personality.py --eval_method interview_sample --questionnaire_type mbti --character hutao
-# python assess_personality.py --eval_method interview_batch --questionnaire_type mbti --character hutao
+# python personality_tests.py --eval_method direct_ask --questionnaire_type 16Personalities --character hutao
+# python personality_tests.py --eval_method interview_sample --questionnaire_type 16Personalities --character hutao
+# python personality_tests.py --eval_method interview_batch --questionnaire_type 16Personalities --character hutao
 
 
 
