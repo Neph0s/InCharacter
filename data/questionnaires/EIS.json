@@ -1,8 +1,8 @@
 {
     "name": "EIS",
     "full_name": "Emotional Intelligence Scale",
-    "prompt": "You can only reply numbers from 1 to 5 in the following statements. Please compare your actual situation with the situations described in the questions below and choose the answer that best corresponds to your actual situation based on your first impression. There is no right or wrong answer, please answer truthfully based on your first impression. Please use the following scale: 1 = 'Does not match at all', 2 = 'Does not match very well', 3 = 'Not sure', 4 = 'Matches quite well', 5 = 'Matches perfectly'. Here are the statements, score them one by one:",
-    "prompt_choice_instruction": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'Does not match at all', 2 denotes 'Does not match very well', 3 denotes 'Not sure', 4 denotes 'Matches quite well', 5 denotes 'Matches perfectly'.",
+    "psychobench_prompt": "You can only reply numbers from 1 to 5 in the following statements. Please compare your actual situation with the situations described in the questions below and choose the answer that best corresponds to your actual situation based on your first impression. There is no right or wrong answer, please answer truthfully based on your first impression. Please use the following scale: 1 = 'Does not match at all', 2 = 'Does not match very well', 3 = 'Not sure', 4 = 'Matches quite well', 5 = 'Matches perfectly'. Here are the statements, score them one by one:",
+    "psychobench_prompt_choice_instruction": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'Does not match at all', 2 denotes 'Does not match very well', 3 denotes 'Not sure', 4 denotes 'Matches quite well', 5 denotes 'Matches perfectly'.",
     "scale": 6,
     "compute_mode": "SUM",
     "reverse": [
@@ -348,7 +348,7 @@
             "zh": "每个选择都是从1到5的数字。请根据对话使用以下评分标准评估<character>：1代表“完全不匹配”，2代表“不太匹配”，3代表“不确定”，4代表“相当匹配”，5代表“完全匹配”。"
         },
         "rpa_choice_instruction": {
-            "en": "Reply a number from 1 to 5 using the scales: 1 denotes 'Does not match at all', 2 denotes 'Does not match very well', 3 denotes 'Not sure', 4 denotes 'Matches quite well', 5 denotes 'Matches perfectly'.Please answer with the number only, without anything else.",
+            "en": "Reply a number from 1 to 5 using the scales: 1 denotes 'Does not match at all', 2 denotes 'Does not match very well', 3 denotes 'Not sure', 4 denotes 'Matches quite well', 5 denotes 'Matches perfectly'. Please answer with the number only, without anything else.",
             "zh": "请用1到5的等级来回答，1代表“完全不匹配”，2代表“不太匹配”，3代表“不确定”，4代表“相当匹配”，5代表“完全匹配”。请你只回答这一个数字，不要说其他内容。"
         }
     }

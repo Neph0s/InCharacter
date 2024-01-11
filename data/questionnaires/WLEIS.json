@@ -1,8 +1,8 @@
 {
     "name": "WLEIS",
     "full_name": "Wong and Law Emotional Intelligence Scale",
-    "prompt": "You can only reply numbers from 1 to 7 in the following statements. A list of statements are provided below, and to complete this questionnaire, rate the extent to which you agree or disagree to each of the statements. 1: 'Strongly Disagree', 2: 'Disagree', 3: 'Slightly Disagree', 4: 'Neither Agree nor Disagree', 5: 'Slightly Agree', 6: 'Agree', 7: 'Strongly Agree'. Here are the statements, score them one by one:",
-    "prompt_choice_instruction": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'Strongly Disagree', 2 denotes 'Disagree', 3 denotes 'Slightly Disagree', 4 denotes 'Neither Agree nor Disagree', 5 denotes 'Slightly Agree', 6 denotes 'Agree', 7 denotes 'Strongly Agree'.",
+    "psychobench_prompt": "You can only reply numbers from 1 to 7 in the following statements. A list of statements are provided below, and to complete this questionnaire, rate the extent to which you agree or disagree to each of the statements. 1: 'Strongly Disagree', 2: 'Disagree', 3: 'Slightly Disagree', 4: 'Neither Agree nor Disagree', 5: 'Slightly Agree', 6: 'Agree', 7: 'Strongly Agree'. Here are the statements, score them one by one:",
+    "psychobench_prompt_choice_instruction": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'Strongly Disagree', 2 denotes 'Disagree', 3 denotes 'Slightly Disagree', 4 denotes 'Neither Agree nor Disagree', 5 denotes 'Slightly Agree', 6 denotes 'Agree', 7 denotes 'Strongly Agree'.",
     "scale": 8,
     "compute_mode": "AVG",
     "reverse": [],
@@ -224,7 +224,7 @@
             "zh": "每个选择都是从1到7的数字。请根据对话使用以下评分标准评估<character>：1代表“强烈不同意”，2代表“不同意”，3代表“稍微不同意”，4代表“既不同意也不不同意”，5代表“稍微同意”，6代表“同意”，7代表“强烈同意”。"
         },
         "rpa_choice_instruction": {
-            "en": "Reply a number from 1 to 7 using the scales: 1 denotes 'Strongly Disagree', 2 denotes 'Disagree', 3 denotes 'Slightly Disagree', 4 denotes 'Neither Agree nor Disagree', 5 denotes 'Slightly Agree', 6 denotes 'Agree', 7 denotes 'Strongly Agree'.Please answer with the number only, without anything else.",
+            "en": "Reply a number from 1 to 7 using the scales: 1 denotes 'Strongly Disagree', 2 denotes 'Disagree', 3 denotes 'Slightly Disagree', 4 denotes 'Neither Agree nor Disagree', 5 denotes 'Slightly Agree', 6 denotes 'Agree', 7 denotes 'Strongly Agree'. Please answer with the number only, without anything else.",
             "zh": "请回复一个1到7之间的数字：1代表“非常不同意”，2代表“不同意”，3代表“稍微不同意”，4代表“既不同意也不不同意”，5代表“稍微同意”，6代表“同意”，7代表“非常同意”。请你只回答这一个数字，不要说其他内容。"
         }
     }

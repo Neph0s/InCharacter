@@ -1,8 +1,8 @@
 {
     "name": "ICB",
     "full_name": "Implicit Culture Belief",
-    "prompt": "You can only reply numbers from 1 to 6 in the following statements. Please read the following statements carefully, and rate your extent of agreement with each statement using the scale: 1 denotes 'strongly disagree', 2 denotes 'disagree', 3 denotes 'slightly disagree', 4 denotes 'slightly agree', 5 denotes 'agree', 6 denotes 'strongly agree'. Here are the statements, score them one by one:",
-    "prompt_choice_instruction": "Each choice is a number from 1 to 6. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly disagree', 2 denotes 'disagree', 3 denotes 'slightly disagree', 4 denotes 'slightly agree', 5 denotes 'agree', 6 denotes 'strongly agree'.",
+    "psychobench_prompt": "You can only reply numbers from 1 to 6 in the following statements. Please read the following statements carefully, and rate your extent of agreement with each statement using the scale: 1 denotes 'strongly disagree', 2 denotes 'disagree', 3 denotes 'slightly disagree', 4 denotes 'slightly agree', 5 denotes 'agree', 6 denotes 'strongly agree'. Here are the statements, score them one by one:",
+    "psychobench_prompt_choice_instruction": "Each choice is a number from 1 to 6. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly disagree', 2 denotes 'disagree', 3 denotes 'slightly disagree', 4 denotes 'slightly agree', 5 denotes 'agree', 6 denotes 'strongly agree'.",
     "scale": 7,
     "compute_mode": "AVG",
     "reverse": [
@@ -118,7 +118,7 @@
             "zh": "每个选择都是从1到6的数字。请根据对话使用以下评分标准评估<character>：1代表“非常不同意”，2代表“不同意”，3代表“稍微不同意”，4代表“稍微同意”，5代表“同意”，6代表“非常同意”。"
         },
         "rpa_choice_instruction": {
-            "en": "Reply a number from 1 to 6 using the scales: 1 denotes 'strongly disagree', 2 denotes 'disagree', 3 denotes 'slightly disagree', 4 denotes 'slightly agree', 5 denotes 'agree', 6 denotes 'strongly agree'.Please answer with the number only, without anything else.",
+            "en": "Reply a number from 1 to 6 using the scales: 1 denotes 'strongly disagree', 2 denotes 'disagree', 3 denotes 'slightly disagree', 4 denotes 'slightly agree', 5 denotes 'agree', 6 denotes 'strongly agree'. Please answer with the number only, without anything else.",
             "zh": "请回复一个1到6之间的数字：1代表“非常不同意”，2代表“不同意”，3代表“稍微不同意”，4代表“稍微同意”，5代表“同意”，6代表“非常同意”。请你只回答这一个数字，不要说其他内容。"
         }
     }

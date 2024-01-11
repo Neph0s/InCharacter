@@ -1,7 +1,7 @@
 character_info = {
     "tangshiye-zh": {
         "alias": [
-            "汤师爷"
+            "汤师爷", 
         ],
         "agent": {
             "ChatHaruhi": "tangshiye"
@@ -10,7 +10,7 @@ character_info = {
     },
     "murongfu-zh": {
         "alias": [
-            "慕容复"
+            "慕容复", "Murong Fu",
         ],
         "agent": {
             "ChatHaruhi": "murongfu"
@@ -19,7 +19,7 @@ character_info = {
     },
     "liyunlong-zh": {
         "alias": [
-            "李云龙"
+            "李云龙", "Li Yunlong"
         ],
         "agent": {
             "ChatHaruhi": "liyunlong"
@@ -38,7 +38,7 @@ character_info = {
     },
     "wangduoyu-zh": {
         "alias": [
-            "王多鱼"
+            "王多鱼", "Wang Duoyu"
         ],
         "agent": {
             "ChatHaruhi": "wangduoyu"
@@ -57,7 +57,7 @@ character_info = {
     },
     "jiumozhi-zh": {
         "alias": [
-            "鸠摩智"
+            "鸠摩智", "Jiumozhi"
         ],
         "agent": {
             "ChatHaruhi": "jiumozhi"
@@ -96,7 +96,7 @@ character_info = {
     },
     "xuzhu-zh": {
         "alias": [
-            "虚竹"
+            "虚竹", "Xuzu"
         ],
         "agent": {
             "ChatHaruhi": "xuzhu"
@@ -105,7 +105,7 @@ character_info = {
     },
     "xiaofeng-zh": {
         "alias": [
-            "萧峰"
+            "萧峰", "Xiao Feng"
         ],
         "agent": {
             "ChatHaruhi": "xiaofeng"
@@ -114,7 +114,7 @@ character_info = {
     },
     "duanyu-zh": {
         "alias": [
-            "段誉"
+            "段誉", "Duan Yu"
         ],
         "agent": {
             "ChatHaruhi": "duanyu"
@@ -144,7 +144,7 @@ character_info = {
     },
     "wangyuyan-zh": {
         "alias": [
-            "王语嫣"
+            "王语嫣", "Wang Yuyan"
         ],
         "agent": {
             "ChatHaruhi": "wangyuyan"
@@ -173,7 +173,7 @@ character_info = {
     },
     "baizhantang-zh": {
         "alias": [
-            "白展堂"
+            "白展堂", "Bai Zhantang"
         ],
         "agent": {
             "ChatHaruhi": "baizhantang"
@@ -182,7 +182,7 @@ character_info = {
     },
     "tongxiangyu-zh": {
         "alias": [
-            "佟湘玉"
+            "佟湘玉", "Tong Xiangyu"
         ],
         "agent": {
             "ChatHaruhi": "tongxiangyu"
@@ -191,7 +191,7 @@ character_info = {
     },
     "guofurong-zh": {
         "alias": [
-            "郭芙蓉"
+            "郭芙蓉", "Guo Furong"
         ],
         "agent": {
             "ChatHaruhi": "guofurong"
@@ -200,7 +200,7 @@ character_info = {
     },
     "wanderer-zh": {
         "alias": [
-            "旅行者"
+            "旅行者", "Wanderer"
         ],
         "agent": {
             "ChatHaruhi": "wanderer"
@@ -209,7 +209,7 @@ character_info = {
     },
     "zhongli-zh": {
         "alias": [
-            "钟离"
+            "钟离", "Zhong Li"
         ],
         "agent": {
             "ChatHaruhi": "zhongli"
@@ -218,7 +218,7 @@ character_info = {
     },
     "hutao-zh": {
         "alias": [
-            "胡桃"
+            "胡桃", "Hu Tao"
         ],
         "agent": {
             "ChatHaruhi": "hutao"
@@ -258,7 +258,7 @@ character_info = {
     },
     "weixiaobao-zh": {
         "alias": [
-            "韦小宝"
+            "韦小宝", "Wei Xiaobao"
         ],
         "agent": {
             "ChatHaruhi": "weixiaobao"
@@ -267,7 +267,7 @@ character_info = {
     },
     "qiaofeng-zh": {
         "alias": [
-            "乔峰"
+            "乔峰", "Qiao Feng"
         ],
         "agent": {
             "ChatHaruhi": "qiaofeng"
@@ -276,7 +276,7 @@ character_info = {
     },
     "ayaka-zh": {
         "alias": [
-            "神里绫华"
+            "神里绫华", "Kamisato Ayaka"
         ],
         "agent": {
             "ChatHaruhi": "ayaka"
@@ -285,7 +285,7 @@ character_info = {
     },
     "raidenShogun-zh": {
         "alias": [
-            "雷电将军"
+            "雷电将军", "Raiden Shogun"
         ],
         "agent": {
             "ChatHaruhi": "raidenShogun"
@@ -294,7 +294,7 @@ character_info = {
     },
     "yuqian-zh": {
         "alias": [
-            "于谦"
+            "于谦", "Yu Qian"
         ],
         "agent": {
             "ChatHaruhi": "yuqian"

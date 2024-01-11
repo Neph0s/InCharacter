@@ -9,6 +9,7 @@ import random
 from prompts import prompts
 import math
 from utils import logger
+import re 
 
 random.seed(42)
 
@@ -68,7 +69,7 @@ with open('config.json', 'r') as f:
 
 
 def load_questionnaire(questionnaire_name):
-    q_path = os.path.join('..', 'data', f'{questionnaire_name}.json')
+    q_path = os.path.join('..', 'data', 'questionnaires', f'{questionnaire_name}.json')
 
     # read this jsonl file
     with open(q_path, 'r', encoding='utf-8') as f:
@@ -175,7 +176,9 @@ def interview(character_agent, questionnaire, experimenter, questionnaire_prompt
         if query_style == 'interview':
             q = question[f'rewritten_{language}']
         elif query_style == 'choose':
-            q = questionnaire_prompts["rpa_choose_prefix"][language].replace('<statement>', question[f'origin_{language}']) + questionnaire_prompts["rpa_choice_instruction"][language]
+            q = questionnaire_prompts["rpa_choose_prefix"][language].replace('<statement>', question[f'origin_{language}']) + ' ' + questionnaire_prompts["rpa_choice_instruction"][language]
+        else:
+            raise NotImplementedError
         
         response = character_agent.chat(role = experimenter, text = q)
 
@@ -201,7 +204,48 @@ def assess(character_name, experimenter, questionnaire_results, questionnaire, q
     eval_args = eval_method.split('_')
 
     assessment_results = {}
+    
+    if eval_args[0] == 'choose' or eval_args[1] == 'convert':
+        # collect choices 
+
+        options = [ str(i) for i in  range(questionnaire_metadata['range'][0], questionnaire_metadata['range'][1]+1) ]
+        if eval_args[0] == 'choose':
+            choices = {} 
+            
+            need_convert = []
+            for r in questionnaire_results:
+                # r = {'id': '20', 'question': '你认为"你往往担心事情会变得更糟。"这个说法适用于你吗？请用1到7的等级来回答，1代表“非常同意”，4代表“既同意也不同意”，7代表“非常不同意”。请你只回答这一个数字，不要说其他内容。', 'response_open': '胡桃: 4', 'query_style': 'choose'}
+                
+                # replace character name
+                response = r['response_open'].replace(character_name, '') 
+                if ':' in response:
+                    response = response.split(':', 1)[-1]
+                elif '：' in response:
+                    response = response.split('：', 1)[-1]
+
+                response = re.sub(r"[^a-zA-Z0-9\u4e00-\u9fa5]", "", response) 
+                if response in options:
+                    choices[r['id']] = response
+                else:
+                    need_convert.append(r)
         
+        print('The following choices can not be recognized as numbers, need LLM convert.')
+        for r in need_convert:
+            print(r['response_open'])
+        
+        sys_prompt = (questionnaire_metadata["prompts"]["convert_to_choice"][language] + '\n' + questionnaire_metadata["prompts"]["llm_choice_instruction"][language]).replace('<character>', character_name)
+        import pdb; pdb.set_trace()
+        (r)
+
+        # convert remaining qa pairs to choices
+
+        
+
+        if 'api' in eval_args:
+            assert(questionnaire_type == '16Personalities')
+        else:
+            pass
+
     if eval_args[1] == 'assess':
         for dim in tqdm(dims):
             
@@ -388,7 +432,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_type,
         
         
         # conduct interview with character given the questionnaire
-        interview_folder_path = os.path.join('..', 'results', 'interview', '{questionnaire_type}-agent-type={agent_type}_agent-llm={agent_llm}_query-style={query_style}_repeat-times={repeat_times}')
+        interview_folder_path = os.path.join('..', 'results', 'interview', f'{questionnaire_type}-agent-type={agent_type}_agent-llm={agent_llm}_query-style={query_style}_repeat-times={repeat_times}')
         if not os.path.exists(interview_folder_path):
             os.makedirs(interview_folder_path)
 
@@ -420,7 +464,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_type,
 
         
         # evaluate the character's personality
-        assessment_folder_path = os.path.join('..', 'results', 'assessment', '{questionnaire_type}_agent-type={agent_type}_agent-llm={agent_llm}_eval-method={eval_method}_repeat-times={repeat_times}')
+        assessment_folder_path = os.path.join('..', 'results', 'assessment', f'{questionnaire_type}_agent-type={agent_type}_agent-llm={agent_llm}_eval-method={eval_method}_repeat-times={repeat_times}')
         if not os.path.exists(assessment_folder_path):
             os.makedirs(assessment_folder_path)
 
@@ -428,6 +472,8 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_type,
     
         assessment_save_path = os.path.join(assessment_folder_path, assessment_save_path)
 
+        return 
+    
         if not os.path.exists(assessment_save_path):
             logger.info('Assessing...')
             assessment_results = assess(character_name, experimenter, questionnaire_results, questionnaire, questionnaire_metadata, eval_method, language, evaluator_llm)
