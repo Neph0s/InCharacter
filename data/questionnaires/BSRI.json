@@ -1,8 +1,8 @@
 {
     "name": "BSRI",
     "full_name": "Bem's Sex Role Inventory",
-    "prompt": "You can only reply numbers from 1 to 7 in the following statements. Please rate yourself on the following adjectives with number 1 to 7. If you feel that the description of the adjective fully matches your situation, score 7 points; if it does not match at all, score 1 point; if it matches somewhat but not completely, please give points between 2-6 according to the degree of conformity. Here are the statements, score them one by one:",
-    "prompt_choice_instruction": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'does not match at all' 7 denotes 'fully matches' and 2 to 6 denote varying degrees of conformity.",
+    "psychobench_prompt": "You can only reply numbers from 1 to 7 in the following statements. Please rate yourself on the following adjectives with number 1 to 7. If you feel that the description of the adjective fully matches your situation, score 7 points; if it does not match at all, score 1 point; if it matches somewhat but not completely, please give points between 2-6 according to the degree of conformity. Here are the statements, score them one by one:",
+    "psychobench_prompt_choice_instruction": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'does not match at all' 7 denotes 'fully matches' and 2 to 6 denote varying degrees of conformity.",
     "scale": 8,
     "compute_mode": "AVG",
     "reverse": [],
@@ -606,12 +606,12 @@
             "zh": "我已经和<character>进行了许多对话。我将输入一个包含许多样本的字典，其中每个样本包括一个陈述和一段对话。\n你的任务是将每段对话转换为一个选择，指示<character>是否同意该陈述。你应该输出一个字典，其中键与输入字典相同，值为选择。\n===输出格式===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===选择指示==="
         },
         "llm_choice_instruction": {
-            "en": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'does not match at all' 7 denotes 'fully matches' and 2 to 6 denote varying degrees of conformity.",
-            "zh": "每个选择都是从1到7的数字。请根据对话使用以下评分标准评估<character>：1表示“完全不匹配”，7表示“完全匹配”，2到6表示不同程度的符合。"
+            "en": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'does not match at all', 2 denotes 'does not match', 3 denotes 'somewhat does not match', 4 denotes 'neutral', 5 denotes 'somewhat matches', 6 denotes 'matches', and 7 denotes 'fully matches'.",
+            "zh": "每个选择都是从1到7的数字。请根据对话使用以下评分标准评估<character>：1表示“完全不匹配”，2表示“不匹配”，3表示“比较不匹配”，4表示“中立”，5表示“比较匹配”，6表示“匹配”，7表示“完全匹配”。"
         },
         "rpa_choice_instruction": {
-            "en": "Reply a number from 1 to 7 using the scales: 1 denotes 'does not match at all', 7 denotes 'fully matches', and 2 to 6 denote varying degrees of conformity.Please answer with the number only, without anything else.",
-            "zh": "请用1到7的等级来回答，1代表“完全不匹配”，7代表“完全匹配”，2到6代表不同程度的符合。请你只回答这一个数字，不要说其他内容。"
+            "en": "Reply a number from 1 to 7 using the scales: 1 denotes 'does not match at all', 2 denotes 'does not match', 3 denotes 'somewhat does not match', 4 denotes 'neutral', 5 denotes 'somewhat matches', 6 denotes 'matches', and 7 denotes 'fully matches'. Please answer with the number only, without anything else.",
+            "zh": "请用1到7的等级来回答，1表示“完全不匹配”，2表示“不匹配”，3表示“比较不匹配”，4表示“中立”，5表示“比较匹配”，6表示“匹配”，7表示“完全匹配”。请你只回答这一个数字，不要说其他内容。"
         }
     }
 }

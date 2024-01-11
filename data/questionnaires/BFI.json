@@ -1,8 +1,8 @@
 {
     "name": "BFI",
     "full_name": "Big Five Inventory",
-    "prompt": "You can only reply numbers from 1 to 5 in the following statements. Here are a number of characteristics that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Here are the statements, score them one by one:",
-    "prompt_choice_instruction": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly disagree' 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', and 5 denotes 'strongly agree'.",
+    "psychobench_prompt": "You can only reply numbers from 1 to 5 in the following statements. Here are a number of characteristics that may or may not apply to you. Please indicate the extent to which you agree or disagree with that statement. 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', 5 denotes 'strongly agree'. Here are the statements, score them one by one:",
+    "psychobench_prompt_choice_instruction": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly disagree' 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', and 5 denotes 'strongly agree'.",
     "scale": 6,
     "compute_mode": "AVG",
     "reverse": [
@@ -506,7 +506,7 @@
             "zh": "每个选择都是从1到5的数字。请根据对话使用以下评分标准评估<character>：1代表“非常不同意”，2代表“有点不同意”，3代表“既不同意也不同意”，4代表“有点同意”，5代表“非常同意”。"
         },
         "rpa_choice_instruction": {
-            "en": "Reply a number from 1 to 5 using the scales: 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', and 5 denotes 'strongly agree'.Please answer with the number only, without anything else.",
+            "en": "Reply a number from 1 to 5 using the scales: 1 denotes 'strongly disagree', 2 denotes 'a little disagree', 3 denotes 'neither agree nor disagree', 4 denotes 'little agree', and 5 denotes 'strongly agree'. Please answer with the number only, without anything else.",
             "zh": "请用1到5的等级来回答，1代表“非常不同意”，2代表“有点不同意”，3代表“既不同意也不反对”，4代表“有点同意”，5代表“非常同意”。请你只回答这一个数字，不要说其他内容。"
         }
     }
