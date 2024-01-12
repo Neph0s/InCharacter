@@ -18,7 +18,7 @@
             "rewritten_en": "Do you regularly make new friends?",
             "rewritten_zh": "你经常交新朋友吗？",
             "dimension": "E/I",
-            "category": "positive"
+            "category": "E"
         },
         "2": {
             "origin_en": "You spend a lot of your free time exploring various random topics that pique your interest",
@@ -26,7 +26,7 @@
             "rewritten_en": "Do you spend a lot of your free time exploring various random topics that pique your interest?",
             "rewritten_zh": "你花很多空闲时间探索各种引起你兴趣的随机话题吗？",
             "dimension": "S/N",
-            "category": "positive"
+            "category": "N"
         },
         "3": {
             "origin_en": "Seeing other people cry can easily make you feel like you want to cry too",
@@ -34,7 +34,7 @@
             "rewritten_en": "Does seeing other people cry easily make you feel like you want to cry too?",
             "rewritten_zh": "看到别人哭很容易让你也想哭吗？",
             "dimension": "T/F",
-            "category": "positive"
+            "category": "F"
         },
         "4": {
             "origin_en": "You often make a backup plan for a backup plan",
@@ -42,7 +42,7 @@
             "rewritten_en": "Do you often make a backup plan for a backup plan?",
             "rewritten_zh": "你经常为备用计划制定备用计划吗？",
             "dimension": "P/J",
-            "category": "positive"
+            "category": "J"
         },
         "5": {
             "origin_en": "You usually stay calm, even under a lot of pressure",
@@ -50,7 +50,7 @@
             "rewritten_en": "Do you usually stay calm, even under a lot of pressure?",
             "rewritten_zh": "即使在很大的压力下，你通常也能保持冷静吗？",
             "dimension": "T/F",
-            "category": "positive"
+            "category": "T"
         },
         "6": {
             "origin_en": "At social events, you rarely try to introduce yourself to new people and mostly talk to the ones you already know",
@@ -58,7 +58,7 @@
             "rewritten_en": "Do you rarely try to introduce yourself to new people and mostly talk to the ones you already know at social events?",
             "rewritten_zh": "在社交活动中，你很少尝试向新人介绍自己，大多与你已经认识的人交谈吗？",
             "dimension": "E/I",
-            "category": "positive"
+            "category": "I"
         },
         "7": {
             "origin_en": "You prefer to completely finish one project before starting another",
@@ -66,7 +66,7 @@
             "rewritten_en": "Do you prefer to completely finish one project before starting another?",
             "rewritten_zh": "你更喜欢在开始另一个项目之前完全完成一个项目吗？",
             "dimension": "P/J",
-            "category": "positive"
+            "category": "J"
         },
         "8": {
             "origin_en": "You are very sentimental",
@@ -74,7 +74,7 @@
             "rewritten_en": "Are you very sentimental?",
             "rewritten_zh": "你非常感性吗？",
             "dimension": "T/F",
-            "category": "positive"
+            "category": "F"
         },
         "9": {
             "origin_en": "You like to use organizing tools like schedules and lists",
@@ -82,7 +82,7 @@
             "rewritten_en": "Do you like to use organizing tools like schedules and lists?",
             "rewritten_zh": "你喜欢使用日程表和清单之类的组织工具吗？",
             "dimension": "P/J",
-            "category": "positive"
+            "category": "J"
         },
         "10": {
             "origin_en": "Even a small mistake can cause you to doubt your overall abilities and knowledge",
@@ -90,7 +90,7 @@
             "rewritten_en": "Can even a small mistake cause you to doubt your overall abilities and knowledge?",
             "rewritten_zh": "即使一个小错误也会让你怀疑自己的整体能力和知识吗？",
             "dimension": "T/F",
-            "category": "positive"
+            "category": "T"
         },
         "11": {
             "origin_en": "You feel comfortable just walking up to someone you find interesting and striking up a conversation",
@@ -98,7 +98,7 @@
             "rewritten_en": "Do you feel comfortable just walking up to someone you find interesting and striking up a conversation?",
             "rewritten_zh": "你觉得只要走到你觉得有趣的人面前，开始一场对话就感到很自在吗？",
             "dimension": "E/I",
-            "category": "positive"
+            "category": "E"
         },
         "12": {
             "origin_en": "You are not too interested in discussing various interpretations and analyses of creative works",
@@ -106,7 +106,7 @@
             "rewritten_en": "Are you not too interested in discussing various interpretations and analyses of creative works?",
             "rewritten_zh": "你对讨论创意作品的各种解释和分析不太感兴趣吗？",
             "dimension": "S/N",
-            "category": "positive"
+            "category": "S"
         },
         "13": {
             "origin_en": "You are more inclined to follow your head than your heart",
@@ -114,7 +114,7 @@
             "rewritten_en": "Are you more inclined to follow your head than your heart?",
             "rewritten_zh": "你更倾向于听从头脑而不是内心吗？",
             "dimension": "T/F",
-            "category": "positive"
+            "category": "T"
         },
         "14": {
             "origin_en": "You usually prefer just doing what you feel like at any given moment instead of planning a particular daily routine",
@@ -122,7 +122,7 @@
             "rewritten_en": "Do you usually prefer just doing what you feel like at any given moment instead of planning a particular daily routine?",
             "rewritten_zh": "你通常更喜欢随心所欲，而不是制定特定的日常计划吗？",
             "dimension": "P/J",
-            "category": "positive"
+            "category": "P"
         },
         "15": {
             "origin_en": "You rarely worry about whether you make a good impression on people you meet",
@@ -130,7 +130,7 @@
             "rewritten_en": "Do you rarely worry about whether you make a good impression on people you meet?",
             "rewritten_zh": "你很少担心自己给见到的人留下好印象吗？",
             "dimension": "E/I",
-            "category": "positive"
+            "category": "I"
         },
         "16": {
             "origin_en": "You enjoy participating in group activities",
@@ -138,7 +138,7 @@
             "rewritten_en": "Do you enjoy participating in group activities?",
             "rewritten_zh": "你喜欢参加团体活动吗？",
             "dimension": "E/I",
-            "category": "positive"
+            "category": "E"
         },
         "17": {
             "origin_en": "You like books and movies that make you come up with your own interpretation of the ending",
@@ -146,7 +146,7 @@
             "rewritten_en": "Do you like books and movies that make you come up with your own interpretation of the ending?",
             "rewritten_zh": "你喜欢那些让你自己对结局进行解释的书籍和电影吗？",
             "dimension": "S/N",
-            "category": "positive"
+            "category": "N"
         },
         "18": {
             "origin_en": "Your happiness comes more from helping others accomplish things than your own accomplishments",
@@ -154,7 +154,7 @@
             "rewritten_en": "Does your happiness come more from helping others accomplish things than your own accomplishments?",
             "rewritten_zh": "你的幸福更多来自于帮助他人取得成就，而不是你自己的成就吗？",
             "dimension": "T/F",
-            "category": "positive"
+            "category": "F"
         },
         "19": {
             "origin_en": "You are interested in so many things that you find it difficult to choose what to try next",
@@ -162,7 +162,7 @@
             "rewritten_en": "Are you interested in so many things that you find it difficult to choose what to try next?",
             "rewritten_zh": "你对很多事情都感兴趣，以至于很难决定下一步做什么吗？",
             "dimension": "P/J",
-            "category": "positive"
+            "category": "P"
         },
         "20": {
             "origin_en": "You are prone to worrying that things will take a turn for the worse",
@@ -170,7 +170,7 @@
             "rewritten_en": "Are you prone to worrying that things will take a turn for the worse?",
             "rewritten_zh": "你往往担心事情会变得更糟吗？",
             "dimension": "S/N",
-            "category": "positive"
+            "category": "N"
         },
         "21": {
             "origin_en": "You avoid leadership roles in group settings",
@@ -178,7 +178,7 @@
             "rewritten_en": "Do you avoid leadership roles in group settings?",
             "rewritten_zh": "你在团体中避免领导角色吗？",
             "dimension": "E/I",
-            "category": "positive"
+            "category": "I"
         },
         "22": {
             "origin_en": "You are definitely not an artistic type of person",
@@ -186,7 +186,7 @@
             "rewritten_en": "Are you definitely not an artistic type of person?",
             "rewritten_zh": "你绝对不是艺术型的人吗？",
             "dimension": "S/N",
-            "category": "positive"
+            "category": "S"
         },
         "23": {
             "origin_en": "You think the world would be a better place if people relied more on rationality and less on their feelings",
@@ -194,7 +194,7 @@
             "rewritten_en": "Do you think the world would be a better place if people relied more on rationality and less on their feelings?",
             "rewritten_zh": "你认为如果人们更多地依赖理性而不是感情，世界会变得更美好吗？",
             "dimension": "T/F",
-            "category": "positive"
+            "category": "T"
         },
         "24": {
             "origin_en": "You prefer to do your chores before allowing yourself to relax",
@@ -202,7 +202,7 @@
             "rewritten_en": "Do you prefer to do your chores before allowing yourself to relax?",
             "rewritten_zh": "你更喜欢在放松之前做家务吗？",
             "dimension": "P/J",
-            "category": "positive"
+            "category": "J"
         },
         "25": {
             "origin_en": "You enjoy watching people argue",
@@ -210,7 +210,7 @@
             "rewritten_en": "Do you enjoy watching people argue?",
             "rewritten_zh": "你喜欢看人们争论吗？",
             "dimension": "T/F",
-            "category": "positive"
+            "category": "F"
         },
         "26": {
             "origin_en": "You tend to avoid drawing attention to yourself",
@@ -218,7 +218,7 @@
             "rewritten_en": "Do you tend to avoid drawing attention to yourself?",
             "rewritten_zh": "你倾向于避免引起别人对你的注意吗？",
             "dimension": "E/I",
-            "category": "positive"
+            "category": "I"
         },
         "27": {
             "origin_en": "Your mood can change very quickly",
@@ -226,7 +226,7 @@
             "rewritten_en": "Can your mood change very quickly?",
             "rewritten_zh": "你的情绪可以变化得很快吗？",
             "dimension": "T/F",
-            "category": "positive"
+            "category": "F"
         },
         "28": {
             "origin_en": "You lose patience with people who are not as efficient as you",
@@ -234,7 +234,7 @@
             "rewritten_en": "Do you lose patience with people who are not as efficient as you?",
             "rewritten_zh": "你对不像你一样有效率的人失去耐心吗？",
             "dimension": "T/F",
-            "category": "positive"
+            "category": "T"
         },
         "29": {
             "origin_en": "You often end up doing things at the last possible moment",
@@ -242,7 +242,7 @@
             "rewritten_en": "Do you often end up doing things at the last possible moment?",
             "rewritten_zh": "你经常在最后一刻才做事吗？",
             "dimension": "P/J",
-            "category": "positive"
+            "category": "P"
         },
         "30": {
             "origin_en": "You have always been fascinated by the question of what, if anything, happens after death",
@@ -250,7 +250,7 @@
             "rewritten_en": "Have you always been fascinated by the question of what, if anything, happens after death?",
             "rewritten_zh": "你一直对死后是否有什么发生感到着迷吗？",
             "dimension": "S/N",
-            "category": "positive"
+            "category": "N"
         },
         "31": {
             "origin_en": "You usually prefer to be around others rather than on your own",
@@ -258,7 +258,7 @@
             "rewritten_en": "Do you usually prefer to be around others rather than on your own?",
             "rewritten_zh": "你通常更喜欢和别人在一起而不是独自一人吗？",
             "dimension": "E/I",
-            "category": "positive"
+            "category": "E"
         },
         "32": {
             "origin_en": "You become bored or lose interest when the discussion gets highly theoretical",
@@ -266,7 +266,7 @@
             "rewritten_en": "Do you become bored or lose interest when the discussion gets highly theoretical?",
             "rewritten_zh": "当讨论变得高度理论化时，你会感到无聊或失去兴趣吗？",
             "dimension": "S/N",
-            "category": "positive"
+            "category": "S"
         },
         "33": {
             "origin_en": "You find it easy to empathize with a person whose experiences are very different from yours",
@@ -274,7 +274,7 @@
             "rewritten_en": "Do you find it easy to empathize with a person whose experiences are very different from yours?",
             "rewritten_zh": "你发现很容易同情那些经历与你非常不同的人吗？",
             "dimension": "T/F",
-            "category": "positive"
+            "category": "F"
         },
         "34": {
             "origin_en": "You usually postpone finalizing decisions for as long as possible",
@@ -282,7 +282,7 @@
             "rewritten_en": "Do you usually postpone finalizing decisions for as long as possible?",
             "rewritten_zh": "你通常尽可能推迟最终决定吗？",
             "dimension": "P/J",
-            "category": "positive"
+            "category": "P"
         },
         "35": {
             "origin_en": "You rarely second-guess the choices that you have made",
@@ -290,7 +290,7 @@
             "rewritten_en": "Do you rarely second-guess the choices that you have made?",
             "rewritten_zh": "你很少对自己做出的选择产生怀疑吗？",
             "dimension": "P/J",
-            "category": "positive"
+            "category": "J"
         },
         "36": {
             "origin_en": "After a long and exhausting week, a lively social event is just what you need",
@@ -298,7 +298,7 @@
             "rewritten_en": "Is a lively social event just what you need after a long and exhausting week?",
             "rewritten_zh": "经过漫长而劳累的一周，一个热闹的社交活动正是你所需要的吗？",
             "dimension": "E/I",
-            "category": "positive"
+            "category": "E"
         },
         "37": {
             "origin_en": "You enjoy going to art museums",
@@ -306,7 +306,7 @@
             "rewritten_en": "Do you enjoy going to art museums?",
             "rewritten_zh": "你喜欢去艺术博物馆吗？",
             "dimension": "S/N",
-            "category": "positive"
+            "category": "N"
         },
         "38": {
             "origin_en": "You often have a hard time understanding other people’s feelings",
@@ -314,7 +314,7 @@
             "rewritten_en": "Do you often have a hard time understanding other people’s feelings?",
             "rewritten_zh": "你经常很难理解别人的感受吗？",
             "dimension": "T/F",
-            "category": "positive"
+            "category": "T"
         },
         "39": {
             "origin_en": "You like to have a to-do list for each day",
@@ -322,7 +322,7 @@
             "rewritten_en": "Do you like to have a to-do list for each day?",
             "rewritten_zh": "你喜欢每天都有一个待办事项清单吗？",
             "dimension": "P/J",
-            "category": "positive"
+            "category": "J"
         },
         "40": {
             "origin_en": "You rarely feel insecure",
@@ -330,7 +330,7 @@
             "rewritten_en": "Do you rarely feel insecure?",
             "rewritten_zh": "你很少感到不安全吗？",
             "dimension": "T/F",
-            "category": "positive"
+            "category": "T"
         },
         "41": {
             "origin_en": "You avoid making phone calls",
@@ -338,7 +338,7 @@
             "rewritten_en": "Do you avoid making phone calls?",
             "rewritten_zh": "你避免打电话吗？",
             "dimension": "E/I",
-            "category": "positive"
+            "category": "I"
         },
         "42": {
             "origin_en": "You often spend a lot of time trying to understand views that are very different from your own",
@@ -346,7 +346,7 @@
             "rewritten_en": "Do you often spend a lot of time trying to understand views that are very different from your own?",
             "rewritten_zh": "你经常花很多时间试图理解与你自己观点非常不同的观点吗？",
             "dimension": "S/N",
-            "category": "positive"
+            "category": "N"
         },
         "43": {
             "origin_en": "In your social circle, you are often the one who contacts your friends and initiates activities",
@@ -354,7 +354,7 @@
             "rewritten_en": "Are you often the one who contacts your friends and initiates activities in your social circle?",
             "rewritten_zh": "在你的社交圈中，你经常是联系朋友并发起活动的人吗？",
             "dimension": "E/I",
-            "category": "positive"
+            "category": "E"
         },
         "44": {
             "origin_en": "If your plans are interrupted, your top priority is to get back on track as soon as possible",
@@ -362,7 +362,7 @@
             "rewritten_en": "Is your top priority to get back on track as soon as possible if your plans are interrupted?",
             "rewritten_zh": "如果你的计划被打断，你的首要任务是尽快恢复正轨吗？",
             "dimension": "P/J",
-            "category": "positive"
+            "category": "J"
         },
         "45": {
             "origin_en": "You are still bothered by mistakes that you made a long time ago",
@@ -370,7 +370,7 @@
             "rewritten_en": "Are you still bothered by mistakes that you made a long time ago?",
             "rewritten_zh": "你仍然为很久以前犯的错误而烦恼吗？",
             "dimension": "T/F",
-            "category": "positive"
+            "category": "F"
         },
         "46": {
             "origin_en": "You rarely contemplate the reasons for human existence or the meaning of life",
@@ -378,7 +378,7 @@
             "rewritten_en": "Do you rarely contemplate the reasons for human existence or the meaning of life?",
             "rewritten_zh": "你很少思考人类存在的原因或生命的意义吗？",
             "dimension": "S/N",
-            "category": "positive"
+            "category": "S"
         },
         "47": {
             "origin_en": "Your emotions control you more than you control them",
@@ -386,7 +386,7 @@
             "rewritten_en": "Do your emotions control you more than you control them?",
             "rewritten_zh": "你的情绪比你控制它们更多地控制着你吗？",
             "dimension": "T/F",
-            "category": "positive"
+            "category": "F"
         },
         "48": {
             "origin_en": "You take great care not to make people look bad, even when it is completely their fault",
@@ -394,7 +394,7 @@
             "rewritten_en": "Do you take great care not to make people look bad, even when it is completely their fault?",
             "rewritten_zh": "即使完全是他们的错，你也非常小心不让人难堪吗？",
             "dimension": "T/F",
-            "category": "positive"
+            "category": "F"
         },
         "49": {
             "origin_en": "Your personal work style is closer to spontaneous bursts of energy than organized and consistent efforts",
@@ -402,7 +402,7 @@
             "rewritten_en": "Is your personal work style closer to spontaneous bursts of energy than organized and consistent efforts?",
             "rewritten_zh": "你的个人工作风格更接近于自发的能量爆发，而不是有组织和持续的努力吗？",
             "dimension": "P/J",
-            "category": "positive"
+            "category": "P"
         },
         "50": {
             "origin_en": "When someone thinks highly of you, you wonder how long it will take them to feel disappointed in you",
@@ -410,7 +410,7 @@
             "rewritten_en": "Do you wonder how long it will take them to feel disappointed in you when someone thinks highly of you?",
             "rewritten_zh": "当有人对你评价很高时，你会想知道他们会花多长时间感到失望吗？",
             "dimension": "T/F",
-            "category": "positive"
+            "category": "F"
         },
         "51": {
             "origin_en": "You would love a job that requires you to work alone most of the time",
@@ -418,7 +418,7 @@
             "rewritten_en": "Would you love a job that requires you to work alone most of the time?",
             "rewritten_zh": "你会喜欢一个大部分时间需要你独自工作的工作吗？",
             "dimension": "E/I",
-            "category": "positive"
+            "category": "I"
         },
         "52": {
             "origin_en": "You believe that pondering abstract philosophical questions is a waste of time",
@@ -426,7 +426,7 @@
             "rewritten_en": "Do you believe that pondering abstract philosophical questions is a waste of time?",
             "rewritten_zh": "你认为思考抽象的哲学问题是浪费时间吗？",
             "dimension": "S/N",
-            "category": "positive"
+            "category": "S"
         },
         "53": {
             "origin_en": "You feel more drawn to places with busy, bustling atmospheres than quiet, intimate places",
@@ -434,7 +434,7 @@
             "rewritten_en": "Do you feel more drawn to places with busy, bustling atmospheres than quiet, intimate places?",
             "rewritten_zh": "你更喜欢热闹、繁华的地方，而不是安静、亲密的地方吗？",
             "dimension": "E/I",
-            "category": "positive"
+            "category": "E"
         },
         "54": {
             "origin_en": "You know at first glance how someone is feeling",
@@ -442,7 +442,7 @@
             "rewritten_en": "Do you know at first glance how someone is feeling?",
             "rewritten_zh": "你一眼就能知道别人的感受吗？",
             "dimension": "T/F",
-            "category": "positive"
+            "category": "F"
         },
         "55": {
             "origin_en": "You often feel overwhelmed",
@@ -450,7 +450,7 @@
             "rewritten_en": "Do you often feel overwhelmed?",
             "rewritten_zh": "你经常感到不知所措吗？",
             "dimension": "T/F",
-            "category": "positive"
+            "category": "F"
         },
         "56": {
             "origin_en": "You complete things methodically without skipping over any steps",
@@ -458,7 +458,7 @@
             "rewritten_en": "Do you complete things methodically without skipping over any steps?",
             "rewritten_zh": "你有条不紊地完成事情，不会跳过任何步骤吗？",
             "dimension": "P/J",
-            "category": "positive"
+            "category": "J"
         },
         "57": {
             "origin_en": "You are very intrigued by things labeled as controversial",
@@ -466,7 +466,7 @@
             "rewritten_en": "Are you very intrigued by things labeled as controversial?",
             "rewritten_zh": "你对被标记为有争议的事物非常感兴趣吗？",
             "dimension": "S/N",
-            "category": "positive"
+            "category": "N"
         },
         "58": {
             "origin_en": "You would pass along a good opportunity if you thought someone else needed it more",
@@ -474,7 +474,7 @@
             "rewritten_en": "Would you pass along a good opportunity if you thought someone else needed it more?",
             "rewritten_zh": "如果你认为别人更需要，你会放弃一个好的机会吗？",
             "dimension": "T/F",
-            "category": "positive"
+            "category": "F"
         },
         "59": {
             "origin_en": "You struggle with deadlines",
@@ -482,7 +482,7 @@
             "rewritten_en": "Do you struggle with deadlines?",
             "rewritten_zh": "你在截止日期方面感到吃力吗？",
             "dimension": "P/J",
-            "category": "positive"
+            "category": "P"
         },
         "60": {
             "origin_en": "You feel confident that things will work out for you",
@@ -490,7 +490,7 @@
             "rewritten_en": "Do you feel confident that things will work out for you?",
             "rewritten_zh": "你相信事情会对你有好的结果吗？",
             "dimension": "P/J",
-            "category": "positive"
+            "category": "P"
         }
     },
     "prompts": {
@@ -507,12 +507,21 @@
             "zh": "我已经和<character>进行了许多对话。我的输入是许多样本的字典，每个样本包括一个陈述和一段对话。你的任务是将每段对话转换为一个选择，指示<character>是否同意该陈述。你应该输出一个字典，其中键与输入字典相同，值为选择。\n===输出格式===\n{\n    \"<i_start>\": <选择1>,\n    ...\n    \"<i_end>\": <选择n>\n}\n===选择说明==="
         },
         "llm_choice_instruction": {
-            "en": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly agree', 2 denotes 'agree', 3 denotes 'somewhat agree', 4 denotes 'neither agree nor disagree', 5 denotes 'somewhat disagree', 6 denotes 'disagree', and 7 denotes 'strongly disagree'.",
-            "zh": "每个选择都是从1到7的数字。请根据对话使用以下标度评估<character>：1代表“非常同意”，2代表“同意”，3代表“比较同意”，4代表“既不同意也不反对”，5代表“比较不同意”，6代表“不同意”，7代表“非常不同意”。"
+            "en": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly disagree', 2 denotes 'disagree', 3 denotes 'somewhat disagree', 4 denotes 'neither agree nor disagree', 5 denotes 'somewhat agree', 6 denotes 'agree', and 7 denotes 'strongly agree'. In case <character> refuses to answer the question, use \"x\" to indicate it.",
+            "zh": "每个选择都是从1到7的数字。请根据对话使用以下标度评估<character>：1代表“非常不同意”，2代表“不同意”，3代表“比较不同意”，4代表“既不同意也不反对”，5代表“比较同意”，6代表“同意”，7代表“非常同意”。如果<character>拒绝回答该问题，用“x”表示。"
         },
         "rpa_choice_instruction": {
-            "en": "Reply a number from 1 to 7 using the scales: 1 denotes 'strongly agree', 2 denotes 'agree', 3 denotes 'somewhat agree', 4 denotes 'neither agree nor disagree', 5 denotes 'somewhat disagree', 6 denotes 'disagree', and 7 denotes 'strongly disagree'. Please answer with the number only, without anything else.",
-            "zh": "请用1到7的等级来回答，1代表“非常同意”，2代表“同意”，3代表“比较同意”，4代表“既不同意也不反对”，5代表“比较不同意”，6代表“不同意”，7代表“非常不同意”。请你只回答这一个数字，不要说其他内容。"
+            "en": "Reply a number from 1 to 7 using the scales: 1 denotes 'strongly disagree', 2 denotes 'disagree', 3 denotes 'somewhat disagree', 4 denotes 'neither agree nor disagree', 5 denotes 'somewhat agree', 6 denotes 'agree', and 7 denotes 'strongly agree'. Please answer with the number only, without anything else.",
+            "zh": "请用1到7的等级来回答，1代表“非常不同意”，2代表“不同意”，3代表“比较不同意”，4代表“既不同意也不反对”，5代表“比较同意”，6代表“同意”，7代表“非常同意”。请你只回答这一个数字，不要说其他内容。"
+        },
+        "dim_desc": {
+            "E/I": "E/I Dimension: Extraversion (E) vs Introversion (I)\n\nE (Extraversion): Extraverts draw energy from interacting with others. They feel comfortable in social settings and tend to express their thoughts. Extraverts are often more active, seek social stimulation, and enjoy participating in group activities. For them, connecting with people, sharing, and exchanging ideas is often a need. They might be more focused on external world stimuli, such as sounds, colors, and social dynamics.\n\nI (Introversion): Introverts feel more comfortable when alone. They derive energy from inner reflection and personal time. Contrary to extraverts, prolonged social interaction might tire them. Introverts might be more introspective, enjoy deep thinking, and tend to have meaningful personal relationships. They are more concerned with the inner world, such as thoughts, emotions, and imaginations.",
+
+            "S/N": "S/N Dimension: Sensing (S) vs Intuition (N)\n\nS (Sensing): Sensing individuals value the concrete, practical, and present situations. They rely on their five senses to process information and often focus on details. For them, past experiences and tangible evidence play a significant role in decision-making. They are typically pragmatic and tend to deal with what they 'see' and 'hear'.\n\nN (Intuition): Intuitive individuals tend to focus on potential possibilities and future opportunities. They like to think about 'what could be', rather than just 'what is'. They lean more towards abstract thinking and can capture concepts and patterns effectively. Intuitives are often more innovative, preferring new ideas and approaches.",
+
+            "T/F": "T/F Dimension: Thinking (T) vs Feeling (F)\n\nT (Thinking): Thinking individuals rely primarily on logic and analysis when making decisions. They pursue fairness and objectivity and might be more direct and frank. For them, finding the most efficient method or the most logical solution is crucial, even if it might hurt some people's feelings.\n\nF (Feeling): Feeling individuals consider people's emotions and needs more when making decisions. They strive for harmony, tend to build relationships, and avoid conflicts. They are often more empathetic, valuing personal values and emotions, rather than just facts or logic.",
+
+            "P/J": "P/J Dimension: Perceiving (P) vs Judging (J)\n\nP (Perceiving): Perceivers are more open and flexible. They tend to 'go with the flow' rather than overly planning or organizing things. Perceivers like to explore various possibilities and prefer to leave options open to address unforeseen circumstances. They lean towards postponing decisions to gather more information and better understanding. For them, life is a continuous process of change, not an event with fixed goals or plans. They often focus more on the experience itself rather than just the outcome.\n\nJ (Judging): Judging individuals are more structured and planned in their lives. They prefer clear expectations and structures and often set goals and pursue them. Judgers are usually more organized and tend to make decisions in advance. They like to act according to plans and feel comfortable in an orderly environment. For them, achieving goals and completing tasks are often priorities. They might focus more on efficiency and structure rather than openness or spontaneity."
         }
     }
 }

@@ -278,8 +278,8 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 				choice = int(choice)
 
 				dim = idx2dimension[idx]
-
-				score = choice - 4 # from [1, 7] to [-3, 3]
+				
+				score = 4 - choice # from [7, 1] to [-3, 3]
 
 				results.append({'id': [idx], 'dim': dim, 'responses': [id2results[idx]], 'score': score}) 
 		else:
@@ -368,7 +368,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 
 					# 等改完数据再来搞一版
 				else:
-					pass 
+					output_format_prompt = prompts["general"]['one_score_output']
 
 				sys_prompt = background_prompt + output_format_prompt
 
@@ -628,8 +628,13 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 			dim_result_info += f'intra std: {result["intra_std"]}\t'
 
 		if "details" in result:
-			# analysis of the first batch
-			dim_result_info += f'{result["details"][0][0]["analysis"]}\t'
+			if 'analysis' in result["details"][0][0]:
+				# analysis of the first batch
+				dim_result_info += f'{result["details"][0][0]["analysis"]}\t'
+			else:
+				dim_result_info += f'{result["details"][0][0]["responses"][0]}\t'
+			
+				
 		
 		logger.info(dim_result_info)
 	
