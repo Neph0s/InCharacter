@@ -119,6 +119,43 @@ def get_response_gpt(sys_prompt, inputs, model='gpt-4', retry_count=0, nth_gener
 
 		print(f'Fail to get response after {retry_count} retry')
 
+def string2json(llm_response):
+	llm_response = llm_response.strip("`")
+	if llm_response.startswith('json'):
+		llm_response = llm_response[4:]
+	
+	try:
+		json_response = json.loads(llm_response)
+	except:
+		try:
+			llm_response = llm_response[llm_response.find("{"):]
+			json_response = json.loads(llm_response)
+		except:
+			return False
+	
+	return json_response
+
+def get_response_json(**kwargs):
+	
+	nth_generation = 0
+
+
+	while (True):
+		response = get_response(**kwargs, nth_generation=nth_generation)
+		print(f'{nth_generation} generation: {response[:100]}')
+
+		json_response = string2json(response)
+		print(f'parse results: {json_response}')
+
+		if json_response:
+			break 
+		else:
+			nth_generation += 1
+
+	return json_response
+
+
+
 if __name__ == '__main__':
 	print(get_response('Act as a calculator', '123+456=?', 'gpt-3.5-turbo'))
 		
