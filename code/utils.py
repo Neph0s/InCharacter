@@ -89,8 +89,8 @@ def get_response_gpt(sys_prompt, inputs, model='gpt-4', retry_count=0, nth_gener
 	
 	try:
 		temperature = 0.2 if nth_generation else 0 
-		logger.info('ChatGPT SysPrompt:  ' + sys_prompt[:100])
-		logger.info('ChatGPT Input:  ' + inputs[:100])
+		#logger.info('ChatGPT SysPrompt:  ' + sys_prompt[:100])
+		#logger.info('ChatGPT Input:  ' + inputs[:100])
 		response = client.chat.completions.create(
 			model= model ,  # 对话模型的名称
 			messages=query,
@@ -100,7 +100,7 @@ def get_response_gpt(sys_prompt, inputs, model='gpt-4', retry_count=0, nth_gener
 			presence_penalty=0.0,  # [-2,2]之间，该值越大则更倾向于产生不同的内容,
 		)
 
-		logger.info('GPT Output: ' + response.choices[0].message.content[:100])
+		#logger.info('GPT Output: ' + response.choices[0].message.content[:100])
 		return response.choices[0].message.content
 
 	except openai.BadRequestError as e:
@@ -142,10 +142,10 @@ def get_response_json(**kwargs):
 
 	while (True):
 		response = get_response(**kwargs, nth_generation=nth_generation)
-		print(f'{nth_generation} generation: {response[:100]}')
+		#print(f'{nth_generation} generation: {response[:100]}')
 
 		json_response = string2json(response)
-		print(f'parse results: {json_response}')
+		#print(f'parse results: {json_response}')
 
 		if json_response:
 			break 

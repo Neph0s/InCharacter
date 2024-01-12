@@ -77,12 +77,16 @@ character_info = {
     "haruhi-zh": {
         "alias": [
             "凉宫春日",
+            "春日",
             "Haruhi Suzumiya"
         ],
         "agent": {
             "ChatHaruhi": "haruhi"
         },
-        "experimenter": "阿虚"
+        "experimenter": "阿虚",
+        "groundtruth": {
+            "16Personalities": "ENFP"
+        }
     },
     "Malfoy-en": {
         "alias": [
@@ -1216,8 +1220,6 @@ character_info = {
         "experimenter": "Ralph Abernathy"
     }
 }
-
-
 
 alias2character = {}
 for k, v in character_info.items():

@@ -18,7 +18,7 @@ parser = argparse.ArgumentParser(description='Assess personality of a character'
 scale_list = ['Empathy', 'BFI', 'BSRI', 'EPQ-R', 'LMS', 'DTDD', 'ECR-R', 'GSE', 'ICB', 'LOT-R', 'EIS', 'WLEIS', 'CABIN', '16Personalities']
 
 # Added choices for the questionnaire argument
-parser.add_argument('--questionnaire_type', type=str, default='16Personalities', 
+parser.add_argument('--questionnaire_name', type=str, default='16Personalities', 
 					choices=scale_list, 
 					help='questionnaire to use.')
 
@@ -197,9 +197,9 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 
 	character_name = character_aliases[0]
 
-	questionnaire_type = questionnaire_metadata['name']
+	questionnaire_name = questionnaire_metadata['name']
 
-	dims = dims_dict.get(questionnaire_type, sorted(list(set([q['dimension'] for q in questionnaire]))))
+	dims = dims_dict.get(questionnaire_name, sorted(list(set([q['dimension'] for q in questionnaire]))))
 
 	from utils import get_response 
 	
@@ -236,9 +236,9 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 				else:
 					need_convert.append(r)
 			
-			print('The following choices can not be recognized as numbers, need LLM convert.')
-			for r in need_convert:
-				print(r['response_open'])
+			# print('The following choices can not be recognized as numbers, need LLM convert.')
+			# for r in need_convert:
+			# 	print(r['response_open'])
 		else:
 			need_convert = questionnaire_results
 		
@@ -264,7 +264,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 		choices.update(converted_choices)
 		
 		if 'api' in eval_args:
-			assert(questionnaire_type == '16Personalities' and len(choices) == 60) 
+			assert(questionnaire_name == '16Personalities' and len(choices) == 60) 
 			for idx, choice in choices.items():
 				if choice == 'x': choice = 4 # To make it possible to call api 
 				choice = int(choice)
@@ -273,7 +273,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 
 				score = choice - 4 # from [1, 7] to [-3, 3]
 
-				results.append({'id': [idx], 'dim': dim, 'responses': [id2results[idx]], 'result': score}) 
+				results.append({'id': [idx], 'dim': dim, 'responses': [id2results[idx]], 'score': score}) 
 		else:
 			for idx, choice in choices.items():
 				if choice == 'x': continue 
@@ -282,7 +282,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 				dim = idx2dimension[idx]
 				category = idx2category[idx]
 
-				if questionnaire_type == '16Personalities':   
+				if questionnaire_name == '16Personalities':   
 					category = 'positive' if category == dim[0] else 'negative'
 				
 				if category == 'positive':
@@ -290,7 +290,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 				else: 
 					score = questionnaire_metadata['range'][0] + questionnaire_metadata['range'][1] - choice
 					
-				results.append({'id': [idx], 'dim': dim, 'responses': [id2results[idx]], 'result': score}) 
+				results.append({'id': [idx], 'dim': dim, 'responses': [id2results[idx]], 'score': score}) 
 				#dim_results = {dim: sum(scores) / len(scores) for dim, scores in dim_scores.items()}		
 
 	elif eval_args[1] == 'assess':
@@ -346,12 +346,12 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 				language_name = {'zh': 'Chinese', 'en': 'English'}[language]
 
 				
-				background_prompt = prompts["general"]['background_template'].format(questionnaire_name, questionnaire_name, dim, prompts[questionnaire_type]["dim_desc"][dim], experimenter, character_name, language_name, character_name, dim, questionnaire_name)
+				background_prompt = prompts["general"]['background_template'].format(questionnaire_name, questionnaire_name, dim, prompts[questionnaire_name]["dim_desc"][dim], experimenter, character_name, language_name, character_name, dim, questionnaire_name)
 
 				if questionnaire_name == '16Personalities':
 					background_prompt = background_prompt.replace('16Personalities', '16Personalities (highly similar to MBTI)', 1)
 							
-				if questionnaire_type == '16Personalities':
+				if questionnaire_name == '16Personalities':
 					dim_cls1, dim_cls2 = dim.split('/')
 					
 					output_format_prompt = prompts["general"]['two_score_output'].format(dim_cls1, dim_cls2)
@@ -366,7 +366,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 
 				llm_response = get_response_json(sys_prompt=sys_prompt, inputs=user_input, model=evaluator_llm)
 
-				if questionnaire_type == '16Personalities':
+				if questionnaire_name == '16Personalities':
 					llm_response['result'] = {k: float(v.strip("%")) for k, v in llm_response['result'].items()}
 					assert (sum(llm_response['result'].values()) == 100)
 					# use the score of dim_cls1
@@ -375,7 +375,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 					llm_response['result'] = float(llm_response['result'])
 												
 				
-				results.append({'id': [r['id'] for r in batch_responses], 'dim': dim, 'responses': batch_responses, 'result': llm_response['result'], 'analysis': llm_response['analysis']})
+				results.append({'id': [r['id'] for r in batch_responses], 'dim': dim, 'responses': batch_responses, 'score': llm_response['result'], 'analysis': llm_response['analysis']})
 
 	# now, we have all the results. Let's aggregate them				
 	assessment_results = {}
@@ -386,13 +386,13 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 		for result in results:
 			dim = result['dim']
 			dim_results[dim].append(result)
-			# result : {'dim': dim, 'responses': [id2results[idx]], 'result': score}
+			# result : {'dim': dim, 'responses': [id2results[idx]], 'score': score}
 		
 		# aggregate results in each dim 
 		for dim, dim_res in dim_results.items():
 			all_scores = [ result['score'] for result in dim_res]
-			
-			if questionnaire_type == '16Personalities' and not 'assess' in eval_args:
+
+			if questionnaire_name == '16Personalities' and not 'assess' in eval_args:
 				# convert scores from [1, 7] to [0, 100]
 				all_scores = [ (score - 1) / 6 * 100 for score in all_scores]
 
@@ -405,7 +405,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 				std_score = None
 			
 			assessment_results[dim] = {
-				'score': score, 
+				'score': avg_score, 
 				'standard_variance': std_score,
 				'details': dim_res, 
 			}
@@ -413,9 +413,9 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 
 	else:
 		# api is only for mbti. it does not support bigfive
-		assert(questionnaire_type == '16Personalities')
+		assert(questionnaire_name == '16Personalities')
 		
-		id2answer = { r['id'][0]: r['result'] for r in results}
+		id2answer = { r['id'][0]: r['score'] for r in results}
 		answers = [ id2answer[str(i)] for i in range(1, 61)]
 
 		from api_16personality import submit_16personality_api
@@ -424,9 +424,30 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 		
 		assessment_results = { dim: {'score': pred[dim]['score'][dim[0]]} for dim in dims }
 
+	# assign a code for BFI/16P 
+	
+	if questionnaire_name in ['BFI', '16Personalities']:
+		thresh = (questionnaire_metadata['range'][0] + questionnaire_metadata['range'][1]) / 2
+		if questionnaire_name == '16Personalities': 
+			thresh = 50
+			pos_tags = { dim: dim[0] for dim in dims}
+			neg_tags = { dim: dim[-1] for dim in dims}
+		elif questionnaire_name == 'BFI':
+			pos_tags = {'Extraversion': 'S', 'Neuroticism': 'L', 'Consientiousness': 'O', 'Agreeableness': 'A', 'Openness': 'I'}
+			neg_tags = {'Extraversion': 'R', 'Neuroticism': 'C', 'Consientiousness': 'U', 'Agreeableness': 'E', 'Openness': 'N'}
+
+		code = ''
+		for dim, result in assessment_results.items():
+			if result['score'] > thresh:
+				code += pos_tags[dim]
+			else:
+				code += neg_tags[dim]
+
+		assessment_results['code'] = code 
+
 	return assessment_results 
 
-def personality_assessment(character, agent_type, agent_llm, questionnaire_type, eval_method, evaluator_llm='gpt-3.5-turbo', repeat_times=1):   
+def personality_assessment(character, agent_type, agent_llm, questionnaire_name, eval_method, evaluator_llm='gpt-3.5-turbo', repeat_times=1):   
 	
 	if character in character_info.keys():
 		pass
@@ -439,8 +460,8 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_type,
 	language = character[character.rfind('-')+1:]
 
 	# load questionnaire
-	if questionnaire_type in scale_list:
-		questionnaire_metadata = load_questionnaire(questionnaire_type)
+	if questionnaire_name in scale_list:
+		questionnaire_metadata = load_questionnaire(questionnaire_name)
 		questionnaire = questionnaire_metadata.pop('questions')
 		
 		# transform into list
@@ -475,7 +496,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_type,
 		
 		
 		# conduct interview with character given the questionnaire
-		interview_folder_path = os.path.join('..', 'results', 'interview', f'{questionnaire_type}-agent-type={agent_type}_agent-llm={agent_llm}_query-style={query_style}_repeat-times={repeat_times}')
+		interview_folder_path = os.path.join('..', 'results', 'interview', f'{questionnaire_name}-agent-type={agent_type}_agent-llm={agent_llm}_query-style={query_style}_repeat-times={repeat_times}')
 		if not os.path.exists(interview_folder_path):
 			os.makedirs(interview_folder_path)
 
@@ -507,7 +528,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_type,
 
 		
 		# evaluate the character's personality
-		assessment_folder_path = os.path.join('..', 'results', 'assessment', f'{questionnaire_type}_agent-type={agent_type}_agent-llm={agent_llm}_eval-method={eval_method}_repeat-times={repeat_times}')
+		assessment_folder_path = os.path.join('..', 'results', 'assessment', f'{questionnaire_name}_agent-type={agent_type}_agent-llm={agent_llm}_eval-method={eval_method}_repeat-times={repeat_times}')
 		if not os.path.exists(assessment_folder_path):
 			os.makedirs(assessment_folder_path)
 
@@ -520,7 +541,6 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_type,
 			logger.info('Assessing...')
 			assessment_results = assess(character_info[character]["alias"], experimenter, questionnaire_results, questionnaire, questionnaire_metadata, eval_method, language, evaluator_llm)
 	   
-			
 			with open(assessment_save_path, 'w') as f:
 				json.dump(assessment_results, f, indent=4, ensure_ascii=False)
 			logger.info(f'Assess finished... save into {assessment_save_path}')
@@ -531,39 +551,45 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_type,
 	
 			
 	# show results of personality assessment 
-
 	logger.info(f'{questionnaire_name} assessment results:')
 	logger.info('Character: ' + character_name)
+
 	
-	dims = dims_dict.get(questionnaire_type, sorted(list(set([q['dimension'] for q in questionnaire]))))
-	thresh = (questionnaire_metadata['range'][0] + questionnaire_metadata['range'][1]) / 2
-
-	pred_code = ''.join([ assessment_results[dim]['result'] for dim in dims])
-	label_code = mbti_labels[character_name]
-
-	logger.info(f'Prediction {pred_code}\tGroundtruth {label_code}')
+	if 'code' in assessment_results:
+		pred_code = assessment_results['code']
+		logger.info(f'Prediction {pred_code}')
+	
+	if questionnaire_name in character_info[character]["groundtruth"]: 
+		label_code = mbti_labels[character_name]
+		logger.info(f'Groundtruth {label_code}')
 
 	for dim, result in assessment_results.items():
+		dim_result_info = ''
 		if "score" in result:
-			logger.info(f'{dim}: {result["score"]}')
+			if questionnaire_name == '16Personalities':
+				dim_result_info += f'{dim[0]}: {result["score"]:.2f}\t{dim[-1]}: {(100 - result["score"]):.2f}\t'
+			else:
+				dim_result_info += f'{dim}: {result["score"]:.2f}\t'
 		if "standard_variance" in result and result["standard_variance"] != None:
-			logger.info(f'std: {result["standard_variance"]:.2f}')
+			dim_result_info += f'std: {result["standard_variance"]:.2f}\t'
 		if "batch_results" in result:
 			# analysis of the first batch
-			logger.info(f'{result["batch_results"][0]["analysis"]}')
+			dim_result_info += f'{result["batch_results"][0]["analysis"]}\t'
+		
+		logger.info(dim_result_info)
 
 	
 if __name__ == '__main__':
 	personality_assessment(
 		args.character, args.agent_type, args.agent_llm, 
-		args.questionnaire_type, args.eval_method, args.evaluator_llm)
+		args.questionnaire_name, args.eval_method, args.evaluator_llm)
 			
 
-# python personality_tests.py --eval_method direct_ask --questionnaire_type 16Personalities --character hutao
-# python personality_tests.py --eval_method interview_sample --questionnaire_type 16Personalities --character hutao
-# python personality_tests.py --eval_method interview_batch --questionnaire_type 16Personalities --character hutao
-# python personality_tests.py --eval_method interview_assess_batch_anonymous --questionnaire_type 16Personalities --character haruhi-zh
-#python personality_tests.py --eval_method interview_convert --questionnaire_type 16Personalities --character haruhi-zh
+# python personality_tests.py --eval_method direct_ask --questionnaire_name 16Personalities --character hutao
+# python personality_tests.py --eval_method interview_sample --questionnaire_name 16Personalities --character hutao
+# python personality_tests.py --eval_method interview_batch --questionnaire_name 16Personalities --character hutao
+# python personality_tests.py --eval_method interview_assess_batch_anonymous --questionnaire_name 16Personalities --character haruhi-zh
+#python personality_tests.py --eval_method interview_convert --questionnaire_name 16Personalities --character haruhi-zh
 
 
 
