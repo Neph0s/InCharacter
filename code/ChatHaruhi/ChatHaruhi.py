@@ -5,6 +5,8 @@ from .utils import luotuo_openai_embedding, tiktokenizer
 
 from .utils import response_postprocess
 
+from .utils import cached
+
 def get_text_from_data( data ):
     if "text" in data:
         return data['text']
@@ -57,7 +59,10 @@ class ChatHaruhi:
 
         if system_prompt:
             self.system_prompt = self.check_system_prompt( system_prompt )
-
+        
+        self.llm_type = llm 
+        self.role_name = role_name 
+        
         # TODO: embedding should be the seperately defined, so refactor this part later
         if llm == 'openai':
             # self.llm = LangChainGPT()
@@ -431,13 +436,14 @@ class ChatHaruhi:
 
         # record dialogue history
         self.dialogue_history.append((last_query_record, response))
-        
+
+    @cached
     def chat(self, text, role):
+        
         # add system prompt
         self.llm.initialize_message()
         self.llm.system_message(self.system_prompt)
     
-
         # add story
         query = self.get_query_string(text, role)
         self.add_story( query )
