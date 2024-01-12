@@ -154,6 +154,13 @@ def get_response_json(**kwargs):
 
 	return json_response
 
+def avg(lst):
+	return sum(lst)/len(lst)
+
+def std(lst):
+	import math
+	avg_score = avg(lst)
+	return math.sqrt(sum([(s-avg_score)**2 for s in lst])/ (len(lst) - 1))
 
 
 if __name__ == '__main__':

@@ -437,7 +437,7 @@ def cached(func):
 	def wrapper(*args, **kwargs):	
 
 		global cache
-		cache_path = 'cache.pkl'
+		cache_path = 'rpa_cache.pkl'
 		if cache == None:
 			if not os.path.exists(cache_path):
 				cache = {}

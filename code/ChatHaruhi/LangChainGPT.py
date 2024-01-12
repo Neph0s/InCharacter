@@ -76,6 +76,7 @@ class LangChainGPT(BaseLLM):
         self.messages.append(HumanMessage(content=payload))
 
     def get_response(self):
+        
         response = self.chat(self.messages)
         return response.content
 
