@@ -8,7 +8,7 @@ import pdb
 import random 
 from prompts import prompts
 import math
-from utils import logger, get_response_json
+from utils import logger, get_response_json, avg, std
 import re 
 
 random.seed(42)
@@ -54,7 +54,9 @@ print(args)
 
 from characters import character_info, alias2character
 
-dims_dict = {'16Personalities': ['E/I', 'S/N', 'T/F', 'P/J'], 'bigfive': ['openness', 'extraversion', 'conscientiousness', 'agreeableness', 'neuroticism']} # we want special order
+dims_dict = {'16Personalities': ['E/I', 'S/N', 'T/F', 'P/J'], 'bigfive': ['Extraversion', 'Neuroticism', 'Conscientiousness', 'Agreeableness', 'Openness'] } # we want special order
+
+
 
 # read mbti groundtruth
 mbti_labels = {}
@@ -88,6 +90,7 @@ def subsample_questionnaire(questionnaire, n=20):
 		remaining = n % n_keys
 
 		keys_w_additional_question = random.sample(key_values, remaining)
+
 		subsampled_questions = []
 
 		for key_value in key_values:
@@ -138,8 +141,9 @@ def split_list(input_list, n=4):
 		result[-1].append(result[i].pop())
 
 	# Assert that each sublist in result has 3-n elements
-	assert( all([len(_) >= n-1 and len(_) <= n for _ in result]) )
-	
+	# no. it cannot . e.g. we can not split 5 elements with n = 4 to satisfy it 
+	# assert( all([len(_) >= n-1 and len(_) <= n for _ in result]) )
+		
 	return result
 
 
@@ -147,6 +151,11 @@ def build_character_agent(character_code, agent_type, agent_llm):
 	from ChatHaruhi import ChatHaruhi
 	
 	if agent_llm.startswith('gpt-'): 
+		if agent_llm.startswith('gpt-3.5'):
+			agent_llm = 'gpt-3.5-turbo-1106'
+		elif agent_llm.startswith('gpt-4'):
+			agent_llm = 'gpt-4-1106-preview'
+
 		os.environ["OPENAI_API_KEY"] = config['openai_apikey']
 
 		if agent_type == 'ChatHaruhi':
@@ -155,6 +164,7 @@ def build_character_agent(character_code, agent_type, agent_llm):
 			character_agent = ChatHaruhi( role_from_hf = character_info[character_code]["agent"]["RoleLLM"], llm = 'openai', embedding = 'bge_en')
 
 		character_agent.llm.model = agent_llm
+		character_agent.llm_type = agent_llm
 
 	character_agent.llm.chat.temperature = 0 
 
@@ -163,7 +173,7 @@ def build_character_agent(character_code, agent_type, agent_llm):
 def get_experimenter(character):    
 	return character_info[character]["experimenter"]
 
-def interview(character_agent, questionnaire, experimenter, questionnaire_prompts, language, query_style):
+def interview(character_agent, questionnaire, experimenter, questionnaire_prompts, language, query_style, nth_test):
 	
 	results = []
 
@@ -180,7 +190,7 @@ def interview(character_agent, questionnaire, experimenter, questionnaire_prompt
 		else:
 			raise NotImplementedError
 		
-		response = character_agent.chat(role = experimenter, text = q)
+		response = character_agent.chat(role = experimenter, text = q, nth_test=nth_test)
 
 		result = {
 			'id': question['id'],
@@ -193,15 +203,13 @@ def interview(character_agent, questionnaire, experimenter, questionnaire_prompt
 		
 	return results
 
-def assess(character_aliases, experimenter, questionnaire_results, questionnaire, questionnaire_metadata, eval_method, language, evaluator_llm):
+def assess(character_aliases, experimenter, questionnaire_results, questionnaire, questionnaire_metadata, eval_method, language, evaluator_llm, nth_test):
 
 	character_name = character_aliases[0]
 
 	questionnaire_name = questionnaire_metadata['name']
 
 	dims = dims_dict.get(questionnaire_name, sorted(list(set([q['dimension'] for q in questionnaire]))))
-
-	from utils import get_response 
 	
 	eval_args = eval_method.split('_')
 	
@@ -303,6 +311,9 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 			
 			dim_responses = [r for i, r in enumerate(questionnaire_results) if questionnaire[i]['dimension'] == dim]
 
+			if nth_test > 0:
+				random.shuffle(dim_responses)
+
 			eval_setting = eval_args[2]
 
 			if eval_setting == 'batch':
@@ -310,7 +321,6 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 				dim_responses_list = split_list(dim_responses)
 			else:
 				dim_responses_list = [dim_responses] 
-
 
 			for batch_responses in dim_responses_list:
 				conversations = ''
@@ -346,7 +356,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 				language_name = {'zh': 'Chinese', 'en': 'English'}[language]
 
 				
-				background_prompt = prompts["general"]['background_template'].format(questionnaire_name, questionnaire_name, dim, prompts[questionnaire_name]["dim_desc"][dim], experimenter, character_name, language_name, character_name, dim, questionnaire_name)
+				background_prompt = prompts["general"]['background_template'].format(questionnaire_name, questionnaire_name, dim, questionnaire_metadata["prompts"]["dim_desc"][dim], experimenter, character_name, language_name, character_name, dim, questionnaire_name)
 
 				if questionnaire_name == '16Personalities':
 					background_prompt = background_prompt.replace('16Personalities', '16Personalities (highly similar to MBTI)', 1)
@@ -398,15 +408,15 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 
 			count_group = len(all_scores)
 
-			avg_score = sum(all_scores)/count_group
+			avg_score = avg(all_scores)
 			if count_group > 1:
-				std_score = math.sqrt(sum([(s-avg_score)**2 for s in all_scores])/ (count_group - 1))
+				std_score = std(all_scores)
 			else:
 				std_score = None
 			
 			assessment_results[dim] = {
 				'score': avg_score, 
-				'standard_variance': std_score,
+				'intra_std': std_score,
 				'details': dim_res, 
 			}
 		
@@ -423,27 +433,6 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 		pred = submit_16personality_api(answers)
 		
 		assessment_results = { dim: {'score': pred[dim]['score'][dim[0]]} for dim in dims }
-
-	# assign a code for BFI/16P 
-	
-	if questionnaire_name in ['BFI', '16Personalities']:
-		thresh = (questionnaire_metadata['range'][0] + questionnaire_metadata['range'][1]) / 2
-		if questionnaire_name == '16Personalities': 
-			thresh = 50
-			pos_tags = { dim: dim[0] for dim in dims}
-			neg_tags = { dim: dim[-1] for dim in dims}
-		elif questionnaire_name == 'BFI':
-			pos_tags = {'Extraversion': 'S', 'Neuroticism': 'L', 'Consientiousness': 'O', 'Agreeableness': 'A', 'Openness': 'I'}
-			neg_tags = {'Extraversion': 'R', 'Neuroticism': 'C', 'Consientiousness': 'U', 'Agreeableness': 'E', 'Openness': 'N'}
-
-		code = ''
-		for dim, result in assessment_results.items():
-			if result['score'] > thresh:
-				code += pos_tags[dim]
-			else:
-				code += neg_tags[dim]
-
-		assessment_results['code'] = code 
 
 	return assessment_results 
 
@@ -483,6 +472,8 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 	character_agent = build_character_agent(character, agent_type, agent_llm) 
 	logger.info(f'Character agent created for {character_name}')
 
+	multitime_assess_results = []
+
 	if eval_method == 'direct':
 		query = questionnaire_metadata['prompts']['direct_ask'][language]
 
@@ -494,67 +485,126 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 		eval_args = eval_method.split('_')
 		query_style = eval_args[0]
 		
+		if repeat_times < 1: 
+			subsample_questionnaire_folder_path = os.path.join('..', 'data', 'subsample_questionnaire', f'ratio={repeat_times}')
+			if not os.path.exists(subsample_questionnaire_folder_path):
+				os.makedirs(subsample_questionnaire_folder_path)
+
+			subsample_questionnaire_path = os.path.join(subsample_questionnaire_folder_path, f'{questionnaire_name}.json')
+
+			if not os.path.exists(subsample_questionnaire_path):
+				questionnaire = subsample_questionnaire(questionnaire, n=math.ceil(len(questionnaire)*repeat_times))
+				with open(subsample_questionnaire_path, 'w') as f:
+					json.dump(questionnaire, f, indent=4, ensure_ascii=False)
+				
+				logger.info(f'Subsample questionnaire and save into {subsample_questionnaire_path}')
+			else:
+				logger.info(f'Load subsampled questionnaire from {subsample_questionnaire_path}')
+				with open(subsample_questionnaire_path, 'r') as f:
+					questionnaire = json.load(f)
 		
 		# conduct interview with character given the questionnaire
-		interview_folder_path = os.path.join('..', 'results', 'interview', f'{questionnaire_name}-agent-type={agent_type}_agent-llm={agent_llm}_query-style={query_style}_repeat-times={repeat_times}')
+		interview_folder_path = os.path.join('..', 'results', 'interview', f'{questionnaire_name}-agent-type={agent_type}_agent-llm={agent_llm}_query-style={query_style}')
 		if not os.path.exists(interview_folder_path):
 			os.makedirs(interview_folder_path)
 
-		
-		interview_save_path = f'{character}.json'
-	
-		interview_save_path = os.path.join(interview_folder_path, interview_save_path)
-		
-
-		if not os.path.exists(interview_save_path):
-			logger.info('Interviewing...')
-			
+		for nth_test in range(max(repeat_times, 1)):
 			if repeat_times < 1:
-				questionnaire = subsample_questionnaire(questionnaire, n=math.ceil(len(questionnaire)*repeat_times))
+				interview_save_path = f'{character}_{repeat_times}-test.json'
+			else:
+				interview_save_path = f'{character}_{nth_test}-test.json'
 
-			questionnaire_results = interview(character_agent, questionnaire, experimenter, questionnaire_metadata["prompts"], language, query_style)
-			with open(interview_save_path, 'w') as f:
-				json.dump(questionnaire_results, f, indent=4, ensure_ascii=False)
-			logger.info(f'Interview finished... save into {interview_save_path}')
-		else:
-			logger.info(f'Interview done before. load directly from {interview_save_path}')
-			with open(interview_save_path, 'r') as f:
-				questionnaire_results = json.load(f)
+			interview_save_path = os.path.join(interview_folder_path, interview_save_path)
+			
+			if True: #not os.path.exists(interview_save_path):
+				logger.info('Interviewing...')
 
-				# reproduce the same questionnaire
-				questionnaire_idx = [q['id'] for q in questionnaire_results]
-				id2question = {q['id']: q for q in questionnaire}
-				questionnaire = [ id2question[i] for i in questionnaire_idx]
+				questionnaire_results = interview(character_agent, questionnaire, experimenter, questionnaire_metadata["prompts"], language, query_style, nth_test)
+				with open(interview_save_path, 'w') as f:
+					json.dump(questionnaire_results, f, indent=4, ensure_ascii=False)
+				logger.info(f'Interview finished... save into {interview_save_path}')
+			else:
+				logger.info(f'Interview done before. load directly from {interview_save_path}')
+				with open(interview_save_path, 'r') as f:
+					questionnaire_results = json.load(f)
 
+			
+			# evaluate the character's personality
+			assessment_folder_path = os.path.join('..', 'results', 'assessment', f'{questionnaire_name}_agent-type={agent_type}_agent-llm={agent_llm}_eval-method={eval_method}-{evaluator_llm}')
+
+			if not os.path.exists(assessment_folder_path):
+				os.makedirs(assessment_folder_path)
+
+			if repeat_times < 1:
+				assessment_save_path = f'{character}_{repeat_times}th-test.json'
+			else:
+				assessment_save_path = f'{character}_{nth_test}th-test.json'
 		
-		# evaluate the character's personality
-		assessment_folder_path = os.path.join('..', 'results', 'assessment', f'{questionnaire_name}_agent-type={agent_type}_agent-llm={agent_llm}_eval-method={eval_method}_repeat-times={repeat_times}')
-		if not os.path.exists(assessment_folder_path):
-			os.makedirs(assessment_folder_path)
+			assessment_save_path = os.path.join(assessment_folder_path, assessment_save_path)
+		
+			if True: #not os.path.exists(assessment_save_path):
+				logger.info('Assessing...')
+				assessment_results = assess(character_info[character]["alias"], experimenter, questionnaire_results, questionnaire, questionnaire_metadata, eval_method, language, evaluator_llm, nth_test)
+		
+				with open(assessment_save_path, 'w') as f:
+					json.dump(assessment_results, f, indent=4, ensure_ascii=False)
+				logger.info(f'Assess finished... save into {assessment_save_path}')
+			else:
+				logger.info(f'Assess done before. load directly from {assessment_save_path}')
+				with open(assessment_save_path, 'r') as f:
+					assessment_results = json.load(f)
+			
+			multitime_assess_results.append(assessment_results)
+	
 
-		assessment_save_path = f'{character}.json'
-	
-		assessment_save_path = os.path.join(assessment_folder_path, assessment_save_path)
-
-	
-		if True: #not os.path.exists(assessment_save_path):
-			logger.info('Assessing...')
-			assessment_results = assess(character_info[character]["alias"], experimenter, questionnaire_results, questionnaire, questionnaire_metadata, eval_method, language, evaluator_llm)
-	   
-			with open(assessment_save_path, 'w') as f:
-				json.dump(assessment_results, f, indent=4, ensure_ascii=False)
-			logger.info(f'Assess finished... save into {assessment_save_path}')
-		else:
-			logger.info(f'Assess done before. load directly from {assessment_save_path}')
-			with open(assessment_save_path, 'r') as f:
-				assessment_results = json.load(f)
-	
 			
 	# show results of personality assessment 
 	logger.info(f'{questionnaire_name} assessment results:')
 	logger.info('Character: ' + character_name)
 
+	# average multitime_assess_results
+	# traverse all possible structures of assessment_results
+	assessment_results = {}
+	for dim in multitime_assess_results[0].keys():
+		
+		a_results_keys = multitime_assess_results[0][dim].keys()
+
+		assessment_results[dim] = {
+			'score': avg([a_results[dim]['score'] for a_results in multitime_assess_results]),
+		}
+		
+		if repeat_times > 1:
+			assessment_results[dim]['inter_std'] = std([a_results[dim]['score'] for a_results in multitime_assess_results])
+
+		if 'intra_std' in a_results_keys:
+			assessment_results[dim]['intra_std'] = [a_results[dim]['intra_std'] for a_results in multitime_assess_results]
+		
+		if 'details' in a_results_keys:
+			assessment_results[dim]['details'] = [a_results[dim]['details'] for a_results in multitime_assess_results]
+		
+
+	# assign a code for BFI/16P 
+	dims = dims_dict.get(questionnaire_name, sorted(list(set([q['dimension'] for q in questionnaire]))))
 	
+	if questionnaire_name in ['BFI', '16Personalities']:
+		thresh = (questionnaire_metadata['range'][0] + questionnaire_metadata['range'][1]) / 2
+		if questionnaire_name == '16Personalities': 
+			thresh = 50
+			pos_tags = { dim: dim[0] for dim in dims}
+			neg_tags = { dim: dim[-1] for dim in dims}
+		elif questionnaire_name == 'BFI':
+			pos_tags = {'Extraversion': 'S', 'Neuroticism': 'L', 'Conscientiousness': 'O', 'Agreeableness': 'A', 'Openness': 'I'}
+			neg_tags = {'Extraversion': 'R', 'Neuroticism': 'C', 'Conscientiousness': 'U', 'Agreeableness': 'E', 'Openness': 'N'}
+
+		code = ''
+		for dim, result in assessment_results.items():
+			if result['score'] > thresh:
+				code += pos_tags[dim]
+			else:
+				code += neg_tags[dim]
+
+		assessment_results['code'] = code 
+
 	if 'code' in assessment_results:
 		pred_code = assessment_results['code']
 		logger.info(f'Prediction {pred_code}')
@@ -570,13 +620,28 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 				dim_result_info += f'{dim[0]}: {result["score"]:.2f}\t{dim[-1]}: {(100 - result["score"]):.2f}\t'
 			else:
 				dim_result_info += f'{dim}: {result["score"]:.2f}\t'
-		if "standard_variance" in result and result["standard_variance"] != None:
-			dim_result_info += f'std: {result["standard_variance"]:.2f}\t'
-		if "batch_results" in result:
+		
+		if "inter_std" in result and result["inter_std"] != None:
+			dim_result_info += f'inter std: {result["inter_std"]:.2f}\t'
+		
+		if "intra_std" in result and result["intra_std"] != None:
+			dim_result_info += f'intra std: {result["intra_std"]}\t'
+
+		if "details" in result:
 			# analysis of the first batch
-			dim_result_info += f'{result["batch_results"][0]["analysis"]}\t'
+			dim_result_info += f'{result["details"][0][0]["analysis"]}\t'
 		
 		logger.info(dim_result_info)
+	
+	final_folder_path = os.path.join('..', 'results', 'final', f'{questionnaire_name}_agent-type={agent_type}_agent-llm={agent_llm}_eval-method={eval_method}-{evaluator_llm}')
+	if not os.path.exists(final_folder_path):
+		os.makedirs(final_folder_path)
+
+	final_save_path = os.path.join(final_folder_path, f'{character}.json' )
+	logger.info(f'Save final results into {final_save_path}')
+
+	with open(final_save_path, 'w') as f:
+		json.dump(assessment_results, f, indent=4, ensure_ascii=False)
 
 	
 if __name__ == '__main__':

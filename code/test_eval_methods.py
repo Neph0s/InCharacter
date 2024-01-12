@@ -5,7 +5,7 @@ characters = ['haruhi-zh']# ['Snape-en']# ['wangduoyu-zh', "xiaofeng-zh", "tongx
 
 
     
-for repeat_times in [1]: #, 0.25, 2]:
+for repeat_times in [2]: #, 0.25, 2]:
     for eval_method in [#'direct', 
        'interview_assess_batch_anonymous', 
                         'interview_convert', 'interview_convert_api', 'choose', 

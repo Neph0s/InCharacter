@@ -92,6 +92,7 @@ class ChatHaruhi:
             print(f'warning! undefined llm {llm}, use openai instead.')
             self.llm, self.tokenizer = self.get_models('openai')
 
+        
         if embedding == 'luotuo_openai':
             self.embedding = luotuo_openai_embedding
         elif embedding == 'bge_en':
@@ -438,7 +439,7 @@ class ChatHaruhi:
         self.dialogue_history.append((last_query_record, response))
 
     @cached
-    def chat(self, text, role):
+    def chat(self, text, role, nth_test):
         
         # add system prompt
         self.llm.initialize_message()
