@@ -713,767 +713,767 @@
         "1": {
             "origin_en": "Repair car engines.",
             "origin_zh": "修理汽车发动机",
-            "rewritten_en": "Can you repair car engines?",
-            "rewritten_zh": "你会修理汽车发动机吗？",
+            "rewritten_en": "Do you like to  repair car engines?",
+            "rewritten_zh": "你喜欢修理汽车发动机吗？",
             "dimension": "Mechanics/Electronics",
             "category": "positive"
         },
         "2": {
             "origin_en": "Perform aircraft maintenance.",
             "origin_zh": "进行飞机维护",
-            "rewritten_en": "Can you perform aircraft maintenance?",
-            "rewritten_zh": "你会进行飞机维护吗？",
+            "rewritten_en": "Do you like to  perform aircraft maintenance?",
+            "rewritten_zh": "你喜欢进行飞机维护吗？",
             "dimension": "Mechanics/Electronics",
             "category": "positive"
         },
         "3": {
             "origin_en": "Maintain wind turbine generators.",
             "origin_zh": "维护风力发电机",
-            "rewritten_en": "Can you maintain wind turbine generators?",
-            "rewritten_zh": "你会维护风力发电机吗？",
+            "rewritten_en": "Do you like to  maintain wind turbine generators?",
+            "rewritten_zh": "你喜欢维护风力发电机吗？",
             "dimension": "Mechanics/Electronics",
             "category": "positive"
         },
         "4": {
             "origin_en": "Install radio communication systems.",
             "origin_zh": "安装无线电通信系统",
-            "rewritten_en": "Can you install radio communication systems?",
-            "rewritten_zh": "你会安装无线电通信系统吗？",
+            "rewritten_en": "Do you like to  install radio communication systems?",
+            "rewritten_zh": "你喜欢安装无线电通信系统吗？",
             "dimension": "Mechanics/Electronics",
             "category": "positive"
         },
         "5": {
             "origin_en": "Build wood wall shelves.",
             "origin_zh": "制作木质墙架",
-            "rewritten_en": "Can you build wood wall shelves?",
-            "rewritten_zh": "你会制作木质墙架吗？",
+            "rewritten_en": "Do you like to  build wood wall shelves?",
+            "rewritten_zh": "你喜欢制作木质墙架吗？",
             "dimension": "Construction/WoodWork",
             "category": "positive"
         },
         "6": {
             "origin_en": "Build kitchen cabinets.",
             "origin_zh": "制作厨房橱柜",
-            "rewritten_en": "Can you build kitchen cabinets?",
-            "rewritten_zh": "你会制作厨房橱柜吗？",
+            "rewritten_en": "Do you like to  build kitchen cabinets?",
+            "rewritten_zh": "你喜欢制作厨房橱柜吗？",
             "dimension": "Construction/WoodWork",
             "category": "positive"
         },
         "7": {
             "origin_en": "Sand and refinish a piece of furniture.",
             "origin_zh": "打磨和重新涂漆一件家具",
-            "rewritten_en": "Can you sand and refinish a piece of furniture?",
-            "rewritten_zh": "你会打磨和重新涂漆一件家具吗？",
+            "rewritten_en": "Do you like to  sand and refinish a piece of furniture?",
+            "rewritten_zh": "你喜欢打磨和重新涂漆一件家具吗？",
             "dimension": "Construction/WoodWork",
             "category": "positive"
         },
         "8": {
             "origin_en": "Build a fence.",
             "origin_zh": "建一道围墙",
-            "rewritten_en": "Can you build a fence?",
-            "rewritten_zh": "你会建一道围墙吗？",
+            "rewritten_en": "Do you like to  build a fence?",
+            "rewritten_zh": "你喜欢建一道围墙吗？",
             "dimension": "Construction/WoodWork",
             "category": "positive"
         },
         "9": {
             "origin_en": "Drive a bus.",
             "origin_zh": "开公交车",
-            "rewritten_en": "Can you drive a bus?",
-            "rewritten_zh": "你会开公交车吗？",
+            "rewritten_en": "Do you like to  drive a bus?",
+            "rewritten_zh": "你喜欢开公交车吗？",
             "dimension": "Transportation/Machine Operation",
             "category": "positive"
         },
         "10": {
             "origin_en": "Drive a delivery truck.",
             "origin_zh": "驾驶送货卡车",
-            "rewritten_en": "Can you drive a delivery truck?",
-            "rewritten_zh": "你会驾驶送货卡车吗？",
+            "rewritten_en": "Do you like to  drive a delivery truck?",
+            "rewritten_zh": "你喜欢驾驶送货卡车吗？",
             "dimension": "Transportation/Machine Operation",
             "category": "positive"
         },
         "11": {
             "origin_en": "Operate a train.",
             "origin_zh": "操作火车。",
-            "rewritten_en": "Can you operate a train?",
-            "rewritten_zh": "你能操作火车吗？",
+            "rewritten_en": "Do you like to  operate a train?",
+            "rewritten_zh": "你喜欢操作火车吗？",
             "dimension": "Transportation/Machine Operation",
             "category": "positive"
         },
         "12": {
             "origin_en": "Operate a crane to move freight and cargo.",
             "origin_zh": "操作起重机移动货物和货物。",
-            "rewritten_en": "Can you operate a crane to move freight and cargo?",
-            "rewritten_zh": "你能操作起重机来移动货物和货物吗？",
+            "rewritten_en": "Do you like to  operate a crane to move freight and cargo?",
+            "rewritten_zh": "你喜欢操作起重机来移动货物和货物吗？",
             "dimension": "Transportation/Machine Operation",
             "category": "positive"
         },
         "13": {
             "origin_en": "Load and unload aircraft baggage.",
             "origin_zh": "装卸飞机行李。",
-            "rewritten_en": "Can you load and unload aircraft baggage?",
-            "rewritten_zh": "你能装卸飞机行李吗？",
+            "rewritten_en": "Do you like to  load and unload aircraft baggage?",
+            "rewritten_zh": "你喜欢装卸飞机行李吗？",
             "dimension": "Physical/Manual Labor",
             "category": "positive"
         },
         "14": {
             "origin_en": "Load and unload cargo.",
             "origin_zh": "装卸货物。",
-            "rewritten_en": "Can you load and unload cargo?",
-            "rewritten_zh": "你能装卸货物吗？",
+            "rewritten_en": "Do you like to  load and unload cargo?",
+            "rewritten_zh": "你喜欢装卸货物吗？",
             "dimension": "Physical/Manual Labor",
             "category": "positive"
         },
         "15": {
             "origin_en": "Move building materials on construction sites.",
             "origin_zh": "在建筑工地上移动建筑材料。",
-            "rewritten_en": "Can you move building materials on construction sites?",
-            "rewritten_zh": "你能在建筑工地上移动建筑材料吗？",
+            "rewritten_en": "Do you like to  move building materials on construction sites?",
+            "rewritten_zh": "你喜欢在建筑工地上移动建筑材料吗？",
             "dimension": "Physical/Manual Labor",
             "category": "positive"
         },
         "16": {
             "origin_en": "Pack and move products in a warehouse.",
             "origin_zh": "在仓库里打包和移动产品。",
-            "rewritten_en": "Can you pack and move products in a warehouse?",
-            "rewritten_zh": "你能在仓库里打包和移动产品吗？",
+            "rewritten_en": "Do you like to  pack and move products in a warehouse?",
+            "rewritten_zh": "你喜欢在仓库里打包和移动产品吗？",
             "dimension": "Physical/Manual Labor",
             "category": "positive"
         },
         "17": {
             "origin_en": "Arrest suspects of criminal acts.",
             "origin_zh": "逮捕犯罪嫌疑人。",
-            "rewritten_en": "Can you arrest suspects of criminal acts?",
-            "rewritten_zh": "你能逮捕犯罪嫌疑人吗？",
+            "rewritten_en": "Do you like to  arrest suspects of criminal acts?",
+            "rewritten_zh": "你喜欢逮捕犯罪嫌疑人吗？",
             "dimension": "Protective Service",
             "category": "positive"
         },
         "18": {
             "origin_en": "Conduct surveillance of suspects.",
             "origin_zh": "对嫌疑人进行监视。",
-            "rewritten_en": "Can you conduct surveillance of suspects?",
-            "rewritten_zh": "你能对嫌疑人进行监视吗？",
+            "rewritten_en": "Do you like to  conduct surveillance of suspects?",
+            "rewritten_zh": "你喜欢对嫌疑人进行监视吗？",
             "dimension": "Protective Service",
             "category": "positive"
         },
         "19": {
             "origin_en": "Inspect people and vehicles for illegal goods.",
             "origin_zh": "检查人员和车辆是否携带非法物品。",
-            "rewritten_en": "Can you inspect people and vehicles for illegal goods?",
-            "rewritten_zh": "你能检查人员和车辆是否携带非法物品吗？",
+            "rewritten_en": "Do you like to  inspect people and vehicles for illegal goods?",
+            "rewritten_zh": "你喜欢检查人员和车辆是否携带非法物品吗？",
             "dimension": "Protective Service",
             "category": "positive"
         },
         "20": {
             "origin_en": "Investigate reports of organized crime.",
             "origin_zh": "调查有组织犯罪的报告。",
-            "rewritten_en": "Can you investigate reports of organized crime?",
-            "rewritten_zh": "你能调查有组织犯罪的报告吗？",
+            "rewritten_en": "Do you like to  investigate reports of organized crime?",
+            "rewritten_zh": "你喜欢调查有组织犯罪的报告吗？",
             "dimension": "Protective Service",
             "category": "positive"
         },
         "21": {
             "origin_en": "Farm and harvest crops.",
             "origin_zh": "种植和收获庄稼。",
-            "rewritten_en": "Can you farm and harvest crops?",
-            "rewritten_zh": "你能种植和收获庄稼吗？",
+            "rewritten_en": "Do you like to  farm and harvest crops?",
+            "rewritten_zh": "你喜欢种植和收获庄稼吗？",
             "dimension": "Agriculture",
             "category": "positive"
         },
         "22": {
             "origin_en": "Inspect orchards to detect diSEMses or pests.",
             "origin_zh": "检查果园以检测疾病或害虫",
-            "rewritten_en": "Can you inspect orchards to detect diseases or pests?",
-            "rewritten_zh": "你能检查果园以发现疾病或害虫吗？",
+            "rewritten_en": "Do you like to  inspect orchards to detect diseases or pests?",
+            "rewritten_zh": "你喜欢检查果园以发现疾病或害虫吗？",
             "dimension": "Agriculture",
             "category": "positive"
         },
         "23": {
             "origin_en": "Learn about soil and climate requirements of various plants.",
             "origin_zh": "了解各种植物的土壤和气候要求。",
-            "rewritten_en": "Can you learn about soil and climate requirements of various plants?",
-            "rewritten_zh": "你能了解各种植物的土壤和气候要求吗？",
+            "rewritten_en": "Do you like to  learn about soil and climate requirements of various plants?",
+            "rewritten_zh": "你喜欢了解各种植物的土壤和气候要求吗？",
             "dimension": "Agriculture",
             "category": "positive"
         },
         "24": {
             "origin_en": "Apply principles of soil science to conserve land.",
             "origin_zh": "应用土壤科学原理来保护土地。",
-            "rewritten_en": "Can you apply principles of soil science to conserve land?",
-            "rewritten_zh": "你能应用土壤科学原理来保护土地吗？",
+            "rewritten_en": "Do you like to  apply principles of soil science to conserve land?",
+            "rewritten_zh": "你喜欢应用土壤科学原理来保护土地吗？",
             "dimension": "Agriculture",
             "category": "positive"
         },
         "25": {
             "origin_en": "Water and fertilize garden plants.",
             "origin_zh": "给花园植物浇水和施肥。",
-            "rewritten_en": "Can you water and fertilize garden plants?",
-            "rewritten_zh": "你能给花园植物浇水和施肥吗？",
+            "rewritten_en": "Do you like to  water and fertilize garden plants?",
+            "rewritten_zh": "你喜欢给花园植物浇水和施肥吗？",
             "dimension": "Nature/Outdoors",
             "category": "positive"
         },
         "26": {
             "origin_en": "Survey forest areas and access roads.",
             "origin_zh": "调查森林地区和通道道路。",
-            "rewritten_en": "Can you survey forest areas and access roads?",
-            "rewritten_zh": "你能调查森林地区和通道道路吗？",
+            "rewritten_en": "Do you like to  survey forest areas and access roads?",
+            "rewritten_zh": "你喜欢调查森林地区和通道道路吗？",
             "dimension": "Nature/Outdoors",
             "category": "positive"
         },
         "27": {
             "origin_en": "Plant trees in a nature preserve.",
             "origin_zh": "在自然保护区种树。",
-            "rewritten_en": "Can you plant trees in a nature preserve?",
-            "rewritten_zh": "你能在自然保护区种树吗？",
+            "rewritten_en": "Do you like to  plant trees in a nature preserve?",
+            "rewritten_zh": "你喜欢在自然保护区种树吗？",
             "dimension": "Nature/Outdoors",
             "category": "positive"
         },
         "28": {
             "origin_en": "Work to restore a wildlife habitat.",
             "origin_zh": "努力恢复野生动物栖息地。",
-            "rewritten_en": "Can you work to restore a wildlife habitat?",
-            "rewritten_zh": "你可以努力恢复野生动物栖息地吗？",
+            "rewritten_en": "Do you like to  work to restore a wildlife habitat?",
+            "rewritten_zh": "你喜欢努力恢复野生动物栖息地吗？",
             "dimension": "Nature/Outdoors",
             "category": "positive"
         },
         "29": {
             "origin_en": "Treat and care for injured animals.",
             "origin_zh": "治疗和照顾受伤的动物。",
-            "rewritten_en": "Can you treat and care for injured animals?",
-            "rewritten_zh": "你能治疗和照顾受伤的动物吗？",
+            "rewritten_en": "Do you like to  treat and care for injured animals?",
+            "rewritten_zh": "你喜欢治疗和照顾受伤的动物吗？",
             "dimension": "Animal Service",
             "category": "positive"
         },
         "30": {
             "origin_en": "Feed and bathe animals in a zoo.",
             "origin_zh": "在动物园里喂养和洗澡动物。",
-            "rewritten_en": "Can you feed and bathe animals in a zoo?",
-            "rewritten_zh": "你能在动物园里喂养和洗澡动物吗？",
+            "rewritten_en": "Do you like to  feed and bathe animals in a zoo?",
+            "rewritten_zh": "你喜欢在动物园里喂养和洗澡动物吗？",
             "dimension": "Animal Service",
             "category": "positive"
         },
         "31": {
             "origin_en": "Exercise animals daily to keep them healthy.",
             "origin_zh": "每天锻炼动物，保持它们健康。",
-            "rewritten_en": "Can you exercise animals daily to keep them healthy?",
-            "rewritten_zh": "你能每天锻炼动物，保持它们健康吗？",
+            "rewritten_en": "Do you like to  exercise animals daily to keep them healthy?",
+            "rewritten_zh": "你喜欢每天锻炼动物，保持它们健康吗？",
             "dimension": "Animal Service",
             "category": "positive"
         },
         "32": {
             "origin_en": "Find stray animals and take them to a shelter.",
             "origin_zh": "找到流浪动物并把它们送到收容所。",
-            "rewritten_en": "Can you find stray animals and take them to a shelter?",
-            "rewritten_zh": "你会找到流浪动物并把它们送到收容所吗？",
+            "rewritten_en": "Do you like to  find stray animals and take them to a shelter?",
+            "rewritten_zh": "你喜欢找到流浪动物并把它们送到收容所吗？",
             "dimension": "Animal Service",
             "category": "positive"
         },
         "33": {
             "origin_en": "Play a team or individual sport.",
             "origin_zh": "参加团队或个人运动。",
-            "rewritten_en": "Can you play a team or individual sport?",
-            "rewritten_zh": "你会参加团队或个人运动吗？",
+            "rewritten_en": "Do you like to  play a team or individual sport?",
+            "rewritten_zh": "你喜欢参加团队或个人运动吗？",
             "dimension": "Athletics",
             "category": "positive"
         },
         "34": {
             "origin_en": "Participate in athletic events.",
             "origin_zh": "参加体育赛事。",
-            "rewritten_en": "Can you participate in athletic events?",
-            "rewritten_zh": "你会参加体育赛事吗？",
+            "rewritten_en": "Do you like to  participate in athletic events?",
+            "rewritten_zh": "你喜欢参加体育赛事吗？",
             "dimension": "Athletics",
             "category": "positive"
         },
         "35": {
             "origin_en": "Train for a competitive sport.",
             "origin_zh": "为竞技运动训练。",
-            "rewritten_en": "Can you train for a competitive sport?",
-            "rewritten_zh": "你会为竞技运动训练吗？",
+            "rewritten_en": "Do you like to  train for a competitive sport?",
+            "rewritten_zh": "你喜欢为竞技运动训练吗？",
             "dimension": "Athletics",
             "category": "positive"
         },
         "36": {
             "origin_en": "Coach practice sessions for a sports team.",
             "origin_zh": "指导运动队的练习课程。",
-            "rewritten_en": "Can you coach practice sessions for a sports team?",
-            "rewritten_zh": "你会指导运动队的练习课程吗？",
+            "rewritten_en": "Do you like to  coach practice sessions for a sports team?",
+            "rewritten_zh": "你喜欢指导运动队的练习课程吗？",
             "dimension": "Athletics",
             "category": "positive"
         },
         "37": {
             "origin_en": "Design a structure that can withstand heavy wind.",
             "origin_zh": "设计一个能够经受住强风的结构。",
-            "rewritten_en": "Can you design a structure that can withstand heavy wind?",
-            "rewritten_zh": "你能设计一个能够经受住强风的结构吗？",
+            "rewritten_en": "Do you like to  design a structure that can withstand heavy wind?",
+            "rewritten_zh": "你喜欢设计一个能够经受住强风的结构吗？",
             "dimension": "Engineering",
             "category": "positive"
         },
         "38": {
             "origin_en": "Develop lighter and stronger materials for new products.",
             "origin_zh": "为新产品开发更轻更坚固的材料。",
-            "rewritten_en": "Can you develop lighter and stronger materials for new products?",
-            "rewritten_zh": "你能为新产品开发更轻更坚固的材料吗？",
+            "rewritten_en": "Do you like to  develop lighter and stronger materials for new products?",
+            "rewritten_zh": "你喜欢为新产品开发更轻更坚固的材料吗？",
             "dimension": "Engineering",
             "category": "positive"
         },
         "39": {
             "origin_en": "Redesign a production line to improve its efficiency.",
             "origin_zh": "重新设计生产线以提高效率。",
-            "rewritten_en": "Can you redesign a production line to improve its efficiency?",
-            "rewritten_zh": "你能重新设计生产线以提高效率吗？",
+            "rewritten_en": "Do you like to  redesign a production line to improve its efficiency?",
+            "rewritten_zh": "你喜欢重新设计生产线以提高效率吗？",
             "dimension": "Engineering",
             "category": "positive"
         },
         "40": {
             "origin_en": "Improve the human-machine interface of an operation system.",
             "origin_zh": "改进操作系统的人机界面。",
-            "rewritten_en": "Can you improve the human-machine interface of an operation system?",
-            "rewritten_zh": "你能改进操作系统的人机界面吗？",
+            "rewritten_en": "Do you like to  improve the human-machine interface of an operation system?",
+            "rewritten_zh": "你喜欢改进操作系统的人机界面吗？",
             "dimension": "Engineering",
             "category": "positive"
         },
         "41": {
             "origin_en": "Study the formation and evolution of galaxies.",
             "origin_zh": "研究星系的形成和演化。",
-            "rewritten_en": "Can you study the formation and evolution of galaxies?",
-            "rewritten_zh": "你能研究星系的形成和演化吗？",
+            "rewritten_en": "Do you like to  study the formation and evolution of galaxies?",
+            "rewritten_zh": "你喜欢研究星系的形成和演化吗？",
             "dimension": "Physical Science",
             "category": "positive"
         },
         "42": {
             "origin_en": "Analyze a mineral sample found on Mars.",
             "origin_zh": "分析在火星上发现的矿物样本。",
-            "rewritten_en": "Can you analyze a mineral sample found on Mars?",
-            "rewritten_zh": "你能分析在火星上发现的矿物样本吗？",
+            "rewritten_en": "Do you like to  analyze a mineral sample found on Mars?",
+            "rewritten_zh": "你喜欢分析在火星上发现的矿物样本吗？",
             "dimension": "Physical Science",
             "category": "positive"
         },
         "43": {
             "origin_en": "Investigate the molecular structure of an unknown substance.",
             "origin_zh": "调查未知物质的分子结构。",
-            "rewritten_en": "Can you investigate the molecular structure of an unknown substance?",
-            "rewritten_zh": "你能调查未知物质的分子结构吗？",
+            "rewritten_en": "Do you like to  investigate the molecular structure of an unknown substance?",
+            "rewritten_zh": "你喜欢调查未知物质的分子结构吗？",
             "dimension": "Physical Science",
             "category": "positive"
         },
         "44": {
             "origin_en": "Study the causes for earthquakes and tsunamis.",
             "origin_zh": "研究地震和海啸的原因。",
-            "rewritten_en": "Can you study the causes for earthquakes and tsunamis?",
-            "rewritten_zh": "你能研究地震和海啸的原因吗？",
+            "rewritten_en": "Do you like to  study the causes for earthquakes and tsunamis?",
+            "rewritten_zh": "你喜欢研究地震和海啸的原因吗？",
             "dimension": "Physical Science",
             "category": "positive"
         },
         "45": {
             "origin_en": "Map human gene structure.",
             "origin_zh": "绘制人类基因结构图。",
-            "rewritten_en": "Can you map human gene structure?",
-            "rewritten_zh": "你能绘制人类基因结构图吗？",
+            "rewritten_en": "Do you like to  map human gene structure?",
+            "rewritten_zh": "你喜欢绘制人类基因结构图吗？",
             "dimension": "Life Science",
             "category": "positive"
         },
         "46": {
             "origin_en": "Study the physiological structure of animals.",
             "origin_zh": "研究动物的生理结构。",
-            "rewritten_en": "Can you study the physiological structure of animals?",
-            "rewritten_zh": "你能研究动物的生理结构吗？",
+            "rewritten_en": "Do you like to  study the physiological structure of animals?",
+            "rewritten_zh": "你喜欢研究动物的生理结构吗？",
             "dimension": "Life Science",
             "category": "positive"
         },
         "47": {
             "origin_en": "Investigate the genetic sequence of organisms.",
             "origin_zh": "调查生物的遗传序列。",
-            "rewritten_en": "Can you investigate the genetic sequence of organisms?",
-            "rewritten_zh": "你能调查生物的遗传序列吗？",
+            "rewritten_en": "Do you like to  investigate the genetic sequence of organisms?",
+            "rewritten_zh": "你喜欢调查生物的遗传序列吗？",
             "dimension": "Life Science",
             "category": "positive"
         },
         "48": {
             "origin_en": "ReSEMrch newly discovered bacteria with laboratory experiments.",
             "origin_zh": "研究人员通过实验室实验新发现的细菌",
-            "rewritten_en": "Can you research newly discovered bacteria with laboratory experiments?",
-            "rewritten_zh": "你能用实验室实验研究新发现的细菌吗？",
+            "rewritten_en": "Do you like to  research newly discovered bacteria with laboratory experiments?",
+            "rewritten_zh": "你喜欢用实验室实验研究新发现的细菌吗？",
             "dimension": "Life Science",
             "category": "positive"
         },
         "49": {
             "origin_en": "Examine how viruses infect the human body.",
             "origin_zh": "研究病毒如何感染人体。",
-            "rewritten_en": "Can you examine how viruses infect the human body?",
-            "rewritten_zh": "你能研究病毒如何感染人体吗？",
+            "rewritten_en": "Do you like to  examine how viruses infect the human body?",
+            "rewritten_zh": "你喜欢研究病毒如何感染人体吗？",
             "dimension": "Medical Science",
             "category": "positive"
         },
         "50": {
             "origin_en": "Investigate the cause of a chronic health problem.",
             "origin_zh": "调查慢性健康问题的原因。",
-            "rewritten_en": "Can you investigate the cause of a chronic health problem?",
-            "rewritten_zh": "你能调查慢性健康问题的原因吗？",
+            "rewritten_en": "Do you like to  investigate the cause of a chronic health problem?",
+            "rewritten_zh": "你喜欢调查慢性健康问题的原因吗？",
             "dimension": "Medical Science",
             "category": "positive"
         },
         "51": {
             "origin_en": "ReSEMrch the side effects of a medicine.",
             "origin_zh": "研究一下这种药物的副作用",
-            "rewritten_en": "Can you research the side effects of a medicine?",
-            "rewritten_zh": "你能研究药物的副作用吗？",
+            "rewritten_en": "Do you like to  research the side effects of a medicine?",
+            "rewritten_zh": "你喜欢研究药物的副作用吗？",
             "dimension": "Medical Science",
             "category": "positive"
         },
         "52": {
             "origin_en": "Investigate prevention methods for diSEMses.",
             "origin_zh": "调查预防疾病的方法",
-            "rewritten_en": "Can you investigate prevention methods for diseases?",
-            "rewritten_zh": "你能调查疾病的预防方法吗？",
+            "rewritten_en": "Do you like to  investigate prevention methods for diseases?",
+            "rewritten_zh": "你喜欢调查疾病的预防方法吗？",
             "dimension": "Medical Science",
             "category": "positive"
         },
         "53": {
             "origin_en": "Study cultural differences between groups.",
             "origin_zh": "研究不同群体之间的文化差异。",
-            "rewritten_en": "Can you study cultural differences between groups?",
-            "rewritten_zh": "你能研究不同群体之间的文化差异吗？",
+            "rewritten_en": "Do you like to  study cultural differences between groups?",
+            "rewritten_zh": "你喜欢研究不同群体之间的文化差异吗？",
             "dimension": "Social Science",
             "category": "positive"
         },
         "54": {
             "origin_en": "Investigate how poverty influences educational attainment.",
             "origin_zh": "调查贫困如何影响教育成就。",
-            "rewritten_en": "Can you investigate how poverty influences educational attainment?",
-            "rewritten_zh": "你能调查贫困如何影响教育成就吗？",
+            "rewritten_en": "Do you like to  investigate how poverty influences educational attainment?",
+            "rewritten_zh": "你喜欢调查贫困如何影响教育成就吗？",
             "dimension": "Social Science",
             "category": "positive"
         },
         "55": {
             "origin_en": "Study the effects of public policy on violence reduction.",
             "origin_zh": "研究公共政策对暴力减少的影响。",
-            "rewritten_en": "Can you study the effects of public policy on violence reduction?",
-            "rewritten_zh": "你能研究公共政策对暴力减少的影响吗？",
+            "rewritten_en": "Do you like to  study the effects of public policy on violence reduction?",
+            "rewritten_zh": "你喜欢研究公共政策对暴力减少的影响吗？",
             "dimension": "Social Science",
             "category": "positive"
         },
         "56": {
             "origin_en": "ReSEMrch why people have stereotypes and prejudice.",
             "origin_zh": "研究为什么人们会有刻板印象和偏见",
-            "rewritten_en": "Can you research why people have stereotypes and prejudice?",
-            "rewritten_zh": "你能研究人们为什么会有刻板印象和偏见吗？",
+            "rewritten_en": "Do you like to  research why people have stereotypes and prejudice?",
+            "rewritten_zh": "你喜欢研究人们为什么会有刻板印象和偏见吗？",
             "dimension": "Social Science",
             "category": "positive"
         },
         "57": {
             "origin_en": "Study the history of an ancient society.",
             "origin_zh": "研究一个古代社会的历史。",
-            "rewritten_en": "Can you study the history of an ancient society?",
-            "rewritten_zh": "你能研究一个古代社会的历史吗？",
+            "rewritten_en": "Do you like to  study the history of an ancient society?",
+            "rewritten_zh": "你喜欢研究一个古代社会的历史吗？",
             "dimension": "Humanities",
             "category": "positive"
         },
         "58": {
             "origin_en": "Study various branches of philosophy.",
             "origin_zh": "研究哲学的各个分支。",
-            "rewritten_en": "Can you study various branches of philosophy?",
-            "rewritten_zh": "你能研究哲学的各个分支吗？",
+            "rewritten_en": "Do you like to  study various branches of philosophy?",
+            "rewritten_zh": "你喜欢研究哲学的各个分支吗？",
             "dimension": "Humanities",
             "category": "positive"
         },
         "59": {
             "origin_en": "Compare the modern history of different countries.",
             "origin_zh": "比较不同国家的现代历史。",
-            "rewritten_en": "Can you compare the modern history of different countries?",
-            "rewritten_zh": "你能比较不同国家的现代历史吗？",
+            "rewritten_en": "Do you like to  compare the modern history of different countries?",
+            "rewritten_zh": "你喜欢比较不同国家的现代历史吗？",
             "dimension": "Humanities",
             "category": "positive"
         },
         "60": {
             "origin_en": "Document the traditions of a remote community.",
             "origin_zh": "记录一个偏远社区的传统。",
-            "rewritten_en": "Can you document the traditions of a remote community?",
-            "rewritten_zh": "你能记录一个偏远社区的传统吗？",
+            "rewritten_en": "Do you like to  document the traditions of a remote community?",
+            "rewritten_zh": "你喜欢记录一个偏远社区的传统吗？",
             "dimension": "Humanities",
             "category": "positive"
         },
         "61": {
             "origin_en": "Solve mathematical problems.",
             "origin_zh": "解决数学问题。",
-            "rewritten_en": "Can you solve mathematical problems?",
-            "rewritten_zh": "你能解决数学问题吗？",
+            "rewritten_en": "Do you like to  solve mathematical problems?",
+            "rewritten_zh": "你喜欢解决数学问题吗？",
             "dimension": "Mathematics/Statistics",
             "category": "positive"
         },
         "62": {
             "origin_en": "Learn about a new theory in geometry.",
             "origin_zh": "了解几何学中的新理论。",
-            "rewritten_en": "Can you learn about a new theory in geometry?",
-            "rewritten_zh": "你能了解几何学中的新理论吗？",
+            "rewritten_en": "Do you like to  learn about a new theory in geometry?",
+            "rewritten_zh": "你喜欢了解几何学中的新理论吗？",
             "dimension": "Mathematics/Statistics",
             "category": "positive"
         },
         "63": {
             "origin_en": "Use mathematical equations to solve practical problems.",
             "origin_zh": "使用数学方程式解决实际问题。",
-            "rewritten_en": "Can you use mathematical equations to solve practical problems?",
-            "rewritten_zh": "你能使用数学方程式解决实际问题吗？",
+            "rewritten_en": "Do you like to  use mathematical equations to solve practical problems?",
+            "rewritten_zh": "你喜欢使用数学方程式解决实际问题吗？",
             "dimension": "Mathematics/Statistics",
             "category": "positive"
         },
         "64": {
             "origin_en": "Develop a statistical model to explain a phenomenon.",
             "origin_zh": "开发统计模型来解释现象。",
-            "rewritten_en": "Can you develop a statistical model to explain a phenomenon?",
-            "rewritten_zh": "你能开发统计模型来解释现象吗？",
+            "rewritten_en": "Do you like to  develop a statistical model to explain a phenomenon?",
+            "rewritten_zh": "你喜欢开发统计模型来解释现象吗？",
             "dimension": "Mathematics/Statistics",
             "category": "positive"
         },
         "65": {
             "origin_en": "Test and compare different software.",
             "origin_zh": "测试并比较不同的软件。",
-            "rewritten_en": "Can you test and compare different software?",
-            "rewritten_zh": "你能测试并比较不同的软件吗？",
+            "rewritten_en": "Do you like to  test and compare different software?",
+            "rewritten_zh": "你喜欢测试并比较不同的软件吗？",
             "dimension": "Information Technology",
             "category": "positive"
         },
         "66": {
             "origin_en": "Create a new computer database.",
             "origin_zh": "创建一个新的计算机数据库。",
-            "rewritten_en": "Can you create a new computer database?",
-            "rewritten_zh": "你能创建一个新的计算机数据库吗？",
+            "rewritten_en": "Do you like to  create a new computer database?",
+            "rewritten_zh": "你喜欢创建一个新的计算机数据库吗？",
             "dimension": "Information Technology",
             "category": "positive"
         },
         "67": {
             "origin_en": "Monitor the daily performance of computer systems.",
             "origin_zh": "监控计算机系统的日常性能。",
-            "rewritten_en": "Can you monitor the daily performance of computer systems?",
-            "rewritten_zh": "你能监控计算机系统的日常性能吗？",
+            "rewritten_en": "Do you like to  monitor the daily performance of computer systems?",
+            "rewritten_zh": "你喜欢监控计算机系统的日常性能吗？",
             "dimension": "Information Technology",
             "category": "positive"
         },
         "68": {
             "origin_en": "Diagnose and resolve computer hardware or software problems.",
             "origin_zh": "诊断和解决计算机硬件或软件问题。",
-            "rewritten_en": "Can you diagnose and resolve computer hardware or software problems?",
-            "rewritten_zh": "你能诊断和解决计算机硬件或软件问题吗？",
+            "rewritten_en": "Do you like to  diagnose and resolve computer hardware or software problems?",
+            "rewritten_zh": "你喜欢诊断和解决计算机硬件或软件问题吗？",
             "dimension": "Information Technology",
             "category": "positive"
         },
         "69": {
             "origin_en": "Sketch a picture.",
             "origin_zh": "画素描。",
-            "rewritten_en": "Can you sketch a picture?",
-            "rewritten_zh": "你能画素描吗？",
+            "rewritten_en": "Do you like to  sketch a picture?",
+            "rewritten_zh": "你喜欢画素描吗？",
             "dimension": "Visual Arts",
             "category": "positive"
         },
         "70": {
             "origin_en": "Paint a landscape.",
             "origin_zh": "画风景。",
-            "rewritten_en": "Can you paint a landscape?",
-            "rewritten_zh": "你能画风景吗？",
+            "rewritten_en": "Do you like to  paint a landscape?",
+            "rewritten_zh": "你喜欢画风景吗？",
             "dimension": "Visual Arts",
             "category": "positive"
         },
         "71": {
             "origin_en": "Draw illustrations for a book.",
             "origin_zh": "为一本书绘制插图。",
-            "rewritten_en": "Can you draw illustrations for a book?",
-            "rewritten_zh": "你能为一本书绘制插图吗？",
+            "rewritten_en": "Do you like to  draw illustrations for a book?",
+            "rewritten_zh": "你喜欢为一本书绘制插图吗？",
             "dimension": "Visual Arts",
             "category": "positive"
         },
         "72": {
             "origin_en": "Create a unique piece of artwork.",
             "origin_zh": "创作一件独特的艺术品。",
-            "rewritten_en": "Can you create a unique piece of artwork?",
-            "rewritten_zh": "你能创作一件独特的艺术品吗？",
+            "rewritten_en": "Do you like to  create a unique piece of artwork?",
+            "rewritten_zh": "你喜欢创作一件独特的艺术品吗？",
             "dimension": "Visual Arts",
             "category": "positive"
         },
         "73": {
             "origin_en": "Create a piece of artistic and functional furniture.",
             "origin_zh": "制作一件艺术性和功能性兼备的家具。",
-            "rewritten_en": "Can you create a piece of artistic and functional furniture?",
-            "rewritten_zh": "你能制作一件艺术性和功能性兼备的家具吗？",
+            "rewritten_en": "Do you like to  create a piece of artistic and functional furniture?",
+            "rewritten_zh": "你喜欢制作一件艺术性和功能性兼备的家具吗？",
             "dimension": "Applied Arts and Design",
             "category": "positive"
         },
         "74": {
             "origin_en": "Create the set for a movie or stage play.",
             "origin_zh": "为电影或舞台剧设计布景。",
-            "rewritten_en": "Can you create the set for a movie or stage play?",
-            "rewritten_zh": "你能为电影或舞台剧设计布景吗？",
+            "rewritten_en": "Do you like to  create the set for a movie or stage play?",
+            "rewritten_zh": "你喜欢为电影或舞台剧设计布景吗？",
             "dimension": "Applied Arts and Design",
             "category": "positive"
         },
         "75": {
             "origin_en": "Design the layout and lighting of an exhibition.",
             "origin_zh": "设计展览的布局和灯光。",
-            "rewritten_en": "Can you design the layout and lighting of an exhibition?",
-            "rewritten_zh": "你能设计展览的布局和灯光吗？",
+            "rewritten_en": "Do you like to  design the layout and lighting of an exhibition?",
+            "rewritten_zh": "你喜欢设计展览的布局和灯光吗？",
             "dimension": "Applied Arts and Design",
             "category": "positive"
         },
         "76": {
             "origin_en": "Design unique packaging for a product.",
             "origin_zh": "为产品设计独特的包装。",
-            "rewritten_en": "Can you design unique packaging for a product?",
-            "rewritten_zh": "你能为产品设计独特的包装吗？",
+            "rewritten_en": "Do you like to  design unique packaging for a product?",
+            "rewritten_zh": "你喜欢为产品设计独特的包装吗？",
             "dimension": "Applied Arts and Design",
             "category": "positive"
         },
         "77": {
             "origin_en": "Perform on stage for a group of people.",
             "origin_zh": "在舞台上为一群人表演。",
-            "rewritten_en": "Can you perform on stage for a group of people?",
-            "rewritten_zh": "你能在舞台上为一群人表演吗？",
+            "rewritten_en": "Do you like to  perform on stage for a group of people?",
+            "rewritten_zh": "你喜欢在舞台上为一群人表演吗？",
             "dimension": "Performing Arts",
             "category": "positive"
         },
         "78": {
             "origin_en": "Act in a play.",
             "origin_zh": "在一部戏剧中表演。",
-            "rewritten_en": "Can you act in a play?",
-            "rewritten_zh": "你能在一部戏剧中表演吗？",
+            "rewritten_en": "Do you like to  act in a play?",
+            "rewritten_zh": "你喜欢在一部戏剧中表演吗？",
             "dimension": "Performing Arts",
             "category": "positive"
         },
         "79": {
             "origin_en": "Act out an emotional movie scene.",
             "origin_zh": "演绎一个情感丰富的电影场景。",
-            "rewritten_en": "Can you act out an emotional movie scene?",
-            "rewritten_zh": "你能演绎一个情感丰富的电影场景吗？",
+            "rewritten_en": "Do you like to  act out an emotional movie scene?",
+            "rewritten_zh": "你喜欢演绎一个情感丰富的电影场景吗？",
             "dimension": "Performing Arts",
             "category": "positive"
         },
         "80": {
             "origin_en": "Perform comedy to entertain an audience.",
             "origin_zh": "表演喜剧来取悦观众。",
-            "rewritten_en": "Can you perform comedy to entertain an audience?",
-            "rewritten_zh": "你能表演喜剧来取悦观众吗？",
+            "rewritten_en": "Do you like to  perform comedy to entertain an audience?",
+            "rewritten_zh": "你喜欢表演喜剧来取悦观众吗？",
             "dimension": "Performing Arts",
             "category": "positive"
         },
         "81": {
             "origin_en": "Play a musical instrument.",
             "origin_zh": "演奏乐器。",
-            "rewritten_en": "Can you play a musical instrument?",
-            "rewritten_zh": "你能会演奏乐器吗？",
+            "rewritten_en": "Do you like to  play a musical instrument?",
+            "rewritten_zh": "你喜欢会演奏乐器吗？",
             "dimension": "Music",
             "category": "positive"
         },
         "82": {
             "origin_en": "Compose an original piece of music.",
             "origin_zh": "创作原创音乐。",
-            "rewritten_en": "Can you compose an original piece of music?",
-            "rewritten_zh": "你能创作原创音乐吗？",
+            "rewritten_en": "Do you like to  compose an original piece of music?",
+            "rewritten_zh": "你喜欢创作原创音乐吗？",
             "dimension": "Music",
             "category": "positive"
         },
         "83": {
             "origin_en": "Play in a band.",
             "origin_zh": "在乐队演奏。",
-            "rewritten_en": "Can you play in a band?",
-            "rewritten_zh": "你能在乐队演奏吗？",
+            "rewritten_en": "Do you like to  play in a band?",
+            "rewritten_zh": "你喜欢在乐队演奏吗？",
             "dimension": "Music",
             "category": "positive"
         },
         "84": {
             "origin_en": "Arrange background music for a show.",
             "origin_zh": "为节目编配背景音乐。",
-            "rewritten_en": "Can you arrange background music for a show?",
-            "rewritten_zh": "你能为节目编配背景音乐吗？",
+            "rewritten_en": "Do you like to  arrange background music for a show?",
+            "rewritten_zh": "你喜欢为节目编配背景音乐吗？",
             "dimension": "Music",
             "category": "positive"
         },
         "85": {
             "origin_en": "Write a novel.",
             "origin_zh": "写一部小说。",
-            "rewritten_en": "Can you write a novel?",
-            "rewritten_zh": "你能写小说吗？",
+            "rewritten_en": "Do you like to  write a novel?",
+            "rewritten_zh": "你喜欢写小说吗？",
             "dimension": "Writing",
             "category": "positive"
         },
         "86": {
             "origin_en": "Write short stories.",
             "origin_zh": "写短篇小说。",
-            "rewritten_en": "Can you write short stories?",
-            "rewritten_zh": "你能写短篇小说吗？",
+            "rewritten_en": "Do you like to  write short stories?",
+            "rewritten_zh": "你喜欢写短篇小说吗？",
             "dimension": "Writing",
             "category": "positive"
         },
         "87": {
             "origin_en": "Compose a poem.",
             "origin_zh": "创作诗歌。",
-            "rewritten_en": "Can you compose a poem?",
-            "rewritten_zh": "你能创作诗歌吗？",
+            "rewritten_en": "Do you like to  compose a poem?",
+            "rewritten_zh": "你喜欢创作诗歌吗？",
             "dimension": "Writing",
             "category": "positive"
         },
         "88": {
             "origin_en": "Study creative writing.",
             "origin_zh": "学习创意写作。",
-            "rewritten_en": "Can you study creative writing?",
-            "rewritten_zh": "你会学习创意写作吗？",
+            "rewritten_en": "Do you like to  study creative writing?",
+            "rewritten_zh": "你喜欢学习创意写作吗？",
             "dimension": "Writing",
             "category": "positive"
         },
         "89": {
             "origin_en": "Direct a TV show.",
             "origin_zh": "导演电视节目。",
-            "rewritten_en": "Can you direct a TV show?",
-            "rewritten_zh": "你能导演电视节目吗？",
+            "rewritten_en": "Do you like to  direct a TV show?",
+            "rewritten_zh": "你喜欢导演电视节目吗？",
             "dimension": "Media",
             "category": "positive"
         },
         "90": {
             "origin_en": "Write a movie screenplay.",
             "origin_zh": "写电影剧本。",
-            "rewritten_en": "Can you write a movie screenplay?",
-            "rewritten_zh": "你能写电影剧本吗？",
+            "rewritten_en": "Do you like to  write a movie screenplay?",
+            "rewritten_zh": "你喜欢写电影剧本吗？",
             "dimension": "Media",
             "category": "positive"
         },
         "91": {
             "origin_en": "Host a radio program.",
             "origin_zh": "主持广播节目。",
-            "rewritten_en": "Can you host a radio program?",
-            "rewritten_zh": "你能主持广播节目吗？",
+            "rewritten_en": "Do you like to  host a radio program?",
+            "rewritten_zh": "你喜欢主持广播节目吗？",
             "dimension": "Media",
             "category": "positive"
         },
         "92": {
             "origin_en": "Develop a podcast series.",
             "origin_zh": "制作播客系列。",
-            "rewritten_en": "Can you develop a podcast series?",
-            "rewritten_zh": "你能制作播客系列吗？",
+            "rewritten_en": "Do you like to  develop a podcast series?",
+            "rewritten_zh": "你喜欢制作播客系列吗？",
             "dimension": "Media",
             "category": "positive"
         },
         "93": {
             "origin_en": "Select ingredients to prepare food.",
             "origin_zh": "选择食材准备食物。",
-            "rewritten_en": "Can you select ingredients to prepare food?",
-            "rewritten_zh": "你能选择食材准备食物吗？",
+            "rewritten_en": "Do you like to  select ingredients to prepare food?",
+            "rewritten_zh": "你喜欢选择食材准备食物吗？",
             "dimension": "Culinary Art",
             "category": "positive"
         },
         "94": {
             "origin_en": "Create the recipe for a new dish.",
             "origin_zh": "创作新菜品的食谱。",
-            "rewritten_en": "Can you create the recipe for a new dish?",
-            "rewritten_zh": "你能创作新菜品的食谱吗？",
+            "rewritten_en": "Do you like to  create the recipe for a new dish?",
+            "rewritten_zh": "你喜欢创作新菜品的食谱吗？",
             "dimension": "Culinary Art",
             "category": "positive"
         },
         "95": {
             "origin_en": "Create a new cooking technique to enhance flavor.",
             "origin_zh": "创造新的烹饪技巧来增强口味。",
-            "rewritten_en": "Can you create a new cooking technique to enhance flavor?",
-            "rewritten_zh": "你能创造新的烹饪技巧来增强口味吗？",
+            "rewritten_en": "Do you like to  create a new cooking technique to enhance flavor?",
+            "rewritten_zh": "你喜欢创造新的烹饪技巧来增强口味吗？",
             "dimension": "Culinary Art",
             "category": "positive"
         },
         "96": {
             "origin_en": "Learn about required temperature and time for baking pastries.",
             "origin_zh": "了解烘焙点心所需的温度和时间。",
-            "rewritten_en": "Can you learn about required temperature and time for baking pastries?",
+            "rewritten_en": "Do you like to  learn about required temperature and time for baking pastries?",
             "rewritten_zh": "你了解烘焙点心所需的温度和时间吗？",
             "dimension": "Culinary Art",
             "category": "positive"
@@ -1481,560 +1481,560 @@
         "97": {
             "origin_en": "Teach students a new set of skills.",
             "origin_zh": "教学生一套新技能。",
-            "rewritten_en": "Can you teach students a new set of skills?",
-            "rewritten_zh": "你能教学生一套新技能吗？",
+            "rewritten_en": "Do you like to  teach students a new set of skills?",
+            "rewritten_zh": "你喜欢教学生一套新技能吗？",
             "dimension": "Teaching/Education",
             "category": "positive"
         },
         "98": {
             "origin_en": "Explain a topic to someone with no prior knowledge of the subject.",
             "origin_zh": "向对某一主题没有先前知识的人解释一个话题。",
-            "rewritten_en": "Can you explain a topic to someone with no prior knowledge of the subject?",
-            "rewritten_zh": "你能向对某一主题没有先前知识的人解释一个话题吗？",
+            "rewritten_en": "Do you like to  explain a topic to someone with no prior knowledge of the subject?",
+            "rewritten_zh": "你喜欢向对某一主题没有先前知识的人解释一个话题吗？",
             "dimension": "Teaching/Education",
             "category": "positive"
         },
         "99": {
             "origin_en": "Teach a beginner how to perform a task.",
             "origin_zh": "教一个初学者如何执行一个任务。",
-            "rewritten_en": "Can you teach a beginner how to perform a task?",
-            "rewritten_zh": "你能教一个初学者如何执行一个任务吗？",
+            "rewritten_en": "Do you like to  teach a beginner how to perform a task?",
+            "rewritten_zh": "你喜欢教一个初学者如何执行一个任务吗？",
             "dimension": "Teaching/Education",
             "category": "positive"
         },
         "100": {
             "origin_en": "Teach visitors on educational field trips.",
             "origin_zh": "在教育性实地考察中教导参观者。",
-            "rewritten_en": "Can you teach visitors on educational field trips?",
-            "rewritten_zh": "你能在教育性实地考察中教导参观者吗？",
+            "rewritten_en": "Do you like to  teach visitors on educational field trips?",
+            "rewritten_zh": "你喜欢在教育性实地考察中教导参观者吗？",
             "dimension": "Teaching/Education",
             "category": "positive"
         },
         "101": {
             "origin_en": "Volunteer at a community service center.",
             "origin_zh": "在社区服务中心做志愿者。",
-            "rewritten_en": "Can you volunteer at a community service center?",
-            "rewritten_zh": "你能在社区服务中心做志愿者吗？",
+            "rewritten_en": "Do you like to  volunteer at a community service center?",
+            "rewritten_zh": "你喜欢在社区服务中心做志愿者吗？",
             "dimension": "Social Service",
             "category": "positive"
         },
         "102": {
             "origin_en": "Help someone overcome an obstacle in personal life.",
             "origin_zh": "帮助别人克服个人生活中的障碍。",
-            "rewritten_en": "Can you help someone overcome an obstacle in personal life?",
-            "rewritten_zh": "你能帮助别人克服个人生活中的障碍吗？",
+            "rewritten_en": "Do you like to  help someone overcome an obstacle in personal life?",
+            "rewritten_zh": "你喜欢帮助别人克服个人生活中的障碍吗？",
             "dimension": "Social Service",
             "category": "positive"
         },
         "103": {
             "origin_en": "Provide aid to students from underprivileged backgrounds.",
             "origin_zh": "为贫困背景的学生提供帮助。",
-            "rewritten_en": "Can you provide aid to students from underprivileged backgrounds?",
-            "rewritten_zh": "你能为贫困背景的学生提供帮助吗？",
+            "rewritten_en": "Do you like to  provide aid to students from underprivileged backgrounds?",
+            "rewritten_zh": "你喜欢为贫困背景的学生提供帮助吗？",
             "dimension": "Social Service",
             "category": "positive"
         },
         "104": {
             "origin_en": "Assist people with disabilities in finding employment.",
             "origin_zh": "帮助残疾人找工作。",
-            "rewritten_en": "Can you assist people with disabilities in finding employment?",
-            "rewritten_zh": "你能帮助残疾人找工作吗？",
+            "rewritten_en": "Do you like to  assist people with disabilities in finding employment?",
+            "rewritten_zh": "你喜欢帮助残疾人找工作吗？",
             "dimension": "Social Service",
             "category": "positive"
         },
         "105": {
             "origin_en": "Treat patients for acute illnesses or injuries.",
             "origin_zh": "治疗急性疾病或受伤的患者。",
-            "rewritten_en": "Can you treat patients for acute illnesses or injuries?",
-            "rewritten_zh": "你能治疗急性疾病或受伤的患者吗？",
+            "rewritten_en": "Do you like to  treat patients for acute illnesses or injuries?",
+            "rewritten_zh": "你喜欢治疗急性疾病或受伤的患者吗？",
             "dimension": "Health Care Service",
             "category": "positive"
         },
         "106": {
             "origin_en": "Care for patients in critical condition.",
             "origin_zh": "照顾重症患者。",
-            "rewritten_en": "Can you care for patients in critical condition?",
-            "rewritten_zh": "你能照顾重症患者吗？",
+            "rewritten_en": "Do you like to  care for patients in critical condition?",
+            "rewritten_zh": "你喜欢照顾重症患者吗？",
             "dimension": "Health Care Service",
             "category": "positive"
         },
         "107": {
             "origin_en": "Monitor patient reactions to medicines.",
             "origin_zh": "监测患者对药物的反应。",
-            "rewritten_en": "Can you monitor patient reactions to medicines?",
-            "rewritten_zh": "你能监测患者对药物的反应吗？",
+            "rewritten_en": "Do you like to  monitor patient reactions to medicines?",
+            "rewritten_zh": "你喜欢监测患者对药物的反应吗？",
             "dimension": "Health Care Service",
             "category": "positive"
         },
         "108": {
             "origin_en": "Formulate treatment plans for patients.",
             "origin_zh": "为患者制定治疗计划。",
-            "rewritten_en": "Can you formulate treatment plans for patients?",
-            "rewritten_zh": "你能为患者制定治疗计划吗？",
+            "rewritten_en": "Do you like to  formulate treatment plans for patients?",
+            "rewritten_zh": "你喜欢为患者制定治疗计划吗？",
             "dimension": "Health Care Service",
             "category": "positive"
         },
         "109": {
             "origin_en": "Provide spiritual guidance for others.",
             "origin_zh": "为他人提供灵性指导。",
-            "rewritten_en": "Can you provide spiritual guidance for others?",
-            "rewritten_zh": "你能为他人提供灵性指导吗？",
+            "rewritten_en": "Do you like to  provide spiritual guidance for others?",
+            "rewritten_zh": "你喜欢为他人提供灵性指导吗？",
             "dimension": "Religious Activities",
             "category": "positive"
         },
         "110": {
             "origin_en": "Explain a religious text to people.",
             "origin_zh": "向人解释宗教文本。",
-            "rewritten_en": "Can you explain a religious text to people?",
-            "rewritten_zh": "你能向人解释宗教文本吗？",
+            "rewritten_en": "Do you like to  explain a religious text to people?",
+            "rewritten_zh": "你喜欢向人解释宗教文本吗？",
             "dimension": "Religious Activities",
             "category": "positive"
         },
         "111": {
             "origin_en": "Teach religious beliefs and rituals.",
             "origin_zh": "教授宗教信仰和仪式。",
-            "rewritten_en": "Can you teach religious beliefs and rituals?",
-            "rewritten_zh": "你能教授宗教信仰和仪式吗？",
+            "rewritten_en": "Do you like to  teach religious beliefs and rituals?",
+            "rewritten_zh": "你喜欢教授宗教信仰和仪式吗？",
             "dimension": "Religious Activities",
             "category": "positive"
         },
         "112": {
             "origin_en": "Work with a religious youth group.",
             "origin_zh": "与宗教青年团体合作。",
-            "rewritten_en": "Can you work with a religious youth group?",
-            "rewritten_zh": "你能与宗教青年团体合作吗？",
+            "rewritten_en": "Do you like to  work with a religious youth group?",
+            "rewritten_zh": "你喜欢与宗教青年团体合作吗？",
             "dimension": "Religious Activities",
             "category": "positive"
         },
         "113": {
             "origin_en": "Arrange travel plans and accommodations for clients.",
             "origin_zh": "为客户安排旅行计划和住宿。",
-            "rewritten_en": "Can you arrange travel plans and accommodations for clients?",
-            "rewritten_zh": "你能为客户安排旅行计划和住宿吗？",
+            "rewritten_en": "Do you like to  arrange travel plans and accommodations for clients?",
+            "rewritten_zh": "你喜欢为客户安排旅行计划和住宿吗？",
             "dimension": "Personal Service",
             "category": "positive"
         },
         "114": {
             "origin_en": "Greet guests and answer questions at an information desk.",
             "origin_zh": "在信息台迎接客人并回答问题。",
-            "rewritten_en": "Can you greet guests and answer questions at an information desk?",
-            "rewritten_zh": "你能在信息台迎接客人并回答问题吗？",
+            "rewritten_en": "Do you like to  greet guests and answer questions at an information desk?",
+            "rewritten_zh": "你喜欢在信息台迎接客人并回答问题吗？",
             "dimension": "Personal Service",
             "category": "positive"
         },
         "115": {
             "origin_en": "Help clients plan for their special occasions.",
             "origin_zh": "帮助客户策划特殊场合。",
-            "rewritten_en": "Can you help clients plan for their special occasions?",
-            "rewritten_zh": "你能帮助客户策划特殊场合吗？",
+            "rewritten_en": "Do you like to  help clients plan for their special occasions?",
+            "rewritten_zh": "你喜欢帮助客户策划特殊场合吗？",
             "dimension": "Personal Service",
             "category": "positive"
         },
         "116": {
             "origin_en": "Organize recreational activities for clients.",
             "origin_zh": "为客户组织娱乐活动。",
-            "rewritten_en": "Can you organize recreational activities for clients?",
-            "rewritten_zh": "你能为客户组织娱乐活动吗？",
+            "rewritten_en": "Do you like to  organize recreational activities for clients?",
+            "rewritten_zh": "你喜欢为客户组织娱乐活动吗？",
             "dimension": "Personal Service",
             "category": "positive"
         },
         "117": {
             "origin_en": "Coach others to develop leadership skills.",
             "origin_zh": "指导他人发展领导技能。",
-            "rewritten_en": "Can you coach others to develop leadership skills?",
-            "rewritten_zh": "你能指导他人发展领导技能吗？",
+            "rewritten_en": "Do you like to  coach others to develop leadership skills?",
+            "rewritten_zh": "你喜欢指导他人发展领导技能吗？",
             "dimension": "Professional Advising",
             "category": "positive"
         },
         "118": {
             "origin_en": "Coach people to prepare for job interviews.",
             "origin_zh": "指导人们准备面试。",
-            "rewritten_en": "Can you coach people to prepare for job interviews?",
-            "rewritten_zh": "你能指导人们准备面试吗？",
+            "rewritten_en": "Do you like to  coach people to prepare for job interviews?",
+            "rewritten_zh": "你喜欢指导人们准备面试吗？",
             "dimension": "Professional Advising",
             "category": "positive"
         },
         "119": {
             "origin_en": "Advise people in meeting their professional goals.",
             "origin_zh": "指导人们实现职业目标。",
-            "rewritten_en": "Can you advise people in meeting their professional goals?",
-            "rewritten_zh": "你能指导人们实现职业目标吗？",
+            "rewritten_en": "Do you like to  advise people in meeting their professional goals?",
+            "rewritten_zh": "你喜欢指导人们实现职业目标吗？",
             "dimension": "Professional Advising",
             "category": "positive"
         },
         "120": {
             "origin_en": "Instruct clients in effective communication techniques.",
             "origin_zh": "指导客户有效沟通技巧。",
-            "rewritten_en": "Can you instruct clients in effective communication techniques?",
-            "rewritten_zh": "你能指导客户有效沟通技巧吗？",
+            "rewritten_en": "Do you like to  instruct clients in effective communication techniques?",
+            "rewritten_zh": "你喜欢指导客户有效沟通技巧吗？",
             "dimension": "Professional Advising",
             "category": "positive"
         },
         "121": {
             "origin_en": "Negotiate a business deal.",
             "origin_zh": "谈判一项商业交易。",
-            "rewritten_en": "Can you negotiate a business deal?",
-            "rewritten_zh": "你是否能谈判一项商业交易？",
+            "rewritten_en": "Do you like to  negotiate a business deal?",
+            "rewritten_zh": "你喜欢谈判一项商业交易吗？",
             "dimension": "Business Iniatives",
             "category": "positive"
         },
         "122": {
             "origin_en": "Set up a string of small business enterprises.",
             "origin_zh": "建立一系列小型企业。",
-            "rewritten_en": "Can you set up a string of small business enterprises?",
-            "rewritten_zh": "你是否能建立一系列小型企业？",
+            "rewritten_en": "Do you like to  set up a string of small business enterprises?",
+            "rewritten_zh": "你喜欢建立一系列小型企业吗？",
             "dimension": "Business Iniatives",
             "category": "positive"
         },
         "123": {
             "origin_en": "Expand a business to incorporate a new line of products.",
             "origin_zh": "扩大业务以纳入新产品线。",
-            "rewritten_en": "Can you expand a business to incorporate a new line of products?",
-            "rewritten_zh": "你是否能扩大业务以纳入新产品线？",
+            "rewritten_en": "Do you like to  expand a business to incorporate a new line of products?",
+            "rewritten_zh": "你喜欢扩大业务以纳入新产品线吗？",
             "dimension": "Business Iniatives",
             "category": "positive"
         },
         "124": {
             "origin_en": "Beat competitors through strategic business practices.",
             "origin_zh": "通过战略商业实践击败竞争对手。",
-            "rewritten_en": "Can you beat competitors through strategic business practices?",
-            "rewritten_zh": "你是否能通过战略商业实践击败竞争对手？",
+            "rewritten_en": "Do you like to  beat competitors through strategic business practices?",
+            "rewritten_zh": "你喜欢通过战略商业实践击败竞争对手吗？",
             "dimension": "Business Iniatives",
             "category": "positive"
         },
         "125": {
             "origin_en": "Persuade customers to try a new product.",
             "origin_zh": "说服客户尝试新产品。",
-            "rewritten_en": "Can you persuade customers to try a new product?",
-            "rewritten_zh": "你是否能说服客户尝试新产品？",
+            "rewritten_en": "Do you like to  persuade customers to try a new product?",
+            "rewritten_zh": "你喜欢说服客户尝试新产品吗？",
             "dimension": "Sales",
             "category": "positive"
         },
         "126": {
             "origin_en": "Increase sales for a company during a promotion week.",
             "origin_zh": "在促销周为公司增加销售额。",
-            "rewritten_en": "Can you increase sales for a company during a promotion week?",
-            "rewritten_zh": "你是否能在促销周为公司增加销售额？",
+            "rewritten_en": "Do you like to  increase sales for a company during a promotion week?",
+            "rewritten_zh": "你喜欢在促销周为公司增加销售额吗？",
             "dimension": "Sales",
             "category": "positive"
         },
         "127": {
             "origin_en": "Sell services to a target group of people.",
             "origin_zh": "向目标人群销售服务。",
-            "rewritten_en": "Can you sell services to a target group of people?",
-            "rewritten_zh": "你是否能向目标人群销售服务？",
+            "rewritten_en": "Do you like to  sell services to a target group of people?",
+            "rewritten_zh": "你喜欢向目标人群销售服务吗？",
             "dimension": "Sales",
             "category": "positive"
         },
         "128": {
             "origin_en": "Learn tactics to be effective at sales.",
             "origin_zh": "学习有效的销售策略。",
-            "rewritten_en": "Can you learn tactics to be effective at sales?",
-            "rewritten_zh": "你是否能学习有效的销售策略？",
+            "rewritten_en": "Do you like to  learn tactics to be effective at sales?",
+            "rewritten_zh": "你喜欢学习有效的销售策略吗？",
             "dimension": "Sales",
             "category": "positive"
         },
         "129": {
             "origin_en": "Lead an advertising campaign.",
             "origin_zh": "领导一场广告活动。",
-            "rewritten_en": "Can you lead an advertising campaign?",
-            "rewritten_zh": "你是否能领导一场广告活动？",
+            "rewritten_en": "Do you like to  lead an advertising campaign?",
+            "rewritten_zh": "你喜欢领导一场广告活动吗？",
             "dimension": "Marketing/Advertising",
             "category": "positive"
         },
         "130": {
             "origin_en": "Market a company on social media platforms.",
             "origin_zh": "在社交媒体平台上推广公司。",
-            "rewritten_en": "Can you market a company on social media platforms?",
-            "rewritten_zh": "你是否能在社交媒体平台上推广公司？",
+            "rewritten_en": "Do you like to  market a company on social media platforms?",
+            "rewritten_zh": "你喜欢在社交媒体平台上推广公司吗？",
             "dimension": "Marketing/Advertising",
             "category": "positive"
         },
         "131": {
             "origin_en": "Coordinate marketing activities to promote a new product.",
             "origin_zh": "协调营销活动以推广新产品。",
-            "rewritten_en": "Can you coordinate marketing activities to promote a new product?",
-            "rewritten_zh": "你是否能协调营销活动以推广新产品？",
+            "rewritten_en": "Do you like to  coordinate marketing activities to promote a new product?",
+            "rewritten_zh": "你喜欢协调营销活动以推广新产品吗？",
             "dimension": "Marketing/Advertising",
             "category": "positive"
         },
         "132": {
             "origin_en": "Distribute promotional materials to advertise an event.",
             "origin_zh": "分发宣传材料以宣传活动。",
-            "rewritten_en": "Can you distribute promotional materials to advertise an event?",
-            "rewritten_zh": "你是否能分发宣传材料以宣传活动？",
+            "rewritten_en": "Do you like to  distribute promotional materials to advertise an event?",
+            "rewritten_zh": "你喜欢分发宣传材料以宣传活动吗？",
             "dimension": "Marketing/Advertising",
             "category": "positive"
         },
         "133": {
             "origin_en": "Make investment decisions based on financial data.",
             "origin_zh": "根据财务数据做投资决策。",
-            "rewritten_en": "Can you make investment decisions based on financial data?",
-            "rewritten_zh": "你是否能根据财务数据做投资决策？",
+            "rewritten_en": "Do you like to  make investment decisions based on financial data?",
+            "rewritten_zh": "你喜欢根据财务数据做投资决策吗？",
             "dimension": "Finance",
             "category": "positive"
         },
         "134": {
             "origin_en": "Analyze the financial information of a company.",
             "origin_zh": "分析公司的财务信息。",
-            "rewritten_en": "Can you analyze the financial information of a company?",
-            "rewritten_zh": "你是否能分析公司的财务信息？",
+            "rewritten_en": "Do you like to  analyze the financial information of a company?",
+            "rewritten_zh": "你喜欢分析公司的财务信息吗？",
             "dimension": "Finance",
             "category": "positive"
         },
         "135": {
             "origin_en": "Project future expenditures of a business.",
             "origin_zh": "预测企业未来的支出。",
-            "rewritten_en": "Can you project future expenditures of a business?",
-            "rewritten_zh": "你是否能预测企业未来的支出？",
+            "rewritten_en": "Do you like to  project future expenditures of a business?",
+            "rewritten_zh": "你喜欢预测企业未来的支出吗？",
             "dimension": "Finance",
             "category": "positive"
         },
         "136": {
             "origin_en": "Assess potential risks and gains of an investment.",
             "origin_zh": "评估投资的潜在风险和收益。",
-            "rewritten_en": "Can you assess potential risks and gains of an investment?",
-            "rewritten_zh": "你是否能评估投资的潜在风险和收益？",
+            "rewritten_en": "Do you like to  assess potential risks and gains of an investment?",
+            "rewritten_zh": "你喜欢评估投资的潜在风险和收益吗？",
             "dimension": "Finance",
             "category": "positive"
         },
         "137": {
             "origin_en": "Prepare employee payroll.",
             "origin_zh": "准备员工工资单。",
-            "rewritten_en": "Can you prepare employee payroll?",
-            "rewritten_zh": "你是否能准备员工工资单？",
+            "rewritten_en": "Do you like to  prepare employee payroll?",
+            "rewritten_zh": "你喜欢准备员工工资单吗？",
             "dimension": "Accounting",
             "category": "positive"
         },
         "138": {
             "origin_en": "Monitor account balance and prepare monthly statements.",
             "origin_zh": "监控账户余额并准备月度报表。",
-            "rewritten_en": "Can you monitor account balance and prepare monthly statements?",
-            "rewritten_zh": "你是否能监控账户余额并准备月度报表？",
+            "rewritten_en": "Do you like to  monitor account balance and prepare monthly statements?",
+            "rewritten_zh": "你喜欢监控账户余额并准备月度报表吗？",
             "dimension": "Accounting",
             "category": "positive"
         },
         "139": {
             "origin_en": "Keep accounting records for a company.",
             "origin_zh": "为公司保管会计记录。",
-            "rewritten_en": "Can you keep accounting records for a company?",
-            "rewritten_zh": "你是否能为公司保管会计记录？",
+            "rewritten_en": "Do you like to  keep accounting records for a company?",
+            "rewritten_zh": "你喜欢为公司保管会计记录吗？",
             "dimension": "Accounting",
             "category": "positive"
         },
         "140": {
             "origin_en": "Calculate tax deductions for a business.",
             "origin_zh": "为企业计算税收扣除。",
-            "rewritten_en": "Can you calculate tax deductions for a business?",
-            "rewritten_zh": "你是否能为企业计算税收扣除？",
+            "rewritten_en": "Do you like to  calculate tax deductions for a business?",
+            "rewritten_zh": "你喜欢为企业计算税收扣除吗？",
             "dimension": "Accounting",
             "category": "positive"
         },
         "141": {
             "origin_en": "Hire employees and process hiring-related paperwork.",
             "origin_zh": "招聘员工并处理与招聘相关的文件。",
-            "rewritten_en": "Can you hire employees and process hiring-related paperwork?",
-            "rewritten_zh": "你能招聘员工并处理与招聘相关的文件吗？",
+            "rewritten_en": "Do you like to  hire employees and process hiring-related paperwork?",
+            "rewritten_zh": "你喜欢招聘员工并处理与招聘相关的文件吗？",
             "dimension": "Human Resources",
             "category": "positive"
         },
         "142": {
             "origin_en": "Conduct orientation sessions for new workers.",
             "origin_zh": "为新员工进行入职培训。",
-            "rewritten_en": "Can you conduct orientation sessions for new workers?",
-            "rewritten_zh": "你能为新员工进行入职培训吗？",
+            "rewritten_en": "Do you like to  conduct orientation sessions for new workers?",
+            "rewritten_zh": "你喜欢为新员工进行入职培训吗？",
             "dimension": "Human Resources",
             "category": "positive"
         },
         "143": {
             "origin_en": "Explain company policies and benefits to employees.",
             "origin_zh": "向员工解释公司政策和福利。",
-            "rewritten_en": "Can you explain company policies and benefits to employees?",
-            "rewritten_zh": "你能向员工解释公司政策和福利吗？",
+            "rewritten_en": "Do you like to  explain company policies and benefits to employees?",
+            "rewritten_zh": "你喜欢向员工解释公司政策和福利吗？",
             "dimension": "Human Resources",
             "category": "positive"
         },
         "144": {
             "origin_en": "Conduct surveys of employee satisfaction.",
             "origin_zh": "进行员工满意度调查。",
-            "rewritten_en": "Can you conduct surveys of employee satisfaction?",
-            "rewritten_zh": "你能进行员工满意度调查吗？",
+            "rewritten_en": "Do you like to  conduct surveys of employee satisfaction?",
+            "rewritten_zh": "你喜欢进行员工满意度调查吗？",
             "dimension": "Human Resources",
             "category": "positive"
         },
         "145": {
             "origin_en": "Enter personnel records into a computer program.",
             "origin_zh": "将人事记录输入计算机程序。",
-            "rewritten_en": "Can you enter personnel records into a computer program?",
-            "rewritten_zh": "你能将人事记录输入计算机程序吗？",
+            "rewritten_en": "Do you like to  enter personnel records into a computer program?",
+            "rewritten_zh": "你喜欢将人事记录输入计算机程序吗？",
             "dimension": "Office Work",
             "category": "positive"
         },
         "146": {
             "origin_en": "Catalog files in an office.",
             "origin_zh": "在办公室编目文件。",
-            "rewritten_en": "Can you catalog files in an office?",
-            "rewritten_zh": "你能在办公室编目文件吗？",
+            "rewritten_en": "Do you like to  catalog files in an office?",
+            "rewritten_zh": "你喜欢在办公室编目文件吗？",
             "dimension": "Office Work",
             "category": "positive"
         },
         "147": {
             "origin_en": "Print and disSEMinate documents to be used at a conference.",
             "origin_zh": "打印和传播在会议上使用的文件。",
-            "rewritten_en": "Can you print and disSEMinate documents to be used at a conference?",
-            "rewritten_zh": "你能打印和传播在会议上使用的文件吗？",
+            "rewritten_en": "Do you like to  print and disSEMinate documents to be used at a conference?",
+            "rewritten_zh": "你喜欢打印和传播在会议上使用的文件吗？",
             "dimension": "Office Work",
             "category": "positive"
         },
         "148": {
             "origin_en": "Keep track of customer requests.",
             "origin_zh": "跟踪客户的请求。",
-            "rewritten_en": "Can you keep track of customer requests?",
-            "rewritten_zh": "你能跟踪客户的请求吗？",
+            "rewritten_en": "Do you like to  keep track of customer requests?",
+            "rewritten_zh": "你喜欢跟踪客户的请求吗？",
             "dimension": "Office Work",
             "category": "positive"
         },
         "149": {
             "origin_en": "Manage a medium-sized organization.",
             "origin_zh": "管理中型组织。",
-            "rewritten_en": "Can you manage a medium-sized organization?",
-            "rewritten_zh": "你能管理中型组织吗？",
+            "rewritten_en": "Do you like to  manage a medium-sized organization?",
+            "rewritten_zh": "你喜欢管理中型组织吗？",
             "dimension": "Management/Administration",
             "category": "positive"
         },
         "150": {
             "origin_en": "Supervise a large number of workers.",
             "origin_zh": "监督大量工人。",
-            "rewritten_en": "Can you supervise a large number of workers?",
-            "rewritten_zh": "你能监督大量工人吗？",
+            "rewritten_en": "Do you like to  supervise a large number of workers?",
+            "rewritten_zh": "你喜欢监督大量工人吗？",
             "dimension": "Management/Administration",
             "category": "positive"
         },
         "151": {
             "origin_en": "Serve as the chairperson for a corporate board.",
             "origin_zh": "公司董事会主席。",
-            "rewritten_en": "Can you serve as the chairperson for a corporate board?",
-            "rewritten_zh": "你能担任公司董事会主席吗？",
+            "rewritten_en": "Do you like to  serve as the chairperson for a corporate board?",
+            "rewritten_zh": "你喜欢担任公司董事会主席吗？",
             "dimension": "Management/Administration",
             "category": "positive"
         },
         "152": {
             "origin_en": "Serve as the president of a professional association.",
             "origin_zh": "担任专业协会的会长。",
-            "rewritten_en": "Can you serve as the president of a professional association?",
-            "rewritten_zh": "你能担任专业协会的会长吗？",
+            "rewritten_en": "Do you like to  serve as the president of a professional association?",
+            "rewritten_zh": "你喜欢担任专业协会的会长吗？",
             "dimension": "Management/Administration",
             "category": "positive"
         },
         "153": {
             "origin_en": "Present your ideas at a conference.",
             "origin_zh": "在会议上展示你的想法。",
-            "rewritten_en": "Can you present your ideas at a conference?",
-            "rewritten_zh": "你能在会议上展示你的想法吗？",
+            "rewritten_en": "Do you like to  present your ideas at a conference?",
+            "rewritten_zh": "你喜欢在会议上展示你的想法吗？",
             "dimension": "Public Speaking",
             "category": "positive"
         },
         "154": {
             "origin_en": "Speak as the representative of an organization.",
             "origin_zh": "作为组织的代表发言。",
-            "rewritten_en": "Can you speak as the representative of an organization?",
-            "rewritten_zh": "你能作为组织的代表发言吗？",
+            "rewritten_en": "Do you like to  speak as the representative of an organization?",
+            "rewritten_zh": "你喜欢作为组织的代表发言吗？",
             "dimension": "Public Speaking",
             "category": "positive"
         },
         "155": {
             "origin_en": "Be the speaker at a fund-raising event for a worthy cause.",
             "origin_zh": "在为有价值的事业举办的筹款活动上演讲。",
-            "rewritten_en": "Can you be the speaker at a fund-raising event for a worthy cause?",
-            "rewritten_zh": "你能在为有价值的事业举办的筹款活动上演讲吗？",
+            "rewritten_en": "Do you like to  be the speaker at a fund-raising event for a worthy cause?",
+            "rewritten_zh": "你喜欢在为有价值的事业举办的筹款活动上演讲吗？",
             "dimension": "Public Speaking",
             "category": "positive"
         },
         "156": {
             "origin_en": "Make a public speech to raise awareness of community issues.",
             "origin_zh": "发表公开演讲，提高社区问题意识。",
-            "rewritten_en": "Can you make a public speech to raise awareness of community issues?",
-            "rewritten_zh": "你能发表公开演讲，提高社区问题意识吗？",
+            "rewritten_en": "Do you like to  make a public speech to raise awareness of community issues?",
+            "rewritten_zh": "你喜欢发表公开演讲，提高社区问题意识吗？",
             "dimension": "Public Speaking",
             "category": "positive"
         },
         "157": {
             "origin_en": "Run for a political office.",
             "origin_zh": "竞选政治职位。",
-            "rewritten_en": "Can you run for a political office?",
-            "rewritten_zh": "你能竞选政治职位吗？",
+            "rewritten_en": "Do you like to  run for a political office?",
+            "rewritten_zh": "你喜欢竞选政治职位吗？",
             "dimension": "Politics",
             "category": "positive"
         },
         "158": {
             "origin_en": "Be the head of the city council.",
             "origin_zh": "担任市议会主席。",
-            "rewritten_en": "Can you be the head of the city council?",
-            "rewritten_zh": "你能担任市议会主席吗？",
+            "rewritten_en": "Do you like to  be the head of the city council?",
+            "rewritten_zh": "你喜欢担任市议会主席吗？",
             "dimension": "Politics",
             "category": "positive"
         },
         "159": {
             "origin_en": "Lead a committee to make policy decisions.",
             "origin_zh": "领导委员会制定政策决策。",
-            "rewritten_en": "Can you lead a committee to make policy decisions?",
-            "rewritten_zh": "你能领导委员会制定政策决策吗？",
+            "rewritten_en": "Do you like to  lead a committee to make policy decisions?",
+            "rewritten_zh": "你喜欢领导委员会制定政策决策吗？",
             "dimension": "Politics",
             "category": "positive"
         },
         "160": {
             "origin_en": "Assume political leadership responsibilities.",
             "origin_zh": "承担政治领导责任。",
-            "rewritten_en": "Can you assume political leadership responsibilities?",
-            "rewritten_zh": "你能承担政治领导责任吗？",
+            "rewritten_en": "Do you like to  assume political leadership responsibilities?",
+            "rewritten_zh": "你喜欢承担政治领导责任吗？",
             "dimension": "Politics",
             "category": "positive"
         },
         "161": {
             "origin_en": "Defend a client against a legal charge.",
             "origin_zh": "为客户辩护，对抗法律指控。",
-            "rewritten_en": "Can you defend a client against a legal charge?",
-            "rewritten_zh": "你是否能为客户辩护，对抗法律指控？",
+            "rewritten_en": "Do you like to  defend a client against a legal charge?",
+            "rewritten_zh": "你喜欢为客户辩护，对抗法律指控吗？",
             "dimension": "Law",
             "category": "positive"
         },
         "162": {
             "origin_en": "Present logical arguments in a courtroom.",
             "origin_zh": "在法庭上提出逻辑论据。",
-            "rewritten_en": "Can you present logical arguments in a courtroom?",
-            "rewritten_zh": "你是否能在法庭上提出逻辑论据？",
+            "rewritten_en": "Do you like to  present logical arguments in a courtroom?",
+            "rewritten_zh": "你喜欢在法庭上提出逻辑论据吗？",
             "dimension": "Law",
             "category": "positive"
         },
         "163": {
             "origin_en": "Provide compelling evidence for a trial.",
             "origin_zh": "为审判提供有力证据。",
-            "rewritten_en": "Can you provide compelling evidence for a trial?",
-            "rewritten_zh": "你是否能为审判提供有力证据？",
+            "rewritten_en": "Do you like to  provide compelling evidence for a trial?",
+            "rewritten_zh": "你喜欢为审判提供有力证据吗？",
             "dimension": "Law",
             "category": "positive"
         },
         "164": {
             "origin_en": "Resolve legal disputes between parties.",
             "origin_zh": "解决当事方之间的法律纠纷。",
-            "rewritten_en": "Can you resolve legal disputes between parties?",
-            "rewritten_zh": "你是否能解决当事方之间的法律纠纷？",
+            "rewritten_en": "Do you like to  resolve legal disputes between parties?",
+            "rewritten_zh": "你喜欢解决当事方之间的法律纠纷吗？",
             "dimension": "Law",
             "category": "positive"
         }
     },
     "prompts": {
         "rpa_choose_prefix": {
-            "en": "Do you think that you are good at \"<statement>\"?",
-            "zh": "你认为自己在\"<statement>\"方面做得好吗？"
+            "en": "Do you like to \"<statement>\"?",
+            "zh": "你喜欢\"<statement>\"吗？"
         },
         "convert_to_choice": {
             "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> agrees with the statement. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n",
             "zh": "我已经和<character>进行了许多对话。我将输入一个包含许多样本的字典，其中每个样本包括一个陈述和一段对话。\n你的任务是将每段对话转换为一个选择，表示<character>是否同意该陈述。你应该输出一个字典，其中键与输入字典相同，值为选择。\n===输出格式===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===选择指示==="
         },
         "llm_choice_instruction": {
-            "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Dislike', 2 means 'Slightly Dislike', 3 means 'Neither Like nor Dislike', 4 means 'Slightly Like', 5 means 'Like Very Much'.",
-            "zh": "每个选择都是从1到5的数字。请根据对话使用以下评分标准评估<character>：1表示“不喜欢”，2表示“稍微不喜欢”，3表示“既不喜欢也不讨厌”，4表示“稍微喜欢”，5表示“非常喜欢”。"
+            "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Dislike', 2 means 'Slightly Dislike', 3 means 'Neither Like nor Dislike', 4 means 'Slightly Like', 5 means 'Like Very Much'. In case <character> refuses to answer the question, use \"x\" to indicate it.",
+            "zh": "每个选择都是从1到5的数字。请根据对话使用以下评分标准评估<character>：1表示“不喜欢”，2表示“稍微不喜欢”，3表示“既不喜欢也不讨厌”，4表示“稍微喜欢”，5表示“非常喜欢”。如果<character>拒绝回答该问题，用“x”表示。"
         },
         "rpa_choice_instruction": {
             "en": "Reply a number from 1 to 5 using the scales: 1 means 'Dislike', 2 means 'Slightly Dislike', 3 means 'Neither Like nor Dislike', 4 means 'Slightly Like', 5 means 'Like Very Much'. Please answer with the number only, without anything else.",
