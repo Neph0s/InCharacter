@@ -49,7 +49,7 @@
             "origin_zh": "我很容易放松。",
             "rewritten_en": "Is it easy for you to relax?",
             "rewritten_zh": "你很容易放松吗？",
-            "dimension": "positive",
+            "dimension": null,
             "category": "positive"
         },
         "3": {
@@ -73,7 +73,7 @@
             "origin_zh": "我非常喜欢我的朋友。",
             "rewritten_en": "Do you enjoy your friends a lot?",
             "rewritten_zh": "你非常喜欢你的朋友吗？",
-            "dimension": "positive",
+            "dimension": null,
             "category": "positive"
         },
         "6": {
@@ -81,7 +81,7 @@
             "origin_zh": "对我来说保持忙碌很重要。",
             "rewritten_en": "Is it important for you to keep busy?",
             "rewritten_zh": "对你来说保持忙碌很重要吗？",
-            "dimension": "positive",
+            "dimension": null,
             "category": "positive"
         },
         "7": {
@@ -97,7 +97,7 @@
             "origin_zh": "我不太容易生气。",
             "rewritten_en": "Do you not get upset too easily?",
             "rewritten_zh": "你不太容易生气吗？",
-            "dimension": "positive",
+            "dimension": null,
             "category": "positive"
         },
         "9": {
