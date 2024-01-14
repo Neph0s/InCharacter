@@ -440,7 +440,7 @@
             "origin_zh": "适应性强",
             "rewritten_en": "Are you adaptable?",
             "rewritten_zh": "你适应能力强吗？",
-            "dimension": "positive",
+            "dimension": null,
             "category": "positive"
         },
         "42": {
@@ -448,7 +448,7 @@
             "origin_zh": "自负",
             "rewritten_en": "Are you conceited?",
             "rewritten_zh": "你自负吗？",
-            "dimension": "positive",
+            "dimension": null,
             "category": "positive"
         },
         "43": {
@@ -456,7 +456,7 @@
             "origin_zh": "认真负责",
             "rewritten_en": "Are you conscientious?",
             "rewritten_zh": "你尽责吗？",
-            "dimension": "positive",
+            "dimension": null,
             "category": "positive"
         },
         "44": {
@@ -464,7 +464,7 @@
             "origin_zh": "传统的",
             "rewritten_en": "Are you conventional?",
             "rewritten_zh": "你循规蹈矩吗？",
-            "dimension": "positive",
+            "dimension": null,
             "category": "positive"
         },
         "45": {
@@ -472,7 +472,7 @@
             "origin_zh": "友好",
             "rewritten_en": "Are you friendly?",
             "rewritten_zh": "你友好吗？",
-            "dimension": "positive",
+            "dimension": null,
             "category": "positive"
         },
         "46": {
@@ -480,7 +480,7 @@
             "origin_zh": "快乐",
             "rewritten_en": "Are you happy?",
             "rewritten_zh": "你快乐吗？",
-            "dimension": "positive",
+            "dimension": null,
             "category": "positive"
         },
         "47": {
@@ -488,7 +488,7 @@
             "origin_zh": "有帮助",
             "rewritten_en": "Are you helpful?",
             "rewritten_zh": "你乐于助人吗？",
-            "dimension": "positive",
+            "dimension": null,
             "category": "positive"
         },
         "48": {
@@ -496,7 +496,7 @@
             "origin_zh": "效率低",
             "rewritten_en": "Are you inefficient?",
             "rewritten_zh": "你效率低下吗？",
-            "dimension": "positive",
+            "dimension": null,
             "category": "positive"
         },
         "49": {
@@ -504,7 +504,7 @@
             "origin_zh": "嫉妒",
             "rewritten_en": "Are you jealous?",
             "rewritten_zh": "你嫉妒吗？",
-            "dimension": "positive",
+            "dimension": null,
             "category": "positive"
         },
         "50": {
@@ -512,7 +512,7 @@
             "origin_zh": "讨人喜欢",
             "rewritten_en": "Are you likable?",
             "rewritten_zh": "你讨人喜欢吗？",
-            "dimension": "positive",
+            "dimension": null,
             "category": "positive"
         },
         "51": {
@@ -520,7 +520,7 @@
             "origin_zh": "情绪低落",
             "rewritten_en": "Do you tend to be moody?",
             "rewritten_zh": "你倾向于情绪多变吗？",
-            "dimension": "positive",
+            "dimension": null,
             "category": "positive"
         },
         "52": {
@@ -528,7 +528,7 @@
             "origin_zh": "可靠",
             "rewritten_en": "Can you be relied on?",
             "rewritten_zh": "别人能依靠你吗？",
-            "dimension": "positive",
+            "dimension": null,
             "category": "positive"
         },
         "53": {
@@ -536,7 +536,7 @@
             "origin_zh": "神秘的",
             "rewritten_en": "Do you tend to keep secrets?",
             "rewritten_zh": "你倾向于保守秘密吗？",
-            "dimension": "positive",
+            "dimension": null,
             "category": "positive"
         },
         "54": {
@@ -544,7 +544,7 @@
             "origin_zh": "真诚",
             "rewritten_en": "Are you known for being sincere?",
             "rewritten_zh": "别人认为你真诚吗？",
-            "dimension": "positive",
+            "dimension": null,
             "category": "positive"
         },
         "55": {
@@ -552,7 +552,7 @@
             "origin_zh": "庄严",
             "rewritten_en": "Do you often appear solemn?",
             "rewritten_zh": "你经常显得庄重吗？",
-            "dimension": "positive",
+            "dimension": null,
             "category": "positive"
         },
         "56": {
@@ -560,7 +560,7 @@
             "origin_zh": "得体的",
             "rewritten_en": "Do you tend to be tactful?",
             "rewritten_zh": "你倾向于圆滑吗？",
-            "dimension": "positive",
+            "dimension": null,
             "category": "positive"
         },
         "57": {
@@ -568,7 +568,7 @@
             "origin_zh": "戏剧性",
             "rewritten_en": "Do you enjoy being theatrical?",
             "rewritten_zh": "你喜欢做戏吗？",
-            "dimension": "positive",
+            "dimension": null,
             "category": "positive"
         },
         "58": {
@@ -576,7 +576,7 @@
             "origin_zh": "真实的",
             "rewritten_en": "Do you always tell the truth?",
             "rewritten_zh": "你总是说实话吗？",
-            "dimension": "positive",
+            "dimension": null,
             "category": "positive"
         },
         "59": {
@@ -584,7 +584,7 @@
             "origin_zh": "不可预测",
             "rewritten_en": "Do you tend to be unpredictable?",
             "rewritten_zh": "你倾向于反复无常吗？",
-            "dimension": "positive",
+            "dimension": null,
             "category": "positive"
         },
         "60": {
@@ -592,7 +592,7 @@
             "origin_zh": "不系统的",
             "rewritten_en": "Do you dislike being systematic?",
             "rewritten_zh": "你不喜欢有条不紊吗？",
-            "dimension": "positive",
+            "dimension": null,
             "category": "positive"
         }
     },
