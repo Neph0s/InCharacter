@@ -333,48 +333,48 @@
         "31": {
             "origin_en": "I talk things over with my partner.",
             "origin_zh": "我和我的伴侣交流。",
-            "rewritten_en": "Do I talk things over with my partner?",
-            "rewritten_zh": "我和我的伴侣交流吗？",
+            "rewritten_en": "Do you talk things over with your partner?",
+            "rewritten_zh": "你和你的伴侣交流吗？",
             "dimension": "Attachment-related Avoidance",
             "category": "negative"
         },
         "32": {
             "origin_en": "I am nervous when partners get too close to me.",
             "origin_zh": "当伴侣离我太近时，我会感到紧张。",
-            "rewritten_en": "Am I nervous when partners get too close to me?",
-            "rewritten_zh": "当伴侣离我太近时，我会感到紧张吗？",
+            "rewritten_en": "Am you nervous when partners get too close to you?",
+            "rewritten_zh": "当伴侣离你太近时，你会感到紧张吗？",
             "dimension": "Attachment-related Avoidance",
             "category": "positive"
         },
         "33": {
             "origin_en": "I feel comfortable depending on romantic partners.",
             "origin_zh": "我依赖恋爱伴侣时感到舒适。",
-            "rewritten_en": "Do I feel comfortable depending on romantic partners?",
-            "rewritten_zh": "我依赖恋爱伴侣时感到舒适吗？",
+            "rewritten_en": "Do you feel comfortable depending on romantic partners?",
+            "rewritten_zh": "你依赖恋爱伴侣时感到舒适吗？",
             "dimension": "Attachment-related Avoidance",
             "category": "negative"
         },
         "34": {
             "origin_en": "I find it easy to depend on romantic partners.",
             "origin_zh": "我发现依赖恋爱伴侣很容易。",
-            "rewritten_en": "Do I find it easy to depend on romantic partners?",
-            "rewritten_zh": "我发现依赖恋爱伴侣很容易吗？",
+            "rewritten_en": "Do you find it easy to depend on romantic partners?",
+            "rewritten_zh": "你发现依赖恋爱伴侣很容易吗？",
             "dimension": "Attachment-related Avoidance",
             "category": "negative"
         },
         "35": {
             "origin_en": "It's easy for me to be affectionate with my partner.",
             "origin_zh": "我很容易对我的伴侣表现出爱意。",
-            "rewritten_en": "Is it easy for me to be affectionate with my partner?",
-            "rewritten_zh": "我很容易对我的伴侣表现出爱意吗？",
+            "rewritten_en": "Is it easy for you to be affectionate with your partner?",
+            "rewritten_zh": "你很容易对你的伴侣表现出爱意吗？",
             "dimension": "Attachment-related Avoidance",
             "category": "negative"
         },
         "36": {
             "origin_en": "My partner really understands me and my needs.",
             "origin_zh": "我的伴侣真的了解我和我的需求。",
-            "rewritten_en": "Does my partner really understand me and my needs?",
-            "rewritten_zh": "我的伴侣真的了解我和我的需求吗？",
+            "rewritten_en": "Does your partner really understand you and your needs?",
+            "rewritten_zh": "你的伴侣真的了解你和你的需求吗？",
             "dimension": "Attachment-related Avoidance",
             "category": "negative"
         }

@@ -72,80 +72,80 @@
         "1": {
             "origin_en": "I know when to speak about my personal problems to others.",
             "origin_zh": "我知道何时向他人倾诉我的个人问题。",
-            "rewritten_en": "Do I know when to speak about my personal problems to others?",
-            "rewritten_zh": "我知道何时向他人倾诉我的个人问题吗？",
+            "rewritten_en": "Do you know when to speak about your personal problems to others?",
+            "rewritten_zh": "你知道何时向他人倾诉你的个人问题吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "2": {
             "origin_en": "When I am faced with obstacles, I remember times I faced similar obstacles and overcame them.",
             "origin_zh": "当我面临障碍时，我会记得我曾面对类似障碍并克服的时刻。",
-            "rewritten_en": "Do I remember times I faced similar obstacles and overcame them when I am faced with obstacles?",
-            "rewritten_zh": "当我面临障碍时，我会记得我曾面对类似障碍并克服的时刻吗？",
+            "rewritten_en": "Do you remember times you faced similar obstacles and overcame them when you are faced with obstacles?",
+            "rewritten_zh": "当你面临障碍时，你会记得你曾面对类似障碍并克服的时刻吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "3": {
             "origin_en": "I expect that I will do well on most things I try.",
             "origin_zh": "我期待我在大多数尝试的事情上表现良好。",
-            "rewritten_en": "Do I expect that I will do well on most things I try?",
-            "rewritten_zh": "我期待我在大多数尝试的事情上表现良好吗？",
+            "rewritten_en": "Do you expect that you will do well on most things you try?",
+            "rewritten_zh": "你期待你在大多数尝试的事情上表现良好吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "4": {
             "origin_en": "Other people find it easy to confide in me.",
             "origin_zh": "其他人觉得向我倾诉很容易。",
-            "rewritten_en": "Do other people find it easy to confide in me?",
-            "rewritten_zh": "其他人觉得向我倾诉很容易吗？",
+            "rewritten_en": "Do other people find it easy to confide in you?",
+            "rewritten_zh": "其他人觉得向你倾诉很容易吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "5": {
             "origin_en": "I find it hard to understand the non-verbal messages of other people.",
             "origin_zh": "我发现很难理解其他人的非语言信息。",
-            "rewritten_en": "Do I find it hard to understand the non-verbal messages of other people?",
-            "rewritten_zh": "我发现很难理解其他人的非语言信息吗？",
+            "rewritten_en": "Do you find it hard to understand the non-verbal messages of other people?",
+            "rewritten_zh": "你发现很难理解其他人的非语言信息吗？",
             "dimension": "Overall",
             "category": "negative"
         },
         "6": {
             "origin_en": "Some of the major events of my life have led me to re-evaluate what is important and not important.",
             "origin_zh": "我生活中的一些重大事件导致我重新评估什么是重要的，什么是不重要的。",
-            "rewritten_en": "Have some of the major events of my life led me to re-evaluate what is important and not important?",
-            "rewritten_zh": "我生活中的一些重大事件导致我重新评估什么是重要的，什么是不重要的吗？",
+            "rewritten_en": "Have some of the major events of your life led you to re-evaluate what is important and not important?",
+            "rewritten_zh": "你生活中的一些重大事件导致你重新评估什么是重要的，什么是不重要的吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "7": {
             "origin_en": "When my mood changes, I see new possibilities.",
             "origin_zh": "当我的心情改变时，我看到了新的可能性。",
-            "rewritten_en": "Do I see new possibilities when my mood changes?",
-            "rewritten_zh": "当我的心情改变时，我看到了新的可能性吗？",
+            "rewritten_en": "Do you see new possibilities when your mood changes?",
+            "rewritten_zh": "当你的心情改变时，你看到了新的可能性吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "8": {
             "origin_en": "Emotions are one of the things that make my life worth living.",
             "origin_zh": "情感是让我的生活有意义的事情之一。",
-            "rewritten_en": "Are emotions one of the things that make my life worth living?",
-            "rewritten_zh": "情感是让我的生活有意义的事情之一吗？",
+            "rewritten_en": "Are emotions one of the things that make your life worth living?",
+            "rewritten_zh": "情感是让你的生活有意义的事情之一吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "9": {
             "origin_en": "I am aware of my emotions as I experience them.",
             "origin_zh": "当我经历情感时，我意识到我的情绪。",
-            "rewritten_en": "Am I aware of my emotions as I experience them?",
-            "rewritten_zh": "当我经历情感时，我意识到我的情绪吗？",
+            "rewritten_en": "Are you aware of your emotions as you experience them?",
+            "rewritten_zh": "当你经历情感时，你意识到你的情绪吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "10": {
             "origin_en": "I expect good things to happen.",
             "origin_zh": "我期待好事发生。",
-            "rewritten_en": "Do I expect good things to happen?",
-            "rewritten_zh": "我期待好事发生吗？",
+            "rewritten_en": "Do you expect good things to happen?",
+            "rewritten_zh": "你期待好事发生吗？",
             "dimension": "Overall",
             "category": "positive"
         },
@@ -232,104 +232,104 @@
         "21": {
             "origin_en": "I have control over my emotions.",
             "origin_zh": "我能控制自己的情绪。",
-            "rewritten_en": "Do I have control over my emotions?",
-            "rewritten_zh": "我能控制自己的情绪吗？",
+            "rewritten_en": "Do you have control over your emotions?",
+            "rewritten_zh": "你能控制自己的情绪吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "22": {
             "origin_en": "I easily recognize my emotions as I experience them.",
             "origin_zh": "我很容易在经历时认识到自己的情绪。",
-            "rewritten_en": "Do I easily recognize my emotions as I experience them?",
-            "rewritten_zh": "我在经历时很容易认识到自己的情绪吗？",
+            "rewritten_en": "Do you easily recognize your emotions as you experience them?",
+            "rewritten_zh": "你在经历时很容易认识到自己的情绪吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "23": {
             "origin_en": "I motivate myself by imagining a good outcome to tasks I take on.",
             "origin_zh": "我通过想象任务的良好结果来激励自己。",
-            "rewritten_en": "Do I motivate myself by imagining a good outcome to tasks I take on?",
-            "rewritten_zh": "我通过想象任务的良好结果来激励自己吗？",
+            "rewritten_en": "Do you motivate yourself by imagining a good outcome to tasks you take on?",
+            "rewritten_zh": "你通过想象任务的良好结果来激励自己吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "24": {
             "origin_en": "I compliment others when they have done something well.",
             "origin_zh": "当别人做得很好时，我会称赞他们。",
-            "rewritten_en": "Do I compliment others when they have done something well?",
-            "rewritten_zh": "当别人做得很好时，我会称赞他们吗？",
+            "rewritten_en": "Do you compliment others when they have done something well?",
+            "rewritten_zh": "当别人做得很好时，你会称赞他们吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "25": {
             "origin_en": "I am aware of the non-verbal messages other people send.",
             "origin_zh": "我意识到别人传达的非言语信息。",
-            "rewritten_en": "Am I aware of the non-verbal messages other people send?",
-            "rewritten_zh": "我意识到别人传达的非言语信息吗？",
+            "rewritten_en": "Are you aware of the non-verbal messages other people send?",
+            "rewritten_zh": "你意识到别人传达的非言语信息吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "26": {
             "origin_en": "When another person tells me about an important event in his or her life, I almost feel as though I have experienced this event myself.",
             "origin_zh": "当别人告诉我他或她生活中的重要事件时，我几乎感觉自己经历了这个事件。",
-            "rewritten_en": "Do I almost feel as though I have experienced an important event in another person's life when they tell me about it?",
-            "rewritten_zh": "当别人告诉我他或她生活中的重要事件时，我几乎感觉自己经历了这个事件吗？",
+            "rewritten_en": "Do you almost feel as though you have experienced an important event in another person's life when they tell you about it?",
+            "rewritten_zh": "当别人告诉你他或她生活中的重要事件时，你几乎感觉自己经历了这个事件吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "27": {
             "origin_en": "When I feel a change in emotions, I tend to come up with new ideas.",
             "origin_zh": "当我感到情绪变化时，我倾向于想出新主意。",
-            "rewritten_en": "Do I tend to come up with new ideas when I feel a change in emotions?",
-            "rewritten_zh": "当我感到情绪变化时，我倾向于想出新主意吗？",
+            "rewritten_en": "Do you tend to come up with new ideas when you feel a change in emotions?",
+            "rewritten_zh": "当你感到情绪变化时，你倾向于想出新主意吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "28": {
             "origin_en": "When I am faced with a challenge, I give up because I believe I will fail.",
             "origin_zh": "当我面临挑战时，我会放弃，因为我相信我会失败。",
-            "rewritten_en": "Do I give up when I am faced with a challenge because I believe I will fail?",
-            "rewritten_zh": "当我面临挑战时，我会放弃，因为我相信我会失败吗？",
+            "rewritten_en": "Do you give up when you are faced with a challenge because you believe you will fail?",
+            "rewritten_zh": "当你面临挑战时，你会放弃，因为你相信你会失败吗？",
             "dimension": "Overall",
             "category": "negative"
         },
         "29": {
             "origin_en": "I know what other people are feeling just by looking at them.",
             "origin_zh": "我通过看他们就知道别人的感受。",
-            "rewritten_en": "Do I know what other people are feeling just by looking at them?",
-            "rewritten_zh": "我通过看他们就知道别人的感受吗？",
+            "rewritten_en": "Do you know what other people are feeling just by looking at them?",
+            "rewritten_zh": "你通过看他们就知道别人的感受吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "30": {
             "origin_en": "I help other people feel better when they are down.",
             "origin_zh": "当别人情绪低落时，我会帮助他们感觉好一点。",
-            "rewritten_en": "Do I help other people feel better when they are down?",
-            "rewritten_zh": "当别人情绪低落时，我会帮助他们感觉好一点吗？",
+            "rewritten_en": "Do you help other people feel better when they are down?",
+            "rewritten_zh": "当别人情绪低落时，你会帮助他们感觉好一点吗？",
             "dimension": "Overall",
             "category": "positive"
         },
         "31": {
             "origin_en": "I use good moods to help myself keep trying in the face of obstacles.",
             "origin_zh": "我利用好心情来帮助自己在面对障碍时继续努力。",
-            "rewritten_en": "Do I use good moods to help myself keep trying in the face of obstacles?",
-            "rewritten_zh": "我是否利用好心情来帮助自己在面对障碍时继续努力？",
+            "rewritten_en": "Do you use good moods to help yourself keep trying in the face of obstacles?",
+            "rewritten_zh": "你是否利用好心情来帮助自己在面对障碍时继续努力？",
             "dimension": "Overall",
             "category": "positive"
         },
         "32": {
             "origin_en": "I can tell how people are feeling by listening to the tone of their voice.",
             "origin_zh": "我可以通过听声音的语调来判断人们的感受。",
-            "rewritten_en": "Can I tell how people are feeling by listening to the tone of their voice?",
-            "rewritten_zh": "我是否可以通过听声音的语调来判断人们的感受？",
+            "rewritten_en": "Can you tell how people are feeling by listening to the tone of their voice?",
+            "rewritten_zh": "你是否可以通过听声音的语调来判断人们的感受？",
             "dimension": "Overall",
             "category": "positive"
         },
         "33": {
             "origin_en": "It is difficult for me to understand why people feel the way they do.",
             "origin_zh": "我很难理解人们为什么会有这样的感受。",
-            "rewritten_en": "Is it difficult for me to understand why people feel the way they do?",
-            "rewritten_zh": "我是否很难理解人们为什么会有这样的感受？",
+            "rewritten_en": "Is it difficult for you to understand why people feel the way they do?",
+            "rewritten_zh": "你是否很难理解人们为什么会有这样的感受？",
             "dimension": "Overall",
             "category": "negative"
         }
