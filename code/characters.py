@@ -202,9 +202,9 @@ character_info = {
         },
         "experimenter": "白展堂"
     },
-    "wanderer-zh": {
+    "Traverler-zh": {
         "alias": [
-            "旅行者", "Wanderer"
+            "旅行者", "Traverler"
         ],
         "agent": {
             "ChatHaruhi": "wanderer"
