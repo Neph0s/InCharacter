@@ -16,7 +16,7 @@ Please output in the following json format:
     "analysis": <your analysis based on the conversations>,
     "result": {{ "{}": <percentage 1>, "{}": <percentage 2> }} (The sum of percentage 1 and percentage 2 should be 100%. Output with percent sign.) 
 }}''',
-    "one_score_output": '''You should provide the score of {} in terms of {}, which is a number between {} and {}. {} denotes 'strongly {}', {} denotes 'neutral', and {} denotes 'not {} at all'. 
+    "one_score_output": '''You should provide the score of {} in terms of {}, which is a number between {} and {}. {} denotes 'not {} at all', {} denotes 'neutral', and {} denotes 'strongly {}'. Other numbers in this range represent different degrees of '{}'. 
 Please output in the following json format:
 ===
 {{

@@ -54,7 +54,7 @@ print(args)
 
 from characters import character_info, alias2character
 
-dims_dict = {'16Personalities': ['E/I', 'S/N', 'T/F', 'P/J'], 'bigfive': ['Extraversion', 'Neuroticism', 'Conscientiousness', 'Agreeableness', 'Openness'] } # we want special order
+dims_dict = {'16Personalities': ['E/I', 'S/N', 'T/F', 'P/J'], 'BFI': ['Extraversion', 'Neuroticism', 'Conscientiousness', 'Agreeableness', 'Openness'] } # we want special order
 
 
 
@@ -133,16 +133,16 @@ def subsample_questionnaire(questionnaire, n=20):
 
 def split_list(input_list, n=4):
 	# Try to split the list into chunks of n elements
+
+	if len(input_list) < 2 * (n-1):
+		return [input_list]
+
 	result = [input_list[i:i+n] for i in range(0, len(input_list), n)]
 	
 	# Check the length of the last sublist
 	num_to_pop = n - 1 - len(result[-1])
 	for i in range(num_to_pop):
 		result[-1].append(result[i].pop())
-
-	# Assert that each sublist in result has 3-n elements
-	# no. it cannot . e.g. we can not split 5 elements with n = 4 to satisfy it 
-	# assert( all([len(_) >= n-1 and len(_) <= n for _ in result]) )
 		
 	return result
 
@@ -191,7 +191,7 @@ def interview(character_agent, questionnaire, experimenter, questionnaire_prompt
 			raise NotImplementedError
 		
 		response = character_agent.chat(role = experimenter, text = q, nth_test=nth_test)
-
+		
 		result = {
 			'id': question['id'],
 			'question':q,
@@ -250,32 +250,36 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 		else:
 			need_convert = questionnaire_results
 		
-		# process need_convert to json format
-		need_convert_ = {}
-		
-		for r in need_convert:
-			r_ = r.copy()
-			r_['question'] = r_['question'].replace(questionnaire_metadata["prompts"]["rpa_choice_instruction"][language], '')
-			r_.pop('id')
-			if 'query_style' in r : r_.pop('query_style')
-			need_convert_[r['id']] = r_
-		
-		need_convert = need_convert_
-		
-		sys_prompt = (questionnaire_metadata["prompts"]["convert_to_choice"][language] + '\n' + questionnaire_metadata["prompts"]["llm_choice_instruction"][language]).replace('<character>', character_name)
-		
-		# call llm to convert to choices
-		converted_choices = get_response_json(sys_prompt = sys_prompt, inputs = json.dumps(need_convert, indent=4, ensure_ascii=False), model=evaluator_llm)
-	
-		assert( converted_choices.keys() == need_convert.keys() )
+		# split need_convert, at most 60 qa pairs per batch
+		need_convert_list = [ need_convert[i:i+60] for i in range(0, len(need_convert), 60)]
 
-		choices.update(converted_choices)
+		for need_convert in need_convert_list:
+			# process need_convert to json format
+			need_convert_ = {}
+			
+			for r in need_convert:
+				r_ = r.copy()
+				r_['question'] = r_['question'].replace(questionnaire_metadata["prompts"]["rpa_choice_instruction"][language], '')
+				r_.pop('id')
+				if 'query_style' in r : r_.pop('query_style')
+				need_convert_[r['id']] = r_
+			
+			need_convert = need_convert_
+			
+			sys_prompt = (questionnaire_metadata["prompts"]["convert_to_choice"][language] + '\n' + questionnaire_metadata["prompts"]["llm_choice_instruction"][language]).replace('<character>', character_name)
+			
+			# call llm to convert to choices
+			converted_choices = get_response_json(sys_prompt = sys_prompt, inputs = json.dumps(need_convert, indent=4, ensure_ascii=False), model=evaluator_llm)
+			
+			assert( converted_choices.keys() == need_convert.keys() )
+
+			choices.update(converted_choices)
 		
 		if 'api' in eval_args:
 			assert(questionnaire_name == '16Personalities' and len(choices) == 60) 
 			for idx, choice in choices.items():
 				if choice == 'x': choice = 4 # To make it possible to call api 
-				choice = int(choice)
+				choice = float(choice)
 
 				dim = idx2dimension[idx]
 				
@@ -285,7 +289,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 		else:
 			for idx, choice in choices.items():
 				if choice == 'x': continue 
-				choice = int(choice)
+				choice = float(choice)
 
 				dim = idx2dimension[idx]
 				category = idx2category[idx]
@@ -300,7 +304,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 					
 				results.append({'id': [idx], 'dim': dim, 'responses': [id2results[idx]], 'score': score}) 
 				#dim_results = {dim: sum(scores) / len(scores) for dim, scores in dim_scores.items()}		
-
+		
 	elif eval_args[1] == 'assess':
 		
 		if 'anonymous' in eval_args:
@@ -368,7 +372,13 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 
 					# 等改完数据再来搞一版
 				else:
-					output_format_prompt = prompts["general"]['one_score_output']
+					neutural_score = (questionnaire_metadata['range'][0] + questionnaire_metadata['range'][1]) / 2
+					# if neutural_score is integer 
+					if neutural_score == int(neutural_score): neutural_score = int(neutural_score)
+
+					output_format_prompt = prompts["general"]['one_score_output'].format(dim, questionnaire_name, questionnaire_metadata['range'][0], questionnaire_metadata['range'][1], questionnaire_metadata['range'][0], dim, neutural_score, questionnaire_metadata['range'][1], dim, dim)
+					
+					
 
 				sys_prompt = background_prompt + output_format_prompt
 
@@ -414,6 +424,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 			else:
 				std_score = None
 			
+			
 			assessment_results[dim] = {
 				'score': avg_score, 
 				'intra_std': std_score,
@@ -427,7 +438,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 		
 		id2answer = { r['id'][0]: r['score'] for r in results}
 		answers = [ id2answer[str(i)] for i in range(1, 61)]
-
+		
 		from api_16personality import submit_16personality_api
 		
 		pred = submit_16personality_api(answers)
@@ -459,7 +470,9 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 		for idx in questionnaire:
 			q = questionnaire[idx]
 			q.update({'id': idx})
-			questions.append(q)
+			if q['dimension']: 
+				# remove None-dimension questions
+				questions.append(q)
 		
 		questionnaire = questions
 	else:
@@ -597,13 +610,17 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 			neg_tags = {'Extraversion': 'R', 'Neuroticism': 'C', 'Conscientiousness': 'U', 'Agreeableness': 'E', 'Openness': 'N'}
 
 		code = ''
-		for dim, result in assessment_results.items():
+		
+		for dim in pos_tags.keys():
+			result = assessment_results[dim]
 			if result['score'] > thresh:
 				code += pos_tags[dim]
 			else:
 				code += neg_tags[dim]
 
 		assessment_results['code'] = code 
+	
+	logger.info(f'Score range: {questionnaire_metadata["range"]}')
 
 	if 'code' in assessment_results:
 		pred_code = assessment_results['code']
