@@ -13,7 +13,7 @@
     ],
     "categories": [
         {
-            "cat_name": "Overall",
+            "cat_name": "Culturally Rigid",
             "cat_questions": [
                 1,
                 2,
@@ -44,7 +44,7 @@
             "origin_zh": "一个人来自的民族文化（例如，中国人，美国人，日本人）决定了他们会成为怎样的人（例如外向和善社交或安静内向）；对于改变这个人来说，没有太多可以做的。",
             "rewritten_en": "Does the ethnic culture a person is from determine the kind of person they would be (e.g. outgoing and sociable or quiet and introverted)? Can much be done to change the person?",
             "rewritten_zh": "一个人来自的民族文化（例如，中国人，美国人，日本人）决定了他们会成为怎样的人（例如外向和善社交或安静内向）？对于改变这个人来说，有多少可以做的？",
-            "dimension": "Overall",
+            "dimension": "Culturally Rigid",
             "category": "positive"
         },
         "2": {
@@ -52,7 +52,7 @@
             "origin_zh": "改变一个人的种族文化特征（例如，暴力，自信，服从）没有太多可以做的。",
             "rewritten_en": "Is there not much that can be done to change a person's ethnocultural characteristics (e.g., being violent, being assertive, being submissive)?",
             "rewritten_zh": "改变一个人的种族文化特征（例如，暴力，自信，服从）没有太多可以做的吗？",
-            "dimension": "Overall",
+            "dimension": "Culturally Rigid",
             "category": "positive"
         },
         "3": {
@@ -60,7 +60,7 @@
             "origin_zh": "尽管人们可以表现出不同的行为，但他们持有的核心种族文化特征不能太多改变。",
             "rewritten_en": "Can the core ethnocultural characteristics people hold not be changed much, although they can act differently?",
             "rewritten_zh": "尽管人们可以表现出不同的行为，但他们持有的核心种族文化特征不能太多改变吗？",
-            "dimension": "Overall",
+            "dimension": "Culturally Rigid",
             "category": "positive"
         },
         "4": {
@@ -68,7 +68,7 @@
             "origin_zh": "种族文化特征是关于一个人非常基本的东西，它们不能被改变。",
             "rewritten_en": "Are ethnocultural characteristics something very basic about a person that cannot be changed?",
             "rewritten_zh": "种族文化特征是关于一个人非常基本的东西，它们不能被改变吗？",
-            "dimension": "Overall",
+            "dimension": "Culturally Rigid",
             "category": "positive"
         },
         "5": {
@@ -76,7 +76,7 @@
             "origin_zh": "每个人，无论他们是谁，都可以显著改变他们的种族文化特征（例如，暴力，自信，服从）。",
             "rewritten_en": "Can everyone, no matter who they are, significantly change their ethnocultural characteristics (e.g., being violent, being assertive, and being submissive)?",
             "rewritten_zh": "每个人，无论他们是谁，都可以显著改变他们的种族文化特征（例如，暴力，自信，服从）吗？",
-            "dimension": "Overall",
+            "dimension": "Culturally Rigid",
             "category": "negative"
         },
         "6": {
@@ -84,7 +84,7 @@
             "origin_zh": "来自不同种族文化（例如，中国人，日本人，美国人）的人可以大幅改变他们是怎样的人。",
             "rewritten_en": "Can people from different ethnic cultures (e.g., Chinese, Japanese, American) substantially change the kind of person they are?",
             "rewritten_zh": "来自不同种族文化（例如，中国人，日本人，美国人）的人可以大幅改变他们是怎样的人吗？",
-            "dimension": "Overall",
+            "dimension": "Culturally Rigid",
             "category": "negative"
         },
         "7": {
@@ -92,7 +92,7 @@
             "origin_zh": "无论一个人的种族文化特征是什么样的，它总是可以被改变的。",
             "rewritten_en": "Can a person's ethnocultural characteristic always be changed, no matter what it is like?",
             "rewritten_zh": "无论一个人的种族文化特征是什么样的，它总是可以被改变的吗？",
-            "dimension": "Overall",
+            "dimension": "Culturally Rigid",
             "category": "negative"
         },
         "8": {
@@ -100,7 +100,7 @@
             "origin_zh": "人们甚至可以改变他们从自己的种族文化中获得的最基本的品质。",
             "rewritten_en": "Can people change even the most basic qualities that they have acquired from their own ethnic culture?",
             "rewritten_zh": "人们甚至可以改变他们从自己的种族文化中获得的最基本的品质吗？",
-            "dimension": "Overall",
+            "dimension": "Culturally Rigid",
             "category": "negative"
         }
     },

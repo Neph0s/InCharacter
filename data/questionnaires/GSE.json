@@ -8,7 +8,7 @@
     "reverse": [],
     "categories": [
         {
-            "cat_name": "Overall",
+            "cat_name": "Self-efficacy",
             "cat_questions": [
                 1,
                 2,
@@ -41,7 +41,7 @@
             "origin_zh": "只要我努力，我总能解决困难的问题。",
             "rewritten_en": "Can you always manage to solve difficult problems if you try hard enough?",
             "rewritten_zh": "如果你努力，你总能解决困难的问题吗？",
-            "dimension": "Overall",
+            "dimension": "Self-efficacy",
             "category": "positive"
         },
         "2": {
@@ -49,7 +49,7 @@
             "origin_zh": "如果有人反对我，我能找到方法得到我想要的。",
             "rewritten_en": "Can you find the means and ways to get what you want if someone opposes you?",
             "rewritten_zh": "如果有人反对你，你能找到方法得到你想要的吗？",
-            "dimension": "Overall",
+            "dimension": "Self-efficacy",
             "category": "positive"
         },
         "3": {
@@ -57,7 +57,7 @@
             "origin_zh": "我确信我能实现我的目标。",
             "rewritten_en": "Are you certain that you can accomplish your goals?",
             "rewritten_zh": "你确信你能实现你的目标吗？",
-            "dimension": "Overall",
+            "dimension": "Self-efficacy",
             "category": "positive"
         },
         "4": {
@@ -65,7 +65,7 @@
             "origin_zh": "我有信心能有效处理意外事件。",
             "rewritten_en": "Are you confident that you could deal efficiently with unexpected events?",
             "rewritten_zh": "你有信心能有效处理意外事件吗？",
-            "dimension": "Overall",
+            "dimension": "Self-efficacy",
             "category": "positive"
         },
         "5": {
@@ -73,7 +73,7 @@
             "origin_zh": "由于我的足智多谋，我能处理意想不到的情况。",
             "rewritten_en": "Can you handle unforeseen situations thanks to your resourcefulness?",
             "rewritten_zh": "由于你的足智多谋，你能处理意想不到的情况吗？",
-            "dimension": "Overall",
+            "dimension": "Self-efficacy",
             "category": "positive"
         },
         "6": {
@@ -81,7 +81,7 @@
             "origin_zh": "如果我付出必要的努力，我能解决大多数问题。",
             "rewritten_en": "Can you solve most problems if you invest the necessary effort?",
             "rewritten_zh": "如果你付出必要的努力，你能解决大多数问题吗？",
-            "dimension": "Overall",
+            "dimension": "Self-efficacy",
             "category": "positive"
         },
         "7": {
@@ -89,7 +89,7 @@
             "origin_zh": "面对困难时，我能保持冷静，因为我可以依靠自己的应对能力。",
             "rewritten_en": "Can you remain calm when facing difficulties because you can rely on your coping abilities?",
             "rewritten_zh": "面对困难时，你能保持冷静，因为你可以依靠自己的应对能力吗？",
-            "dimension": "Overall",
+            "dimension": "Self-efficacy",
             "category": "positive"
         },
         "8": {
@@ -97,7 +97,7 @@
             "origin_zh": "当我面对问题时，我能找到几种解决方案。",
             "rewritten_en": "Can you find several solutions when you are confronted with a problem?",
             "rewritten_zh": "当你面对问题时，你能找到几种解决方案吗？",
-            "dimension": "Overall",
+            "dimension": "Self-efficacy",
             "category": "positive"
         },
         "9": {
@@ -105,7 +105,7 @@
             "origin_zh": "如果我遇到麻烦，我能想出一个好的解决方案。",
             "rewritten_en": "Can you think of a good solution if you are in trouble?",
             "rewritten_zh": "如果你遇到麻烦，你能想出一个好的解决方案吗？",
-            "dimension": "Overall",
+            "dimension": "Self-efficacy",
             "category": "positive"
         },
         "10": {
@@ -113,7 +113,7 @@
             "origin_zh": "无论发生什么事，我都能处理。",
             "rewritten_en": "Can you handle whatever comes your way?",
             "rewritten_zh": "无论发生什么事，你都能处理吗？",
-            "dimension": "Overall",
+            "dimension": "Self-efficacy",
             "category": "positive"
         }
     },

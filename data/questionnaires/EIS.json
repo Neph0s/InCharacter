@@ -12,7 +12,7 @@
     ],
     "categories": [
         {
-            "cat_name": "Overall",
+            "cat_name": "Emotionally Intelligent",
             "cat_questions": [
                 1,
                 2,
@@ -74,7 +74,7 @@
             "origin_zh": "我知道何时向他人倾诉我的个人问题。",
             "rewritten_en": "Do you know when to speak about your personal problems to others?",
             "rewritten_zh": "你知道何时向他人倾诉你的个人问题吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "2": {
@@ -82,7 +82,7 @@
             "origin_zh": "当我面临障碍时，我会记得我曾面对类似障碍并克服的时刻。",
             "rewritten_en": "Do you remember times you faced similar obstacles and overcame them when you are faced with obstacles?",
             "rewritten_zh": "当你面临障碍时，你会记得你曾面对类似障碍并克服的时刻吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "3": {
@@ -90,7 +90,7 @@
             "origin_zh": "我期待我在大多数尝试的事情上表现良好。",
             "rewritten_en": "Do you expect that you will do well on most things you try?",
             "rewritten_zh": "你期待你在大多数尝试的事情上表现良好吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "4": {
@@ -98,7 +98,7 @@
             "origin_zh": "其他人觉得向我倾诉很容易。",
             "rewritten_en": "Do other people find it easy to confide in you?",
             "rewritten_zh": "其他人觉得向你倾诉很容易吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "5": {
@@ -106,7 +106,7 @@
             "origin_zh": "我发现很难理解其他人的非语言信息。",
             "rewritten_en": "Do you find it hard to understand the non-verbal messages of other people?",
             "rewritten_zh": "你发现很难理解其他人的非语言信息吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "negative"
         },
         "6": {
@@ -114,7 +114,7 @@
             "origin_zh": "我生活中的一些重大事件导致我重新评估什么是重要的，什么是不重要的。",
             "rewritten_en": "Have some of the major events of your life led you to re-evaluate what is important and not important?",
             "rewritten_zh": "你生活中的一些重大事件导致你重新评估什么是重要的，什么是不重要的吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "7": {
@@ -122,7 +122,7 @@
             "origin_zh": "当我的心情改变时，我看到了新的可能性。",
             "rewritten_en": "Do you see new possibilities when your mood changes?",
             "rewritten_zh": "当你的心情改变时，你看到了新的可能性吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "8": {
@@ -130,7 +130,7 @@
             "origin_zh": "情感是让我的生活有意义的事情之一。",
             "rewritten_en": "Are emotions one of the things that make your life worth living?",
             "rewritten_zh": "情感是让你的生活有意义的事情之一吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "9": {
@@ -138,7 +138,7 @@
             "origin_zh": "当我经历情感时，我意识到我的情绪。",
             "rewritten_en": "Are you aware of your emotions as you experience them?",
             "rewritten_zh": "当你经历情感时，你意识到你的情绪吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "10": {
@@ -146,7 +146,7 @@
             "origin_zh": "我期待好事发生。",
             "rewritten_en": "Do you expect good things to happen?",
             "rewritten_zh": "你期待好事发生吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "11": {
@@ -154,7 +154,7 @@
             "origin_zh": "我喜欢与他人分享我的情绪。",
             "rewritten_en": "Do you like to share your emotions with others?",
             "rewritten_zh": "你喜欢与他人分享你的情绪吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "12": {
@@ -162,7 +162,7 @@
             "origin_zh": "当我经历积极情绪时，我知道如何让它持续下去。",
             "rewritten_en": "Do you know how to make a positive emotion last when you experience it?",
             "rewritten_zh": "当你经历积极情绪时，你知道如何让它持续下去吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "13": {
@@ -170,7 +170,7 @@
             "origin_zh": "我安排其他人喜欢的活动。",
             "rewritten_en": "Do you arrange events that others enjoy?",
             "rewritten_zh": "你安排其他人喜欢的活动吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "14": {
@@ -178,7 +178,7 @@
             "origin_zh": "我寻找能让我快乐的活动。",
             "rewritten_en": "Do you seek out activities that make you happy?",
             "rewritten_zh": "你寻找能让你快乐的活动吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "15": {
@@ -186,7 +186,7 @@
             "origin_zh": "我意识到我向他人传达的非语言信息。",
             "rewritten_en": "Are you aware of the non-verbal messages you send to others?",
             "rewritten_zh": "你意识到你向他人传达的非语言信息吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "16": {
@@ -194,7 +194,7 @@
             "origin_zh": "我以一种给他人留下良好印象的方式展现自己。",
             "rewritten_en": "Do you present yourself in a way that makes a good impression on others?",
             "rewritten_zh": "你以一种给他人留下良好印象的方式展现自己吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "17": {
@@ -202,7 +202,7 @@
             "origin_zh": "当我处于积极情绪时，解决问题对我来说很容易。",
             "rewritten_en": "Is solving problems easy for you when you are in a positive mood?",
             "rewritten_zh": "当你处于积极情绪时，解决问题对你来说很容易吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "18": {
@@ -210,7 +210,7 @@
             "origin_zh": "通过观察他们的面部表情，我能识别出人们正在经历的情绪。",
             "rewritten_en": "Can you recognize the emotions people are experiencing by looking at their facial expressions?",
             "rewritten_zh": "通过观察他们的面部表情，你能识别出人们正在经历的情绪吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "19": {
@@ -218,7 +218,7 @@
             "origin_zh": "我知道我的情绪为什么会改变。",
             "rewritten_en": "Do you know why your emotions change?",
             "rewritten_zh": "你知道你的情绪为什么会改变吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "20": {
@@ -226,7 +226,7 @@
             "origin_zh": "当我处于积极情绪时，我能够想出新主意。",
             "rewritten_en": "Are you able to come up with new ideas when you are in a positive mood?",
             "rewritten_zh": "当你处于积极情绪时，你能够想出新主意吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "21": {
@@ -234,7 +234,7 @@
             "origin_zh": "我能控制自己的情绪。",
             "rewritten_en": "Do you have control over your emotions?",
             "rewritten_zh": "你能控制自己的情绪吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "22": {
@@ -242,7 +242,7 @@
             "origin_zh": "我很容易在经历时认识到自己的情绪。",
             "rewritten_en": "Do you easily recognize your emotions as you experience them?",
             "rewritten_zh": "你在经历时很容易认识到自己的情绪吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "23": {
@@ -250,7 +250,7 @@
             "origin_zh": "我通过想象任务的良好结果来激励自己。",
             "rewritten_en": "Do you motivate yourself by imagining a good outcome to tasks you take on?",
             "rewritten_zh": "你通过想象任务的良好结果来激励自己吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "24": {
@@ -258,7 +258,7 @@
             "origin_zh": "当别人做得很好时，我会称赞他们。",
             "rewritten_en": "Do you compliment others when they have done something well?",
             "rewritten_zh": "当别人做得很好时，你会称赞他们吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "25": {
@@ -266,7 +266,7 @@
             "origin_zh": "我意识到别人传达的非言语信息。",
             "rewritten_en": "Are you aware of the non-verbal messages other people send?",
             "rewritten_zh": "你意识到别人传达的非言语信息吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "26": {
@@ -274,7 +274,7 @@
             "origin_zh": "当别人告诉我他或她生活中的重要事件时，我几乎感觉自己经历了这个事件。",
             "rewritten_en": "Do you almost feel as though you have experienced an important event in another person's life when they tell you about it?",
             "rewritten_zh": "当别人告诉你他或她生活中的重要事件时，你几乎感觉自己经历了这个事件吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "27": {
@@ -282,7 +282,7 @@
             "origin_zh": "当我感到情绪变化时，我倾向于想出新主意。",
             "rewritten_en": "Do you tend to come up with new ideas when you feel a change in emotions?",
             "rewritten_zh": "当你感到情绪变化时，你倾向于想出新主意吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "28": {
@@ -290,7 +290,7 @@
             "origin_zh": "当我面临挑战时，我会放弃，因为我相信我会失败。",
             "rewritten_en": "Do you give up when you are faced with a challenge because you believe you will fail?",
             "rewritten_zh": "当你面临挑战时，你会放弃，因为你相信你会失败吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "negative"
         },
         "29": {
@@ -298,7 +298,7 @@
             "origin_zh": "我通过看他们就知道别人的感受。",
             "rewritten_en": "Do you know what other people are feeling just by looking at them?",
             "rewritten_zh": "你通过看他们就知道别人的感受吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "30": {
@@ -306,7 +306,7 @@
             "origin_zh": "当别人情绪低落时，我会帮助他们感觉好一点。",
             "rewritten_en": "Do you help other people feel better when they are down?",
             "rewritten_zh": "当别人情绪低落时，你会帮助他们感觉好一点吗？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "31": {
@@ -314,7 +314,7 @@
             "origin_zh": "我利用好心情来帮助自己在面对障碍时继续努力。",
             "rewritten_en": "Do you use good moods to help yourself keep trying in the face of obstacles?",
             "rewritten_zh": "你是否利用好心情来帮助自己在面对障碍时继续努力？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "32": {
@@ -322,7 +322,7 @@
             "origin_zh": "我可以通过听声音的语调来判断人们的感受。",
             "rewritten_en": "Can you tell how people are feeling by listening to the tone of their voice?",
             "rewritten_zh": "你是否可以通过听声音的语调来判断人们的感受？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "positive"
         },
         "33": {
@@ -330,7 +330,7 @@
             "origin_zh": "我很难理解人们为什么会有这样的感受。",
             "rewritten_en": "Is it difficult for you to understand why people feel the way they do?",
             "rewritten_zh": "你是否很难理解人们为什么会有这样的感受？",
-            "dimension": "Overall",
+            "dimension": "Emotionally Intelligent",
             "category": "negative"
         }
     },
