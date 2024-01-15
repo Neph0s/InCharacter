@@ -24,7 +24,9 @@
 # }
 
 
-from langchain.chat_models import ChatOpenAI
+#from langchain.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
+from langchain.callbacks import get_openai_callback
 from langchain.prompts.chat import (
     ChatPromptTemplate,
     SystemMessagePromptTemplate,
@@ -76,8 +78,10 @@ class LangChainGPT(BaseLLM):
         self.messages.append(HumanMessage(content=payload))
 
     def get_response(self):
-        
-        response = self.chat(self.messages)
+        with get_openai_callback() as cb:
+            response = self.chat.invoke(self.messages)
+        total_tokens = cb.total_tokens
+
         return response.content
 
     def print_prompt(self):

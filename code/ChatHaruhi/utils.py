@@ -430,6 +430,8 @@ def get_cosine_similarity( v1, v2):
 
 
 import pickle
+
+
 cache_sign = True
 
 cache = None 
@@ -449,6 +451,7 @@ def cached(func):
 		if (cache_sign and key in cache and cache[key] not in [None, '[TOKEN LIMIT]']) :
 			return cache[key]
 		else:
+			
 			result = func(*args, **kwargs)
 			if result != 'busy' and result != None:
 				cache[key] = result
