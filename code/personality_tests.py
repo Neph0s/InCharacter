@@ -454,34 +454,39 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 	else:
 		raise ValueError(f"Character '{character}' not found. Here are the items: {list(alias2character.items())}") 
 
+	# load questionnaire
+	if questionnaire_name in scale_list:
+		questionnaire_metadata = load_questionnaire(questionnaire_name)
+		questionnaire = questionnaire_metadata.pop('questions')
+		
+		# transform into list
+		questions = []
+
+		for idx in questionnaire:
+			q = questionnaire[idx]
+			q.update({'id': idx})
+			if q['dimension']: 
+				# remove None-dimension questions
+				questions.append(q)
+		
+		questionnaire = questions
+	else:
+		raise NotImplementedError
+		
+	# assign a code for BFI/16P 
+	dims_ = dims_dict.get(questionnaire_name, sorted(list(set([q['dimension'] for q in questionnaire]))))
+	dims = dims_dict.get(questionnaire_name, sorted( c['cat_name'] for c in questionnaire_metadata['categories'] ))
+	assert(dims_ == dims)
+
 	final_folder_path = os.path.join('..', 'results', 'final', f'{questionnaire_name}_agent-type={agent_type}_agent-llm={agent_llm}_eval-method={eval_method}-{evaluator_llm}_repeat-times={repeat_times}')
 	if not os.path.exists(final_folder_path):
 		os.makedirs(final_folder_path)
-
+	
 	final_save_path = os.path.join(final_folder_path, f'{character}.json' )
 
-	if True: #not os.path.exists(final_save_path):
+	if not os.path.exists(final_save_path):
 		character_name = character_info[character]["alias"][0]
 		language = character[character.rfind('-')+1:]
-
-		# load questionnaire
-		if questionnaire_name in scale_list:
-			questionnaire_metadata = load_questionnaire(questionnaire_name)
-			questionnaire = questionnaire_metadata.pop('questions')
-			
-			# transform into list
-			questions = []
-
-			for idx in questionnaire:
-				q = questionnaire[idx]
-				q.update({'id': idx})
-				if q['dimension']: 
-					# remove None-dimension questions
-					questions.append(q)
-			
-			questionnaire = questions
-		else:
-			raise NotImplementedError
 		
 		# get experimenter
 		experimenter = get_experimenter(character)
@@ -534,7 +539,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 
 				interview_save_path = os.path.join(interview_folder_path, interview_save_path)
 				
-				if True: #not os.path.exists(interview_save_path):
+				if not os.path.exists(interview_save_path):
 					logger.info('Interviewing...')
 
 					questionnaire_results = interview(character_agent, questionnaire, experimenter, questionnaire_metadata["prompts"], language, query_style, nth_test)
@@ -560,7 +565,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 			
 				assessment_save_path = os.path.join(assessment_folder_path, assessment_save_path)
 			
-				if True: #not os.path.exists(assessment_save_path):
+				if not os.path.exists(assessment_save_path):
 					logger.info('Assessing...')
 					assessment_results = assess(character_info[character]["alias"], experimenter, questionnaire_results, questionnaire, questionnaire_metadata, eval_method, language, evaluator_llm, nth_test)
 			
@@ -602,7 +607,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 			
 
 		# assign a code for BFI/16P 
-		dims = dims_dict.get(questionnaire_name, sorted(list(set([q['dimension'] for q in questionnaire]))))
+		# dims = dims_dict.get(questionnaire_name, sorted(list(set([q['dimension'] for q in questionnaire]))))
 		
 		if questionnaire_name in ['BFI', '16Personalities']:
 			thresh = (questionnaire_metadata['range'][0] + questionnaire_metadata['range'][1]) / 2
@@ -671,6 +676,8 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 
 		with open(final_save_path, 'r') as f:
 			assessment_results = json.load(f)
+		
+		
 	
 	for dim in dims:
 		assessment_results[dim].pop('details')
