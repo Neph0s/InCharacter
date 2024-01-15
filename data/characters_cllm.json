@@ -1,0 +1,143 @@
+{
+	"Hermione-en": {
+		"alias": [
+			"Hermione",
+			"Hermione Granger"
+		],
+		"agent": {
+			"ChatHaruhi": "Hermione",
+			"Character-LLM": "Hermione",
+			"character.ai": "oNYqd0CAFhHUU0h1zYC0kRdMg_ZmTIayX-ndxj0ZO4s"
+		},
+		"experimenter": "Harry",
+		"idx": 0,
+		"labels": {
+			"BFI": "SCOEN",
+			"16Personalities": "ESTJ"
+		}
+	},
+	"Caesar-en": {
+		"alias": [
+			"Caesar",
+			"Julius Caesar"
+		],
+		"agent": {
+			"RoleLLM": "Caesar",
+			"Character-LLM": "Caesar",
+			"character.ai": "wNSyPMPQ3BcwGFhxaMsr--v4piOz17_yQVV3cs9cGKg"
+		},
+		"experimenter": "Mark Antony",
+		"idx": 1,
+		"labels": {
+			"BFI": "SXOEI",
+			"16Personalities": "ENTJ"
+		}
+	},
+	"Cleopatra-en": {
+		"alias": [
+			"Cleopatra VII"
+		],
+		"agent": {
+			"Character-LLM": "Cleopatra",
+			"character.ai": "sKpuaZqMELVnR1Apf1JvoKNYojnS9fmO0_14CTg45wY"
+		},
+		"experimenter": "Mark Antony",
+		"idx": 2,
+		"labels": {
+			"BFI": "SCOEI",
+			"16Personalities": "ENTJ"
+		}
+	},
+	"Voldemort-en": {
+		"alias": [
+			"Voldemort",
+			"Lord Voldemort"
+		],
+		"agent": {
+			"Character-LLM": "Voldemort",
+			"character.ai": "j1CRsFh8xf10yAAqGs78V3X9ojK4VYP034wSPcnOtno"
+		},
+		"experimenter": "Bellatrix Lestrange",
+		"idx": 3,
+		"labels": {
+			"BFI": "SLOEI",
+			"16Personalities": "ENTJ"
+		}
+	},
+	"Spartacus-en": {
+		"alias": [
+			"Spartacus"
+		],
+		"agent": {
+			"Character-LLM": "Spartacus",
+			"character.ai": "tlaEX52yvsQ4TBMBUxRQCw3EIs1gjzWLNASk7PzwyUg"
+		},
+		"experimenter": "Crixus",
+		"idx": 4,
+		"labels": {
+			"BFI": "RCOEI",
+			"16Personalities": "ISTP"
+		}
+	},
+	"Newton-en": {
+		"alias": [
+			"Newton",
+			"Isaac Newton"
+		],
+		"agent": {
+			"Character-LLM": "Newton",
+			"character.ai": "KHkYw8ZN8WzBL-6wkM8OpMne_mg8J8P55RgZdNH7DDM"
+		},
+		"experimenter": "Edmond Halley",
+		"idx": 5,
+		"labels": {
+			"BFI": "RLOEI",
+			"16Personalities": "INTJ"
+		}
+	},
+	"Beethoven-en": {
+		"alias": [
+			"Beethoven",
+			"Ludwig van Beethoven"
+		],
+		"agent": {
+			"Character-LLM": "Beethoven",
+			"character.ai": "vxsUXJXEfRc-q8xPTyiTAVnFKb4uIq0Eofrn6SZqn9w"
+		},
+		"experimenter": "Joseph Haydn",
+		"idx": 6,
+		"labels": {
+			"BFI": "RLOEI",
+			"16Personalities": "INTJ"
+		}
+	},
+	"Socrates-en": {
+		"alias": [
+			"Socrates"
+		],
+		"agent": {
+			"Character-LLM": "Socrates"
+		},
+		"experimenter": "Plato",
+		"idx": 7,
+		"labels": {
+			"BFI": "SCUEI",
+			"16Personalities": "ENTP"
+		}
+	},
+	"Martin-en": {
+		"alias": [
+			"Martin Luther King Jr."
+		],
+		"agent": {
+			"Character-LLM": "Martin",
+			"character.ai": "VPp4qGkhuJd2bhnkbddP5Zr22aKe58ZyVmd_BaaYwOk"
+		},
+		"experimenter": "Ralph Abernathy",
+		"idx": 8,
+		"labels": {
+			"BFI": "SCOAI",
+			"16Personalities": "ENFJ"
+		}
+	}
+}
