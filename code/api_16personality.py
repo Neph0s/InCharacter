@@ -202,17 +202,20 @@ def submit_16personality_api(Answers):
     
     ans1 = ''
     session = requests.session()
-    if sess_r.json()['user']['traits']['mind'] != 'Extraverted':
-        mind_value = 100 - (101 + scores[0]) // 2
+
+    
+    
+    if sess_r.json()['user']['traits']['energy'] != 'Extraverted':
+        energy_value = 100 - (101 + scores[0]) // 2
         ans1 += 'I'
     else:
-        mind_value = (101 + scores[0]) // 2
+        energy_value = (101 + scores[0]) // 2
         ans1 += 'E'
-    if sess_r.json()['user']['traits']['energy'] != 'Intuitive':
-        energy_value = 100 - (101 + scores[1]) // 2
+    if sess_r.json()['user']['traits']['mind'] != 'Intuitive':
+        mind_value = 100 - (101 + scores[1]) // 2
         ans1 += 'S'
     else:
-        energy_value = (101 + scores[1]) // 2
+        mind_value = (101 + scores[1]) // 2
         ans1 += 'N'
     if sess_r.json()['user']['traits']['nature'] != 'Thinking':
         nature_value = 100 - (101 + scores[2]) // 2
@@ -256,8 +259,8 @@ def submit_16personality_api(Answers):
     assert(ans1 == ans2)
 
     return {
-        "E/I": {"result": ans1[0], "score": {"E": mind_value, "I": 100 - mind_value}},
-        "S/N": {"result": ans1[1], "score": {"S": 100 - energy_value, "N": energy_value}},
+        "E/I": {"result": ans1[0], "score": {"E": energy_value, "I": 100 - energy_value}},
+        "S/N": {"result": ans1[1], "score": {"S": 100 - mind_value, "N": mind_value}},
         "T/F": {"result": ans1[2], "score": {"T": nature_value, "F": 100 - nature_value}},
         "P/J": {"result": ans1[3], "score": {"P": 100 - tactics_value, "J": tactics_value}},
     }                     
