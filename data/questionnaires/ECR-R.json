@@ -341,7 +341,7 @@
         "32": {
             "origin_en": "I am nervous when partners get too close to me.",
             "origin_zh": "当伴侣离我太近时，我会感到紧张。",
-            "rewritten_en": "Am you nervous when partners get too close to you?",
+            "rewritten_en": "Are you nervous when partners get too close to you?",
             "rewritten_zh": "当伴侣离你太近时，你会感到紧张吗？",
             "dimension": "Attachment-related Avoidance",
             "category": "positive"
@@ -395,6 +395,22 @@
         "rpa_choice_instruction": {
             "en": "Reply a number from 1 to 7 using the scales: 1 denotes 'strongly disagree', 2 denotes 'disagree', 3 denotes 'slightly disagree', 4 denotes 'neutral', 5 denotes 'slightly agree', 6 denotes 'agree', 7 denotes 'strongly agree'. Please answer with the number only, without anything else.",
             "zh": "请用1到7的等级来回答，1代表“非常不同意”，2代表“不同意”，3代表“稍微不同意”，4代表“中立”，5代表“稍微同意”，6代表“同意”，7代表“非常同意”。请你只回答这一个数字，不要说其他内容。"
+        },
+        "convert_to_choice_adjoption": {
+            "Attachment-related Anxiety": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Attachment-related Anxiety personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Attachment-related Avoidance": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Attachment-related Avoidance personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            }
+        },
+        "llm_choice_instruction_adjoption": {
+            "Attachment-related Anxiety": {
+                "en": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly secure', 2 denotes 'secure', 3 denotes 'slightly secure', 4 denotes 'neutral', 5 denotes 'slightly anxious', 6 denotes 'anxious', 7 denotes 'strongly anxious'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Attachment-related Avoidance": {
+                "en": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly secure', 2 denotes 'secure', 3 denotes 'slightly secure', 4 denotes 'neutral', 5 denotes 'slightly avoidant', 6 denotes 'avoidant', 7 denotes 'strongly avoidant'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            }
         }
     }
 }

@@ -515,6 +515,40 @@
             "Agreeableness": "Agreeableness in the Big Five Inventory assesses an individual's likability and attitudes towards others, balancing compassion and sympathy with antagonism and distrust. It encapsulates a broad interpersonal orientation, emphasizing cooperation and social harmony.\nThe six facets of agreeableness are:\n1. Trust: Belief in others' honesty and good intentions.\n2. Straightforwardness: Frankness and sincerity, contrasting with manipulative tendencies.\n3. Altruism: Generosity and willingness to assist others.\n4. Compliance: Preference for harmony over conflict, with a tendency to be accommodating.\n5. Modesty: Humbleness and self-effacement, as opposed to arrogance.\n6. Tender-mindedness: Sympathy and concern for others, versus a more hardheaded and objective approach.\nHigh scorers in agreeableness are seen as good-natured, cooperative, and trusting, whereas low scorers may prioritize self-interest, be indifferent to others, and exhibit skepticism towards people's motives.",
             "Extraversion": "Extraversion in the Big Five Inventory measures the quantity and intensity of interpersonal interaction, need for stimulation, and capacity for joy, contrasting social, outgoing individuals with reserved, shy types. It's evaluated through interpersonal involvement and activity level.\nThe six facets of extraversion are:\n1. Warmth: Affection and friendliness, with high scorers enjoying close relationships.\n2. Gregariousness: Preference for company, with high scorers enjoying lively settings.\n3. Assertiveness: Social dominance, with high scorers often becoming leaders.\n4. Activity: Pace of life, with high scorers leading fast-paced, busy lives.\n5. Excitement Seeking: Craving for stimulation, with high scorers seeking thrills.\n6. Positive Emotions: Tendency to experience joy and optimism.\nExtraverted people are energetic, enjoy interaction, and often feel positive emotions. They are enthusiastic and seek excitement. Introverted individuals are quieter, cautious, and value solitude, often misunderstood as unfriendly or arrogant, but can be kind and approachable.",
             "Neuroticism": "Neuroticism, or Emotional Stability, in the Big Five Inventory, refers to tendencies towards anxiety, hostility, depression, self-consciousness, impulsiveness, and vulnerability. It contrasts individuals who are prone to emotional instability with those who are emotionally stable and less reactive to stress.\nThe six facets of neuroticism are:\n1. Anxiety: High levels indicate a tendency to worry and feel tense.\n2. Angry Hostility: Reflects the ease of experiencing anger and frustration.\n3. Depression: Measures the tendency to feel sadness, hopelessness, and loneliness.\n4. Self-Consciousness: Involves shyness and sensitivity to social scrutiny.\n5. Impulsiveness: Indicates difficulty in controlling cravings and urges.\n6. Vulnerability: Measures susceptibility to stress and difficulty coping.\nHigh scorers in neuroticism may experience more negative emotions like fear, anger, and sadness, and find it hard to cope with stress. Low scorers tend to be calmer, more relaxed, and emotionally stable, handling stress and social situations more effectively."
-}
+        },
+        "convert_to_choice_adjoption": {
+            "Extraversion": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly extraverted personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Agreeableness": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly agreeable personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Conscientiousness": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly conscientious personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Neuroticism": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly neurotic personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Openness": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly open personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            }
+        },
+        "llm_choice_instruction_adjoption": {
+            "Extraversion": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly introverted' 2 denotes 'a little introverted', 3 denotes 'neutral', 4 denotes 'little extroverted', and 5 denotes 'strongly extroverted'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Agreeableness": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly egocentric' 2 denotes 'a little egocentric', 3 denotes 'neutral', 4 denotes 'little agreeable', and 5 denotes 'strongly agreeable'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Conscientiousness": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly unstructured' 2 denotes 'a little unstructured', 3 denotes 'neutral', 4 denotes 'little organized', and 5 denotes 'strongly organized'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Neuroticism": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly calm' 2 denotes 'a little calm', 3 denotes 'neutral', 4 denotes 'little limbic', and 5 denotes 'strongly limbic'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Openness": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly non-curious' 2 denotes 'a little non-curious', 3 denotes 'neutral', 4 denotes 'little inquisitive', and 5 denotes 'strongly inquisitive'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            }
+        }
     }
 }

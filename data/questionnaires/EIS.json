@@ -350,6 +350,16 @@
         "rpa_choice_instruction": {
             "en": "Reply a number from 1 to 5 using the scales: 1 denotes 'Does not match at all', 2 denotes 'Does not match very well', 3 denotes 'Not sure', 4 denotes 'Matches quite well', 5 denotes 'Matches perfectly'. Please answer with the number only, without anything else.",
             "zh": "请用1到5的等级来回答，1代表“完全不匹配”，2代表“不太匹配”，3代表“不确定”，4代表“相当匹配”，5代表“完全匹配”。请你只回答这一个数字，不要说其他内容。"
+        },
+        "convert_to_choice_adjoption": {
+            "Overall": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Overall personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            }
+        },
+        "llm_choice_instruction_adjoption": {
+            "Overall": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly uncharacteristic', 2 denotes 'somewhat uncharacteristic', 3 denotes 'neutral', 4 denotes 'somewhat characteristic', and 5 denotes 'strongly characteristic'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            }
         }
     }
 }

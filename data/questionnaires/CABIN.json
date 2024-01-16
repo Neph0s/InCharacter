@@ -2039,6 +2039,256 @@
         "rpa_choice_instruction": {
             "en": "Reply a number from 1 to 5 using the scales: 1 means 'Dislike', 2 means 'Slightly Dislike', 3 means 'Neither Like nor Dislike', 4 means 'Slightly Like', 5 means 'Like Very Much'. Please answer with the number only, without anything else.",
             "zh": "请用1到5的等级来回答，1代表“不喜欢”，2代表“稍微不喜欢”，3代表“既不喜欢也不讨厌”，4代表“稍微喜欢”，5代表“非常喜欢”。请你只回答这一个数字，不要说其他内容。"
+        },
+        "convert_to_choice_adjoption": {
+            "Mechanics/Electronics": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Mechanics/Electronics personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Construction/WoodWork": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Construction/WoodWork personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Transportation/Machine Operation": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Transportation/Machine Operation personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Physical/Manual Labor": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Physical/Manual Labor personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Protective Service": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Protective Service personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Agriculture": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Agriculture personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Nature/Outdoors": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Nature/Outdoors personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Animal Service": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Animal Service personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Athletics": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Athletics personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Engineering": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Engineering personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Physical Science": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Physical Science personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Life Science": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Life Science personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Medical Science": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Medical Science personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Social Science": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Social Science personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Humanities": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Humanities personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Mathematics/Statistics": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Mathematics/Statistics personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Information Technology": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Information Technology personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Visual Arts": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Visual Arts personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Applied Arts and Design": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Applied Arts and Design personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Performing Arts": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Performing Arts personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Music": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Music personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Writing": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Writing personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Media": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Media personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Culinary Art": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Culinary Art personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Teaching/Education": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Teaching/Education personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Social Service": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Social Service personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Health Care Service": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Health Care Service personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Religious Activities": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Religious Activities personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Personal Service": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Personal Service personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Professional Advising": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Professional Advising personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Business Iniatives": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Business Iniatives personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Sales": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Sales personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Marketing/Advertising": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Marketing/Advertising personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Finance": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Finance personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Accounting": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Accounting personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Human Resources": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Human Resources personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Office Work": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Office Work personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Management/Administration": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Management/Administration personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Public Speaking": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Public Speaking personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Politics": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Politics personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Law": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Law personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            }
+        },
+        "llm_choice_instruction_adjoption": {
+            "Mechanics/Electronics": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Very Inept at Mechanics/Electronics', 2 means 'Slightly Inept at Mechanics/Electronics', 3 means 'Average Ability in Mechanics/Electronics', 4 means 'Slightly Skilled at Mechanics/Electronics', 5 means 'Highly Skilled at Mechanics/Electronics'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Construction/WoodWork": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Very Inexperienced in Construction/Woodwork', 2 means 'Slightly Inexperienced in Construction/Woodwork', 3 means 'Neutral Experience in Construction/Woodwork', 4 means 'Slightly Experienced in Construction/Woodwork', 5 means 'Very Experienced in Construction/Woodwork'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Transportation/Machine Operation": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Highly Inexperienced', 2 means 'Somewhat Inexperienced', 3 means 'Average Experience', 4 means 'Somewhat Experienced', 5 means 'Highly Experienced'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Physical/Manual Labor": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Strongly Avoids Physical/Manual Labor', 2 means 'Somewhat Avoids Physical/Manual Labor', 3 means 'Neutral Towards Physical/Manual Labor', 4 means 'Somewhat Prefers Physical/Manual Labor', 5 means 'Strongly Prefers Physical/Manual Labor'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Protective Service": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Strongly Non-Protective', 2 means 'Slightly Non-Protective', 3 means 'Neutral', 4 means 'Slightly Protective', 5 means 'Very Protective'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Agriculture": {
+                "en": "The dimension \"Agriculture\" does not correspond to a personality trait or a scale that can be easily translated into adjectives like 'introverted' or 'extroverted'. Could you please provide a dimension that is more aligned with personality traits or clarify how you would like the dimension of \"Agriculture\" to be represented in terms of adjectives?"
+            },
+            "Nature/Outdoors": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Strongly Unnatured', 2 means 'Slightly Unnatured', 3 means 'Neutral towards Nature/Outdoors', 4 means 'Slightly Natured', 5 means 'Very Natured'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Animal Service": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Strongly Uninterested in Animals', 2 means 'Slightly Uninterested in Animals', 3 means 'Neutral towards Animals', 4 means 'Slightly Interested in Animals', 5 means 'Very Interested in Animals'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Athletics": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Very Unathletic', 2 means 'Slightly Unathletic', 3 means 'Neither Athletic nor Unathletic', 4 means 'Slightly Athletic', 5 means 'Very Athletic'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Engineering": {
+                "en": "The dimension \"Engineering\" does not correspond to a personality trait like \"Extraversion\" and thus cannot be directly translated into adjectives that describe a level of engineering affinity or skill. The original prompt seems to be measuring a preference or affinity, which doesn't directly apply to a technical skill or profession like engineering.\n\nIf you are looking for a way to measure a character's engineering ability or inclination, you might consider a different set of adjectives that reflect competence or interest in engineering. However, without a clear understanding of how you wish to measure \"Engineering\" on a scale, I cannot provide an accurate rewrite. Please provide more context or a different dimension that aligns with personality traits or preferences."
+            },
+            "Physical Science": {
+                "en": "The dimension \"Physical Science\" does not correspond to a personality trait or a spectrum like \"Extraversion\" and \"Introversion.\" Therefore, it is not possible to rewrite the prompt using adjectives such as 'strongly introverted', 'introverted', 'extroverted', and 'strongly extroverted'. Please provide a dimension that relates to a personality trait or a similar spectrum for an appropriate rewrite."
+            },
+            "Life Science": {
+                "en": "The dimension \"Life Science\" does not correspond to a personality trait or a scale that can be easily translated into adjectives like 'introverted' or 'extroverted'. Could you please provide a dimension that is related to personality or clarify how you would like the dimension of \"Life Science\" to be represented in terms of adjectives?"
+            },
+            "Medical Science": {
+                "en": "The dimension \"Medical Science\" does not correspond to a personality trait or a scale that can be easily translated into adjectives like 'introverted' or 'extroverted'. Could you please provide a dimension that is more aligned with personality traits or clarify how you would like the dimension of \"Medical Science\" to be represented in terms of adjectives?"
+            },
+            "Social Science": {
+                "en": "The dimension \"Social Science\" does not directly correspond to a scale like \"Extraversion\" does. Therefore, I cannot rewrite the prompt with adjectives such as 'strongly introverted', 'introverted', 'extroverted', and 'strongly extroverted'. If you can provide a specific trait or dimension within social science that aligns with a scale similar to extraversion, I can assist in rewriting the prompt accordingly."
+            },
+            "Humanities": {
+                "en": "The dimension \"Humanities\" does not correspond to a personality trait like \"Extraversion\" and thus cannot be directly translated into adjectives like 'introverted' or 'extroverted'. Could you please provide a different dimension that aligns with personality traits, or clarify how you would like the dimension of \"Humanities\" to be represented in terms of adjectives?"
+            },
+            "Mathematics/Statistics": {
+                "en": "The dimension \"Mathematics/Statistics\" does not align with a personality trait or a spectrum like \"Extraversion\" and \"Introversion.\" Therefore, it is not possible to rewrite the prompt using adjectives that describe a position on a spectrum related to Mathematics/Statistics. Please provide a dimension that corresponds to a personality trait or a similar spectrum for an appropriate rewrite."
+            },
+            "Information Technology": {
+                "en": "The dimension \"Information Technology\" does not correspond to a personality trait like Extraversion and thus cannot be directly translated into adjectives describing a personality spectrum. The original prompt seems to be measuring a preference or affinity, which does not align with the IT dimension. Could you please provide a dimension that relates to a personality trait or clarify how you would like the IT dimension to be represented in the scale?"
+            },
+            "Visual Arts": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Very Unartistic', 2 means 'Slightly Unartistic', 3 means 'Neutral', 4 means 'Slightly Artistic', 5 means 'Very Artistic'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Applied Arts and Design": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Very Uncreative', 2 means 'Slightly Uncreative', 3 means 'Neutral Creativity', 4 means 'Slightly Creative', 5 means 'Highly Creative'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Performing Arts": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Very Inartistic', 2 means 'Slightly Inartistic', 3 means 'Neither Artistic nor Inartistic', 4 means 'Slightly Artistic', 5 means 'Very Artistic'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Music": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Strongly Disinterested in Music', 2 means 'Slightly Disinterested in Music', 3 means 'Neutral Interest in Music', 4 means 'Slightly Interested in Music', 5 means 'Very Interested in Music'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Writing": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Very Inarticulate', 2 means 'Somewhat Inarticulate', 3 means 'Neutral', 4 means 'Somewhat Articulate', 5 means 'Very Articulate'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Media": {
+                "en": "The dimension \"Media\" does not correspond to a personality trait like \"Extraversion\" and thus cannot be directly translated into adjectives like 'strongly introverted', 'introverted', 'extroverted', and 'strongly extroverted'. Could you please provide a different dimension that aligns with personality traits, or clarify how you would like the dimension \"Media\" to be interpreted in this context?"
+            },
+            "Culinary Art": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Strongly Unpalatable', 2 means 'Slightly Unpalatable', 3 means 'Neutral Taste', 4 means 'Slightly Palatable', 5 means 'Highly Palatable'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Teaching/Education": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Very Inexperienced', 2 means 'Somewhat Inexperienced', 3 means 'Neutral Experience', 4 means 'Somewhat Experienced', 5 means 'Highly Experienced'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Social Service": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Strongly Unhelpful', 2 means 'Slightly Unhelpful', 3 means 'Neutral', 4 means 'Slightly Helpful', 5 means 'Very Helpful'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Health Care Service": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Very Poor Health Service', 2 means 'Poor Health Service', 3 means 'Average Health Service', 4 means 'Good Health Service', 5 means 'Excellent Health Service'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Religious Activities": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Not Religious', 2 means 'Slightly Not Religious', 3 means 'Neutral Towards Religion', 4 means 'Slightly Religious', 5 means 'Very Religious'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Personal Service": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Very Poor Service', 2 means 'Poor Service', 3 means 'Average Service', 4 means 'Good Service', 5 means 'Excellent Service'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Professional Advising": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Very Unprofessional', 2 means 'Slightly Unprofessional', 3 means 'Neutral Professionalism', 4 means 'Slightly Professional', 5 means 'Highly Professional'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Business Iniatives": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Very Cautious', 2 means 'Somewhat Cautious', 3 means 'Neutral', 4 means 'Somewhat Enterprising', 5 means 'Very Enterprising'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Sales": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Very Unconvincing', 2 means 'Slightly Unconvincing', 3 means 'Neutral', 4 means 'Slightly Convincing', 5 means 'Very Convincing'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Marketing/Advertising": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Highly Unpersuasive', 2 means 'Somewhat Unpersuasive', 3 means 'Neutral', 4 means 'Somewhat Persuasive', 5 means 'Highly Persuasive'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Finance": {
+                "en": "The dimension \"Finance\" does not directly correspond to a scale of introversion to extraversion or similar traits. Could you please provide a dimension that is more aligned with personality traits, or clarify how you would like the scale to be adapted for the dimension of Finance?"
+            },
+            "Accounting": {
+                "en": "The dimension provided \"Accounting\" does not correspond to a personality trait or a characteristic that can be described using adjectives like 'introverted' or 'extroverted'. Could you please provide a dimension that is related to personality or behavior so that I can assist you in rewriting the prompt accordingly?"
+            },
+            "Human Resources": {
+                "en": "The dimension \"Human Resources\" does not directly correspond to a scale like Extraversion. Could you please provide a more specific trait or dimension within Human Resources that you would like to measure? For example, it could be \"Teamwork,\" \"Leadership,\" \"Work Ethic,\" etc. Once you provide a specific trait, I can help rewrite the prompt accordingly."
+            },
+            "Office Work": {
+                "en": "The dimension \"Office Work\" does not correspond to a personality trait like \"Extraversion\" and thus cannot be directly translated into adjectives like 'introverted' or 'extroverted'. Could you please provide a dimension that aligns with personality traits, or clarify how you would like the prompt to be rewritten in the context of \"Office Work\"?"
+            },
+            "Management/Administration": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Very Poor Management Skills', 2 means 'Below Average Management Skills', 3 means 'Average Management Skills', 4 means 'Above Average Management Skills', 5 means 'Excellent Management Skills'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Public Speaking": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Strongly Avoidant of Public Speaking', 2 means 'Somewhat Avoidant of Public Speaking', 3 means 'Neutral towards Public Speaking', 4 means 'Somewhat Enjoy Public Speaking', 5 means 'Greatly Enjoy Public Speaking'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Politics": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Strongly Conservative', 2 means 'Somewhat Conservative', 3 means 'Moderate', 4 means 'Somewhat Liberal', 5 means 'Strongly Liberal'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Law": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Strongly Unlawful', 2 means 'Somewhat Unlawful', 3 means 'Neutral', 4 means 'Somewhat Lawful', 5 means 'Strongly Lawful'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            }
         }
     }
 }

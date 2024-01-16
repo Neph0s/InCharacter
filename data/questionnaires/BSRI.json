@@ -612,6 +612,22 @@
         "rpa_choice_instruction": {
             "en": "Reply a number from 1 to 7 using the scales: 1 denotes 'does not match at all', 2 denotes 'does not match', 3 denotes 'somewhat does not match', 4 denotes 'neutral', 5 denotes 'somewhat matches', 6 denotes 'matches', and 7 denotes 'fully matches'. Please answer with the number only, without anything else.",
             "zh": "请用1到7的等级来回答，1表示“完全不匹配”，2表示“不匹配”，3表示“比较不匹配”，4表示“中立”，5表示“比较匹配”，6表示“匹配”，7表示“完全匹配”。请你只回答这一个数字，不要说其他内容。"
+        },
+        "convert_to_choice_adjoption": {
+            "Masculine": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly masculine personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Feminine": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly feminine personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            }
+        },
+        "llm_choice_instruction_adjoption": {
+            "Masculine": {
+                "en": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly non-masculine', 2 denotes 'moderately non-masculine', 3 denotes 'slightly non-masculine', 4 denotes 'neutral', 5 denotes 'slightly masculine', 6 denotes 'moderately masculine', and 7 denotes 'strongly masculine'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Feminine": {
+                "en": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly non-faminine', 2 denotes 'moderately non-faminine', 3 denotes 'slightly non-faminine', 4 denotes 'neutral', 5 denotes 'slightly feminine', 6 denotes 'moderately feminine', and 7 denotes 'strongly feminine'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            }
         }
     }
 }
