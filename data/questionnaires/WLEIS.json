@@ -253,6 +253,7 @@
             },
             "ROE": {
                 "en": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'not emotionally regulated at all', 2 denotes 'not emotionally regulated', 3 denotes 'barely emotionally regulated', 4 denotes 'Neutral', 5 denotes 'slightly emotionally regulated', 6 denotes 'emotionally regulated', 7 denotes 'strongly emotionally regulated'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            }
         }
     }
 }

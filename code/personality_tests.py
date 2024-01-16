@@ -183,10 +183,9 @@ def interview(character_agent, questionnaire, experimenter, questionnaire_prompt
 		else:
 			raise NotImplementedError
 		
-		try:
-			response = character_agent.chat(role = experimenter, text = q, nth_test=nth_test)
-		except:
-			import pdb; pdb.set_trace()
+		# this can cause error when changing ChatHaruhi RPA into RoleLLM RPAs, just rerun it in that case.
+		response = character_agent.chat(role = experimenter, text = q, nth_test=nth_test)
+
 			
 
 		result = {
@@ -247,8 +246,18 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 		else:
 			need_convert = questionnaire_results
 		
-		# split need_convert, at most 60 qa pairs per batch
-		need_convert_list = [ need_convert[i:i+60] for i in range(0, len(need_convert), 60)]
+		
+		if 'adjoption' in eval_args:
+			# split need_convert based on dimension 
+			need_convert_dict = { d: [] for d in dims}
+			for q in need_convert:
+				need_convert_dict[idx2dimension[q['id']]].append(q)
+			
+			need_convert_list = list(need_convert_dict.values())
+			
+		else:
+			# split need_convert, at most 60 qa pairs per batch
+			need_convert_list = [ need_convert[i:i+60] for i in range(0, len(need_convert), 60)]
 
 		for need_convert in need_convert_list:
 			# process need_convert to json format
@@ -263,14 +272,45 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 			
 			need_convert = need_convert_
 			
-			sys_prompt = (questionnaire_metadata["prompts"]["convert_to_choice"][language] + '\n' + questionnaire_metadata["prompts"]["llm_choice_instruction"][language]).replace('<character>', character_name)
+			if 'adjoption' in eval_args:
+				assert(questionnaire_name in ['BFI']) #, '16Personalities']) # prompt not implemented for other questionnaires
+
+				need_convert_dim = set([ idx2dimension[q] for q in need_convert])
+				assert(len(need_convert_dim) == 1)
+				need_convert_dim = need_convert_dim.pop()
+
+				pos_adjoption = {'Extraversion': 'extroverted', 'Neuroticism': 'limbic', 'Conscientiousness': 'organized', 'Agreeableness': 'agreeable', 'Openness': 'inquisitive'}
+				neg_adjoption = {'Extraversion': 'introverted', 'Neuroticism': 'calm', 'Conscientiousness': 'unstructured', 'Agreeableness': 'egocentric', 'Openness': 'non-curious'}
+				
+				sys_prompt = (questionnaire_metadata["prompts"]["convert_to_choice"]['en'].replace('agrees with the statement', f'displays a highly {need_convert_dim} personality') + '\n' + questionnaire_metadata["prompts"]["llm_choice_instruction"]['en']).replace('neither agree nor disagree', 'neutral').replace('disagree', neg_adjoption[need_convert_dim]).replace('agree', pos_adjoption[need_convert_dim])				
+				
+				sys_prompt = sys_prompt.replace('<character>', character_name)
+			else:
+				sys_prompt = (questionnaire_metadata["prompts"]["convert_to_choice"]['en'] + '\n' + questionnaire_metadata["prompts"]["llm_choice_instruction"]['en']).replace('<character>', character_name)
 			
-			# call llm to convert to choices
-			converted_choices = get_response_json(sys_prompt = sys_prompt, inputs = json.dumps(need_convert, indent=4, ensure_ascii=False), model=evaluator_llm)
+
+			if evaluator_llm.startswith('gpt'):
+				# call llm to convert to choices
+				converted_choices = get_response_json(sys_prompt = sys_prompt, inputs = json.dumps(need_convert, indent=4, ensure_ascii=False), model=evaluator_llm)							
+			else:
+				from utils import string2json_ensure_choice_format
+				sys_prompt = sys_prompt + '\n===OUTPUT EXAMPLE===\n{\n    \"1\": 1,\n    ...\n    \"9\": 0\n}'
+				
+				converted_choices = get_response_json(string2json_ensure_choice_format, sys_prompt = sys_prompt, inputs = json.dumps(need_convert, indent=4, ensure_ascii=False), model=evaluator_llm)	
 			
+			
+
+			if 'adjoption' in eval_args:
+				# convert 'negative' question choices. I.e. strongly extraverted (5) -> strongly disagree (1). 
+				for idx, choice in converted_choices.items():
+					if idx2category[idx] == 'negative' and choice != 'x':
+						converted_choices[idx] = questionnaire_metadata['range'][0] + questionnaire_metadata['range'][1] - choice
+					
+
 			assert( converted_choices.keys() == need_convert.keys() )
 
 			choices.update(converted_choices)
+		
 		
 		if 'api' in eval_args:
 			assert(questionnaire_name == '16Personalities' and len(choices) == 60) 
@@ -285,9 +325,11 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 				results.append({'id': [idx], 'dim': dim, 'responses': [id2results[idx]], 'choice': choices[idx], 'score': score}) 
 		else:
 			for idx, choice in choices.items():
-				if choice == 'x': continue 
+				if choice == 'x': 
+					choice = (questionnaire_metadata['range'][0] + questionnaire_metadata['range'][1] ) / 2
+				
 				choice = float(choice)
-
+				
 				dim = idx2dimension[idx]
 				category = idx2category[idx]
 
@@ -416,6 +458,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 			count_group = len(all_scores)
 
 			avg_score = avg(all_scores)
+
 			if count_group > 1:
 				std_score = std(all_scores)
 			else:
@@ -484,9 +527,10 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 	
 	final_save_path = os.path.join(final_folder_path, f'{character}.json' )
 
-	if not os.path.exists(final_save_path):
-		character_name = character_info[character]["alias"][0]
-		language = character[character.rfind('-')+1:]
+	character_name = character_info[character]["alias"][0]
+	language = character[character.rfind('-')+1:]
+	
+	if language == 'zh' or (not os.path.exists(final_save_path)):
 		
 		# get experimenter
 		experimenter = get_experimenter(character)
@@ -565,7 +609,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 			
 				assessment_save_path = os.path.join(assessment_folder_path, assessment_save_path)
 			
-				if not os.path.exists(assessment_save_path):
+				if language == 'zh' or (not os.path.exists(assessment_save_path)):
 					logger.info('Assessing...')
 					assessment_results = assess(character_info[character]["alias"], experimenter, questionnaire_results, questionnaire, questionnaire_metadata, eval_method, language, evaluator_llm, nth_test)
 			
@@ -680,7 +724,8 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 		
 	
 	for dim in dims:
-		assessment_results[dim].pop('details')
+		if 'details' in assessment_results[dim].keys():
+			assessment_results[dim].pop('details')
 
 	return assessment_results
 
