@@ -122,13 +122,13 @@
             "zh": "请回复一个1到6之间的数字：1代表“非常不同意”，2代表“不同意”，3代表“稍微不同意”，4代表“稍微同意”，5代表“同意”，6代表“非常同意”。请你只回答这一个数字，不要说其他内容。"
         },
         "convert_to_choice_adjoption": {
-            "Overall": {
-                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Overall personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            "Culturally Rigid": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly culturally Rigid personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
             }
         },
         "llm_choice_instruction_adjoption": {
-            "Overall": {
-                "en": "Each choice is a number from 1 to 6. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly negative', 2 denotes 'negative', 3 denotes 'slightly negative', 4 denotes 'slightly positive', 5 denotes 'positive', 6 denotes 'strongly positive'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            "Culturally Rigid": {
+                "en": "Each choice is a number from 1 to 6. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly culturally open-minded', 2 denotes 'culturally open-minded', 3 denotes 'slightly culturally open-minded', 4 denotes 'slightly culturally Rigid', 5 denotes 'culturally Rigid', 6 denotes 'strongly culturally Rigid'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             }
         }
     }

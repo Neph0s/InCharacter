@@ -135,13 +135,13 @@
             "zh": "请回复一个0到4之间的数字：0代表“非常不同意”，1代表“不同意”，2代表“中立”，3代表“同意”，4代表“非常同意”。请你只回答这一个数字，不要说其他内容。"
         },
         "convert_to_choice_adjoption": {
-            "Overall": {
-                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Overall personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            "Optimistic": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly optimistic personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
             }
         },
         "llm_choice_instruction_adjoption": {
-            "Overall": {
-                "en": "Each choice is a number from 0 to 4. Please evaluate <character> based on the conversation using the scales: 0 denotes 'strongly negative', 1 denotes 'negative', 2 denotes 'neutral', 3 denotes 'positive', 4 denotes 'strongly positive'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            "Optimistic": {
+                "en": "Each choice is a number from 0 to 4. Please evaluate <character> based on the conversation using the scales: 0 denotes 'strongly pessimistic', 1 denotes 'pessimistic', 2 denotes 'neutral', 3 denotes 'optimistic', 4 denotes 'strongly optimistic'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             }
         }
     }

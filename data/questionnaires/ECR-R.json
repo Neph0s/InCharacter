@@ -398,18 +398,18 @@
         },
         "convert_to_choice_adjoption": {
             "Attachment-related Anxiety": {
-                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Attachment-related Anxiety personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly attachment-anxious personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
             },
             "Attachment-related Avoidance": {
-                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Attachment-related Avoidance personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly attachment-avoidant personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
             }
         },
         "llm_choice_instruction_adjoption": {
             "Attachment-related Anxiety": {
-                "en": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly secure', 2 denotes 'secure', 3 denotes 'slightly secure', 4 denotes 'neutral', 5 denotes 'slightly anxious', 6 denotes 'anxious', 7 denotes 'strongly anxious'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+                "en": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly attachment-secure', 2 denotes 'attachment-secure', 3 denotes 'slightly attachment-secure', 4 denotes 'neutral', 5 denotes 'slightly attachment-anxious', 6 denotes 'attachment-anxious', 7 denotes 'strongly attachment-anxious'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             },
             "Attachment-related Avoidance": {
-                "en": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly secure', 2 denotes 'secure', 3 denotes 'slightly secure', 4 denotes 'neutral', 5 denotes 'slightly avoidant', 6 denotes 'avoidant', 7 denotes 'strongly avoidant'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+                "en": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly attachment-engaged', 2 denotes 'attachment-engaged', 3 denotes 'slightly attachment-engaged', 4 denotes 'neutral', 5 denotes 'slightly attachment-avoidant', 6 denotes 'attachment-avoidant', 7 denotes 'strongly attachment-avoidant'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             }
         }
     }

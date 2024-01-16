@@ -171,24 +171,24 @@
         },
         "convert_to_choice_adjoption": {
             "Factor rich": {
-                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Factor rich personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly money-loving personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
             },
             "Factor motivator": {
-                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Factor motivator personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly money-driven personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
             },
             "Factor important": {
-                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Factor important personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly money-oriented personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
             }
         },
         "llm_choice_instruction_adjoption": {
             "Factor rich": {
-                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly factor poor', 2 denotes 'factor poor', 3 denotes 'neutral', 4 denotes 'factor rich', 5 denotes 'strongly factor rich'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'not money-loving at all', 2 denotes 'not money-loving', 3 denotes 'neutral', 4 denotes 'money-loving', 5 denotes 'strongly money-loving'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             },
             "Factor motivator": {
-                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly unmotivated', 2 denotes 'unmotivated', 3 denotes 'neutral', 4 denotes 'motivated', 5 denotes 'strongly motivated'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'not money-driven at all', 2 denotes 'not money-driven', 3 denotes 'neutral', 4 denotes 'money-driven', 5 denotes 'strongly money-driven'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             },
             "Factor important": {
-                "en": "The dimension \"Factor important\" is not clearly defined in terms of personality traits like Extraversion. Could you please provide a specific personality trait or dimension for the rewrite?"
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'not money-oriented at all', 2 denotes 'not money-oriented', 3 denotes 'neutral', 4 denotes 'money-oriented', 5 denotes 'strongly money-oriented'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             }
         }
     }
