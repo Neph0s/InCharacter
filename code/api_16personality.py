@@ -249,7 +249,7 @@ def submit_16personality_api(Answers):
     #print('Trait:', 'Judging (J)', tactics_value, '|', 'Prospecting (P)', 100 - tactics_value)
     #print('Trait:', 'Assertive (A)', identity_value, '|', 'Turbulent (T)', 100 - identity_value)
     # print('Variant:', sess_r.json()['user']['traits'])
-    code, role = judge_16([mind_value, energy_value, nature_value, tactics_value, identity_value])
+    code, role = judge_16([energy_value, mind_value, nature_value, tactics_value, identity_value])
     #print('Character:', sess_r.json()['user']['avatarFull'].split('avatars/')[1].split('.')[0])
     #print('Dic. Judge:', code, role)
     #print()
@@ -257,6 +257,8 @@ def submit_16personality_api(Answers):
     ans2 = code[:4]
 
     assert(ans1 == ans2)
+
+        
 
     return {
         "E/I": {"result": ans1[0], "score": {"E": energy_value, "I": 100 - energy_value}},

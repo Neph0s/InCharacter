@@ -10,6 +10,7 @@ import jsonlines
 import requests 
 import io
 import pickle
+import __main__
 
 logger = logging.getLogger(__name__)
 
@@ -29,7 +30,7 @@ formatter = logging.Formatter('%(name)s - %(levelname)s - %(message)s [%(filenam
 console_handler.setFormatter(formatter)
  
 logger_main = logging.getLogger(__name__ + '_main')
-file_handler_main = logging.FileHandler('main.log', encoding='utf-8')
+file_handler_main = logging.FileHandler(f'{__main__.__file__}.log', encoding='utf-8')
 logger_main.setLevel(logging.INFO)
 logger_main.addHandler(file_handler_main)
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -46,6 +47,10 @@ if config.get('proxy', None):
 
 if config.get('openai_apibase', None):
 	openai.api_base = config['openai_apibase']
+
+if config.get('gemini_apikey', None):
+	import google.generativeai as genai
+	genai.configure(api_key=config['gemini_apikey'])
 
 # -----------------------------------------------------------------------------
 # utilities for safe writing of a pickle file
@@ -145,10 +150,13 @@ def get_response(sys_prompt, inputs, model='gpt4', nth_generation=0):
 	model = model.lower().replace(' ', '')
 	if model.startswith('gpt-3.5'):
 		model = 'gpt-3.5-turbo-1106'
+		return get_response_gpt(sys_prompt, inputs, model, nth_generation=nth_generation)
 	elif model.startswith('gpt-4'):
 		model = 'gpt-4-1106-preview'
-	
-	return get_response_gpt(sys_prompt, inputs, model, nth_generation=nth_generation)
+		return get_response_gpt(sys_prompt, inputs, model, nth_generation=nth_generation)
+	elif model.startswith('gemini'):
+		model = 'gemini-pro'
+		return get_response_gemini(sys_prompt, inputs, model, nth_generation=nth_generation)
 
 from openai import OpenAI
 client = OpenAI(
@@ -174,6 +182,7 @@ def get_response_gpt(sys_prompt, inputs, model='gpt-4', retry_count=0, nth_gener
 			top_p=1,
 			frequency_penalty=0.0,  # [-2,2]之间，该值越大则更倾向于产生不同的内容
 			presence_penalty=0.0,  # [-2,2]之间，该值越大则更倾向于产生不同的内容,
+			timeout=60
 		)
 
 		logger.info('GPT Output: ' + response.choices[0].message.content[:100])
@@ -191,7 +200,37 @@ def get_response_gpt(sys_prompt, inputs, model='gpt-4', retry_count=0, nth_gener
 		if retry_count < 2:
 			time.sleep(5)
 			logger.warn("[OPEN_AI] RateLimit exceed, 第{}次重试".format(retry_count+1))
-			return get_response_gpt(sys_prompt, inputs, model, retry_count+1) 
+			return get_response_gpt(sys_prompt, inputs, model, retry_count+1, nth_generation) 
+
+		print(f'Fail to get response after {retry_count} retry')
+
+@cached 
+def get_response_gemini(sys_prompt, inputs, model='gemini-pro', retry_count=0, nth_generation=0):
+
+	try:
+		gemini_model = genai.GenerativeModel(model_name=model)
+
+		logger.info('Gemini SysPrompt:  ' + sys_prompt[:100])
+		logger.info('Gemini Input:  ' + inputs[:100])
+			
+
+		response = gemini_model.generate_content(sys_prompt + inputs, generation_config=genai.types.GenerationConfig(
+			candidate_count=1, 
+			temperature = 0.2 if nth_generation else 0,
+		))
+		
+		response = response.text
+		logger.info('Gemini Output: ' + response[:100])
+		return response
+
+	except Exception as e:
+		# unknown exception
+		logger.exception(e)
+
+		if retry_count < 2:
+			time.sleep(5)
+			logger.warn("[GEMINI_AI] RateLimit exceed, 第{}次重试".format(retry_count+1))
+			return get_response_gemini(sys_prompt, inputs, model, retry_count+1, nth_generation) 
 
 		print(f'Fail to get response after {retry_count} retry')
 
@@ -211,7 +250,34 @@ def string2json(llm_response):
 	
 	return json_response
 
-def get_response_json(**kwargs):
+def string2json_ensure_choice_format(llm_response):
+	json_response = string2json(llm_response)
+		
+	if json_response:
+		# gemini's ift ability need further improvement. it can not output the format I want
+		try:
+			for idx, choice in json_response.items():
+			# 如果choice是一个dict
+				if choice == 'x': continue 
+				
+				if isinstance(choice, dict):
+					choice = choice['choice']
+				if isinstance(choice, str):
+					choice = int(choice)
+
+				json_response[idx] = choice
+			
+			return json_response
+				
+		except:
+			logger.info('Not a valid json response for choice format')
+			return False
+				
+	else:
+		return False
+
+
+def get_response_json(post_processing_func=string2json, **kwargs):
 	
 	nth_generation = 0
 
@@ -219,8 +285,8 @@ def get_response_json(**kwargs):
 	while (True):
 		response = get_response(**kwargs, nth_generation=nth_generation)
 		#print(f'{nth_generation} generation: {response[:100]}')
-
-		json_response = string2json(response)
+		
+		json_response = post_processing_func(response)
 		#print(f'parse results: {json_response}')
 
 		if json_response:
@@ -229,6 +295,8 @@ def get_response_json(**kwargs):
 			nth_generation += 1
 
 	return json_response
+
+
 
 def avg(lst):
 	return sum(lst)/len(lst)

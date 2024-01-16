@@ -10,13 +10,15 @@ agent_types = ['RoleLLM', 'ChatHaruhi']
 logger.info('Start testing eval methods')
 
 for questionnaire in questionnaires: 
-    for eval_method in ['interview_convert_api', 'interview_convert', 'choose', 
+    for eval_method in ['interview_convert_adjoption', 'interview_convert_adjoption_api', 'interview_convert_api', 'interview_convert', 'choose', 
                         'interview_assess_batch_anonymous', 'interview_assess_collective_anonymous']:  
-        for repeat_times in [0.25, 1, 2]: # 0.25 1, 
-            for agent_llm in ['gpt-3.5']:
-                for eval_llm in ['gpt-3.5']:
+        for eval_llm in ['gpt-3.5', 'gpt-4', 'gemini'] :
+            for repeat_times in [0.25, 1, 2]: # 0.25 1, 
+                for agent_llm in ['gpt-3.5', 'gpt-4']:
                     # if agent_llm == 'gpt-3.5' and eval_llm == 'gpt-3.5': 
                     #     continue
+                    if eval_llm == 'gpt-4' and repeat_times == 2: continue #costly?
+                    if agent_llm == 'gpt-4' and eval_method == 'choose': continue # costly
 
                     if eval_method == 'interview_convert_api':
                         if not questionnaire == '16Personalities': continue 
