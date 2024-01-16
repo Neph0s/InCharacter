@@ -88,7 +88,7 @@
             ]
         },
         {
-            "cat_name": "Pschoticism",
+            "cat_name": "Psychoticism",
             "cat_questions": [
                 25,
                 29,
@@ -240,7 +240,7 @@
             "origin_zh": "做任何事情之前，你会停下来仔细考虑吗？",
             "rewritten_en": "Do you stop to think things over before doing anything?",
             "rewritten_zh": "做任何事情之前，你会停下来仔细考虑吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "negative"
         },
         "3": {
@@ -264,7 +264,7 @@
             "origin_zh": "你很在意别人的想法吗？",
             "rewritten_en": "Do you take much notice of what people think?",
             "rewritten_zh": "你很在意别人的想法吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "negative"
         },
         "6": {
@@ -280,7 +280,7 @@
             "origin_zh": "负债会让你担心吗？",
             "rewritten_en": "Would being in debt worry you?",
             "rewritten_zh": "负债会让你担心吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "negative"
         },
         "8": {
@@ -296,7 +296,7 @@
             "origin_zh": "你会把钱捐给慈善机构吗？",
             "rewritten_en": "Do you give money to charities?",
             "rewritten_zh": "你会把钱捐给慈善机构吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "negative"
         },
         "10": {
@@ -320,7 +320,7 @@
             "origin_zh": "看到孩子或动物受苦会让你很难过吗？",
             "rewritten_en": "Would it upset you a lot to see a child or an animal suffer?",
             "rewritten_zh": "看到孩子或动物受苦会让你很难过吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "negative"
         },
         "13": {
@@ -336,7 +336,7 @@
             "origin_zh": "你讨厌不懂得自律的人吗？",
             "rewritten_en": "Do you dislike people who don't know how to behave themselves?",
             "rewritten_zh": "你讨厌不懂得自律的人吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "negative"
         },
         "15": {
@@ -368,7 +368,7 @@
             "origin_zh": "人们是否应该始终尊重法律？",
             "rewritten_en": "Should people always respect the law?",
             "rewritten_zh": "人们是否应该始终尊重法律？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "negative"
         },
         "19": {
@@ -392,7 +392,7 @@
             "origin_zh": "礼貌很重要吗？",
             "rewritten_en": "Are good manners very important?",
             "rewritten_zh": "礼貌很重要吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "negative"
         },
         "22": {
@@ -424,7 +424,7 @@
             "origin_zh": "你会服用可能产生奇怪或危险影响的药物吗？",
             "rewritten_en": "Would you take drugs which may have strange or dangerous effects?",
             "rewritten_zh": "你会服用可能产生奇怪或危险影响的药物吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "positive"
         },
         "26": {
@@ -456,7 +456,7 @@
             "origin_zh": "你更喜欢按照自己的方式行事，而不是遵守规则吗？",
             "rewritten_en": "Do you prefer to go your own way rather than act by the rules?",
             "rewritten_zh": "你更喜欢按照自己的方式行事，而不是遵守规则吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "positive"
         },
         "30": {
@@ -464,7 +464,7 @@
             "origin_zh": "你喜欢伤害你爱的人吗？",
             "rewritten_en": "Do you enjoy hurting people you love?",
             "rewritten_zh": "你喜欢伤害你爱的人吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "positive"
         },
         "31": {
@@ -496,7 +496,7 @@
             "origin_zh": "你有想要伤害你的敌人吗？",
             "rewritten_en": "Do you have enemies who want to harm you?",
             "rewritten_zh": "你有想要伤害你的敌人吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "positive"
         },
         "35": {
@@ -520,7 +520,7 @@
             "origin_zh": "你喜欢有时会真的伤害人的恶作剧吗？",
             "rewritten_en": "Do you enjoy practical jokes that can sometimes really hurt people?",
             "rewritten_zh": "你喜欢有时会真的伤害人的恶作剧吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "positive"
         },
         "38": {
@@ -552,7 +552,7 @@
             "origin_zh": "你很在意礼貌和清洁吗？",
             "rewritten_en": "Do good manners and cleanliness matter much to you?",
             "rewritten_zh": "你很在意礼貌和清洁吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "negative"
         },
         "42": {
@@ -560,7 +560,7 @@
             "origin_zh": "你经常违背父母的意愿吗？",
             "rewritten_en": "Have you often gone against your parents' wishes?",
             "rewritten_zh": "你经常违背父母的意愿吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "positive"
         },
         "43": {
@@ -608,7 +608,7 @@
             "origin_zh": "你认为婚姻是过时的，应该被废除吗？",
             "rewritten_en": "Do you think marriage is old-fashioned and should be done away with?",
             "rewritten_zh": "你认为婚姻是过时的，应该被废除吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "positive"
         },
         "49": {
@@ -624,7 +624,7 @@
             "origin_zh": "你对是非问题比大多数人更随和吗？",
             "rewritten_en": "Are you more easy-going about right and wrong than most people?",
             "rewritten_zh": "你对是非问题比大多数人更随和吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "positive"
         },
         "51": {
@@ -656,7 +656,7 @@
             "origin_zh": "你喜欢与他人合作吗？",
             "rewritten_en": "Do you like working together with others?",
             "rewritten_zh": "你喜欢与他人合作吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "negative"
         },
         "55": {
@@ -672,7 +672,7 @@
             "origin_zh": "对你来说，大多数东西的味道都一样吗？",
             "rewritten_en": "Do most things have a similar taste to you?",
             "rewritten_zh": "对你来说，大多数东西的味道都一样吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "positive"
         },
         "57": {
@@ -696,7 +696,7 @@
             "origin_zh": "如果你知道自己的工作有错误，你会担心吗？",
             "rewritten_en": "Do you feel concerned if you know there are mistakes in your work?",
             "rewritten_zh": "如果你知道自己的工作有错误，你会担心吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "negative"
         },
         "60": {
@@ -736,7 +736,7 @@
             "origin_zh": "你喜欢提前到达约会地点吗？",
             "rewritten_en": "Do you like to arrive at appointments in plenty of time?",
             "rewritten_zh": "你喜欢提前到达约会地点吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "negative"
         },
         "65": {
@@ -768,7 +768,7 @@
             "origin_zh": "你的母亲是（或曾经是）一个好女人吗？",
             "rewritten_en": "Is (or was) your mother a good woman?",
             "rewritten_zh": "你的母亲是（或曾经是）一个好女人吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "negative"
         },
         "69": {
@@ -808,7 +808,7 @@
             "origin_zh": "有几个人一直试图避开你吗？",
             "rewritten_en": "Are there several people who keep trying to avoid you?",
             "rewritten_zh": "有几个人一直试图避开你吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "positive"
         },
         "74": {
@@ -824,7 +824,7 @@
             "origin_zh": "你认为人们花太多时间用储蓄和保险来保障自己的未来吗？",
             "rewritten_en": "Do you think people spend too much time safeguarding their future with savings and insurance?",
             "rewritten_zh": "你认为人们花太多时间用储蓄和保险来保障自己的未来吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "positive"
         },
         "76": {
@@ -856,7 +856,7 @@
             "origin_zh": "你努力不对人粗鲁吗？",
             "rewritten_en": "Do you try not to be rude to people?",
             "rewritten_zh": "你努力不对人粗鲁吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "negative"
         },
         "80": {
@@ -872,7 +872,7 @@
             "origin_zh": "你通常会三思而后行吗？",
             "rewritten_en": "Do you generally 'look before you leap'?",
             "rewritten_zh": "你通常会三思而后行吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "negative"
         },
         "82": {
@@ -904,7 +904,7 @@
             "origin_zh": "你总体上相信人们会说实话吗？",
             "rewritten_en": "Can you on the whole trust people to tell the truth?",
             "rewritten_zh": "你总体上相信人们会说实话吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "negative"
         },
         "86": {
@@ -928,7 +928,7 @@
             "origin_zh": "遵守社会规则比按自己的方式行事更好吗？",
             "rewritten_en": "Is it better to follow society's rules than go your own way?",
             "rewritten_zh": "遵守社会规则比按自己的方式行事更好吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "negative"
         },
         "89": {
@@ -952,7 +952,7 @@
             "origin_zh": "你希望别人害怕你吗？",
             "rewritten_en": "Would you like other people to be afraid of you?",
             "rewritten_zh": "你希望别人害怕你吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "positive"
         },
         "92": {
@@ -984,7 +984,7 @@
             "origin_zh": "有人经常对你撒谎吗？",
             "rewritten_en": "Do people tell you a lot of lies?",
             "rewritten_zh": "有人经常对你撒谎吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "positive"
         },
         "96": {
@@ -992,7 +992,7 @@
             "origin_zh": "你认为一个人对家庭有特殊责任吗？",
             "rewritten_en": "Do you believe one has special duties to one's family?",
             "rewritten_zh": "你认为一个人对家庭有特殊责任吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "negative"
         },
         "97": {
@@ -1016,7 +1016,7 @@
             "origin_zh": "如果动物被困在陷阱里，你会感到非常难过吗？",
             "rewritten_en": "Would you feel very sorry for an animal caught in a trap?",
             "rewritten_zh": "如果动物被困在陷阱里，你会感到非常难过吗？",
-            "dimension": "Pschoticism",
+            "dimension": "Psychoticism",
             "category": "negative"
         },
         "100": {
@@ -1044,6 +1044,34 @@
         "rpa_choice_instruction": {
             "en": "Reply a number from 0 to 1 using the scales: '1' denotes 'YES' and '0' denotes 'NO'. Please answer with the number only, without anything else.",
             "zh": "回复一个0或1的数字：'1'代表'是'，'0'代表'否'。请你只回答这一个数字，不要说其他内容。"
+        },
+        "convert_to_choice_adjoption": {
+            "Extraversion": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Extraversion personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Psychoticism": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Psychoticism personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Neuroticism": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Neuroticism personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "Lying": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Lying personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            }
+        },
+        "llm_choice_instruction_adjoption": {
+            "Extraversion": {
+                "en": "Each choice is a number, either 0 or 1. Please evaluate <character> based on the conversation using the scales: '1' denotes 'extroverted' and '0' denotes 'introverted'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Psychoticism": {
+                "en": "Each choice is a number, either 0 or 1. Please evaluate <character> based on the conversation using the scales: '1' denotes 'high psychoticism' and '0' denotes 'low psychoticism'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Neuroticism": {
+                "en": "Each choice is a number, either 0 or 1. Please evaluate <character> based on the conversation using the scales: '1' denotes 'emotionally stable' and '0' denotes 'neurotic'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "Lying": {
+                "en": "Each choice is a number, either 0 or 1. Please evaluate <character> based on the conversation using the scales: '1' denotes 'likely lying' and '0' denotes 'likely truthful'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            }
         }
     }
 }

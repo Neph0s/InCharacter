@@ -635,6 +635,35 @@
             "S/N": "S/N Dimension: Sensing (S) vs Intuition (N)\n\nS (Sensing): Sensing individuals value the concrete, practical, and present situations. They rely on their five senses to process information and often focus on details. For them, past experiences and tangible evidence play a significant role in decision-making. They are typically pragmatic and tend to deal with what they 'see' and 'hear'.\n\nN (Intuition): Intuitive individuals tend to focus on potential possibilities and future opportunities. They like to think about 'what could be', rather than just 'what is'. They lean more towards abstract thinking and can capture concepts and patterns effectively. Intuitives are often more innovative, preferring new ideas and approaches.",
             "T/F": "T/F Dimension: Thinking (T) vs Feeling (F)\n\nT (Thinking): Thinking individuals rely primarily on logic and analysis when making decisions. They pursue fairness and objectivity and might be more direct and frank. For them, finding the most efficient method or the most logical solution is crucial, even if it might hurt some people's feelings.\n\nF (Feeling): Feeling individuals consider people's emotions and needs more when making decisions. They strive for harmony, tend to build relationships, and avoid conflicts. They are often more empathetic, valuing personal values and emotions, rather than just facts or logic.",
             "P/J": "P/J Dimension: Perceiving (P) vs Judging (J)\n\nP (Perceiving): Perceivers are more open and flexible. They tend to 'go with the flow' rather than overly planning or organizing things. Perceivers like to explore various possibilities and prefer to leave options open to address unforeseen circumstances. They lean towards postponing decisions to gather more information and better understanding. For them, life is a continuous process of change, not an event with fixed goals or plans. They often focus more on the experience itself rather than just the outcome.\n\nJ (Judging): Judging individuals are more structured and planned in their lives. They prefer clear expectations and structures and often set goals and pursue them. Judgers are usually more organized and tend to make decisions in advance. They like to act according to plans and feel comfortable in an orderly environment. For them, achieving goals and completing tasks are often priorities. They might focus more on efficiency and structure rather than openness or spontaneity."
+        },
+        "convert_to_choice_adjoption": {
+            "E/I": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly extraverted personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "S/N": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly sensing-oriented personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "T/F": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly rationally focused personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            },
+            "P/J": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly perceiving-oriented personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            }
+        },
+        "llm_choice_instruction_adjoption": {
+            "E/I": {
+                "en": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly introverted', 2 denotes 'moderately introverted', 3 denotes 'somewhat introverted', 4 denotes 'neutral', 5 denotes 'somewhat extraverted', 6 denotes 'moderately extraverted', and 7 denotes 'strongly extraverted'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "S/N": {
+                "en": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly intuitive', 2 denotes 'moderately intuitive', 3 denotes 'somewhat intuitive', 4 denotes 'neutral', 5 denotes 'somewhat sensing', 6 denotes 'moderately sensing', and 7 denotes 'strongly sensing'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "T/F": {
+                "en": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly emotionally focused', 2 denotes 'moderately emotionally focused', 3 denotes 'somewhat emotionally focused', 4 denotes 'neutral', 5 denotes 'somewhat rationally focused', 6 denotes 'moderately rationally focused', and 7 denotes 'strongly rationally focused'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            },
+            "P/J": {
+                "en": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly judging-oriented', 2 denotes 'moderately judging-oriented', 3 denotes 'somewhat judging-oriented', 4 denotes 'neutral', 5 denotes 'somewhat perceiving-oriented', 6 denotes 'moderately perceiving-oriented', and 7 denotes 'strongly perceiving-oriented'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            }
         }
+          
     }
 }
