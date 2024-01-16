@@ -140,13 +140,13 @@
             "zh": "请用1到7的等级来回答，其中1代表“非常不准确”，2代表“不准确”，3代表“有些不准确”，4代表“中性”，5代表“有些准确”，6代表“准确”，7代表“非常准确”。请你只回答这一个数字，不要说其他内容。"
         },
         "convert_to_choice_adjoption": {
-            "Overall": {
-                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Overall personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            "Empathetic": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly empathetic personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
             }
         },
         "llm_choice_instruction_adjoption": {
-            "Overall": {
-                "en": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'very inaccurately', 2 denotes 'inaccurately', 3 denotes 'somewhat inaccurately', 4 denotes 'neutrally', 5 denotes 'somewhat accurately', 6 denotes 'accurately', and 7 denotes 'very accurately'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            "Empathetic": {
+                "en": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'very unempathetic', 2 denotes 'unempathetic', 3 denotes 'somewhat unempathetic', 4 denotes 'neutral', 5 denotes 'somewhat empathetic', 6 denotes 'empathetic', and 7 denotes 'very empathetic'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             }
         }
     }

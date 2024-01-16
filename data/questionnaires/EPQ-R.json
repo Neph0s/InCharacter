@@ -1047,30 +1047,30 @@
         },
         "convert_to_choice_adjoption": {
             "Extraversion": {
-                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Extraversion personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly extraverted personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
             },
             "Psychoticism": {
-                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Psychoticism personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly psychotic personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
             },
             "Neuroticism": {
-                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Neuroticism personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly neurotic personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
             },
             "Lying": {
-                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly Lying personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly deceptive personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
             }
         },
         "llm_choice_instruction_adjoption": {
             "Extraversion": {
-                "en": "Each choice is a number, either 0 or 1. Please evaluate <character> based on the conversation using the scales: '1' denotes 'extroverted' and '0' denotes 'introverted'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+                "en": "Each choice is a number, either 0 or 1. Please evaluate <character> based on the conversation using the scales: '1' denotes 'likely extroverted' and '0' denotes 'likely introverted'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             },
             "Psychoticism": {
-                "en": "Each choice is a number, either 0 or 1. Please evaluate <character> based on the conversation using the scales: '1' denotes 'high psychoticism' and '0' denotes 'low psychoticism'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+                "en": "Each choice is a number, either 0 or 1. Please evaluate <character> based on the conversation using the scales: '1' denotes 'likely psychotic' and '0' denotes 'likely non-psychotic'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             },
             "Neuroticism": {
-                "en": "Each choice is a number, either 0 or 1. Please evaluate <character> based on the conversation using the scales: '1' denotes 'emotionally stable' and '0' denotes 'neurotic'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+                "en": "Each choice is a number, either 0 or 1. Please evaluate <character> based on the conversation using the scales: '1' denotes 'likely neurotic' and '0' denotes 'likely non-neurotic'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             },
             "Lying": {
-                "en": "Each choice is a number, either 0 or 1. Please evaluate <character> based on the conversation using the scales: '1' denotes 'likely lying' and '0' denotes 'likely truthful'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+                "en": "Each choice is a number, either 0 or 1. Please evaluate <character> based on the conversation using the scales: '1' denotes 'likely honest' and '0' denotes 'likely deceptive'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             }
         }
     }
