@@ -294,7 +294,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 				converted_choices = get_response_json(sys_prompt = sys_prompt, inputs = json.dumps(need_convert, indent=4, ensure_ascii=False), model=evaluator_llm)							
 			else:
 				from utils import string2json_ensure_choice_format
-				sys_prompt = sys_prompt + '\n===OUTPUT EXAMPLE===\n{\n    \"1\": 1,\n    ...\n    \"9\": 0\n}'
+				sys_prompt = sys_prompt + '\n===OUTPUT EXAMPLE===\n{\n    \"1\": 1,\n    ...\n    \"9\": 0\n}===My Input Is==='
 				
 				converted_choices = get_response_json(string2json_ensure_choice_format, sys_prompt = sys_prompt, inputs = json.dumps(need_convert, indent=4, ensure_ascii=False), model=evaluator_llm)	
 			
