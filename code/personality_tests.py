@@ -268,13 +268,9 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 				r_['question'] = r_['question'].replace(questionnaire_metadata["prompts"]["rpa_choice_instruction"][language], '')
 				r_.pop('id')
 				if 'query_style' in r : r_.pop('query_style')
-				if 'anonymous' in eval_args:
-					r_['question'] = r_['question'].replace(character_name, '<the participant>')
-					r_['response_open'] = r_['response_open'].replace(character_name, '<the participant>')
 				need_convert_[r['id']] = r_
 			
 			need_convert = need_convert_
-
 			
 			if 'adjoption' in eval_args:
 				#assert(questionnaire_name in ['BFI']) #, '16Personalities']) # prompt not implemented for other questionnaires
@@ -297,9 +293,6 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 				sys_prompt = (questionnaire_metadata["prompts"]["convert_to_choice"]['en'] + '\n' + questionnaire_metadata["prompts"]["llm_choice_instruction"]['en']).replace('<character>', character_name)
 			
 			from utils import string2json_ensure_keys
-			
-				
-			
 
 			if evaluator_llm.startswith('gpt'):
 				# call llm to convert to choices
@@ -415,7 +408,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 				if 'anonymous' in eval_args:
 					for a in character_aliases:
 						conversations = conversations.replace(a, '<the participant>')
-					conversations = conversations.replace(orig_experimenter, '<the experimenter>')
+					conversations = conversations.replace(orig_experimenter, '<the participant>')
 
 				questionnaire_name = questionnaire_metadata["name"]
 
@@ -560,7 +553,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 	
 	eval_args = eval_method.split('_')
 
-	if 'anonymous' in eval_args or (not os.path.exists(final_save_path)): ##agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(final_save_path)):
+	if questionnaire_name != 'BFI': ##agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(final_save_path)):
 		
 		# get experimenter
 		experimenter = get_experimenter(character)
@@ -639,7 +632,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 			
 				assessment_save_path = os.path.join(assessment_folder_path, assessment_save_path)
 			
-				if 'anonymous' in eval_args or (not os.path.exists(final_save_path)): #agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(assessment_save_path)):
+				if questionnaire_name != 'BFI': #agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(assessment_save_path)):
 					logger.info('Assessing...')
 					assessment_results = assess(character_info[character]["alias"], experimenter, questionnaire_results, questionnaire, questionnaire_metadata, eval_method, language, evaluator_llm, nth_test)
 			
