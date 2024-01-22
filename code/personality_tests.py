@@ -291,11 +291,6 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 				r_['question'] = r_['question'].replace(questionnaire_metadata["prompts"]["rpa_choice_instruction"][language], '')
 				r_.pop('id')
 				if 'query_style' in r : r_.pop('query_style')
-				if 'anonymous' in eval_args:
-					for a in character_aliases:
-						r_['response_open'] = r_['response_open'].replace(a, '<the participant>')
-					r_['response_open'] = r_['response_open'].replace(experimenter, '<the experimenter>')
-
 				need_convert_[r['id']] = r_
 			
 			need_convert = need_convert_
@@ -319,22 +314,27 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 			else:
 				sys_prompt = (questionnaire_metadata["prompts"]["convert_to_choice"]['en'] + '\n' + questionnaire_metadata["prompts"]["llm_choice_instruction"]['en']).replace('<character>', character_name)
 			
+			user_input = json.dumps(need_convert, indent=4, ensure_ascii=False)
+
 			if 'anonymous' in eval_args:
-				sys_prompt = sys_prompt.replace(character_name, '<the participant>')
+				for a in character_aliases:
+					sys_prompt = sys_prompt.replace(a, '<the participant>')
+					user_input = user_input.replace(a, '<the participant>')
+				sys_prompt = sys_prompt.replace(experimenter, '<the experimenter>')
+				user_input = user_input.replace(experimenter, '<the experimenter>')
 
 			from utils import string2json_ensure_keys
 			
 
 			if evaluator_llm.startswith('gpt'):
 				# call llm to convert to choices
-				import pdb; pdb.set_trace()
 				
-				converted_choices = get_response_json([string2json_ensure_keys], sys_prompt = sys_prompt, inputs = json.dumps(need_convert, indent=4, ensure_ascii=False), model=evaluator_llm)							
+				converted_choices = get_response_json([string2json_ensure_keys], sys_prompt = sys_prompt, inputs = user_input, model=evaluator_llm)							
 			else:
 				from utils import string2json_ensure_choice_format
 				sys_prompt = sys_prompt + '\n===OUTPUT EXAMPLE===\n{\n    \"1\": 1,\n    ...\n    \"9\": 0\n}===My Input Is==='
 				
-				converted_choices = get_response_json([string2json_ensure_choice_format, string2json_ensure_keys], sys_prompt = sys_prompt, inputs = json.dumps(need_convert, indent=4, ensure_ascii=False), model=evaluator_llm)	
+				converted_choices = get_response_json([string2json_ensure_choice_format, string2json_ensure_keys], sys_prompt = sys_prompt, inputs = user_input, model=evaluator_llm)	
 			
 			
 
@@ -418,11 +418,6 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 					response = r['response_open'] 
 					conversations += f"{response}\n"
 				
-				if 'anonymous' in eval_args:
-					for a in character_aliases:
-						conversations = conversations.replace(a, '<the participant>')
-					conversations = conversations.replace(experimenter, '<the experimenter>')
-
 				questionnaire_name = questionnaire_metadata["name"]
 
 				language_name = {'zh': 'Chinese', 'en': 'English'}[language]
@@ -452,8 +447,16 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 
 				user_input = 'Our conversation is as follows:\n' + conversations + '\n'
 
+				if 'anonymous' in eval_args:
+					for a in character_aliases:
+						sys_prompt = sys_prompt.replace(a, '<the participant>')
+						user_input = user_input.replace(a, '<the participant>')
+					sys_prompt = sys_prompt.replace(experimenter, '<the experimenter>')
+					user_input = user_input.replace(experimenter, '<the experimenter>')
+				
 				llm_response = get_response_json(sys_prompt=sys_prompt, inputs=user_input, model=evaluator_llm)
-
+				import pdb; pdb.set_trace()
+				
 				if questionnaire_name == '16Personalities':
 					llm_response['result'] = {k: float(v.strip("%")) for k, v in llm_response['result'].items()}
 					assert (sum(llm_response['result'].values()) == 100)
