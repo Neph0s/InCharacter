@@ -535,19 +535,19 @@
         },
         "llm_choice_instruction_adjoption": {
             "Extraversion": {
-                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly introverted' 2 denotes 'introverted', 3 denotes 'neutral', 4 denotes 'extroverted', and 5 denotes 'strongly extroverted'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly introverted' 2 denotes 'a little introverted', 3 denotes 'neutral', 4 denotes 'little extroverted', and 5 denotes 'strongly extroverted'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             },
             "Agreeableness": {
-                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly egocentric' 2 denotes 'egocentric', 3 denotes 'neutral', 4 denotes 'agreeable', and 5 denotes 'strongly agreeable'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly egocentric' 2 denotes 'a little egocentric', 3 denotes 'neutral', 4 denotes 'little agreeable', and 5 denotes 'strongly agreeable'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             },
             "Conscientiousness": {
-                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly unstructured' 2 denotes 'unstructured', 3 denotes 'neutral', 4 denotes 'organized', and 5 denotes 'strongly organized'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly unstructured' 2 denotes 'a little unstructured', 3 denotes 'neutral', 4 denotes 'little organized', and 5 denotes 'strongly organized'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             },
             "Neuroticism": {
-                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly calm' 2 denotes 'calm', 3 denotes 'neutral', 4 denotes 'limbic', and 5 denotes 'strongly limbic'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly calm' 2 denotes 'a little calm', 3 denotes 'neutral', 4 denotes 'little limbic', and 5 denotes 'strongly limbic'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             },
             "Openness": {
-                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly non-curious' 2 denotes 'non-curious', 3 denotes 'neutral', 4 denotes 'inquisitive', and 5 denotes 'strongly inquisitive'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly non-curious' 2 denotes 'a little non-curious', 3 denotes 'neutral', 4 denotes 'little inquisitive', and 5 denotes 'strongly inquisitive'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             }
         }
     }
