@@ -213,28 +213,34 @@ def get_response_gemini(sys_prompt, inputs, model='gemini-pro', retry_count=0, n
 		logger.info('Gemini SysPrompt:  ' + sys_prompt[:100])
 		logger.info('Gemini Input:  ' + inputs[:100])
 			
-
 		response = gemini_model.generate_content(sys_prompt + inputs, generation_config=genai.types.GenerationConfig(
 			candidate_count=1, 
 			temperature = 0.2 if nth_generation else 0,
-		))
+		))		
 		
 		response = response.text
 		logger.info('Gemini Output: ' + response[:100])
+		
 		return response
 
 	except Exception as e:
 		# unknown exception
 		logger.exception(e)
+		
+		if response.prompt_feedback.block_reason:
+			# blocked ... gpt instead ? 
+			return get_response_gpt(sys_prompt, inputs, model='gpt-4')
 
 		if retry_count < 2:
 			time.sleep(5)
 			logger.warn("[GEMINI_AI] RateLimit exceed, 第{}次重试".format(retry_count+1))
 			return get_response_gemini(sys_prompt, inputs, model, retry_count+1, nth_generation) 
+		
+
 
 		print(f'Fail to get response after {retry_count} retry')
 
-def string2json(llm_response):
+def string2json(llm_response, nth_generation=0, **kwargs):
 	llm_response = llm_response.strip("`")
 	if llm_response.startswith('json'):
 		llm_response = llm_response[4:]
@@ -250,8 +256,13 @@ def string2json(llm_response):
 	
 	return json_response
 
-def string2json_ensure_choice_format(llm_response):
-	json_response = string2json(llm_response)
+def string2json_ensure_choice_format(llm_response, nth_generation=0, **kwargs):
+	if not llm_response: return False
+	
+	if isinstance(llm_response, str):
+		json_response = string2json(llm_response)
+	else:
+		json_response = llm_response
 		
 	if json_response:
 		# gemini's ift ability need further improvement. it can not output the format I want
@@ -276,23 +287,52 @@ def string2json_ensure_choice_format(llm_response):
 	else:
 		return False
 
+def string2json_ensure_keys(llm_response, nth_generation=0, **kwargs):
+	if not llm_response: return False
 
-def get_response_json(post_processing_func=string2json, **kwargs):
+	if isinstance(llm_response, str):
+		json_response = string2json(llm_response)
+	else:
+		json_response = llm_response
+		
+	if json_response:
+		input_json = json.loads(kwargs['inputs'])
+		
+		missing_keys = input_json.keys() - json_response.keys()
+		if missing_keys: 
+			# the json response does not contain all the keys in input_json
+			if nth_generation < 10:
+				return False
+			else:
+				for k in missing_keys:
+					json_response[k] = 'x'
+				return json_response
+		else:
+			return json_response
+	else:
+		return False
+
+
+def get_response_json(post_processing_funcs=[string2json], **kwargs):
 	
 	nth_generation = 0
 
 
 	while (True):
 		response = get_response(**kwargs, nth_generation=nth_generation)
-		#print(f'{nth_generation} generation: {response[:100]}')
 		
-		json_response = post_processing_func(response)
+		for post_processing_func in post_processing_funcs:
+			response = post_processing_func(response, nth_generation, **kwargs)
 		#print(f'parse results: {json_response}')
-
+		json_response = response 
+		
 		if json_response:
 			break 
 		else:
 			nth_generation += 1
+			if nth_generation > 10:
+				break	
+
 
 	return json_response
 
@@ -306,7 +346,15 @@ def std(lst):
 	avg_score = avg(lst)
 	return math.sqrt(sum([(s-avg_score)**2 for s in lst])/ (len(lst)))
 
+def find_colon_idx(response):
+	colon_idx1 = response.find(':')
+	colon_idx2 = response.find('：')
 
+	if colon_idx1 > -1 and colon_idx2 > -1:
+		colon_idx = min(colon_idx1, colon_idx2)
+	else:
+		colon_idx = max(colon_idx1, colon_idx2) 
+	return colon_idx
 
 
 if __name__ == '__main__':
