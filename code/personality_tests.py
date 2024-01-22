@@ -440,6 +440,8 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 				user_input = 'Our conversation is as follows:\n' + conversations + '\n'
 
 				llm_response = get_response_json(sys_prompt=sys_prompt, inputs=user_input, model=evaluator_llm)
+				import pdb; pdb.set_trace()
+				
 
 				if questionnaire_name == '16Personalities':
 					llm_response['result'] = {k: float(v.strip("%")) for k, v in llm_response['result'].items()}
