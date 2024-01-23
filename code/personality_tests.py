@@ -228,7 +228,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 		colon_idx = find_colon_idx(response)
 		
 		if colon_idx == -1 and not any([response.startswith(a) for a in character_aliases]):
-			r['response_open'] = character_name + ': ' + response
+			r['response_open'] = character_name + ': 「' + response + '」'
 			
 
 
@@ -335,7 +335,6 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 				sys_prompt = sys_prompt + '\n===OUTPUT EXAMPLE===\n{\n    \"1\": 1,\n    ...\n    \"9\": 0\n}===My Input Is==='
 				
 				converted_choices = get_response_json([string2json_ensure_choice_format, string2json_ensure_keys], sys_prompt = sys_prompt, inputs = user_input, model=evaluator_llm)	
-			
 			
 
 			if 'adjoption' in eval_args:
@@ -453,9 +452,9 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 						user_input = user_input.replace(a, '<the participant>')
 					sys_prompt = sys_prompt.replace(experimenter, '<the experimenter>')
 					user_input = user_input.replace(experimenter, '<the experimenter>')
+					sys_prompt = sys_prompt.replace('I ', 'I (<the participant>) ', 1)
 				
 				llm_response = get_response_json(sys_prompt=sys_prompt, inputs=user_input, model=evaluator_llm)
-				import pdb; pdb.set_trace()
 				
 				if questionnaire_name == '16Personalities':
 					llm_response['result'] = {k: float(v.strip("%")) for k, v in llm_response['result'].items()}

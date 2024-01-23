@@ -4,15 +4,16 @@ from characters import character_info
 from utils import logger_main as logger
 
 characters = character_info.keys()
-questionnaires = ['BFI', '16Personalities']
+questionnaires = ['16Personalities']
 agent_types = ['RoleLLM', 'ChatHaruhi']
 
 logger.info('Start testing eval methods')
 
+#Questionnaire: BFI, Eval Method: interview_assess_collective_anonymous, Repeat Times: 1, Agent LLM: gpt-4, Eval LLM: gpt-4
+
 for questionnaire in questionnaires: 
-    for eval_method in ['interview_convert_adjoption', 'interview_convert_adjoption_api', 'interview_convert_api', 'interview_convert', 'choose', 
-                        'interview_assess_batch_anonymous', 'interview_assess_collective_anonymous']:  
-        for eval_llm in ['gpt-3.5', 'gpt-4', 'gemini'] :
+    for eval_method in ['interview_convert_adjoption_anonymous', 'interview_assess_batch_anonymous', 'interview_assess_collective_anonymous']:#'interview_convert_adjoption', 'interview_convert_adjoption_api', 'interview_convert_api', 'interview_convert', 'choose',  'interview_assess_batch_anonymous', 'interview_assess_collective_anonymous']:  
+        for eval_llm in ['gpt-3.5', 'gpt-4'] :
             for repeat_times in [0.25, 1, 2]: # 0.25 1, 
                 for agent_llm in ['gpt-3.5', 'gpt-4']:
                     # if agent_llm == 'gpt-3.5' and eval_llm == 'gpt-3.5': 
@@ -20,7 +21,7 @@ for questionnaire in questionnaires:
                     if eval_llm == 'gpt-4' and repeat_times == 2: continue #costly?
                     if agent_llm == 'gpt-4' and eval_method == 'choose': continue # costly
 
-                    if eval_method == 'interview_convert_api':
+                    if eval_method.endswith('api'):
                         if not questionnaire == '16Personalities': continue 
                         if repeat_times != 1: continue 
                     
