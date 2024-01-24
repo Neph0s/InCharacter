@@ -568,8 +568,9 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 	
 	eval_args = eval_method.split('_')
 
-	if 'anonymous' in eval_args or (not os.path.exists(final_save_path)): ##agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(final_save_path)):
-		
+	if (not os.path.exists(final_save_path)): ##agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(final_save_path)):
+		# need to get multitime assessment results
+
 		# get experimenter
 		experimenter = get_experimenter(character)
 
@@ -647,7 +648,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 			
 				assessment_save_path = os.path.join(assessment_folder_path, assessment_save_path)
 			
-				if 'anonymous' in eval_args or (not os.path.exists(final_save_path)): #agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(assessment_save_path)):
+				if (not os.path.exists(assessment_save_path)): #agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(assessment_save_path)):
 					logger.info('Assessing...')
 					assessment_results = assess(character_info[character]["alias"], experimenter, questionnaire_results, questionnaire, questionnaire_metadata, eval_method, language, evaluator_llm, nth_test)
 			
@@ -746,7 +747,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 					
 			
 			logger.info(dim_result_info)
-	
+		
 	
 		logger.info(f'Save final results into {final_save_path}')
 
