@@ -13,7 +13,7 @@ logger.info('Start testing eval methods')
 
 for eval_llm in ['gpt-3.5', 'gpt-4', 'gemini']: 
     for questionnaire in questionnaires: 
-        for eval_method in ['choose']: #['choose', 'interview_convert', 'interview_convert_api', 'interview_convert_adjoption_anonymous', 'interview_convert_adjoption_anonymous_api',  'interview_assess_batch_anonymous', 'interview_assess_collective_anonymous']: 
+        for eval_method in ['choose', 'interview_convert', 'interview_convert_api', 'interview_convert_adjoption_anonymous', 'interview_convert_adjoption_anonymous_api',  'interview_assess_batch_anonymous', 'interview_assess_collective_anonymous']: 
             for repeat_times in [3]: 
                 for agent_llm in ['gpt-3.5']: 
                     
