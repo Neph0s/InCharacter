@@ -15,11 +15,14 @@ class ChracterLLM:
         character=self.name
         loc_time = "Coffee Shop - Afternoon"
         status = f'{character} is casually chatting with a man from the 21st century.'
-        prompt = prompt+'\n\n'
+        prompt =  meta_prompt.format(character=self.name, loc_time=loc_time, status=status) + '\n\n' # f'{meta_prompt}\n{prompt}\n\n'
+
+        
         tokenizer = AutoTokenizer.from_pretrained(self.ModelName)
-        model = AutoModelForCausalLM.from_pretrained(self.ModelName)
+        model = AutoModelForCausalLM.from_pretrained(self.ModelName).cuda()
         inputs = tokenizer([prompt], return_tensors="pt")
-        outputs = model.generate(**inputs, do_sample=True, temperature=0.8, top_p=0.95, max_new_tokens=300)
+        inputs.to('cuda')
+        outputs = model.generate(**inputs, do_sample=True, temperature=0.5, top_p=0.95, max_new_tokens=50)
         response = tokenizer.decode(outputs[0], skip_special_tokens=True)
         print(response)
 
