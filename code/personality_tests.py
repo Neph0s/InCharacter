@@ -281,7 +281,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 		else:
 			# split need_convert, at most 60 qa pairs per batch
 			need_convert_list = [ need_convert[i:i+60] for i in range(0, len(need_convert), 60)]
-
+		
 		for need_convert in need_convert_list:
 			# process need_convert to json format
 			need_convert_ = {}
@@ -457,7 +457,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 				llm_response = get_response_json(sys_prompt=sys_prompt, inputs=user_input, model=evaluator_llm)
 				
 				if questionnaire_name == '16Personalities':
-					llm_response['result'] = {k: float(v.strip("%")) for k, v in llm_response['result'].items()}
+					llm_response['result'] = {k: float(str(v).strip("%")) for k, v in llm_response['result'].items()}
 					assert (sum(llm_response['result'].values()) == 100)
 					# use the score of dim_cls1
 					llm_response['result'] = llm_response['result'][dim_cls1]
@@ -568,7 +568,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 	
 	eval_args = eval_method.split('_')
 
-	if (not os.path.exists(final_save_path)): ##agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(final_save_path)):
+	if not os.path.exists(final_save_path): ##agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(final_save_path)):
 		# need to get multitime assessment results
 
 		# get experimenter
@@ -648,7 +648,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 			
 				assessment_save_path = os.path.join(assessment_folder_path, assessment_save_path)
 			
-				if (not os.path.exists(assessment_save_path)): #agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(assessment_save_path)):
+				if not os.path.exists(assessment_save_path): #agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(assessment_save_path)):
 					logger.info('Assessing...')
 					assessment_results = assess(character_info[character]["alias"], experimenter, questionnaire_results, questionnaire, questionnaire_metadata, eval_method, language, evaluator_llm, nth_test)
 			
@@ -678,6 +678,8 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 			assessment_results[dim] = {
 				'score': avg([a_results[dim]['score'] for a_results in multitime_assess_results]),
 			}
+
+		
 			
 			if repeat_times > 1:
 				assessment_results[dim]['inter_std'] = std([a_results[dim]['score'] for a_results in multitime_assess_results])
@@ -760,14 +762,51 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 		with open(final_save_path, 'r') as f:
 			assessment_results = json.load(f)
 		
-		
-	
 	for dim in dims:
 		if 'details' in assessment_results[dim].keys():
 			assessment_results[dim].pop('details')
 
 	return assessment_results
 
+def accuracy(agent_types, results, questionnaire_name):
+	count_dimension = { a: 0 for a in agent_types }
+	count_correct_dimension = { a: 0 for a in agent_types }
+	
+	count_full = { a: 0 for a in agent_types }
+	count_correct_full = { a: 0 for a in agent_types }
+	
+	for (character, a), code in results.items():
+		label = character_info[character]['labels'][questionnaire_name]
+
+		full_correct = True
+		for p, l in zip(code, label):
+			if l == 'X': continue 
+
+			count_dimension[a] += 1
+			if p == l:
+				count_correct_dimension[a] += 1
+			else: 
+				full_correct = False
+
+		count_full[a] += 1
+		if full_correct: 
+			count_correct_full[a] += 1
+	
+	
+	for count in [count_dimension, count_correct_dimension, count_full, count_correct_full]:
+		count['all'] = sum(count.values())
+
+	acc = {}
+             
+	for a in agent_types + ['all']:
+		acc[a] = { 
+			'dim_acc': count_correct_dimension[a] / count_dimension[a],
+			'full_acc': count_correct_full[a] / count_full[a]
+		}
+	
+	return acc
+
+		
 	
 if __name__ == '__main__':
 	personality_assessment(

@@ -12,6 +12,8 @@ import io
 import pickle
 import __main__
 
+quiet = False
+
 logger = logging.getLogger(__name__)
 
 file_handler = logging.FileHandler('log.log', encoding='utf-8')
@@ -23,7 +25,8 @@ formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(messag
 file_handler.setFormatter(formatter)
 console_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
-logger.addHandler(console_handler)
+if not quiet:
+	logger.addHandler(console_handler)
 logger.setLevel(logging.INFO)
 console_handler = logging.StreamHandler()
 formatter = logging.Formatter('%(name)s - %(levelname)s - %(message)s [%(filename)s:%(lineno)d]')
@@ -134,7 +137,7 @@ def cached(func):
 		key = ( func.__name__, str(args), str(kwargs.items()))
 		
 
-		if (cache_sign and key in cache and cache[key] not in [None, '[TOKEN LIMIT]']) :
+		if (cache_sign and key in cache and cache[key] not in [None, '[TOKEN LIMIT]']):
 			return cache[key]
 		else:
 			result = func(*args, **kwargs)
@@ -217,6 +220,10 @@ def get_response_gemini(sys_prompt, inputs, model='gemini-pro', retry_count=0, n
 			candidate_count=1, 
 			temperature = 0.2 if nth_generation else 0,
 		))		
+
+		if nth_generation >= 5:
+			# can not get valid output
+			return get_response_gpt(sys_prompt, inputs, model='gpt-4')
 		
 		response = response.text
 		logger.info('Gemini Output: ' + response[:100])
@@ -226,19 +233,14 @@ def get_response_gemini(sys_prompt, inputs, model='gemini-pro', retry_count=0, n
 	except Exception as e:
 		# unknown exception
 		logger.exception(e)
-		
-		if response.prompt_feedback.block_reason:
-			# blocked ... gpt instead ? 
-			return get_response_gpt(sys_prompt, inputs, model='gpt-4')
 
-		if retry_count < 2:
+		if retry_count < 5:
 			time.sleep(5)
 			logger.warn("[GEMINI_AI] RateLimit exceed, 第{}次重试".format(retry_count+1))
 			return get_response_gemini(sys_prompt, inputs, model, retry_count+1, nth_generation) 
-		
-
-
-		print(f'Fail to get response after {retry_count} retry')
+		else:
+			# blocked ... gpt instead ? 
+			return get_response_gpt(sys_prompt, inputs, model='gpt-4')
 
 def string2json(llm_response, nth_generation=0, **kwargs):
 	llm_response = llm_response.strip("`")
@@ -330,7 +332,7 @@ def get_response_json(post_processing_funcs=[string2json], **kwargs):
 			break 
 		else:
 			nth_generation += 1
-			if nth_generation > 10:
+			if nth_generation > 12:
 				break	
 
 
