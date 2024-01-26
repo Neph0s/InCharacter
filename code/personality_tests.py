@@ -769,6 +769,12 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 	return assessment_results
 
 def accuracy(agent_types, results, questionnaire_name):
+	count_correct_dimension_each_dim = { a: { d: 0 for d in dims_dict[questionnaire_name]} for a in agent_types }
+	count_dimension_each_dim = { a: { d: 0 for d in dims_dict[questionnaire_name]} for a in agent_types }
+	idx2dimension = {i: d for i, d in enumerate(dims_dict[questionnaire_name])} 
+	dims = dims_dict[questionnaire_name]
+	
+
 	count_dimension = { a: 0 for a in agent_types }
 	count_correct_dimension = { a: 0 for a in agent_types }
 	
@@ -779,14 +785,18 @@ def accuracy(agent_types, results, questionnaire_name):
 		label = character_info[character]['labels'][questionnaire_name]
 
 		full_correct = True
-		for p, l in zip(code, label):
+		for i, (p, l) in enumerate(zip(code, label)):
 			if l == 'X': continue 
 
 			count_dimension[a] += 1
+			count_dimension_each_dim[a][idx2dimension[i]] += 1
+
 			if p == l:
 				count_correct_dimension[a] += 1
+				count_correct_dimension_each_dim[a][idx2dimension[i]] += 1
 			else: 
 				full_correct = False
+			
 
 		count_full[a] += 1
 		if full_correct: 
@@ -795,11 +805,19 @@ def accuracy(agent_types, results, questionnaire_name):
 	
 	for count in [count_dimension, count_correct_dimension, count_full, count_correct_full]:
 		count['all'] = sum(count.values())
+	
+	count_correct_dimension_each_dim['all'] = { d: sum( [count_correct_dimension_each_dim[a][d] for a in agent_types] ) for d in dims }
+
+	count_dimension_each_dim['all'] = { d: sum( [count_dimension_each_dim[a][d] for a in agent_types] ) for d in dims}
+
 
 	acc = {}
              
 	for a in agent_types + ['all']:
-		acc[a] = { 
+		assert(count_dimension[a] == sum(count_dimension_each_dim[a].values()))
+
+		acc[a] = {
+			'each_dim_acc': { d: count_correct_dimension_each_dim[a][d] / count_dimension_each_dim[a][d] for d in dims},
 			'dim_acc': count_correct_dimension[a] / count_dimension[a],
 			'full_acc': count_correct_full[a] / count_full[a]
 		}
