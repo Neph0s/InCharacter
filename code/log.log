@@ -1,0 +1,427 @@
+2024-01-26 05:45:44,322 - utils - INFO - Character agent created for Lucifer Morningstar
+2024-01-26 05:45:44,322 - utils - INFO - Interviewing...
+2024-01-26 06:07:52,052 - utils - INFO - Character agent created for 凉宫春日
+2024-01-26 06:07:52,053 - utils - INFO - Interviewing...
+2024-01-26 06:11:04,704 - utils - INFO - Interview finished... save into ../results/interview/16Personalities-agent-type=ChatHaruhi_agent-llm=llama2_query-style=interview/haruhi-zh_0-test.json
+2024-01-26 06:11:04,704 - utils - INFO - Assessing...
+2024-01-26 06:11:04,706 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:11:04,706 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你经常交新朋友吗？」
+<the participant>:「当然了，我是个非常有魅力和吸
+2024-01-26 06:11:10,292 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant seems to exhibit a balanced mix of ex
+2024-01-26 06:11:10,293 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:11:10,293 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你喜欢参加团体活动吗？」
+<the participant>:「团体活动吗？嗯，我对于参
+2024-01-26 06:11:13,948 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant seems to exhibit a blend of both extr
+2024-01-26 06:11:13,949 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:11:13,949 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「经过漫长而劳累的一周，一个热闹的社交活动正是你所需要的吗？」
+<the particip
+2024-01-26 06:11:17,291 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant seems to exhibit more extraverted tra
+2024-01-26 06:11:17,291 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:11:17,292 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你更喜欢热闹、繁华的地方，而不是安静、亲密的地方吗？」
+<the participant
+2024-01-26 06:11:19,050 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant demonstrates a strong preference for 
+2024-01-26 06:11:19,051 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:11:19,052 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你花很多空闲时间探索各种引起你兴趣的随机话题吗？」
+<the participant>:
+2024-01-26 06:13:45,132 - utils - INFO - Character agent created for 凉宫春日
+2024-01-26 06:13:45,133 - utils - INFO - Interview done before. load directly from ../results/interview/16Personalities-agent-type=ChatHaruhi_agent-llm=llama2_query-style=interview/haruhi-zh_0-test.json
+2024-01-26 06:13:45,133 - utils - INFO - Assessing...
+2024-01-26 06:13:45,134 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:13:45,134 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你花很多空闲时间探索各种引起你兴趣的随机话题吗？」
+<the participant>:
+2024-01-26 06:19:18,675 - utils - INFO - Character agent created for 凉宫春日
+2024-01-26 06:19:18,675 - utils - INFO - Interview done before. load directly from ../results/interview/16Personalities-agent-type=ChatHaruhi_agent-llm=llama2_query-style=interview/haruhi-zh_0-test.json
+2024-01-26 06:19:18,676 - utils - INFO - Assessing...
+2024-01-26 06:19:18,677 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:19:18,678 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你花很多空闲时间探索各种引起你兴趣的随机话题吗？」
+<the participant>:
+2024-01-26 06:19:23,625 - utils - INFO - GPT Output: Based on the conversations, it seems that the participant leans more towards Intuition (N) rather th
+2024-01-26 06:19:23,626 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:19:23,626 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你花很多空闲时间探索各种引起你兴趣的随机话题吗？」
+<the participant>:
+2024-01-26 06:19:26,810 - utils - INFO - GPT Output: Based on the conversations, it seems that the participant leans more towards Intuition (N) rather th
+2024-01-26 06:19:26,811 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:19:26,811 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你绝对不是艺术型的人吗？」
+<the participant>:「当然不是啦！我可是SO
+2024-01-26 06:19:31,718 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant demonstrates a preference for Intuiti
+2024-01-26 06:19:31,719 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:19:31,719 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你经常花很多时间试图理解与你自己观点非常不同的观点吗？」
+<the participan
+2024-01-26 06:19:35,797 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant demonstrates a strong inclination tow
+2024-01-26 06:19:35,798 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:19:35,798 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「看到别人哭很容易让你也想哭吗？」
+<the participant>:「哼，我可不是那种
+2024-01-26 06:20:09,461 - utils - INFO - Character agent created for 胡桃
+2024-01-26 06:20:09,462 - utils - INFO - Interviewing...
+2024-01-26 06:23:37,018 - utils - INFO - Interview finished... save into ../results/interview/16Personalities-agent-type=ChatHaruhi_agent-llm=llama2_query-style=interview/hutao-zh_0-test.json
+2024-01-26 06:23:37,018 - utils - INFO - Assessing...
+2024-01-26 06:23:37,020 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:23:37,020 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你经常交新朋友吗？」
+<the participant>:「嘻嘻，我是个喜欢交朋友的人呢
+2024-01-26 06:23:40,732 - utils - INFO - GPT Output: Based on the conversations, it seems that the participant demonstrates a preference for Extraversion
+2024-01-26 06:23:40,733 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:23:40,733 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你喜欢参加团体活动吗？」
+<the participant>:「嘻嘻，团体活动？当然喜欢
+2024-01-26 06:23:42,390 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant seems to exhibit more extraverted tra
+2024-01-26 06:23:42,391 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:23:42,391 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「经过漫长而劳累的一周，一个热闹的社交活动正是你所需要的吗？」
+<the particip
+2024-01-26 06:23:45,890 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant seems to exhibit a strong preference 
+2024-01-26 06:23:45,891 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:23:45,892 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你更喜欢热闹、繁华的地方，而不是安静、亲密的地方吗？」
+<the participant
+2024-01-26 06:23:48,448 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant seems to exhibit a preference for ext
+2024-01-26 06:23:48,450 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:23:48,450 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你花很多空闲时间探索各种引起你兴趣的随机话题吗？」
+<the participant>:
+2024-01-26 06:23:52,902 - utils - INFO - GPT Output: Based on the conversations, it seems that the participant leans more towards Intuition (N) rather th
+2024-01-26 06:23:52,903 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:23:52,904 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你绝对不是艺术型的人吗？」
+<the participant>:「哈哈哈，你说对了！我可
+2024-01-26 06:23:55,963 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant demonstrates a strong inclination tow
+2024-01-26 06:23:55,964 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:23:55,965 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你经常花很多时间试图理解与你自己观点非常不同的观点吗？」
+<the participan
+2024-01-26 06:23:58,151 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant demonstrates a strong inclination tow
+2024-01-26 06:23:58,152 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:23:58,153 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「看到别人哭很容易让你也想哭吗？」
+<the participant>:「嘻嘻，有时候看到
+2024-01-26 06:24:02,767 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant seems to value emotions and empathy, 
+2024-01-26 06:24:02,768 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:24:02,768 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你更倾向于听从头脑而不是内心吗？」
+<the participant>:「哈哈哈，这个问
+2024-01-26 06:24:07,192 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant seems to exhibit a balanced approach 
+2024-01-26 06:24:07,193 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:24:07,194 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你的情绪可以变化得很快吗？」
+<the participant>:「嘻嘻，我的情绪就像是
+2024-01-26 06:24:11,566 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant seems to exhibit a balanced approach 
+2024-01-26 06:24:11,567 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:24:11,567 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你很少感到不安全吗？」
+<the participant>:「嘻嘻，我是往生堂的堂主，自
+2024-01-26 06:24:16,018 - utils - INFO - GPT Output: Based on the conversations, the participant seems to exhibit a balance between Thinking (T) and Feel
+2024-01-26 06:24:16,019 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:24:16,019 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你很少感到不安全吗？」
+<the participant>:「嘻嘻，我是往生堂的堂主，自
+2024-01-26 06:24:19,805 - utils - INFO - GPT Output: Based on the conversations, the participant seems to exhibit characteristics of both Thinking (T) an
+2024-01-26 06:24:19,806 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:24:19,806 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你很少感到不安全吗？」
+<the participant>:「嘻嘻，我是往生堂的堂主，自
+2024-01-26 06:24:23,863 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant seems to value empathy, personal grow
+2024-01-26 06:24:23,864 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:24:23,864 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「当有人对你评价很高时，你会想知道他们会花多长时间感到失望吗？」
+<the partici
+2024-01-26 06:24:25,972 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, <the participant> seems to value personal emotions an
+2024-01-26 06:24:25,974 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:24:25,974 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你经常为备用计划制定备用计划吗？」
+<the participant>:「备用计划的备用
+2024-01-26 06:24:30,169 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant demonstrates a preference for flexibi
+2024-01-26 06:24:30,170 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:24:30,170 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你对很多事情都感兴趣，以至于很难决定下一步做什么吗？」
+<the participant
+2024-01-26 06:24:33,987 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant demonstrates a preference for flexibi
+2024-01-26 06:24:33,988 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:24:33,988 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你很少对自己做出的选择产生怀疑吗？」
+<the participant>:「怀疑？嘻嘻，
+2024-01-26 06:24:38,410 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, <the participant> demonstrates a strong preference fo
+2024-01-26 06:24:38,412 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 06:24:38,412 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你有条不紊地完成事情，不会跳过任何步骤吗？」
+<the participant>:「哈哈
+2024-01-26 06:24:42,201 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant demonstrates a mix of both Perceiving
+2024-01-26 06:24:42,205 - utils - INFO - Assess finished... save into ../results/assessment/16Personalities_agent-type=ChatHaruhi_agent-llm=llama2_eval-method=interview_assess_batch_anonymous-gpt-3.5-turbo/hutao-zh_0th-test.json
+2024-01-26 06:24:42,206 - utils - INFO - 16Personalities assessment results:
+2024-01-26 06:24:42,206 - utils - INFO - Character: 胡桃
+2024-01-26 06:24:42,206 - utils - INFO - Score range: [1, 7]
+2024-01-26 06:24:42,206 - utils - INFO - Prediction ENFP
+2024-01-26 06:24:42,206 - utils - INFO - Groundtruth ENFP
+2024-01-26 06:24:42,206 - utils - INFO - E: 80.00	I: 20.00	intra std: [0.0]	
+2024-01-26 06:24:42,206 - utils - INFO - S: 13.33	N: 86.67	intra std: [9.428090415820634]	
+2024-01-26 06:24:42,207 - utils - INFO - T: 40.00	F: 60.00	intra std: [8.94427190999916]	
+2024-01-26 06:24:42,207 - utils - INFO - P: 75.00	J: 25.00	intra std: [15.0]	
+2024-01-26 06:24:42,207 - utils - INFO - 
+2024-01-26 06:24:42,207 - utils - INFO - Save final results into ../results/final/16Personalities_agent-type=ChatHaruhi_agent-llm=llama2_eval-method=interview_assess_batch_anonymous-gpt-3.5-turbo_repeat-times=1/hutao-zh.json
+2024-01-26 10:16:46,880 - utils - INFO - Load final results from ../results/final/16Personalities_agent-type=ChatHaruhi_agent-llm=llama2_eval-method=interview_assess_batch_anonymous-gpt-3.5-turbo_repeat-times=1/hutao-zh.json
+2024-01-26 10:17:22,255 - utils - INFO - Character agent created for 钟离
+2024-01-26 10:17:22,255 - utils - INFO - Interviewing...
+2024-01-26 13:29:39,100 - utils - INFO - Character agent created for 钟离
+2024-01-26 13:29:39,100 - utils - INFO - Interviewing...
+2024-01-26 13:33:45,476 - utils - INFO - Character agent created for 钟离
+2024-01-26 13:33:45,476 - utils - INFO - Interviewing...
+2024-01-26 13:42:53,743 - utils - INFO - Character agent created for 钟离
+2024-01-26 13:42:53,743 - utils - INFO - Interviewing...
+2024-01-26 13:55:25,518 - utils - INFO - Character agent created for 钟离
+2024-01-26 13:55:25,518 - utils - INFO - Interviewing...
+2024-01-26 13:56:09,877 - utils - INFO - Character agent created for 钟离
+2024-01-26 13:56:09,877 - utils - INFO - Interviewing...
+2024-01-26 13:58:22,480 - utils - INFO - Character agent created for 钟离
+2024-01-26 13:58:22,480 - utils - INFO - Interviewing...
+2024-01-26 13:59:58,943 - utils - INFO - Character agent created for 钟离
+2024-01-26 13:59:58,943 - utils - INFO - Interviewing...
+2024-01-26 14:00:46,245 - utils - INFO - Character agent created for 钟离
+2024-01-26 14:00:46,245 - utils - INFO - Interviewing...
+2024-01-26 14:01:47,111 - utils - INFO - Character agent created for 钟离
+2024-01-26 14:01:47,111 - utils - INFO - Interviewing...
+2024-01-26 14:02:26,450 - utils - INFO - Interview finished... save into ../results/interview/16Personalities-agent-type=ChatHaruhi_agent-llm=llama2_query-style=interview/zhongli-zh_0-test.json
+2024-01-26 14:02:26,450 - utils - INFO - Assessing...
+2024-01-26 14:02:26,451 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 14:02:26,451 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你经常交新朋友吗？」
+<the participant>:「我不是一个善于交际的人，对于
+2024-01-26 14:02:30,133 - utils - INFO - GPT Output: Based on the conversations, the participant's responses consistently indicate a preference for spend
+2024-01-26 14:02:30,135 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 14:02:30,135 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你经常交新朋友吗？」
+<the participant>:「我不是一个善于交际的人，对于
+2024-01-26 14:02:37,032 - utils - INFO - GPT Output: Based on the conversations, the participant's responses consistently indicate a preference for spend
+2024-01-26 14:02:37,034 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 14:02:37,034 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你喜欢参加团体活动吗？」
+<the participant>: 「<bound meth
+2024-01-26 14:02:40,044 - utils - INFO - GPT Output: Based on the conversations, it seems that the participant's responses indicate a preference for Intr
+2024-01-26 14:02:40,045 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 14:02:40,046 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「经过漫长而劳累的一周，一个热闹的社交活动正是你所需要的吗？」
+<the particip
+2024-01-26 14:02:47,793 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant's responses indicate a preference for
+2024-01-26 14:02:47,794 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 14:02:47,794 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你更喜欢热闹、繁华的地方，而不是安静、亲密的地方吗？」
+<the participant
+2024-01-26 14:02:51,524 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant's responses indicate a preference for
+2024-01-26 14:02:51,525 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 14:02:51,525 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你花很多空闲时间探索各种引起你兴趣的随机话题吗？」
+<the participant>:
+2024-01-26 14:02:56,063 - utils - INFO - GPT Output: Based on the conversations, it seems that the participant leans more towards Intuition (N) rather th
+2024-01-26 14:02:56,064 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 14:02:56,064 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你花很多空闲时间探索各种引起你兴趣的随机话题吗？」
+<the participant>:
+2024-01-26 14:03:01,296 - utils - INFO - GPT Output: Based on the conversations, it seems that the participant leans more towards Intuition (N) rather th
+2024-01-26 14:03:01,297 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 14:03:01,297 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你花很多空闲时间探索各种引起你兴趣的随机话题吗？」
+<the participant>:
+2024-01-26 14:03:05,659 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant demonstrates a strong inclination tow
+2024-01-26 14:03:05,660 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 14:03:05,660 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你绝对不是艺术型的人吗？」
+<the participant>: 「<bound met
+2024-01-26 14:03:10,065 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant's responses indicate a preference for
+2024-01-26 14:03:10,066 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 14:03:10,066 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你经常花很多时间试图理解与你自己观点非常不同的观点吗？」
+<the participan
+2024-01-26 14:03:13,242 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant seems to lean more towards the Intuit
+2024-01-26 14:03:13,243 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 14:03:13,243 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「看到别人哭很容易让你也想哭吗？」
+<the participant>:「人们的情绪是相互
+2024-01-26 14:03:15,546 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant seems to exhibit a balanced approach 
+2024-01-26 14:03:15,547 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 14:03:15,547 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你更倾向于听从头脑而不是内心吗？」
+<the participant>: 「<bound
+2024-01-26 14:03:18,836 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant seems to lean more towards the Thinki
+2024-01-26 14:03:18,837 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 14:03:18,837 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你的情绪可以变化得很快吗？」
+<the participant>: 「<bound me
+2024-01-26 14:03:23,873 - utils - INFO - GPT Output: Based on the conversations, it seems that the participant's responses are not providing clear indica
+2024-01-26 14:03:23,874 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 14:03:23,874 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你的情绪可以变化得很快吗？」
+<the participant>: 「<bound me
+2024-01-26 14:03:27,049 - utils - INFO - GPT Output: Based on the conversations, it seems that the participant's responses are not providing clear answer
+2024-01-26 14:03:27,050 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 14:03:27,051 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你很少感到不安全吗？」
+<the participant>: 「<bound metho
+2024-01-26 14:03:34,050 - utils - INFO - GPT Output: Based on the provided conversation, it's challenging to gauge the T/F dimension as the participant's
+2024-01-26 14:03:34,051 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 14:03:34,051 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你很少感到不安全吗？」
+<the participant>: 「<bound metho
+2024-01-26 14:03:38,637 - utils - INFO - GPT Output: Based on the provided conversation, it seems that the participant's responses indicate a tendency to
+2024-01-26 14:03:38,639 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 14:03:38,639 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「当有人对你评价很高时，你会想知道他们会花多长时间感到失望吗？」
+<the partici
+2024-01-26 14:03:41,835 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant's responses indicate a tendency towar
+2024-01-26 14:03:41,837 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 14:03:41,837 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你经常为备用计划制定备用计划吗？」
+<the participant>:「备用计划的备用
+2024-01-26 14:03:44,036 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant seems to exhibit a balanced approach 
+2024-01-26 14:03:44,038 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 14:03:44,038 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你对很多事情都感兴趣，以至于很难决定下一步做什么吗？」
+<the participant
+2024-01-26 14:03:48,850 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant's responses indicate a tendency towar
+2024-01-26 14:03:48,852 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 14:03:48,852 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你很少对自己做出的选择产生怀疑吗？」
+<the participant>: 「<boun
+2024-01-26 14:04:12,544 - utils - INFO - Character agent created for 钟离
+2024-01-26 14:04:12,544 - utils - INFO - Interview done before. load directly from ../results/interview/16Personalities-agent-type=ChatHaruhi_agent-llm=llama2_query-style=interview/zhongli-zh_0-test.json
+2024-01-26 14:04:12,545 - utils - INFO - Assessing...
+2024-01-26 14:04:12,547 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 14:04:12,547 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你很少对自己做出的选择产生怀疑吗？」
+<the participant>: 「<boun
+2024-01-26 14:04:15,672 - utils - INFO - GPT Output: {
+    "analysis": "Based on the responses, the participant seems to lean more towards the Perceiving
+2024-01-26 14:04:15,674 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 14:04:15,674 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「你有条不紊地完成事情，不会跳过任何步骤吗？」
+<the participant>: 「<
+2024-01-26 14:04:19,293 - utils - INFO - GPT Output: {
+    "analysis": "Based on the conversations, the participant's responses indicate a tendency towar
+2024-01-26 14:04:19,298 - utils - INFO - Assess finished... save into ../results/assessment/16Personalities_agent-type=ChatHaruhi_agent-llm=llama2_eval-method=interview_assess_batch_anonymous-gpt-3.5-turbo/zhongli-zh_0th-test.json
+2024-01-26 14:04:19,298 - utils - INFO - 16Personalities assessment results:
+2024-01-26 14:04:19,298 - utils - INFO - Character: 钟离
+2024-01-26 14:04:19,299 - utils - INFO - Score range: [1, 7]
+2024-01-26 14:04:19,299 - utils - INFO - Prediction INFP
+2024-01-26 14:04:19,299 - utils - INFO - Groundtruth ISTJ
+2024-01-26 14:04:19,299 - utils - INFO - E: 5.00	I: 95.00	intra std: [8.660254037844387]	
+2024-01-26 14:04:19,299 - utils - INFO - S: 33.33	N: 66.67	intra std: [47.14045207910317]	
+2024-01-26 14:04:19,299 - utils - INFO - T: 42.00	F: 58.00	intra std: [38.157568056677825]	
+2024-01-26 14:04:19,299 - utils - INFO - P: 52.50	J: 47.50	intra std: [32.69174207655505]	
+2024-01-26 14:04:19,299 - utils - INFO - 
+2024-01-26 14:04:19,299 - utils - INFO - Save final results into ../results/final/16Personalities_agent-type=ChatHaruhi_agent-llm=llama2_eval-method=interview_assess_batch_anonymous-gpt-3.5-turbo_repeat-times=1/zhongli-zh.json
+2024-01-26 14:09:29,951 - utils - INFO - Character agent created for Hermione
+2024-01-26 14:09:29,951 - utils - INFO - Interviewing...
+2024-01-26 14:10:05,774 - utils - INFO - Interview finished... save into ../results/interview/BFI-agent-type=ChatHaruhi_agent-llm=llama2_query-style=interview/Hermione-en_0-test.json
+2024-01-26 14:10:05,774 - utils - INFO - Assessing...
+2024-01-26 14:10:05,775 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially BFI. I (<the participant>) am conducting the BFI test
+2024-01-26 14:10:05,775 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「Are you talkative?」
+<the participant>: 「<bou
+2024-01-26 14:23:13,501 - utils - INFO - Load final results from ../results/final/16Personalities_agent-type=ChatHaruhi_agent-llm=llama2_eval-method=interview_assess_batch_anonymous-gpt-3.5-turbo_repeat-times=1/zhongli-zh.json
+2024-01-26 14:23:28,345 - utils - INFO - Load final results from ../results/final/16Personalities_agent-type=ChatHaruhi_agent-llm=llama2_eval-method=interview_assess_batch_anonymous-gpt-3.5-turbo_repeat-times=1/hutao-zh.json
+2024-01-26 14:23:44,864 - utils - INFO - Load final results from ../results/final/16Personalities_agent-type=ChatHaruhi_agent-llm=llama2_eval-method=interview_assess_batch_anonymous-gpt-3.5-turbo_repeat-times=1/zhongli-zh.json
+2024-01-26 14:24:56,280 - utils - INFO - Character agent created for Harry
+2024-01-26 14:24:56,281 - utils - INFO - Interviewing...
+2024-01-26 14:25:49,085 - utils - INFO - Character agent created for Harry
+2024-01-26 14:25:49,086 - utils - INFO - Interviewing...
+2024-01-26 14:29:01,431 - utils - INFO - Character agent created for Harry
+2024-01-26 14:29:01,431 - utils - INFO - Interviewing...
+2024-01-26 14:29:25,892 - utils - INFO - Character agent created for Harry
+2024-01-26 14:29:25,892 - utils - INFO - Interviewing...
+2024-01-26 14:30:07,176 - utils - INFO - Interview finished... save into ../results/interview/16Personalities-agent-type=ChatHaruhi_agent-llm=llama2_query-style=interview/Harry-en_0-test.json
+2024-01-26 14:30:07,176 - utils - INFO - Assessing...
+2024-01-26 14:30:07,177 - utils - INFO - ChatGPT SysPrompt:  You are an expert in Psychometrics, especially 16Personalities (highly similar to MBTI). I (<the par
+2024-01-26 14:30:07,177 - utils - INFO - ChatGPT Input:  Our conversation is as follows:
+1.
+<the experimenter>: 「Do you regularly make new friends?」
+<the par
