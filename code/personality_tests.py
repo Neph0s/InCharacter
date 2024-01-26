@@ -31,7 +31,7 @@ parser.add_argument('--agent_type', type=str, default='ChatHaruhi',
 
 # Added choices for the agent_llm argument
 parser.add_argument('--agent_llm', type=str, default='gpt-3.5-turbo', 
-					choices=['gpt-3.5-turbo', 'openai', 'GLMPro', 'ChatGLM2GPT'], 
+					choices=['gpt-3.5-turbo', 'openai', 'GLMPro', 'ChatGLM2GPT',"qwen118k_raw","llama2"], 
 					help='agent LLM (gpt-3.5-turbo)')
 
 # Added choices for the evaluator_llm argument
@@ -158,8 +158,11 @@ def build_character_agent(character_code, agent_type, agent_llm):
 
 		character_agent.llm.model = agent_llm
 		character_agent.llm_type = agent_llm # just to set different keys for cache 
-
-	character_agent.llm.chat.temperature = 0 
+	else:
+		if agent_type == 'ChatHaruhi':
+			os.environ["OPENAI_API_KEY"] = config['openai_apikey']
+			character_agent = ChatHaruhi(role_name = character_info[character_code]["agent"]["ChatHaruhi"], llm = agent_llm)
+			#character_agent.llm.chat.temperature = 0 
 
 	return character_agent
 
@@ -281,7 +284,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 		else:
 			# split need_convert, at most 60 qa pairs per batch
 			need_convert_list = [ need_convert[i:i+60] for i in range(0, len(need_convert), 60)]
-		
+
 		for need_convert in need_convert_list:
 			# process need_convert to json format
 			need_convert_ = {}
@@ -457,7 +460,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 				llm_response = get_response_json(sys_prompt=sys_prompt, inputs=user_input, model=evaluator_llm)
 				
 				if questionnaire_name == '16Personalities':
-					llm_response['result'] = {k: float(str(v).strip("%")) for k, v in llm_response['result'].items()}
+					llm_response['result'] = {k: float(v.strip("%")) for k, v in llm_response['result'].items()}
 					assert (sum(llm_response['result'].values()) == 100)
 					# use the score of dim_cls1
 					llm_response['result'] = llm_response['result'][dim_cls1]
@@ -568,7 +571,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 	
 	eval_args = eval_method.split('_')
 
-	if not os.path.exists(final_save_path): ##agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(final_save_path)):
+	if (not os.path.exists(final_save_path)): ##agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(final_save_path)):
 		# need to get multitime assessment results
 
 		# get experimenter
@@ -648,7 +651,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 			
 				assessment_save_path = os.path.join(assessment_folder_path, assessment_save_path)
 			
-				if not os.path.exists(assessment_save_path): #agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(assessment_save_path)):
+				if (not os.path.exists(assessment_save_path)): #agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(assessment_save_path)):
 					logger.info('Assessing...')
 					assessment_results = assess(character_info[character]["alias"], experimenter, questionnaire_results, questionnaire, questionnaire_metadata, eval_method, language, evaluator_llm, nth_test)
 			
@@ -678,8 +681,6 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 			assessment_results[dim] = {
 				'score': avg([a_results[dim]['score'] for a_results in multitime_assess_results]),
 			}
-
-		
 			
 			if repeat_times > 1:
 				assessment_results[dim]['inter_std'] = std([a_results[dim]['score'] for a_results in multitime_assess_results])
@@ -762,6 +763,8 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 		with open(final_save_path, 'r') as f:
 			assessment_results = json.load(f)
 		
+		
+	
 	for dim in dims:
 		if 'details' in assessment_results[dim].keys():
 			assessment_results[dim].pop('details')
