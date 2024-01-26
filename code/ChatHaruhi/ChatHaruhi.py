@@ -88,6 +88,8 @@ class ChatHaruhi:
             self.llm, self.tokenizer = self.get_models('foo')
         elif "qwen" in llm:
             self.llm, self.tokenizer = self.get_models(llm)
+        elif "llama" in llm:
+            self.llm, self.tokenizer = self.get_models(llm)
         else:
             print(f'warning! undefined llm {llm}, use openai instead.')
             self.llm, self.tokenizer = self.get_models('openai')
@@ -300,6 +302,9 @@ class ChatHaruhi:
         elif model_name == "foo":
             from .FooLLM import FooLLM
             return (FooLLM(), tiktokenizer)
+        elif "llama" in model_name:
+            from .llama2 import ChatLLaMA
+            return (ChatLLaMA(), tiktokenizer)
         elif "qwen" in model_name:
             if model_name == "qwen118k_raw":
                 from .Qwen118k2GPT import Qwen118k2GPT, Qwen_tokenizer
