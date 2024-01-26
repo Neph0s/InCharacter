@@ -36,6 +36,7 @@ logger_main = logging.getLogger(__name__ + '_main')
 file_handler_main = logging.FileHandler(f'{__main__.__file__}.log', encoding='utf-8')
 logger_main.setLevel(logging.INFO)
 logger_main.addHandler(file_handler_main)
+logger_main.addHandler(console_handler)
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 file_handler_main.setFormatter(formatter)
 

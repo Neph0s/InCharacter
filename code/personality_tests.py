@@ -460,7 +460,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 				llm_response = get_response_json(sys_prompt=sys_prompt, inputs=user_input, model=evaluator_llm)
 				
 				if questionnaire_name == '16Personalities':
-					llm_response['result'] = {k: float(v.strip("%")) for k, v in llm_response['result'].items()}
+					llm_response['result'] = {k: float(str(v).strip("%")) for k, v in llm_response['result'].items()}
 					assert (sum(llm_response['result'].values()) == 100)
 					# use the score of dim_cls1
 					llm_response['result'] = llm_response['result'][dim_cls1]
@@ -571,7 +571,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 	
 	eval_args = eval_method.split('_')
 
-	if (not os.path.exists(final_save_path)): ##agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(final_save_path)):
+	if not os.path.exists(final_save_path): ##agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(final_save_path)):
 		# need to get multitime assessment results
 
 		# get experimenter
@@ -651,7 +651,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 			
 				assessment_save_path = os.path.join(assessment_folder_path, assessment_save_path)
 			
-				if (not os.path.exists(assessment_save_path)): #agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(assessment_save_path)):
+				if not os.path.exists(assessment_save_path): #agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(assessment_save_path)):
 					logger.info('Assessing...')
 					assessment_results = assess(character_info[character]["alias"], experimenter, questionnaire_results, questionnaire, questionnaire_metadata, eval_method, language, evaluator_llm, nth_test)
 			
