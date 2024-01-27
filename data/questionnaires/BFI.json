@@ -382,7 +382,7 @@
         "31": {
             "origin_en": "Is sometimes shy, inhibited.",
             "origin_zh": "有时害羞，拘谨。",
-            "rewritten_en": "Is it sometimes shy, inhibited?",
+            "rewritten_en": "Are you sometimes shy, inhibited?",
             "rewritten_zh": "有时害羞，拘谨吗？",
             "dimension": "Extraversion",
             "category": "negative"
@@ -390,7 +390,7 @@
         "32": {
             "origin_en": "Is considerate and kind to almost everyone.",
             "origin_zh": "对几乎所有人都考虑周到和友善。",
-            "rewritten_en": "Is it considerate and kind to almost everyone?",
+            "rewritten_en": "Are you considerate and kind to almost everyone?",
             "rewritten_zh": "对几乎所有人都考虑周到和友善吗？",
             "dimension": "Agreeableness",
             "category": "positive"
@@ -398,7 +398,7 @@
         "33": {
             "origin_en": "Does things efficiently.",
             "origin_zh": "高效地做事。",
-            "rewritten_en": "Does it do things efficiently?",
+            "rewritten_en": "Do you do things efficiently?",
             "rewritten_zh": "高效地做事吗？",
             "dimension": "Conscientiousness",
             "category": "positive"
@@ -406,7 +406,7 @@
         "34": {
             "origin_en": "Remains calm in tense situations.",
             "origin_zh": "在紧张的情况下保持冷静。",
-            "rewritten_en": "Does it remain calm in tense situations?",
+            "rewritten_en": "Do you remain calm in tense situations?",
             "rewritten_zh": "在紧张的情况下保持冷静吗？",
             "dimension": "Neuroticism",
             "category": "negative"
@@ -414,7 +414,7 @@
         "35": {
             "origin_en": "Prefers work that is routine.",
             "origin_zh": "喜欢例行公事。",
-            "rewritten_en": "Does it prefer work that is routine?",
+            "rewritten_en": "Do you prefer work that is routine?",
             "rewritten_zh": "喜欢例行公事吗？",
             "dimension": "Openness",
             "category": "negative"
@@ -422,7 +422,7 @@
         "36": {
             "origin_en": "Is outgoing, sociable.",
             "origin_zh": "外向，善于交际。",
-            "rewritten_en": "Is it outgoing, sociable?",
+            "rewritten_en": "Are you outgoing, sociable?",
             "rewritten_zh": "外向，善于交际吗？",
             "dimension": "Extraversion",
             "category": "positive"
@@ -430,7 +430,7 @@
         "37": {
             "origin_en": "Is sometimes rude to others.",
             "origin_zh": "有时对别人粗鲁。",
-            "rewritten_en": "Is it sometimes rude to others?",
+            "rewritten_en": "Are you sometimes rude to others?",
             "rewritten_zh": "有时对别人粗鲁吗？",
             "dimension": "Agreeableness",
             "category": "negative"
@@ -438,7 +438,7 @@
         "38": {
             "origin_en": "Makes plans and follows through with them.",
             "origin_zh": "制定计划并付诸实施。",
-            "rewritten_en": "Does it make plans and follow through with them?",
+            "rewritten_en": "Do you make plans and follow through with them?",
             "rewritten_zh": "制定计划并付诸实施吗？",
             "dimension": "Conscientiousness",
             "category": "positive"
@@ -446,7 +446,7 @@
         "39": {
             "origin_en": "Gets nervous easily.",
             "origin_zh": "容易紧张。",
-            "rewritten_en": "Does it get nervous easily?",
+            "rewritten_en": "Do you get nervous easily?",
             "rewritten_zh": "容易紧张吗？",
             "dimension": "Neuroticism",
             "category": "positive"
@@ -454,7 +454,7 @@
         "40": {
             "origin_en": "Likes to reflect, play with ideas.",
             "origin_zh": "喜欢反思，玩弄想法。",
-            "rewritten_en": "Does it like to reflect, play with ideas?",
+            "rewritten_en": "Do you like to reflect, play with ideas?",
             "rewritten_zh": "喜欢反思，玩弄想法吗？",
             "dimension": "Openness",
             "category": "positive"
