@@ -106,8 +106,8 @@
     },
     "prompts": {
         "rpa_choose_prefix": {
-            "en": "Do you think that the statement \"<statement>\" applies to you?",
-            "zh": "你认为\"<statement>\"这个说法适用于你吗？"
+            "en": "Do you agree with the statement that \"<statement>\"?",
+            "zh": "你赞同\"<statement>\"这个说法吗？"
         },
         "convert_to_choice": {
             "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> agrees with the statement. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n",

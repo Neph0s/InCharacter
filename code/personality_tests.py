@@ -455,7 +455,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 						user_input = user_input.replace(a, '<the participant>')
 					sys_prompt = sys_prompt.replace(experimenter, '<the experimenter>')
 					user_input = user_input.replace(experimenter, '<the experimenter>')
-					sys_prompt = sys_prompt.replace('I ', 'I (<the participant>) ', 1)
+					sys_prompt = sys_prompt.replace('I ', 'I (<the experimenter>) ', 1)
 				
 				llm_response = get_response_json(sys_prompt=sys_prompt, inputs=user_input, model=evaluator_llm)
 				
@@ -571,7 +571,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 	
 	eval_args = eval_method.split('_')
 
-	if not os.path.exists(final_save_path): ##agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(final_save_path)):
+	if True: #not os.path.exists(final_save_path): ##agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(final_save_path)):
 		# need to get multitime assessment results
 
 		# get experimenter
@@ -625,7 +625,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 
 				interview_save_path = os.path.join(interview_folder_path, interview_save_path)
 				
-				if not os.path.exists(interview_save_path):
+				if True: #not os.path.exists(interview_save_path):
 					logger.info('Interviewing...')
 
 					questionnaire_results = interview(character_agent, questionnaire, experimenter, questionnaire_metadata["prompts"], language, query_style, nth_test)
@@ -651,7 +651,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 			
 				assessment_save_path = os.path.join(assessment_folder_path, assessment_save_path)
 			
-				if not os.path.exists(assessment_save_path): #agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(assessment_save_path)):
+				if True: #not os.path.exists(assessment_save_path): #agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(assessment_save_path)):
 					logger.info('Assessing...')
 					assessment_results = assess(character_info[character]["alias"], experimenter, questionnaire_results, questionnaire, questionnaire_metadata, eval_method, language, evaluator_llm, nth_test)
 			
