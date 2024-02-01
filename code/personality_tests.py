@@ -304,12 +304,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 
 				need_convert_dim = set([ idx2dimension[q] for q in need_convert])
 				assert(len(need_convert_dim) == 1)
-				need_convert_dim = need_convert_dim.pop()
-
-				# pos_adjoption = {'Extraversion': 'extroverted', 'Neuroticism': 'limbic', 'Conscientiousness': 'organized', 'Agreeableness': 'agreeable', 'Openness': 'inquisitive'}
-				# neg_adjoption = {'Extraversion': 'introverted', 'Neuroticism': 'calm', 'Conscientiousness': 'unstructured', 'Agreeableness': 'egocentric', 'Openness': 'non-curious'}
-				
-				# sys_prompt_ = (questionnaire_metadata["prompts"]["convert_to_choice"]['en'].replace('agrees with the statement', f'displays a highly {need_convert_dim} personality')) + '\n' + questionnaire_metadata["prompts"]["llm_choice_instruction"]['en'].replace('neither agree nor disagree', 'neutral').replace('disagree', neg_adjoption[need_convert_dim]).replace('agree', pos_adjoption[need_convert_dim])				
+				need_convert_dim = need_convert_dim.pop()		
 				
 				sys_prompt = (questionnaire_metadata["prompts"]["convert_to_choice"]['en'].replace('agrees with the statement', f'displays a highly {need_convert_dim} personality') + '\n' + questionnaire_metadata["prompts"]["llm_choice_instruction_adjoption"][need_convert_dim]['en'])
 				
@@ -364,8 +359,11 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 		if 'api' in eval_args:
 			assert(questionnaire_name == '16Personalities' and len(choices) == 60) 
 			for idx, choice in choices.items():
-				if choice == 'x': choice = 4 # To make it possible to call api 
+				if choice == 'x' or choice == None: choice = 4 # To make it possible to call api 
+				
 				choice = int(choice)
+
+					
 
 				dim = idx2dimension[idx]
 				

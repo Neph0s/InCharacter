@@ -99,7 +99,7 @@ def get_final_assessment(multitime_assess_results, questionnaire):
 from utils import logger_main as logger
 logger.info('Start Testsing')
 
-eval_methods = ['interview_convert', 'interview_convert_api', 'interview_convert_adjoption_anonymous', 'interview_convert_adjoption_anonymous_api',  'interview_assess_batch_anonymous', 'interview_assess_collective_anonymous'] #'choose'
+eval_methods = ['choose', 'choose_api', 'interview_convert', 'interview_convert_api', 'interview_convert_adjoption_anonymous', 'interview_convert_adjoption_anonymous_api',  'interview_assess_batch_anonymous', 'interview_assess_collective_anonymous'] #'choose'
 
 eval_llms = ['gpt-3.5', 'gpt-4', 'gemini']
 
@@ -111,6 +111,7 @@ for questionnaire in questionnaires:
             for repeat_times in [3]: 
                 for agent_llm in ['gpt-3.5']: 
                     if eval_method.endswith('api') and not questionnaire == '16Personalities': continue 
+                    if eval_method in ['choose'] and questionnaire == '16Personalities': continue
 
                     logger.info(f'Settings: Questionnaire: {questionnaire}, Eval Method: {eval_method}, Repeat Times: {repeat_times}, Agent LLM: {agent_llm}, Eval LLM: {eval_llm}')
 
@@ -148,7 +149,6 @@ for questionnaire in questionnaires:
                                     range_span = 4 
 
                                 robustness = dim_std / range_span
-
                                 
                                 count_robustness += 1
                                 sum_robustness += robustness
@@ -205,6 +205,7 @@ for questionnaire in questionnaires:
                                 logger.info(f'{dim}: {avg_metric:.4f} +- {std_metric:.4f}')
 
 
+import pdb; pdb.set_trace()
 
 eval_method_map = {
     #'choose': 'Likert-Scale', 

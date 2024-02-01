@@ -11,11 +11,11 @@ logger.info('Start testing eval methods')
 
 #Questionnaire: BFI, Eval Method: interview_assess_collective_anonymous, Repeat Times: 1, Agent LLM: gpt-4, Eval LLM: gpt-4
 
-for eval_llm in ['gpt-3.5', 'gpt-4', 'gemini']: 
+for eval_llm in ['gpt-4']: 
     for questionnaire in questionnaires: 
-        for eval_method in ['interview_convert', 'interview_convert_api', 'interview_convert_adjoption_anonymous', 'interview_convert_adjoption_anonymous_api',  'interview_assess_batch_anonymous', 'interview_assess_collective_anonymous']:  #'choose', 'choose_api', 
-            for repeat_times in [3]: 
-                for agent_llm in ['gpt-3.5']: 
+        for eval_method in ['interview_convert_adjoption_anonymous']:  #'choose', 'choose_api', 
+            for repeat_times in [1]: 
+                for agent_llm in ['gpt-4']: 
                     
                     # try:
                     if eval_method.endswith('api'):

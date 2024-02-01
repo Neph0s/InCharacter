@@ -224,7 +224,7 @@ def get_response_gemini(sys_prompt, inputs, model='gemini-pro', retry_count=0, n
 
 		if nth_generation >= 5:
 			# can not get valid output
-			return get_response_gpt(sys_prompt, inputs, model='gpt-4')
+			return get_response(sys_prompt, inputs, model='gpt-4')
 		
 		response = response.text
 		logger.info('Gemini Output: ' + response[:100])
@@ -361,7 +361,7 @@ def find_colon_idx(response):
 
 
 if __name__ == '__main__':
-	print(get_response('Act as a calculator', '123+456=?', 'gpt-3.5-turbo'))
+	print(get_response('Act as a calculator', '12223+456=?', 'gpt-3.5-turbo'))
 		
 
 
