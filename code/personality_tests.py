@@ -306,10 +306,6 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 				assert(len(need_convert_dim) == 1)
 				need_convert_dim = need_convert_dim.pop()
 
-				# pos_adjoption = {'Extraversion': 'extroverted', 'Neuroticism': 'limbic', 'Conscientiousness': 'organized', 'Agreeableness': 'agreeable', 'Openness': 'inquisitive'}
-				# neg_adjoption = {'Extraversion': 'introverted', 'Neuroticism': 'calm', 'Conscientiousness': 'unstructured', 'Agreeableness': 'egocentric', 'Openness': 'non-curious'}
-				
-				# sys_prompt_ = (questionnaire_metadata["prompts"]["convert_to_choice"]['en'].replace('agrees with the statement', f'displays a highly {need_convert_dim} personality')) + '\n' + questionnaire_metadata["prompts"]["llm_choice_instruction"]['en'].replace('neither agree nor disagree', 'neutral').replace('disagree', neg_adjoption[need_convert_dim]).replace('agree', pos_adjoption[need_convert_dim])				
 				
 				sys_prompt = (questionnaire_metadata["prompts"]["convert_to_choice"]['en'].replace('agrees with the statement', f'displays a highly {need_convert_dim} personality') + '\n' + questionnaire_metadata["prompts"]["llm_choice_instruction_adjoption"][need_convert_dim]['en'])
 				
@@ -571,7 +567,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 	
 	eval_args = eval_method.split('_')
 
-	if True: #not os.path.exists(final_save_path): ##agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(final_save_path)):
+	if not os.path.exists(final_save_path): ##agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(final_save_path)):
 		# need to get multitime assessment results
 
 		# get experimenter
@@ -625,7 +621,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 
 				interview_save_path = os.path.join(interview_folder_path, interview_save_path)
 				
-				if True: #not os.path.exists(interview_save_path):
+				if not os.path.exists(interview_save_path):
 					logger.info('Interviewing...')
 
 					questionnaire_results = interview(character_agent, questionnaire, experimenter, questionnaire_metadata["prompts"], language, query_style, nth_test)
