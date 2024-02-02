@@ -11,6 +11,8 @@ import math
 from utils import logger, get_response_json, avg, std
 import re 
 
+
+
 random.seed(42)
 
 parser = argparse.ArgumentParser(description='Assess personality of a character')
@@ -52,7 +54,7 @@ parser.add_argument('--eval_method', type=str, default='interview_batch',
 args = parser.parse_args()
 print(args)
 
-from characters import character_info, alias2character
+from characters import character_info, alias2character, character_labels
 
 dims_dict = {'16Personalities': ['E/I', 'S/N', 'T/F', 'P/J'], 'BFI': ['Extraversion', 'Neuroticism', 'Conscientiousness', 'Agreeableness', 'Openness'] } # we want special order
 
@@ -181,15 +183,22 @@ def interview(character_agent, questionnaire, experimenter, questionnaire_prompt
 		# get question
 		if query_style == 'interview':
 			q = question[f'rewritten_{language}']
-		elif query_style == 'choose':
+		elif query_style.startswith('choose'):
 			q = questionnaire_prompts["rpa_choose_prefix"][language].replace('<statement>', question[f'origin_{language}']) + ' ' + questionnaire_prompts["rpa_choice_instruction"][language]
+
+			if query_style == 'choosecot':
+				if language == 'en':
+					q = q.replace('Please answer with the number only, without anything else.', 'Please give your reasons.')
+				else:
+					q = q.replace('请你只回答这一个数字，不要说其他内容。', '请给出你的理由。')
+				
+
+
 		else:
 			raise NotImplementedError
 		
 		# this can cause error when changing ChatHaruhi RPA into RoleLLM RPAs, just rerun it in that case.
 		response = character_agent.chat(role = experimenter, text = q, nth_test=nth_test)
-
-			
 
 		result = {
 			'id': question['id'],
@@ -237,7 +246,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 
 
 
-	if eval_args[0] == 'choose' or eval_args[1] == 'convert':
+	if eval_args[0].startswith('choose') or eval_args[1] == 'convert':
 		# collect choices 
 
 		idx2dimension = {q['id']: q['dimension'] for q in questionnaire}
@@ -247,7 +256,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 		options = [ str(i) for i in  range(questionnaire_metadata['range'][0], questionnaire_metadata['range'][1]+1) ]
 		choices = {} 
 
-		if eval_args[0] == 'choose':
+		if eval_args[0].startswith('choose'):
 			
 			need_convert = []
 			for r in questionnaire_results:
@@ -567,19 +576,22 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 	
 	eval_args = eval_method.split('_')
 
-	if not os.path.exists(final_save_path): ##agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(final_save_path)):
+	if True: #not os.path.exists(final_save_path): 
 		# need to get multitime assessment results
 
 		# get experimenter
 		experimenter = get_experimenter(character)
 
-		# build character agent
-		character_agent = build_character_agent(character, agent_type, agent_llm) 
-		logger.info(f'Character agent created for {character_name}')
-
 		multitime_assess_results = []
 
+		character_agent = None
+
 		if eval_method == 'direct':
+			if not character_agent:
+				# build character agent
+				character_agent = build_character_agent(character, agent_type, agent_llm) 
+				logger.info(f'Character agent created for {character_name}')
+
 			query = questionnaire_metadata['prompts']['direct_ask'][language]
 
 			response = character_agent.chat(role = experimenter, text = query)
@@ -587,7 +599,6 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 
 			return 
 		else:
-		
 			query_style = eval_args[0]
 			
 			if repeat_times < 1: 
@@ -624,6 +635,11 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 				if not os.path.exists(interview_save_path):
 					logger.info('Interviewing...')
 
+					if not character_agent:
+						# build character agent
+						character_agent = build_character_agent(character, agent_type, agent_llm) 
+						logger.info(f'Character agent created for {character_name}')
+
 					questionnaire_results = interview(character_agent, questionnaire, experimenter, questionnaire_metadata["prompts"], language, query_style, nth_test)
 					with open(interview_save_path, 'w') as f:
 						json.dump(questionnaire_results, f, indent=4, ensure_ascii=False)
@@ -647,7 +663,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 			
 				assessment_save_path = os.path.join(assessment_folder_path, assessment_save_path)
 			
-				if True: #not os.path.exists(assessment_save_path): #agent_llm == 'gpt-3.5' and language == 'zh' or (not os.path.exists(assessment_save_path)):
+				if not os.path.exists(assessment_save_path): 
 					logger.info('Assessing...')
 					assessment_results = assess(character_info[character]["alias"], experimenter, questionnaire_results, questionnaire, questionnaire_metadata, eval_method, language, evaluator_llm, nth_test)
 			
@@ -669,30 +685,64 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 
 		# average multitime_assess_results
 		# traverse all possible structures of assessment_results
-		assessment_results = {}
+		assessment_results = {
+			'dims': {},
+			'analysis': {},
+			'code': ''
+		}
+
+		if 'assess' not in eval_method:
+			multitime_item_results = {}
+
 		for dim in multitime_assess_results[0].keys():
 			
 			a_results_keys = multitime_assess_results[0][dim].keys()
 
-			assessment_results[dim] = {
+			assessment_results['dims'][dim] = {
 				'score': avg([a_results[dim]['score'] for a_results in multitime_assess_results]),
 			}
 			
 			if repeat_times > 1:
-				assessment_results[dim]['inter_std'] = std([a_results[dim]['score'] for a_results in multitime_assess_results])
+				assessment_results['dims'][dim]['inter_std'] = std([a_results[dim]['score'] for a_results in multitime_assess_results])
 
 			if 'intra_std' in a_results_keys:
-				assessment_results[dim]['intra_std'] = [a_results[dim]['intra_std'] for a_results in multitime_assess_results]
+				assessment_results['dims'][dim]['intra_std'] = [a_results[dim]['intra_std'] for a_results in multitime_assess_results]
 			
 			if 'details' in a_results_keys:
-				assessment_results[dim]['details'] = [a_results[dim]['details'] for a_results in multitime_assess_results]
+				assessment_results['dims'][dim]['details'] = [a_results[dim]['details'] for a_results in multitime_assess_results]
 			
+			if 'assess' not in eval_method:
+				for a_results in multitime_assess_results:
+					for item in a_results[dim]['details']:
+						assert(len(item['id']) == 1)
+						item_id = item['id'][0]
+						multitime_item_results[item_id] = multitime_item_results.get(item_id, []) + [item['score']]
+		
+		score_span = questionnaire_metadata['range'][1] - questionnaire_metadata['range'][0]
+
+
+		if 'assess' not in eval_method:
+			assessment_results['analysis']['item_consistency'] = avg([ std(scores) for item_id, scores in multitime_item_results.items()]) / score_span
+
+			assessment_results['analysis']['dim_consistency'] = avg([ avg(assessment_results['dims'][dim]['intra_std']) for dim in dims]) / score_span
+		
+
+		assessment_results['analysis']['robustness'] = avg([ assessment_results['dims'][dim]['inter_std'] for dim in dims]) / score_span
+		
+	
 
 		# assign a code for BFI/16P 
 		# dims = dims_dict.get(questionnaire_name, sorted(list(set([q['dimension'] for q in questionnaire]))))
 		
 		if questionnaire_name in ['BFI', '16Personalities']:
+			label_settings = ['pdb', 'annotation']
+		else:
+			label_settings = ['annotation']
+
+
+		if questionnaire_name in ['BFI', '16Personalities']:
 			thresh = (questionnaire_metadata['range'][0] + questionnaire_metadata['range'][1]) / 2
+
 			if questionnaire_name == '16Personalities': 
 				thresh = 50
 				pos_tags = { dim: dim[0] for dim in dims}
@@ -704,25 +754,41 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 			code = ''
 			
 			for dim in pos_tags.keys():
-				result = assessment_results[dim]
+				result = assessment_results['dims'][dim]
 				if result['score'] > thresh:
 					code += pos_tags[dim]
 				else:
 					code += neg_tags[dim]
 
 			assessment_results['code'] = code 
-		
+			logger.info(f'Prediction {code}')
+
+			for label_setting in label_settings:
+				labels = character_labels[label_setting][character][questionnaire_name]
+
+				label_code = '' 
+				for dim in dims:
+					l = labels[dim]['type']
+					if l == 'X': 
+						label_code += 'X'
+					elif l == 'H':
+						label_code += pos_tags[dim]
+					elif l == 'L':
+						label_code += neg_tags[dim]
+					else:
+						import pdb; pdb.set_trace()
+						
+						raise NotImplementedError
+				
+				logger.info(f'{label_setting} Label {label_code}')
+
+				
+			
 		logger.info(f'Score range: {questionnaire_metadata["range"]}')
 
-		if 'code' in assessment_results:
-			pred_code = assessment_results['code']
-			logger.info(f'Prediction {pred_code}')
-		
-		if questionnaire_name in character_info[character]["labels"]: 
-			label_code = character_info[character]["labels"][questionnaire_name]
-			logger.info(f'Groundtruth {label_code}')
+		for dim in dims:
+			result = assessment_results['dims'][dim]
 
-		for dim, result in assessment_results.items():
 			dim_result_info = ''
 			if "score" in result:
 				if questionnaire_name == '16Personalities':
@@ -735,17 +801,11 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 			
 			if "intra_std" in result and result["intra_std"] != None:
 				dim_result_info += f'intra std: {result["intra_std"]}\t'
-
-			if False: #"details" in result:
-				if 'analysis' in result["details"][0][0]:
-					# analysis of the first batch
-					dim_result_info += f'{result["details"][0][0]["analysis"]}\t'
-				else:
-					dim_result_info += f'{result["details"][0][0]["responses"][0]}\t'
-				
-					
-			
+									
 			logger.info(dim_result_info)
+		
+		for analysis, result in assessment_results['analysis'].items():
+			logger.info(f'{analysis}: {result:.5f}')
 		
 	
 		logger.info(f'Save final results into {final_save_path}')
@@ -759,69 +819,103 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 		with open(final_save_path, 'r') as f:
 			assessment_results = json.load(f)
 		
-		
 	
-	for dim in dims:
-		if 'details' in assessment_results[dim].keys():
-			assessment_results[dim].pop('details')
+	# for dim in dims:
+	# 	if 'details' in assessment_results['dims'][dim].keys():
+	# 		assessment_results['dims'][dim].pop('details')
 
 	return assessment_results
 
-def accuracy(agent_types, results, questionnaire_name):
-	count_correct_dimension_each_dim = { a: { d: 0 for d in dims_dict[questionnaire_name]} for a in agent_types }
-	count_dimension_each_dim = { a: { d: 0 for d in dims_dict[questionnaire_name]} for a in agent_types }
-	idx2dimension = {i: d for i, d in enumerate(dims_dict[questionnaire_name])} 
-	dims = dims_dict[questionnaire_name]
-	
+def calculate_measured_alignment(preds, labels, questionnaire_name):
+	assert(preds.keys() == labels.keys())
 
-	count_dimension = { a: 0 for a in agent_types }
-	count_correct_dimension = { a: 0 for a in agent_types }
+	agent_types = list(set([ rpa[1] for rpa in preds.keys()]))
 	
+	dims = dims_dict[questionnaire_name]
+
+	sum_mse_each_dim = { a: { d: 0 for d in dims } for a in agent_types }
+	sum_mae_each_dim = { a: { d: 0 for d in dims } for a in agent_types }
+	correct_single_each_dim = { a: { d: 0 for d in dims } for a in agent_types }
+	correct_full = { a: 0 for a in agent_types }
+
+	count_single_each_dim = { a: { d: 0 for d in dims } for a in agent_types }
 	count_full = { a: 0 for a in agent_types }
-	count_correct_full = { a: 0 for a in agent_types }
 	
-	for (character, a), code in results.items():
-		label = character_info[character]['labels'][questionnaire_name]
+	questionnaire_metadata = load_questionnaire(questionnaire_name) 
+
+	if questionnaire_name == '16Personalities':
+		range_max = 100
+		range_min = 0
+	else:
+		range_max = questionnaire_metadata['range'][1]
+		range_min = questionnaire_metadata['range'][0]
+
+	range_middle = (range_max + range_min) / 2
+	range_span = range_max - range_min
+	
+	for rpa in preds.keys():
+		pred = preds[rpa]
+		label = labels[rpa]
+
+		a = rpa[1]
 
 		full_correct = True
-		for i, (p, l) in enumerate(zip(code, label)):
-			if l == 'X': continue 
+		for dim in label.keys():
+			label_score = label[dim]['score']
+			label_type = label[dim]['type']
 
-			count_dimension[a] += 1
-			count_dimension_each_dim[a][idx2dimension[i]] += 1
+			if label_type == 'X': continue 
 
-			if p == l:
-				count_correct_dimension[a] += 1
-				count_correct_dimension_each_dim[a][idx2dimension[i]] += 1
-			else: 
+			pred_score = pred[dim]
+			pred_type = 'H' if pred_score > range_middle else 'L'
+
+			count_single_each_dim[a][dim] += 1 
+
+			if pred_type == label_type:
+				correct_single_each_dim[a][dim] += 1
+			else:
 				full_correct = False
-			
 
-		count_full[a] += 1
+			sum_mse_each_dim[a][dim] += ((pred_score - label_score) / range_span) ** 2
+			sum_mae_each_dim[a][dim] += abs((pred_score - label_score) / range_span) 
+
 		if full_correct: 
-			count_correct_full[a] += 1
+			correct_full[a] += 1
+			# print(rpa)
+			# print(f'Pred {pred} Label {label}')
+		count_full[a] += 1
+	
+	# aggreagate individual dims 
+	for count in [sum_mse_each_dim, sum_mae_each_dim, correct_single_each_dim, count_single_each_dim]:
+		for a in agent_types:
+			count[a]['all'] = sum(count[a].values()) 
+
+	for count in [sum_mse_each_dim, sum_mae_each_dim, correct_single_each_dim, correct_full, count_single_each_dim, count_full]:
+		if isinstance( count[agent_types[0]], dict):
+			count['all'] = {}
+			for dim in dims + ['all']:
+				count['all'][dim] = sum(count[a][dim] for a in agent_types)
+		else:
+			count['all'] = sum(count.values())
 	
 	
-	for count in [count_dimension, count_correct_dimension, count_full, count_correct_full]:
-		count['all'] = sum(count.values())
-	
-	count_correct_dimension_each_dim['all'] = { d: sum( [count_correct_dimension_each_dim[a][d] for a in agent_types] ) for d in dims }
-
-	count_dimension_each_dim['all'] = { d: sum( [count_dimension_each_dim[a][d] for a in agent_types] ) for d in dims}
-
-
-	acc = {}
+	metrics = {}
              
 	for a in agent_types + ['all']:
-		assert(count_dimension[a] == sum(count_dimension_each_dim[a].values()))
+		single_acc = {}
+		single_mse = {}
+		single_mae = {}
 
-		acc[a] = {
-			'each_dim_acc': { d: count_correct_dimension_each_dim[a][d] / count_dimension_each_dim[a][d] for d in dims},
-			'dim_acc': count_correct_dimension[a] / count_dimension[a],
-			'full_acc': count_correct_full[a] / count_full[a]
-		}
-	
-	return acc
+		for dim in dims + ['all']:
+			single_acc[dim] = correct_single_each_dim[a][dim] / count_single_each_dim[a][dim] 
+			single_mse[dim] = sum_mse_each_dim[a][dim] / count_single_each_dim[a][dim]
+			single_mae[dim] = sum_mae_each_dim[a][dim] / count_single_each_dim[a][dim]
+		
+		full_acc = correct_full[a] / count_full[a]
+		
+		metrics[a] = { 'single_acc': single_acc, 'single_mse': single_mse, 'single_mae': single_mae, 'full_acc': full_acc}
+
+	return metrics
 
 		
 	

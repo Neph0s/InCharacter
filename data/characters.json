@@ -10,11 +10,7 @@
             "character.ai": "oNYqd0CAFhHUU0h1zYC0kRdMg_ZmTIayX-ndxj0ZO4s"
         },
         "experimenter": "Harry",
-        "idx": 0,
-        "labels": {
-            "BFI": "SCOEN",
-            "16Personalities": "ESTJ"
-        }
+        "idx": 0
     },
     "Sheldon-en": {
         "alias": [
@@ -27,11 +23,7 @@
             "character.ai": "MumgMFKvBATbJM_q6wWd5qruw6mxSOHzfSyR6WcWkKA"
         },
         "experimenter": "Leonard",
-        "idx": 1,
-        "labels": {
-            "BFI": "RLOEI",
-            "16Personalities": "IXTJ"
-        }
+        "idx": 1
     },
     "raidenShogun-zh": {
         "alias": [
@@ -43,11 +35,7 @@
             "character.ai": "sN6SOwnxQl2A5EILnl6QFWHR3AD60OJFjZJTBf5MSk0"
         },
         "experimenter": "旅行者",
-        "idx": 2,
-        "labels": {
-            "BFI": "RCOEN",
-            "16Personalities": "ISTJ"
-        }
+        "idx": 2
     },
     "Lucifer Morningstar-en": {
         "alias": [
@@ -58,11 +46,7 @@
             "character.ai": "ZvecXgHajQTLYfumfqxkhx41CKXudi5wgXjeID_UFI4"
         },
         "experimenter": "Chloe Decker",
-        "idx": 3,
-        "labels": {
-            "BFI": "SLUEI",
-            "16Personalities": "EXXP"
-        }
+        "idx": 3
     },
     "zhongli-zh": {
         "alias": [
@@ -74,11 +58,7 @@
             "character.ai": "B1-r0Sd9myqJ9liAvyG5gaAVe6NElndTkuf8HobrIUA"
         },
         "experimenter": "旅行者",
-        "idx": 4,
-        "labels": {
-            "BFI": "RCOAI",
-            "16Personalities": "ISTJ"
-        }
+        "idx": 4
     },
     "Gaston-en": {
         "alias": [
@@ -89,11 +69,7 @@
             "character.ai": "vmpG3EnQESklg9flOkMCYkzh93rtzskpUQxtWUueel4"
         },
         "experimenter": "LeFou",
-        "idx": 5,
-        "labels": {
-            "BFI": "SXUEN",
-            "16Personalities": "ESTP"
-        }
+        "idx": 5
     },
     "hutao-zh": {
         "alias": [
@@ -105,11 +81,7 @@
             "character.ai": "YRvlPe-7AsG2QNassfQMRV1my8gwf2DJitGT8Fka3fo"
         },
         "experimenter": "旅行者",
-        "idx": 6,
-        "labels": {
-            "BFI": "SCUEI",
-            "16Personalities": "ENFP"
-        }
+        "idx": 6
     },
     "Klaus Mikaelson-en": {
         "alias": [
@@ -120,11 +92,7 @@
             "character.ai": "dY3ljnF4Pai8aB_yWcrTzdOSVbYHFFU50wPxBJfRx9Y"
         },
         "experimenter": "Elijah Mikaelson",
-        "idx": 7,
-        "labels": {
-            "BFI": "SLOEI",
-            "16Personalities": "ENTJ"
-        }
+        "idx": 7
     },
     "Jigsaw-en": {
         "alias": [
@@ -135,11 +103,7 @@
             "character.ai": "JRyH6oYT0RokLPfopQnAbNZsTpbFaN1_ju5D9p_42Ko"
         },
         "experimenter": "Amanda Young",
-        "idx": 8,
-        "labels": {
-            "BFI": "RCOEI",
-            "16Personalities": "INFJ"
-        }
+        "idx": 8
     },
     "James Bond-en": {
         "alias": [
@@ -150,11 +114,7 @@
             "character.ai": "NurpUNKeJCDlgjd_QnAZJynQVkduUP2bKfK4tSgrR1I"
         },
         "experimenter": "M",
-        "idx": 9,
-        "labels": {
-            "BFI": "RCXEN",
-            "16Personalities": "ISTP"
-        }
+        "idx": 9
     },
     "Blair Waldorf-en": {
         "alias": [
@@ -165,11 +125,7 @@
             "character.ai": "7k9h0V_qD_lW4cnYnC6X0t2WzW7yBubbqm7-P4mBr3Y"
         },
         "experimenter": "Serena van der Woodsen",
-        "idx": 10,
-        "labels": {
-            "BFI": "SLOEN",
-            "16Personalities": "EXTJ"
-        }
+        "idx": 10
     },
     "Rorschach-en": {
         "alias": [
@@ -180,11 +136,7 @@
             "character.ai": "sKZgNAPznTYm8UxxUgtbzR5Jms0Q_y6GAZrrSogzBzA"
         },
         "experimenter": "Nite Owl",
-        "idx": 11,
-        "labels": {
-            "BFI": "RLOEN",
-            "16Personalities": "ISTJ"
-        }
+        "idx": 11
     },
     "Luna-en": {
         "alias": [
@@ -196,11 +148,7 @@
             "character.ai": "9sM7L6rOhPGpvF73kPZh55vv40NJZcjKP-Og1dTgMPk"
         },
         "experimenter": "Harry",
-        "idx": 12,
-        "labels": {
-            "BFI": "RCUAI",
-            "16Personalities": "INFP"
-        }
+        "idx": 12
     },
     "Thor-en": {
         "alias": [
@@ -211,11 +159,7 @@
             "character.ai": "mDzlSX-C3djnrUG8hk9dXfnfX3kxYw4lEUmqa9pWePE"
         },
         "experimenter": "Loki",
-        "idx": 13,
-        "labels": {
-            "BFI": "SLUAN",
-            "16Personalities": "ESXP"
-        }
+        "idx": 13
     },
     "Raj-en": {
         "alias": [
@@ -227,11 +171,7 @@
             "character.ai": "HFrCGA2enlkjz_WdkeFcJ-u1DC0MA_RJZMi379H0MPU"
         },
         "experimenter": "Leonard",
-        "idx": 14,
-        "labels": {
-            "BFI": "RLUAI",
-            "16Personalities": "INFP"
-        }
+        "idx": 14
     },
     "Twilight Sparkle-en": {
         "alias": [
@@ -242,11 +182,7 @@
             "character.ai": "zreRXiroWwozhUTxT5zRTKE_q4CVvP04qgFvcbvojGk"
         },
         "experimenter": "Spike",
-        "idx": 15,
-        "labels": {
-            "BFI": "RLOAI",
-            "16Personalities": "ISTJ"
-        }
+        "idx": 15
     },
     "Jim Morrison-en": {
         "alias": [
@@ -257,11 +193,7 @@
             "character.ai": "oMFZE0x6fGzg1OA_T_KEIFwUn87oUhpildP1lPR0OAs"
         },
         "experimenter": "Ray Manzarek",
-        "idx": 16,
-        "labels": {
-            "BFI": "RLUEI",
-            "16Personalities": "INFP"
-        }
+        "idx": 16
     },
     "John Keating-en": {
         "alias": [
@@ -272,11 +204,7 @@
             "character.ai": "VouOCRGb36IbskxyUBsH7XF2B7W-L1cgl4iNKcCa4QI"
         },
         "experimenter": "Todd Anderson",
-        "idx": 17,
-        "labels": {
-            "BFI": "SCUAI",
-            "16Personalities": "ENFP"
-        }
+        "idx": 17
     },
     "Michael Scott-en": {
         "alias": [
@@ -287,11 +215,7 @@
             "character.ai": "FbTJC1qa_0eTM8U_y7921NURjnDobiRNaopdVkBisIk"
         },
         "experimenter": "Dwight Schrute",
-        "idx": 18,
-        "labels": {
-            "BFI": "SLUAI",
-            "16Personalities": "ENFP"
-        }
+        "idx": 18
     },
     "Shrek-en": {
         "alias": [
@@ -302,11 +226,7 @@
             "character.ai": "eX2BOqEshHs_G4TOisfotuDRi5nNt6fVP9DHrxk8A04"
         },
         "experimenter": "Donkey",
-        "idx": 19,
-        "labels": {
-            "BFI": "RLUEN",
-            "16Personalities": "ISTP"
-        }
+        "idx": 19
     },
     "Harry-en": {
         "alias": [
@@ -318,11 +238,7 @@
             "character.ai": "suAUJzAPwFm-rDAAzKByHqAN64dYBg__lC_83ClfBzg"
         },
         "experimenter": "Hermione",
-        "idx": 20,
-        "labels": {
-            "BFI": "RLUAN",
-            "16Personalities": "ISFP"
-        }
+        "idx": 20
     },
     "The Dude-en": {
         "alias": [
@@ -333,11 +249,7 @@
             "character.ai": "OYYf4iM6fjt9eZ72oXRsY3UGPeXd9Y-uJwfAjF5JAwk"
         },
         "experimenter": "Walter Sobchak",
-        "idx": 21,
-        "labels": {
-            "BFI": "RCUAN",
-            "16Personalities": "ISFP"
-        }
+        "idx": 21
     },
     "Walt Kowalski-en": {
         "alias": [
@@ -348,11 +260,7 @@
             "character.ai": "JftuNjGPmXhgvvVO_NuahpKMyQG1U_IFUKsXec1TM-8"
         },
         "experimenter": "Thao Vang Lor",
-        "idx": 22,
-        "labels": {
-            "BFI": "RXOEN",
-            "16Personalities": "ISTJ"
-        }
+        "idx": 22
     },
     "Snape-en": {
         "alias": [
@@ -364,11 +272,7 @@
             "character.ai": "3UPkXMg4O9ypGc2tjFd8ngz88pB46gLlexzsxObdE1Y"
         },
         "experimenter": "Dumbledore",
-        "idx": 23,
-        "labels": {
-            "BFI": "RLOEI",
-            "16Personalities": "INTJ"
-        }
+        "idx": 23
     },
     "haruhi-zh": {
         "alias": [
@@ -384,11 +288,7 @@
         "groundtruth": {
             "16Personalities": "ENFP"
         },
-        "idx": 24,
-        "labels": {
-            "BFI": "SLUEI",
-            "16Personalities": "ENFP"
-        }
+        "idx": 24
     },
     "ayaka-zh": {
         "alias": [
@@ -400,11 +300,7 @@
             "character.ai": "EyCXjGgCJPqDgX2VIv-J4w-RCYihvPSnMbo6FIphk1Q"
         },
         "experimenter": "旅行者",
-        "idx": 25,
-        "labels": {
-            "BFI": "RCOAI",
-            "16Personalities": "INFJ"
-        }
+        "idx": 25
     },
     "Malfoy-en": {
         "alias": [
@@ -416,11 +312,7 @@
             "character.ai": "673gY2uYLGlwnvbJBACRQ5UcnR5dWlYU--y5EUN77Xg"
         },
         "experimenter": "Crabbe",
-        "idx": 26,
-        "labels": {
-            "BFI": "SLOEN",
-            "16Personalities": "ESTJ"
-        }
+        "idx": 26
     },
     "Ron-en": {
         "alias": [
@@ -432,11 +324,7 @@
             "character.ai": "XB6vZp_grwz11nyyN3Zme0M-4xgQyE7ccJLU7mvs-Ro"
         },
         "experimenter": "Hermione",
-        "idx": 27,
-        "labels": {
-            "BFI": "SLUAN",
-            "16Personalities": "ESFP"
-        }
+        "idx": 27
     },
     "wanderer-zh": {
         "alias": [
@@ -448,11 +336,7 @@
             "character.ai": "dA-MZ70NidVWwc_7FvTU5wbjwTuVz0nrGdk7lAjas9g"
         },
         "experimenter": "纳西妲",
-        "idx": 28,
-        "labels": {
-            "BFI": "RLOEI",
-            "16Personalities": "INXX"
-        }
+        "idx": 28
     },
     "Dumbledore-en": {
         "alias": [
@@ -464,11 +348,7 @@
             "character.ai": "Ih2Cid1Cdv5qfz5hPKi1Bi-jExbcy2P0V-7mKBIPaUQ"
         },
         "experimenter": "McGonagall",
-        "idx": 29,
-        "labels": {
-            "BFI": "RCOAI",
-            "16Personalities": "INFJ"
-        }
+        "idx": 29
     },
     "McGonagall-en": {
         "alias": [
@@ -480,11 +360,7 @@
             "character.ai": "r0bm6AD-Ai7JG1V9ZFObsITsK4McnRZO0w4NsKTMR78"
         },
         "experimenter": "Dumbledore",
-        "idx": 30,
-        "labels": {
-            "BFI": "RCOAI",
-            "16Personalities": "ISTJ"
-        }
+        "idx": 30
     },
     "Lestat de Lioncourt-en": {
         "alias": [
@@ -495,10 +371,6 @@
             "character.ai": "pvgODZlNN9bxW5_60_GRPaw1IOG0EJY_ymho_wlJ248"
         },
         "experimenter": "Louis de Pointe du Lac",
-        "idx": 31,
-        "labels": {
-            "BFI": "SLUEN",
-            "16Personalities": "ESTP"
-        }
+        "idx": 31
     }
 }
