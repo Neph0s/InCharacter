@@ -254,6 +254,12 @@
             "ROE": {
                 "en": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'not emotionally regulated at all', 2 denotes 'not emotionally regulated', 3 denotes 'barely emotionally regulated', 4 denotes 'Neutral', 5 denotes 'slightly emotionally regulated', 6 denotes 'emotionally regulated', 7 denotes 'strongly emotionally regulated'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             }
+        },
+        "dim_desc": {
+            "SEA": "Self-Emotional Appraisal (SEA) evaluates an individual's ability to understand and recognize their own emotions. High scorers on SEA are adept at identifying and understanding the nuances of their feelings, knowing why they feel a certain way most of the time, and consistently recognizing their emotional states, including happiness.", 
+            "OEA": "Others' Emotional Appraisal (OEA) measures the capacity to perceive and understand the emotions of others through their behavior. Individuals scoring high in this dimension are sensitive and attuned to the feelings of those around them, capable of reading emotional cues accurately, and possess a keen awareness of the emotional climate within their social circles.",
+            "UOE": "Use of Emotion (UOE) assesses the ability to utilize emotions to enhance performance and achieve goals. High scorers believe in their competence, set and strive towards personal objectives with optimism, and use their emotional states as a driving force to motivate themselves and persist in their endeavors.",
+            "ROE": "Regulation of Emotion (ROE) focuses on an individual's ability to regulate and manage their emotions effectively. High scorers can control their temper, maintain emotional stability under stress, quickly recover from emotional disturbances, and apply rational thinking to overcome challenges."
         }
     }
 }

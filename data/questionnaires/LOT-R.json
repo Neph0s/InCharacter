@@ -143,6 +143,9 @@
             "Optimistic": {
                 "en": "Each choice is a number from 0 to 4. Please evaluate <character> based on the conversation using the scales: 0 denotes 'strongly pessimistic', 1 denotes 'pessimistic', 2 denotes 'neutral', 3 denotes 'optimistic', 4 denotes 'strongly optimistic'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             }
+        },
+        "dim_desc": {
+            "Optimistic": "Optimism on the LOT-R gauges an individual's tendency to expect positive outcomes. High scorers tend to expect the best outcomes in uncertain times and are generally optimistic about their future. They believe that more good things will happen to them than bad, reflecting a positive outlook towards life and its challenges. Low scorers typically expect things to not always go their way and might believe that if something can go wrong, it will. This perspective indicates a more cautious or pessimistic view, where the anticipation of positive outcomes is less frequent, potentially affecting their approach to life's uncertainties and future aspirations."
         }
     }
 }

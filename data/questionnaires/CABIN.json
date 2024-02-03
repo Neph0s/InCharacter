@@ -518,7 +518,7 @@
             ]
         },
         {
-            "cat_name": "Business Iniatives",
+            "cat_name": "Business Initiatives",
             "cat_questions": [
                 121,
                 122,
@@ -1675,7 +1675,7 @@
             "origin_zh": "谈判一项商业交易。",
             "rewritten_en": "Do you like to  negotiate a business deal?",
             "rewritten_zh": "你喜欢谈判一项商业交易吗？",
-            "dimension": "Business Iniatives",
+            "dimension": "Business Initiatives",
             "category": "positive"
         },
         "122": {
@@ -1683,7 +1683,7 @@
             "origin_zh": "建立一系列小型企业。",
             "rewritten_en": "Do you like to  set up a string of small business enterprises?",
             "rewritten_zh": "你喜欢建立一系列小型企业吗？",
-            "dimension": "Business Iniatives",
+            "dimension": "Business Initiatives",
             "category": "positive"
         },
         "123": {
@@ -1691,7 +1691,7 @@
             "origin_zh": "扩大业务以纳入新产品线。",
             "rewritten_en": "Do you like to  expand a business to incorporate a new line of products?",
             "rewritten_zh": "你喜欢扩大业务以纳入新产品线吗？",
-            "dimension": "Business Iniatives",
+            "dimension": "Business Initiatives",
             "category": "positive"
         },
         "124": {
@@ -1699,7 +1699,7 @@
             "origin_zh": "通过战略商业实践击败竞争对手。",
             "rewritten_en": "Do you like to  beat competitors through strategic business practices?",
             "rewritten_zh": "你喜欢通过战略商业实践击败竞争对手吗？",
-            "dimension": "Business Iniatives",
+            "dimension": "Business Initiatives",
             "category": "positive"
         },
         "125": {
@@ -2131,8 +2131,8 @@
             "Professional Advising": {
                 "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> likes Professional Advising. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
             },
-            "Business Iniatives": {
-                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> likes Business Iniatives. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            "Business Initiatives": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> likes Business Initiatives. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
             },
             "Sales": {
                 "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> likes Sales. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
@@ -2256,8 +2256,8 @@
             "Professional Advising": {
                 "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Dislike Professional Advising', 2 means 'Slightly Dislike Professional Advising', 3 means 'Neither Like nor Dislike', 4 means 'Slightly Like Professional Advising', 5 means 'Like Professional Advising Very Much'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             },
-            "Business Iniatives": {
-                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Dislike Business Iniatives', 2 means 'Slightly Dislike Business Iniatives', 3 means 'Neither Like nor Dislike', 4 means 'Slightly Like Business Iniatives', 5 means 'Like Business Iniatives Very Much'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            "Business Initiatives": {
+                "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Dislike Business Initiatives', 2 means 'Slightly Dislike Business Initiatives', 3 means 'Neither Like nor Dislike', 4 means 'Slightly Like Business Initiatives', 5 means 'Like Business Initiatives Very Much'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             },
             "Sales": {
                 "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Dislike Sales', 2 means 'Slightly Dislike Sales', 3 means 'Neither Like nor Dislike', 4 means 'Slightly Like Sales', 5 means 'Like Sales Very Much'. In case <character> refuses to answer the question, use \"x\" to indicate it."
@@ -2289,6 +2289,49 @@
             "Law": {
                 "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 means 'Dislike Law', 2 means 'Slightly Dislike Law', 3 means 'Neither Like nor Dislike', 4 means 'Slightly Like Law', 5 means 'Like Law Very Much'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             }
+        },
+        "dim_desc": {
+            "Mechanics/Electronics": "This dimension reflects a strong interest in understanding, repairing, and maintaining mechanical and electronic systems. It includes activities such as repairing car engines, performing aircraft maintenance, and installing communication systems. High scorers are likely to enjoy working with their hands, solving technical problems, and have a keen interest in how machines operate.",
+            "Construction/WoodWork": "Individuals scoring high in this area show a preference for constructing and creating structures or objects, often from materials like wood. They enjoy practical tasks such as building furniture, crafting wood wall shelves, and constructing fences, demonstrating skill, creativity, and a tangible outcome from their efforts.",
+            "Transportation/Machine Operation": "This dimension indicates a fascination with operating vehicles and heavy machinery. High scorers find satisfaction in driving buses, operating trains, or managing cranes, often showing an appreciation for the mechanics of transportation and the responsibility of safely moving goods or people.",
+            "Physical/Manual Labor": "Reflecting an interest in physical exertion and hands-on work, this dimension covers activities from loading and unloading cargo to moving construction materials. High scorers thrive in active roles that require strength, stamina, and a direct impact on physical tasks.",
+            "Protective Service": "Those interested in serving and protecting the community score high here. It encompasses law enforcement and security tasks such as arresting suspects, conducting surveillance, and inspecting for illegal goods, showing a commitment to safety and justice.",
+            "Agriculture": "High scorers in this dimension are drawn to farming, gardening, and working with the land. They enjoy cultivating crops, studying soil science, and managing orchards, often with a deep respect for nature and sustainable practices.",
+            "Nature/Outdoors": "This interest area focuses on outdoor activities and conservation efforts. Individuals prefer engaging with the natural environment, whether through planting trees, restoring wildlife habitats, or surveying forest areas, showing a passion for environmental preservation.",
+            "Animal Service": "Reflecting a love for animals, this dimension includes caring for, treating, and managing animals in various settings. High scorers are compassionate, dedicated to animal welfare, and interested in veterinary services or animal care roles.",
+            "Athletics": "Individuals with a strong inclination towards sports and physical competition score high in this dimension. They enjoy participating in, training for, and coaching sports, showing a commitment to physical fitness and competitive achievement.",
+            "Engineering": "This area indicates a keen interest in designing, innovating, and improving systems and structures. It includes activities like structural design to withstand environmental challenges and developing new materials, showcasing a problem-solving mindset and technical acuity.",
+            "Physical Science": "High scorers are fascinated by the natural world's fundamental principles, including studying galaxies, analyzing geological samples, and investigating physical phenomena, demonstrating curiosity and analytical skills.",
+            "Life Science": "This dimension covers interests in the biological aspects of life, from genetic research to studying organisms' physiology. Individuals are intrigued by life's complexities and contribute to advancing medical, environmental, or biological understanding.",
+            "Medical Science": "Reflecting a commitment to health and well-being, high scorers are drawn to diagnosing, treating, and researching medical conditions. They are interested in advancing healthcare practices and improving patient outcomes.",
+            "Social Science": "Individuals scoring high in this dimension are interested in studying societies, cultural differences, and human behavior. They aim to understand and address social issues through research and analysis.",
+            "Humanities": "This area includes interests in exploring human culture, history, and philosophy. High scorers enjoy studying ancient societies, comparing historical narratives, and delving into philosophical debates, demonstrating a deep appreciation for human thought and culture.",
+            "Mathematics/Statistics": "Reflecting a love for numbers and data analysis, individuals enjoy solving mathematical problems, developing statistical models, and applying quantitative methods to real-world situations, showcasing strong analytical and logical reasoning skills.",
+            "Information Technology": "High scorers are interested in computer science, software development, and technology management. They enjoy programming, troubleshooting hardware or software issues, and keeping abreast of technological advancements.",
+            "Visual Arts": "This dimension represents a strong inclination towards creating and appreciating visual art forms. Individuals enjoy sketching, painting, and producing unique artworks, demonstrating creativity and a keen eye for aesthetics.",
+            "Applied Arts and Design": "Individuals scoring high here are interested in combining artistic creativity with functional design. They engage in activities like creating artistic furniture, designing sets for media productions, and developing innovative design solutions.",
+            "Performing Arts": "Reflecting a passion for expressing creativity through performance, high scorers enjoy acting, dancing, or playing music in front of an audience, showcasing talent, expressiveness, and a connection with viewers.",
+            "Music": "This dimension includes interests in playing instruments, composing music, and participating in musical ensembles. High scorers have a deep appreciation for music's expressive power and enjoy creating or performing musical pieces.",
+            "Writing": "High scorers are passionate about storytelling and language, often writing narratives, poetry, and creative pieces. They explore themes and express thoughts through writing, showing a commitment to the craft for personal fulfillment or professional aims.",
+            "Media": "This area reflects an interest in creating, managing, and contributing to various media forms. High scorers enjoy directing TV shows, writing screenplays, hosting radio programs, or developing digital content, showcasing a knack for communication and audience engagement.",
+            "Culinary Art": "Reflecting a passion for cooking and food preparation, individuals enjoy experimenting with recipes, creating new dishes, and exploring culinary techniques. They appreciate the art of cooking and aim to enhance flavor and presentation.",
+            "Teaching/Education": "High scorers are drawn to sharing knowledge, instructing others, and facilitating learning. They enjoy teaching a range of subjects, mentoring students, and contributing to educational development, demonstrating patience, and a commitment to helping others grow.",
+            "Social Service": "This dimension indicates a strong inclination towards helping and serving others, especially those in need. Individuals engage in community service, assist underprivileged groups, and work towards social betterment, showing empathy and a desire to make a positive impact.",
+            "Health Care Service": "Reflecting an interest in promoting health and well-being, high scorers are drawn to treating patients, caring for individuals in critical conditions, and contributing to the medical field, showing compassion and a commitment to healthcare.",
+            "Religious Activities": "High scorers are interested in spiritual leadership, teaching religious beliefs, and engaging in faith-based community work. They value spiritual guidance and aim to foster a sense of community and faith.",
+            "Personal Service": "This area includes providing direct services to individuals, such as travel planning, event organization, and recreational activities. High scorers enjoy enhancing clients' experiences and satisfaction through personalized attention.", 
+            "Professional Advising": "Individuals scoring high here are interested in coaching, mentoring, and advising others professionally. They aim to help others achieve their career goals, improve communication skills, and navigate professional challenges.",
+            "Business Initiatives": "Reflecting entrepreneurial spirit, high scorers are interested in starting businesses, negotiating deals, and exploring new market opportunities. They have a knack for strategic thinking and aim to achieve business success.",
+            "Sales": "This dimension includes an interest in selling products or services, increasing sales, and engaging with customers. High scorers are persuasive, goal-oriented, and enjoy the challenge of meeting sales targets.",
+            "Marketing/Advertising": "High scorers are drawn to promoting products, creating advertising campaigns, and developing marketing strategies. They enjoy creative thinking, audience analysis, and the challenge of enhancing brand visibility.",
+            "Finance": "Reflecting an interest in financial management and investment, individuals enjoy analyzing financial data, assessing investment risks, and planning budgets. They have strong analytical skills and aim to maximize financial performance.",
+            "Accounting": "High scorers are interested in managing financial records, preparing payroll, and ensuring accuracy in financial reporting. They value precision, organization, and the role of accounting in business operations.",
+            "Human Resources": "This dimension includes interests in recruiting, training, and managing employee relations. High scorers aim to improve workplace environments, support employee development, and ensure organizational effectiveness.",
+            "Office Work": "Reflecting an interest in administrative tasks, high scorers enjoy organizing files, managing records, and supporting office operations. They value efficiency, organization, and the smooth running of office systems.",
+            "Management/Administration": "High scorers are interested in leading organizations, supervising teams, and making strategic decisions. They aim to guide businesses or groups towards achieving their goals and improving performance.",
+            "Public Speaking": "This area includes presenting ideas, representing organizations, and engaging with audiences through speech. High scorers enjoy communication, influencing others, and the opportunity to share their views publicly.",
+            "Politics": "Reflecting an interest in political leadership and policy-making, high scorers aim to influence public policy, lead political organizations, and contribute to governance, demonstrating a commitment to public service and leadership.",
+            "Law": "High scorers are drawn to the legal field, including defending clients, presenting arguments in court, and resolving disputes. They value justice, logical reasoning, and the role of law in society."
         }
     }
 }

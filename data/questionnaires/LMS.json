@@ -190,6 +190,11 @@
             "Factor important": {
                 "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'not money-oriented at all', 2 denotes 'not money-oriented', 3 denotes 'neutral', 4 denotes 'money-oriented', 5 denotes 'strongly money-oriented'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             }
+        },
+        "dim_desc":{
+            "Factor rich": "Factor rich measures the desire and aspiration to accumulate wealth. High scorers on this factor express a strong wish to achieve financial abundance, viewing wealth as a significant marker of success and a source of happiness. They believe that being rich enhances their status and quality of life.",
+            "Factor motivator": "Factor motivator assesses how much an individual is driven by monetary incentives to exert effort in their work or ambitions. High scorers find money to be a powerful motivator that encourages them to work harder and achieve their goals. They see financial rewards as a primary reason for investing effort in their tasks.",
+            "Factor important": "Factor important evaluates the perceived importance and value of money in an individual's life. High scorers regard money as crucial for their well-being and security. They believe that having money is essential for fulfilling their needs, ensuring stability, and accessing opportunities."
         }
     }
 }

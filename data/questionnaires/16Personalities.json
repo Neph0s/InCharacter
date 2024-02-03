@@ -326,7 +326,7 @@
             "rewritten_en": "Do you enjoy watching people argue?",
             "rewritten_zh": "你喜欢看人们争论吗？",
             "dimension": "T/F",
-            "category": "F"
+            "category": "T"
         },
         "26": {
             "origin_en": "You tend to avoid drawing attention to yourself",

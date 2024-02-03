@@ -253,9 +253,9 @@
         },
         "4": {
             "origin_en": "Have you ever taken the praise for something you knew someone else had really done?",
-            "origin_zh": "你是否曾经因为知道别人做了某事而接受了表扬？",
+            "origin_zh": "你是否曾经因为某事接受表扬，即使你知道这件事其实是别人做的？",
             "rewritten_en": "Have you ever taken the praise for something you knew someone else had really done?",
-            "rewritten_zh": "你是否曾经因为知道别人做了某事而接受了表扬？",
+            "rewritten_zh": "你是否曾经因为某事接受表扬，即使你知道这件事其实是别人做的？",
             "dimension": "Lying",
             "category": "negative"
         },
@@ -373,9 +373,9 @@
         },
         "19": {
             "origin_en": "Have you ever blamed someone for doing something you knew was really your fault?",
-            "origin_zh": "你是否曾因为别人做了你知道其实是你的错的事情而责备他人？",
+            "origin_zh": "你是否曾因某事责备他人，即使你知道其实这件事是你自己的错误？",
             "rewritten_en": "Have you ever blamed someone for doing something you knew was really your fault?",
-            "rewritten_zh": "你是否曾因为别人做了你知道其实是你的错的事情而责备他人？",
+            "rewritten_zh": "你是否曾因某事责备他人，即使你知道其实这件事是你自己的错误？",
             "dimension": "Lying",
             "category": "negative"
         },
@@ -1072,6 +1072,12 @@
             "Lying": {
                 "en": "Each choice is a number, either 0 or 1. Please evaluate <character> based on the conversation using the scales: '1' denotes 'likely honest' and '0' denotes 'likely deceptive'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             }
+        },
+        "dim_desc": {
+            "Extraversion": "This dimension measures an individual's level of sociability, liveliness, and activity. High scorers are characterized by their outgoing nature, enthusiasm, and enjoyment of social interactions. They tend to be assertive, active, and seek excitement. Low scorers, or introverts, prefer solitude, are reserved, and require less stimulation from the external world. They may enjoy quiet environments and are more reflective.", 
+            "Neuroticism": "euroticism assesses emotional stability and susceptibility to negative emotions. Individuals scoring high on this dimension are more prone to experiencing anxiety, depression, guilt, and low self-esteem. They may react more emotionally to stress and are more likely to perceive ordinary situations as threatening. Low scorers are emotionally stable, calm, and less affected by stress or emotional distress.", 
+            "Psychoticism": "Psychoticism reflects traits related to aggressiveness, impulsivity, and empathy. High scores are associated with a tendency towards tough-mindedness, nonconformity, and risk-taking. Such individuals may exhibit hostile or aggressive behaviors and have difficulty in social relationships. Low psychoticism scores suggest a more empathetic, altruistic, and conventional personality, with better emotional regulation and social adaptation.", 
+            "Lying": "This dimension evaluates an individual's inclination towards honesty versus a tendency to fabricate or provide socially acceptable answers that may not be entirely truthful. High scores indicate a strong inclination towards truthfulness, reflected in behaviors such as admitting mistakes, resisting the urge to take advantage of others, and showing a consistent adherence to honesty even when it could be personally disadvantageous. Low scores suggest a greater likelihood of engaging in deceitful behaviors, including cheating, evading responsibility, boasting about unearned achievements, and providing misleading information. This dimension contrasts the value placed on transparency and authenticity with the inclination towards deception for personal gain or social approval."
         }
     }
 }

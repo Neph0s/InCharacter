@@ -628,6 +628,10 @@
             "Feminine": {
                 "en": "Each choice is a number from 1 to 7. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly non-faminine', 2 denotes 'moderately non-faminine', 3 denotes 'slightly non-faminine', 4 denotes 'neutral', 5 denotes 'slightly feminine', 6 denotes 'moderately feminine', and 7 denotes 'strongly feminine'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             }
+        },
+        "dim_desc":{
+            "Masculine": "The masculine dimension in the BSRI encompasses traits traditionally associated with male gender roles in many societies. These traits reflect a person's tendency toward action, leadership, and assertiveness. Individuals scoring high on this dimension often exhibit qualities such as ambition, competitiveness, and the capacity to act as a leader. They are likely to be self-reliant, independent, and possess a strong personality, willing to take risks and make decisions easily. High scores indicate a person aligns with characteristics viewed as socially desirable for men, including being forceful, dominant, and having leadership abilities. These traits suggest a preference for taking charge, being assertive in social situations, and a predisposition towards analytical and instrumental behavior.",
+            "Feminine": "The feminine dimension in the BSRI captures traits traditionally associated with female gender roles. These characteristics emphasize emotional expressiveness, compassion, and interpersonal warmth. High scorers on this dimension are typically affectionate, cheerful, and compassionate, showing a deep sensitivity to the needs of others. They value relationships, are eager to soothe hurt feelings, and exhibit nurturing behaviors such as loving children and being loyal. The traits within this dimension also include being gentle, tender, and understanding, highlighting a propensity for empathy, emotional support, and a preference for cooperative and harmonious interactions."
         }
     }
 }

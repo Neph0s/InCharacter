@@ -360,6 +360,9 @@
             "Emotionally Intelligent": {
                 "en": "Each choice is a number from 1 to 5. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly emotionally insensitive', 2 denotes 'somewhat emotionally insensitive', 3 denotes 'neutral', 4 denotes 'somewhat emotionally intelligent', and 5 denotes 'strongly emotionally intelligent'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             }
+        },
+        "dim_desc": {
+            "Emotionally Intelligent": "Emotional Intelligence focuses on the capacity to understand, manage, and utilize emotions effectively. Individuals with high scores demonstrate:\nSelf-awareness: Recognizing personal emotions, strengths, and limitations.\nSelf-regulation: Managing emotions to adapt to circumstances and resist impulsive actions.\nMotivation: Pursuing goals with energy and persistence, driven by internal rewards.\nEmpathy: Understanding and sharing others' feelings, facilitating compassionate interactions.\nSocial Skills: Excelling in communication and relationship management, resolving conflicts, and inspiring others."
         }
     }
 }

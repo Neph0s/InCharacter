@@ -143,6 +143,9 @@
             "Self-efficacy": {
                 "en": "Each choice is a number from 1 to 4. Please evaluate <character> based on the conversation using the scales: 1 denotes 'not self-efficacious', 2 denotes 'somewhat low self-efficacious', 3 denotes 'somewhat self-efficacious', 4 denotes 'self-efficacious'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             }
+        },
+        "dim_desc": {
+            "Self-efficacy": "This dimension measures one's confidence in their ability to tackle and solve problems. High scorers believe in their skills to overcome challenges, persist through difficulties, and successfully manage tasks and unforeseen situations. They view obstacles as opportunities for growth and are resourceful in finding solutions. On the other hand, low scorers may doubt their capabilities, shy away from challenges due to fear of failure, and feel less prepared to handle demanding situations, potentially affecting their achievement levels and increasing susceptibility to stress."
         }
     }
 }

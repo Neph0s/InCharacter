@@ -130,6 +130,9 @@
             "Culturally Rigid": {
                 "en": "Each choice is a number from 1 to 6. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly culturally open-minded', 2 denotes 'culturally open-minded', 3 denotes 'slightly culturally open-minded', 4 denotes 'slightly culturally Rigid', 5 denotes 'culturally Rigid', 6 denotes 'strongly culturally Rigid'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             }
+        },
+        "dim_desc":{
+            "Culturally Rigid": "The Culturally Rigid dimension assesses the belief in the immutability of ethnocultural characteristics. High scorers perceive ethnocultural traits as fixed and unchangeable, suggesting that a person's cultural background rigidly defines their personality and behaviors. They believe that core characteristics derived from one's ethnic culture, such as temperament and social behaviors, cannot be significantly altered. In contrast, low scorers view ethnocultural traits as flexible and subject to change. They believe individuals can substantially alter their culturally acquired characteristics through effort, learning, and experience, showcasing a more dynamic understanding of cultural identity and personal development."
         }
     }
 }
