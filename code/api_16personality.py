@@ -204,7 +204,7 @@ def submit_16personality_api(Answers):
     session = requests.session()
 
     
-    
+
     if sess_r.json()['user']['traits']['energy'] != 'Extraverted':
         energy_value = 100 - (101 + scores[0]) // 2
         ans1 += 'I'
@@ -229,6 +229,8 @@ def submit_16personality_api(Answers):
     else:
         tactics_value = (101 + scores[3]) // 2
         ans1 += 'J'
+
+        
 
     if sess_r.json()['user']['traits']['identity'] != 'Assertive':
         identity_value = 100 - (101 + scores[4]) // 2

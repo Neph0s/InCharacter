@@ -468,7 +468,7 @@ class ChatHaruhi:
         # record dialogue history
         self.dialogue_history.append((query, response))
 
-
+        
 
         return response
     
@@ -484,7 +484,7 @@ class ChatHaruhi:
             return
         
         query_vec = self.embedding(query)
-
+        
         stories = self.db.search(query_vec, self.k_search)
         
         story_string = self.story_prefix_prompt
