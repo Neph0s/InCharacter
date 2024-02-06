@@ -1,21 +1,16 @@
-import torch 
+import torch
 from .BaseLLM import BaseLLM
-from transformers import AutoTokenizer, AutoModel
-from peft import PeftModel
-from transformers import AutoModelForCausalLM, AutoTokenizer
-from transformers.generation import GenerationConfig
-
+from transformers import AutoTokenizer, AutoModelForCausalLM
+import pdb
 tokenizer_qwen = None
 model_qwen = None
-
-
-
-def initialize_Qwen2LORA(model):
+# Load model directly
+def initialize_Qwen2LORA():
     global model_qwen, tokenizer_qwen
 
     if model_qwen is None:
         model_qwen = AutoModelForCausalLM.from_pretrained(
-            model,
+            "silk-road/ChatHaruhi_RolePlaying_qwen_7b",
             device_map="auto",
             trust_remote_code=True
         )
@@ -27,49 +22,34 @@ def initialize_Qwen2LORA(model):
 
     if tokenizer_qwen is None:
         tokenizer_qwen = AutoTokenizer.from_pretrained(
-            model, 
+            "silk-road/ChatHaruhi_RolePlaying_qwen_7b", 
             # use_fast=True,
             trust_remote_code=True
         )
 
     return model_qwen, tokenizer_qwen
 
-def Qwen_tokenizer(text):
+
+def LLaMA_tokenizer(text):
     return len(tokenizer_qwen.encode(text))
 
 class Qwen118k2GPT(BaseLLM):
-    def __init__(self, model):
+    def __init__(self, model="qwen-118k"):
         super(Qwen118k2GPT, self).__init__()
-        global model_qwen, tokenizer_qwen
-        if model == "Qwen/Qwen-1_8B-Chat":
-            tokenizer_qwen = AutoTokenizer.from_pretrained(
-                "Qwen/Qwen-1_8B-Chat", 
-                trust_remote_code=True
-            )
-            model_qwen = AutoModelForCausalLM.from_pretrained(
-                "Qwen/Qwen-1_8B-Chat", 
-                device_map="auto", 
-                trust_remote_code=True
-            ).eval()
-            self.model = model_qwen
-            self.tokenizer = tokenizer_qwen
-        elif "silk-road/" in model :
-            self.model, self.tokenizer = initialize_Qwen2LORA(model)
-        else:
-            raise Exception("Unknown Qwen model")
+        self.model, self.tokenizer = initialize_Qwen2LORA()
         self.messages = ""
 
     def initialize_message(self):
         self.messages = ""
 
     def ai_message(self, payload):
-        self.messages = "AI: " +  self.messages + "\n " + payload 
+        self.messages = self.messages + "\n " + payload 
 
     def system_message(self, payload):
-        self.messages = "SYSTEM PROMPT: " + self.messages + "\n " + payload 
+        self.messages = self.messages + "\n " + payload 
 
     def user_message(self, payload):
-        self.messages = "User: " + self.messages + "\n " + payload 
+        self.messages = self.messages + "\n " + payload 
 
     def get_response(self):
         with torch.no_grad():
@@ -80,5 +60,3 @@ class Qwen118k2GPT(BaseLLM):
     def print_prompt(self):
         print(type(self.messages))
         print(self.messages)
-
-    
