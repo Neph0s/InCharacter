@@ -42,7 +42,7 @@
             ]
         },
         {
-            "cat_name": "Neuroticism",
+            "cat_name": "Narcissism",
             "cat_questions": [
                 9,
                 10,
@@ -133,7 +133,7 @@
             "origin_zh": "我倾向于希望别人钦佩我。",
             "rewritten_en": "Do you tend to want others to admire you?",
             "rewritten_zh": "你倾向于希望别人钦佩你吗？",
-            "dimension": "Neuroticism",
+            "dimension": "Narcissism",
             "category": "positive"
         },
         "10": {
@@ -141,7 +141,7 @@
             "origin_zh": "我倾向于希望别人关注我。",
             "rewritten_en": "Do you tend to want others to pay attention to you?",
             "rewritten_zh": "你倾向于希望别人关注你吗？",
-            "dimension": "Neuroticism",
+            "dimension": "Narcissism",
             "category": "positive"
         },
         "11": {
@@ -149,7 +149,7 @@
             "origin_zh": "我倾向于追求声望或地位。",
             "rewritten_en": "Do you tend to seek prestige or status?",
             "rewritten_zh": "你倾向于追求声望或地位吗？",
-            "dimension": "Neuroticism",
+            "dimension": "Narcissism",
             "category": "positive"
         },
         "12": {
@@ -157,7 +157,7 @@
             "origin_zh": "我倾向于期待他人给予特殊优待。",
             "rewritten_en": "Do you tend to expect special favors from others?",
             "rewritten_zh": "你倾向于期待他人给予特殊优待吗？",
-            "dimension": "Neuroticism",
+            "dimension": "Narcissism",
             "category": "positive"
         }
     },
@@ -185,8 +185,8 @@
             "Psychopathy": {
                 "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly psychopathic personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
             },
-            "Neuroticism": {
-                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly neurotic personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
+            "Narcissism": {
+                "en": "I have conducted many conversations with <character>. I will input a dict of many samples, where each sample consists of a statement and a conversation. \nYour task is to convert each conversation into a choice indicating whether <character> displays a highly narcissistic personality. You should output a dict, where the keys are the same as the input dict, and the values are the choices. \n===OUTPUT FORMAT===\n{\n    \"<i_start>\": <choice 1>,\n    ...\n    \"<i_end>\": <choice n>\n}\n===CHOICE INSTRUCTION===\n"
             }
         },
         "llm_choice_instruction_adjoption": {
@@ -196,8 +196,8 @@
             "Psychopathy": {
                 "en": "Each choice is a number from 1 to 9. Please evaluate <character> based on the conversation using the scales: 1 denotes 'strongly empathetic', 2 denotes 'empathetic', 3 denotes 'somewhat empathetic', 4 denotes 'slightly empathetic', 5 denotes 'neutral', 6 denotes 'slightly psychopathic', 7 denotes 'somewhat psychopathic', 8 denotes 'psychopathic', and 9 denotes 'strongly psychopathic'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             },
-            "Neuroticism": {
-                "en": "Each choice is a number from 1 to 9. Please evaluate <character> based on the conversation using the scales: 1 denotes 'highly stable', 2 denotes 'stable', 3 denotes 'somewhat stable', 4 denotes 'slightly stable', 5 denotes 'neutral', 6 denotes 'slightly neurotic', 7 denotes 'somewhat neurotic', 8 denotes 'neurotic', and 9 denotes 'highly neurotic'. In case <character> refuses to answer the question, use \"x\" to indicate it."
+            "Narcissism": {
+                "en": "Each choice is a number from 1 to 9. Please evaluate <character> based on the conversation using the scales: 1 denotes 'highly selfless', 2 denotes 'selfless', 3 denotes 'somewhat selfless', 4 denotes 'slightly selfless', 5 denotes 'neutral', 6 denotes 'slightly narcissistic', 7 denotes 'somewhat narcissistic', 8 denotes 'narcissistic', and 9 denotes 'highly narcissistic'. In case <character> refuses to answer the question, use \"x\" to indicate it."
             }
         },
         "dim_desc": {

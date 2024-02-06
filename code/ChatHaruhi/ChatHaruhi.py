@@ -448,11 +448,14 @@ class ChatHaruhi:
         
         # add system prompt
         self.llm.initialize_message()
-        self.llm.system_message(self.system_prompt)
-    
-        # add story
+        
+        if not 'no_description' in self.llm_type.split('='):
+            self.llm.system_message(self.system_prompt)
+
         query = self.get_query_string(text, role)
-        self.add_story( query )
+        if not 'no_retrieve' in self.llm_type.split('='):
+            # add story
+            self.add_story( query )
 
         # add history
         self.add_history()
@@ -464,11 +467,9 @@ class ChatHaruhi:
         response_raw = self.llm.get_response()
 
         response = response_postprocess(response_raw, self.dialogue_bra_token, self.dialogue_ket_token)
-
+        
         # record dialogue history
         self.dialogue_history.append((query, response))
-
-        
 
         return response
     
