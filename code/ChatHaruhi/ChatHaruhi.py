@@ -90,6 +90,16 @@ class ChatHaruhi:
             self.llm, self.tokenizer = self.get_models(llm)
         elif "llama" in llm:
             self.llm, self.tokenizer = self.get_models(llm)
+        elif "phi" in llm:
+            self.llm, self.tokenizer = self.get_models(llm)
+        elif "Mixtral" in llm:
+            self.llm, self.tokenizer = self.get_models(llm)
+        elif "Qwen-118k" in llm:
+            self.llm, self.tokenizer = self.get_models(llm)
+        elif "mistral" in llm:
+            self.llm, self.tokenizer = self.get_models(llm)
+        elif "openChat" in llm:
+            self.llm, self.tokenizer = self.get_models(llm)
         else:
             print(f'warning! undefined llm {llm}, use openai instead.')
             self.llm, self.tokenizer = self.get_models('openai')
@@ -306,28 +316,23 @@ class ChatHaruhi:
             from .llama2 import ChatLLaMA
             return (ChatLLaMA(), tiktokenizer)
         elif "qwen" in model_name:
-            if model_name == "qwen118k_raw":
-                from .Qwen118k2GPT import Qwen118k2GPT, Qwen_tokenizer
-                return (Qwen118k2GPT(model = "Qwen/Qwen-1_8B-Chat"), Qwen_tokenizer)
-            from huggingface_hub import HfApi 
-            from huggingface_hub.hf_api import ModelFilter
-            qwen_api = HfApi()
-            qwen_models = qwen_api.list_models(
-                filter = ModelFilter(model_name=model_name),
-                author = "silk-road"             
-            )
-            qwen_models_id = []
-            for qwen_model in qwen_models:
-                qwen_models_id.append(qwen_model.id)
-                # print(model.id)
-            if "silk-road/" + model_name in qwen_models_id:
-                from .Qwen118k2GPT import Qwen118k2GPT, Qwen_tokenizer
-                return (Qwen118k2GPT(model = "silk-road/" + model_name), Qwen_tokenizer)
-            else:
-                print(f'warning! undefined model {model_name}, use openai instead.')
-                from .LangChainGPT import LangChainGPT
-                return (LangChainGPT(), tiktokenizer) 
-            # print(models_id)
+            from.qwen import ChatQwen
+            return (ChatQwen(), tiktokenizer)
+        elif model_name ==  "phi":
+            from.phi import Chatphi
+            return (Chatphi(), tiktokenizer)
+        elif "Mixtral" in model_name:
+            from.Mixtral import ChatMixtral
+            return (ChatMixtral(), tiktokenizer)
+        elif model_name ==  "Qwen-118k":
+            from .Qwen118k2GPT import Qwen118k2GPT
+            return (Qwen118k2GPT(), tiktokenizer)
+        elif "mistral" in model_name:
+            from.mistral import ChatMistral
+            return (ChatMistral(), tiktokenizer)
+        elif "openChat" in model_name:
+            from.openChat import ChatOpenChat
+            return (ChatOpenChat(), tiktokenizer)
         else:
             print(f'warning! undefined model {model_name}, use openai instead.')
             from .LangChainGPT import LangChainGPT

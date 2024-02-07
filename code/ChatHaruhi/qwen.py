@@ -5,38 +5,36 @@ import pdb
 tokenizer_qwen = None
 model_qwen = None
 # Load model directly
-def initialize_Qwen2LORA():
+def initialize_qwen():
     global model_qwen, tokenizer_qwen
 
     if model_qwen is None:
         model_qwen = AutoModelForCausalLM.from_pretrained(
-            "silk-road/ChatHaruhi_RolePlaying_qwen_7b",
+            "Qwen/Qwen-7B-Chat",
+            torch_dtype=torch.float16,
             device_map="auto",
             trust_remote_code=True
         )
-        model_qwen = model_qwen.eval()
-        # model_qwen = PeftModel.from_pretrained(
-        #     model_qwen,
-        #     "silk-road/Chat-Haruhi-Fusion_B"
-        # )
 
     if tokenizer_qwen is None:
         tokenizer_qwen = AutoTokenizer.from_pretrained(
-            "silk-road/ChatHaruhi_RolePlaying_qwen_7b", 
-            # use_fast=True,
+            "Qwen/Qwen-7B-Chat", 
+            use_fast=True,
             trust_remote_code=True
         )
+            
+
+
 
     return model_qwen, tokenizer_qwen
-
 
 def LLaMA_tokenizer(text):
     return len(tokenizer_qwen.encode(text))
 
-class Qwen118k2GPT(BaseLLM):
-    def __init__(self, model="qwen-118k"):
-        super(Qwen118k2GPT, self).__init__()
-        self.model, self.tokenizer = initialize_Qwen2LORA()
+class ChatQwen(BaseLLM):
+    def __init__(self, model="qwen7b"):
+        super(ChatQwen, self).__init__()
+        self.model, self.tokenizer = initialize_qwen()
         self.messages = ""
 
     def initialize_message(self):

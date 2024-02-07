@@ -33,7 +33,7 @@ parser.add_argument('--agent_type', type=str, default='ChatHaruhi',
 
 # Added choices for the agent_llm argument
 parser.add_argument('--agent_llm', type=str, default='gpt-3.5-turbo', 
-					choices=['gpt-3.5-turbo', 'openai', 'GLMPro', 'ChatGLM2GPT',"qwen118k_raw","llama2"], 
+					choices=['gpt-3.5-turbo', 'openChat', 'mistral', 'ChatGLM2GPT',"qwen-118k","llama2","Mixtral"], 
 					help='agent LLM (gpt-3.5-turbo)')
 
 # Added choices for the evaluator_llm argument
