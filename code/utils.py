@@ -137,6 +137,7 @@ def cached(func):
 
 		key = ( func.__name__, str(args), str(kwargs.items()))
 		
+		
 
 		if (cache_sign and key in cache and cache[key] not in [None, '[TOKEN LIMIT]']):
 			return cache[key]
@@ -169,7 +170,7 @@ client = OpenAI(
 )
 
 @cached 
-def get_response_gpt(sys_prompt, inputs, model='gpt-4', retry_count=0, nth_generation=0):
+def get_response_gpt(sys_prompt, inputs, model, retry_count=0, nth_generation=0):
 
 	query = [ {'role': 'system', 'content': sys_prompt}]
 	if len(inputs) > 0:
@@ -224,7 +225,7 @@ def get_response_gemini(sys_prompt, inputs, model='gemini-pro', retry_count=0, n
 
 		if nth_generation >= 5:
 			# can not get valid output
-			return get_response_gpt(sys_prompt, inputs, model='gpt-4')
+			return get_response(sys_prompt, inputs, model='gpt-4')
 		
 		response = response.text
 		logger.info('Gemini Output: ' + response[:100])
@@ -241,7 +242,7 @@ def get_response_gemini(sys_prompt, inputs, model='gemini-pro', retry_count=0, n
 			return get_response_gemini(sys_prompt, inputs, model, retry_count+1, nth_generation) 
 		else:
 			# blocked ... gpt instead ? 
-			return get_response_gpt(sys_prompt, inputs, model='gpt-4')
+			return get_response(sys_prompt, inputs, model='gpt-4')
 
 def string2json(llm_response, nth_generation=0, **kwargs):
 	llm_response = llm_response.strip("`")
@@ -253,6 +254,8 @@ def string2json(llm_response, nth_generation=0, **kwargs):
 	except:
 		try:
 			llm_response = llm_response[llm_response.find("{"):]
+			llm_response = '\n'.join([line.split("//")[0] for line in llm_response.splitlines()])
+
 			json_response = json.loads(llm_response)
 		except:
 			return False
@@ -359,6 +362,46 @@ def find_colon_idx(response):
 		colon_idx = max(colon_idx1, colon_idx2) 
 	return colon_idx
 
+import tiktoken
+def num_tokens_from_messages(messages, model="gpt-3.5-turbo-0613"):
+    """Return the number of tokens used by a list of messages."""
+    try:
+        encoding = tiktoken.encoding_for_model(model)
+    except KeyError:
+        print("Warning: model not found. Using cl100k_base encoding.")
+        encoding = tiktoken.get_encoding("cl100k_base")
+    if model in {
+        "gpt-3.5-turbo-0613",
+        "gpt-3.5-turbo-16k-0613",
+        "gpt-4-0314",
+        "gpt-4-32k-0314",
+        "gpt-4-0613",
+        "gpt-4-32k-0613",
+        }:
+        tokens_per_message = 3
+        tokens_per_name = 1
+    elif model == "gpt-3.5-turbo-0301":
+        tokens_per_message = 4  # every message follows <|start|>{role/name}\n{content}<|end|>\n
+        tokens_per_name = -1  # if there's a name, the role is omitted
+    elif "gpt-3.5-turbo" in model:
+        print("Warning: gpt-3.5-turbo may update over time. Returning num tokens assuming gpt-3.5-turbo-0613.")
+        return num_tokens_from_messages(messages, model="gpt-3.5-turbo-0613")
+    elif "gpt-4" in model:
+        print("Warning: gpt-4 may update over time. Returning num tokens assuming gpt-4-0613.")
+        return num_tokens_from_messages(messages, model="gpt-4-0613")
+    else:
+        raise NotImplementedError(
+            f"""num_tokens_from_messages() is not implemented for model {model}. See https://github.com/openai/openai-python/blob/main/chatml.md for information on how messages are converted to tokens."""
+        )
+    num_tokens = 0
+    for message in messages:
+        num_tokens += tokens_per_message
+        for key, value in message.items():
+            num_tokens += len(encoding.encode(value))
+            if key == "name":
+                num_tokens += tokens_per_name
+    num_tokens += 3  # every reply is primed with <|start|>assistant<|message|>
+    return num_tokens
 
 if __name__ == '__main__':
 	print(get_response('Act as a calculator', '123+456=?', 'gpt-3.5-turbo'))
