@@ -346,9 +346,11 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 				sys_prompt = (questionnaire_metadata["prompts"]["convert_to_choice"]['en'] + '\n' + questionnaire_metadata["prompts"]["llm_choice_instruction"]['en']).replace('<character>', character_name)
 			
 			# control batch size
-			from utils import count_tokens
+			from utils import num_tokens_from_messages
 
-			if evaluator_llm == 'gpt-3.5' and count_tokens(json.dumps(need_convert, indent=4, ensure_ascii=False), evaluator_llm) > 15500:
+			if evaluator_llm == 'gpt-3.5' and num_tokens_from_messages([{
+				"role": "user", "content": json.dumps(need_convert, indent=4, ensure_ascii=False)
+				}], 'gpt-3.5-turbo-1106') > 15500:
 				
 				need_convert_list = [ {str(j+1): need_convert[str(j+1)] for j in range(i, i+30)} for i in range(0, len(need_convert), 30)]
 			else:
@@ -396,8 +398,10 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 							converted_choices[idx] = questionnaire_metadata['range'][0] + questionnaire_metadata['range'][1] - float(choice)
 						
 							
-						
-				assert( len(need_convert.keys() - converted_choices.keys()) == 0 )
+				try:
+					assert( len(need_convert.keys() - converted_choices.keys()) == 0 )
+				except:
+					import pdb; pdb.set_trace()
 		
 				choices.update(converted_choices)
 		
