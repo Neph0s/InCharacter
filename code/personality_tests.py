@@ -33,7 +33,7 @@ parser.add_argument('--agent_type', type=str, default='ChatHaruhi',
 
 # Added choices for the agent_llm argument
 parser.add_argument('--agent_llm', type=str, default='gpt-3.5-turbo', 
-					choices=['gpt-3.5-turbo', 'openai', 'GLMPro', 'ChatGLM2GPT',"qwen118k_raw","llama2"], 
+					choices=['gpt-3.5-turbo', 'openChat', 'mistral', 'ChatGLM2GPT',"qwen-118k","llama2","Mixtral"], 
 					help='agent LLM (gpt-3.5-turbo)')
 
 # Added choices for the evaluator_llm argument
@@ -71,10 +71,6 @@ def load_questionnaire(questionnaire_name):
 	# read this jsonl file
 	with open(q_path, 'r', encoding='utf-8') as f:
 		questionnaire = json.load(f)
-	
-	if questionnaire_name not in dims_dict:
-		dims_dict[questionnaire_name] = [ _['cat_name'] for _ in  questionnaire['categories'] ]
-		
 	return questionnaire
 
 def subsample_questionnaire(questionnaire, n=20):
@@ -149,8 +145,6 @@ def split_list(input_list, n=4):
 def build_character_agent(character_code, agent_type, agent_llm):
 	from ChatHaruhi import ChatHaruhi
 	
-	agent_type_args = agent_type.split('=', 1)
-
 	if agent_llm.startswith('gpt-'): 
 		if agent_llm.startswith('gpt-3.5'):
 			agent_llm = 'gpt-3.5-turbo-1106'
@@ -158,25 +152,20 @@ def build_character_agent(character_code, agent_type, agent_llm):
 			agent_llm = 'gpt-4-1106-preview'
 
 		os.environ["OPENAI_API_KEY"] = config['openai_apikey']
-		
-		if agent_type_args[0] == 'ChatHaruhi':
+
+		if agent_type == 'ChatHaruhi':
 			character_agent = ChatHaruhi(role_name = character_info[character_code]["agent"]["ChatHaruhi"], llm = 'openai')
-		elif agent_type_args[0] == 'RoleLLM':
+		elif agent_type == 'RoleLLM':
 			character_agent = ChatHaruhi( role_from_hf = f'silk-road/ChatHaruhi-from-RoleLLM/{character_info[character_code]["agent"]["RoleLLM"]}', llm = 'openai', embedding = 'bge_en')
 			character_agent.role_name = 'RoleLLM/' + character_info[character_code]["agent"]["RoleLLM"]
 
 		character_agent.llm.model = agent_llm
-
 		character_agent.llm_type = agent_llm # just to set different keys for cache 
-			
 	else:
-		if agent_type_args[0] == 'ChatHaruhi':
+		if agent_type == 'ChatHaruhi':
 			os.environ["OPENAI_API_KEY"] = config['openai_apikey']
 			character_agent = ChatHaruhi(role_name = character_info[character_code]["agent"]["ChatHaruhi"], llm = agent_llm)
 			#character_agent.llm.chat.temperature = 0 
-	
-	if len(agent_type_args) > 1:
-		character_agent.llm_type = character_agent.llm_type + '=' + agent_type_args[1]
 
 	return character_agent
 
@@ -198,9 +187,9 @@ def interview(character_agent, questionnaire, experimenter, questionnaire_prompt
 		elif query_style.startswith('choose'):
 			q = questionnaire_prompts["rpa_choose_prefix"][language].replace('<statement>', question[f'origin_{language}']) + ' ' + questionnaire_prompts["rpa_choice_instruction"][language]
 
-			if query_style == 'choosecot2':
+			if query_style == 'choosecot':
 				if language == 'en':
-					q = q.replace('Please answer with the number only, without anything else.', 'Please think step by step. Start by sharing your thoughts, then proceed to present the number.')
+					q = q.replace('Please answer with the number only, without anything else.', 'Please give your reasons.')
 				else:
 					q = q.replace('请你只回答这一个数字，不要说其他内容。', '请给出你的理由。')
 				
@@ -256,10 +245,8 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 			
 
 	global previous_file_path
-	previous_file_path_cp = previous_file_path.replace('../results/assessment/', '../results/assessment_cp/')
-	if os.path.exists(previous_file_path_cp):
-		previous_file_path = previous_file_path_cp
-
+	previous_file_path = previous_file_path.replace('../results/assessment/', '../results/assessment_cp/')
+	
 	if True and os.path.exists(previous_file_path):
 		
 		with open(previous_file_path, 'r') as f:
@@ -302,9 +289,6 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 		else:
 			need_convert = questionnaire_results
 		
-	
-		
-		
 		
 		if 'adjoption' in eval_args:
 			# split need_convert based on dimension 
@@ -345,70 +329,55 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 			else:
 				sys_prompt = (questionnaire_metadata["prompts"]["convert_to_choice"]['en'] + '\n' + questionnaire_metadata["prompts"]["llm_choice_instruction"]['en']).replace('<character>', character_name)
 			
-			# control batch size
-			from utils import count_tokens
+			user_input = json.dumps(need_convert, indent=4, ensure_ascii=False)
 
-			if evaluator_llm == 'gpt-3.5' and count_tokens(json.dumps(need_convert, indent=4, ensure_ascii=False), evaluator_llm) > 15500:
+			if 'anonymous' in eval_args:
+				for a in character_aliases:
+					sys_prompt = sys_prompt.replace(a, '<the participant>')
+					user_input = user_input.replace(a, '<the participant>')
+				sys_prompt = sys_prompt.replace(experimenter, '<the experimenter>')
+				user_input = user_input.replace(experimenter, '<the experimenter>')
+
+			from utils import string2json_ensure_keys
+			
+
+			if evaluator_llm.startswith('gpt'):
+				# call llm to convert to choices
 				
-				need_convert_list = [ {str(j+1): need_convert[str(j+1)] for j in range(i, i+30)} for i in range(0, len(need_convert), 30)]
+				converted_choices = get_response_json([string2json_ensure_keys], sys_prompt = sys_prompt, inputs = user_input, model=evaluator_llm)							
 			else:
-				need_convert_list = [ need_convert ]
-
-			for need_convert in need_convert_list:
-				user_input = json.dumps(need_convert, indent=4, ensure_ascii=False)
-
-				if 'anonymous' in eval_args:
-					for a in character_aliases:
-						sys_prompt = sys_prompt.replace(a, '<the participant>')
-						user_input = user_input.replace(a, '<the participant>')
-					sys_prompt = sys_prompt.replace(experimenter, '<the experimenter>')
-					user_input = user_input.replace(experimenter, '<the experimenter>')
-
-				from utils import string2json_ensure_keys
+				from utils import string2json_ensure_choice_format
+				sys_prompt = sys_prompt + '\n===OUTPUT EXAMPLE===\n{\n    \"1\": 1,\n    ...\n    \"9\": 0\n}===My Input Is==='
 				
+				converted_choices = get_response_json([string2json_ensure_choice_format, string2json_ensure_keys], sys_prompt = sys_prompt, inputs = user_input, model=evaluator_llm)	
+			
 
-				if evaluator_llm.startswith('gpt'):
-					# call llm to convert to choices
-					try:
-						converted_choices = get_response_json([string2json_ensure_keys], sys_prompt = sys_prompt, inputs = user_input, model=evaluator_llm)		
-					except:
-						import pdb; pdb.set_trace()
-											
-				else:
-					from utils import string2json_ensure_choice_format
-					sys_prompt = sys_prompt + '\n===OUTPUT EXAMPLE===\n{\n    \"1\": 1,\n    ...\n    \"9\": 0\n}===My Input Is==='
+			if 'adjoption' in eval_args:
+				# convert 'negative' question choices. I.e. strongly extraverted (5) -> strongly disagree (1). 
+				for idx, choice in converted_choices.items():
+					dim = idx2dimension[idx]
+					category = idx2category[idx]
 					
-					converted_choices = get_response_json([string2json_ensure_choice_format, string2json_ensure_keys], sys_prompt = sys_prompt, inputs = user_input, model=evaluator_llm)	
+					if questionnaire_name == '16Personalities':   
+						category = 'positive' if category == dim[0] else 'negative' 
+
+					if category == 'negative' and choice != 'x':
+						converted_choices[idx] = questionnaire_metadata['range'][0] + questionnaire_metadata['range'][1] - float(choice)
 					
 						
+					
+			assert( len(need_convert.keys() - converted_choices.keys()) == 0 )
+	
 				
 
-				if 'adjoption' in eval_args:
-					# convert 'negative' question choices. I.e. strongly extraverted (5) -> strongly disagree (1). 
-					for idx, choice in converted_choices.items():
-						dim = idx2dimension[idx]
-						category = idx2category[idx]
-						
-						if questionnaire_name == '16Personalities':   
-							category = 'positive' if category == dim[0] else 'negative' 
-
-						if category == 'negative' and choice != 'x':
-							converted_choices[idx] = questionnaire_metadata['range'][0] + questionnaire_metadata['range'][1] - float(choice)
-						
-							
-						
-				assert( len(need_convert.keys() - converted_choices.keys()) == 0 )
-		
-				choices.update(converted_choices)
+			choices.update(converted_choices)
 		
 
 		for idx, choice in choices.items():
-			if choice == 'x' or choice is None: 
+			if choice == 'x': 
 				choice = (questionnaire_metadata['range'][0] + questionnaire_metadata['range'][1] ) / 2
-
+			
 			choice = float(choice)
-
-				
 			
 			dim = idx2dimension[idx]
 			category = idx2category[idx]
@@ -431,7 +400,6 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 			dim_responses = [r for i, r in enumerate(questionnaire_results) if questionnaire[i]['dimension'] == dim]
 			
 			if nth_test > 0:
-				random.seed(nth_test)
 				random.shuffle(dim_responses)
 
 			eval_setting = eval_args[2]
@@ -556,9 +524,8 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 			
 		
 		from api_16personality import submit_16personality_api
-		pred = submit_16personality_api(answers)
 		
-			
+		pred = submit_16personality_api(answers)	
 		
 		#assessment_results = { dim: {'score': pred[dim]['score'][dim[0]]} for dim in dims }
 		for dim in dims:
@@ -880,7 +847,8 @@ def calculate_measured_alignment(preds, labels, questionnaire_name, labels_pdb):
 
 	agent_types = list(set([ rpa[1] for rpa in preds.keys()]))
 	
-	dims = dims_dict[questionnaire_name] 
+	dims = dims_dict[questionnaire_name]
+
 	
 	questionnaire_metadata = load_questionnaire(questionnaire_name) 
 
@@ -932,7 +900,6 @@ def calculate_measured_alignment(preds, labels, questionnaire_name, labels_pdb):
 					full_correct = False
 
 				sum_mse_each_dim[a][dim] += ((pred_score - label_score) / range_span) ** 2
-				
 				sum_mae_each_dim[a][dim] += abs((pred_score - label_score) / range_span) 
 
 			if full_correct: 
