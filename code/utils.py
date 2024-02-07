@@ -156,6 +156,7 @@ def get_response(sys_prompt, inputs, model='gpt4', nth_generation=0):
 	if model.startswith('gpt-3.5'):
 		model = 'gpt-3.5-turbo-1106'
 		return get_response_gpt(sys_prompt, inputs, model, nth_generation=nth_generation)
+		pass
 	elif model.startswith('gpt-4'):
 		model = 'gpt-4-1106-preview'
 		return get_response_gpt(sys_prompt, inputs, model, nth_generation=nth_generation)
