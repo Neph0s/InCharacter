@@ -11,7 +11,7 @@ import math
 from utils import logger, get_response_json, avg, std
 import re 
 
-rerun = False
+rerun = True#False
 
 random.seed(42)
 
@@ -28,12 +28,12 @@ parser.add_argument('--character', type=str, default='haruhi', help='character n
 
 # Added choices for the agent_llm argument
 parser.add_argument('--agent_type', type=str, default='ChatHaruhi', 
-					choices=['ChatHaruhi'], 
+					choices=['ChatHaruhi', 'RoleLLM'], 
 					help='agent type (haruhi by default)')
 
 # Added choices for the agent_llm argument
 parser.add_argument('--agent_llm', type=str, default='gpt-3.5-turbo', 
-					choices=['gpt-3.5-turbo', 'openChat', 'mistral', 'ChatGLM2GPT',"qwen-118k","llama2","Mixtral"], 
+					#choices=['gpt-3.5-turbo', 'openChat', 'mistral', 'ChatGLM2GPT',"qwen-118k","llama2","Mixtral"], 
 					help='agent LLM (gpt-3.5-turbo)')
 
 # Added choices for the evaluator_llm argument
@@ -52,7 +52,7 @@ parser.add_argument('--eval_method', type=str, default='interview_batch',
 #                     help='language, temporarily only support Chinese (cn)')
 
 args = parser.parse_args()
-print(args)
+#print(args)
 
 from characters import character_info, alias2character, character_labels
 
@@ -156,24 +156,21 @@ def build_character_agent(character_code, agent_type, agent_llm):
 			agent_llm = 'gpt-3.5-turbo-1106'
 		elif agent_llm.startswith('gpt-4'):
 			agent_llm = 'gpt-4-1106-preview'
+	
 
-		os.environ["OPENAI_API_KEY"] = config['openai_apikey']
-		
-		if agent_type_args[0] == 'ChatHaruhi':
-			character_agent = ChatHaruhi(role_name = character_info[character_code]["agent"]["ChatHaruhi"], llm = 'openai')
-		elif agent_type_args[0] == 'RoleLLM':
-			character_agent = ChatHaruhi( role_from_hf = f'silk-road/ChatHaruhi-from-RoleLLM/{character_info[character_code]["agent"]["RoleLLM"]}', llm = 'openai', embedding = 'bge_en')
-			character_agent.role_name = 'RoleLLM/' + character_info[character_code]["agent"]["RoleLLM"]
+	os.environ["OPENAI_API_KEY"] = config['openai_apikey']
+	
+	if agent_type_args[0] == 'ChatHaruhi':
+		character_agent = ChatHaruhi(role_name = character_info[character_code]["agent"]["ChatHaruhi"], llm = agent_llm)
+	elif agent_type_args[0] == 'RoleLLM':
+		character_agent = ChatHaruhi( role_from_hf = f'silk-road/ChatHaruhi-from-RoleLLM/{character_info[character_code]["agent"]["RoleLLM"]}', llm = agent_llm, embedding = 'bge_en')
+		character_agent.role_name = 'RoleLLM/' + character_info[character_code]["agent"]["RoleLLM"]
 
-		character_agent.llm.model = agent_llm
+	character_agent.llm.model = agent_llm
 
-		character_agent.llm_type = agent_llm # just to set different keys for cache 
+	character_agent.llm_type = agent_llm # just to set different keys for cache 
 			
-	else:
-		if agent_type_args[0] == 'ChatHaruhi':
-			os.environ["OPENAI_API_KEY"] = config['openai_apikey']
-			character_agent = ChatHaruhi(role_name = character_info[character_code]["agent"]["ChatHaruhi"], llm = agent_llm)
-			#character_agent.llm.chat.temperature = 0 
+	
 	
 	if len(agent_type_args) > 1:
 		character_agent.llm_type = character_agent.llm_type + '=' + agent_type_args[1]
@@ -223,7 +220,7 @@ def interview(character_agent, questionnaire, experimenter, questionnaire_prompt
 		
 	return results
 
-def assess(character_aliases, experimenter, questionnaire_results, questionnaire, questionnaire_metadata, eval_method, language, evaluator_llm, nth_test):
+def assess(character_aliases, experimenter, questionnaire_results, questionnaire, questionnaire_metadata, eval_method, language, evaluator_llm, nth_test, agent_llm):
 
 	character_name = character_aliases[0]
 
@@ -237,18 +234,37 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 
 	from utils import find_colon_idx
 
-	# collect character aliases
-	for r in questionnaire_results:
-		response = r['response_open']
-		colon_idx = find_colon_idx(response)
-		if colon_idx != -1:			
-			character_aliases.append(response[:colon_idx])
+	if agent_llm.startswith('gpt'):
+		# collect character aliases
+		for r in questionnaire_results:
+			response = r['response_open']
+			colon_idx = find_colon_idx(response)
+			if colon_idx != -1:			
+				character_aliases.append(response[:colon_idx])
 	
 	character_aliases = sorted(set(character_aliases), key=lambda x: len(x), reverse=True)
+
+	error_counts = {}
 
 	# correct response without speaker name
 	for r in questionnaire_results:
 		response = r['response_open']
+		question = r['question']
+		
+		if not ( agent_llm.startswith('gpt') ):
+			from utils import is_multiround, is_multilanguage, not_into_character, contain_repeation
+
+			if is_multilanguage(question, response):
+				error_counts['is_multilanguage'] = error_counts.get('is_multilanguage', 0) + 1
+			if not_into_character(response, experimenter):
+				error_counts['not_into_character'] = error_counts.get('not_into_character', 0) + 1
+			if contain_repeation(response):
+				error_counts['contain_repeation'] = error_counts.get('contain_repeation', 0) + 1
+			if is_multiround(response):
+				error_counts['is_multiround'] = error_counts.get('is_multiround', 0) + 1
+				r['response_open'] = is_multiround(response)
+		
+
 		colon_idx = find_colon_idx(response)
 		
 		if colon_idx == -1 and not any([response.startswith(a) for a in character_aliases]):
@@ -483,6 +499,8 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 				sys_prompt = background_prompt + output_format_prompt
 
 				user_input = 'Our conversation is as follows:\n' + conversations + '\n'
+				
+			
 
 				if 'anonymous' in eval_args:
 					for a in character_aliases:
@@ -492,8 +510,22 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 					user_input = user_input.replace(experimenter, '<the experimenter>')
 					sys_prompt = sys_prompt.replace('I ', 'I (<the experimenter>) ', 1)
 				
+				
+
+				user_input = user_input.replace(character_name, '<the participant>')
+
+				# for evaluating the personality of vanilla GPT
+				bad_words = ['as an AI language model,', 'As an AI language model,', 'As an AI,', 'as an AI,', 'I am an AI language model,', 'being an AI,']
+
+				for bad_word in bad_words:
+					user_input = user_input.replace(bad_word, '')
+				
+				sys_prompt = sys_prompt.replace("Other numbers in this range represent different degrees of 'Conscientiousness'.", "Other numbers in this range represent different degrees of 'Conscientiousness'. You must give a score, and you are not allowed to give answers like 'N/A' and 'not applicable'.", 1)
+
 				llm_response = get_response_json(sys_prompt=sys_prompt, inputs=user_input, model=evaluator_llm)
 				
+					
+
 				if questionnaire_name == '16Personalities':
 					llm_response['result'] = {k: float(str(v).strip("%")) for k, v in llm_response['result'].items()}
 					assert (sum(llm_response['result'].values()) == 100)
@@ -501,7 +533,11 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 					llm_response['result'] = llm_response['result'][dim_cls1]
 				else:
 					if llm_response['result']:
-						llm_response['result'] = float(llm_response['result'])
+						try:
+							llm_response['result'] = float(llm_response['result'])
+						except:
+							llm_response['result'] = (questionnaire_metadata['range'][0] + questionnaire_metadata['range'][1]) / 2
+							
 					else:
 						llm_response['result'] = (questionnaire_metadata['range'][0] + questionnaire_metadata['range'][1]) / 2
 
@@ -569,6 +605,8 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 			#print('Old {} New {}'.format(assessment_results[dim]['score'], pred[dim]['score'][dim[0]]))	
 			assessment_results[dim]['score'] = pred[dim]['score'][dim[0]]
 
+	if len(error_counts) > 0:
+		assessment_results['error_counts'] = error_counts
 
 	return assessment_results 
 
@@ -638,7 +676,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 			response = character_agent.chat(role = experimenter, text = query)
 			logger.info(f'Response from {character_name}: {response} ')
 
-			return 
+			#return 
 		else:
 			query_style = eval_args[0]
 			
@@ -661,7 +699,11 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 						questionnaire = json.load(f)
 			
 			# conduct interview with character given the questionnaire
-			interview_folder_path = os.path.join('..', 'results', 'interview', f'{questionnaire_name}-agent-type={agent_type}_agent-llm={agent_llm}_query-style={query_style}')
+			if agent_llm != 'cAI':
+				interview_folder_path = os.path.join('..', 'results', 'interview', f'{questionnaire_name}-agent-type={agent_type}_agent-llm={agent_llm}_query-style={query_style}')
+			else:
+				interview_folder_path = os.path.join('..', 'results', 'interview', f'{questionnaire_name}-agent-type=cAI_agent-llm=gpt-3.5-turbo_query-style={query_style}')
+			
 			if not os.path.exists(interview_folder_path):
 				os.makedirs(interview_folder_path)
 
@@ -690,6 +732,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 					with open(interview_save_path, 'r') as f:
 						questionnaire_results = json.load(f)
 
+							
 				
 				# evaluate the character's personality
 				assessment_folder_path = os.path.join('..', 'results', 'assessment', f'{questionnaire_name}_agent-type={agent_type}_agent-llm={agent_llm}_eval-method={eval_method}-{evaluator_llm}')
@@ -709,7 +752,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 					previous_file_path = assessment_save_path
 					
 					logger.info('Assessing...')
-					assessment_results = assess(character_info[character]["alias"], experimenter, questionnaire_results, questionnaire, questionnaire_metadata, eval_method, language, evaluator_llm, nth_test)
+					assessment_results = assess(character_info[character]["alias"], experimenter, questionnaire_results, questionnaire, questionnaire_metadata, eval_method, language, evaluator_llm, nth_test, agent_llm)
 			
 					with open(assessment_save_path, 'w') as f:
 						json.dump(assessment_results, f, indent=4, ensure_ascii=False)
@@ -735,17 +778,23 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 			'code': ''
 		}
 
+		if 'error_counts' in  multitime_assess_results[0]:
+			assessment_results['error_counts'] = { k: [a.get(k, 0) for a in multitime_assess_results] for k in multitime_assess_results[0]['error_counts'].keys()}
+
 		if 'assess' not in eval_method:
 			multitime_item_results = {}
 
-		for dim in multitime_assess_results[0].keys():
+		for dim in dims: #multitime_assess_results[0].keys():
 			
 			a_results_keys = multitime_assess_results[0][dim].keys()
-
-			assessment_results['dims'][dim] = {
-				'score': avg([a_results[dim]['score'] for a_results in multitime_assess_results]),
-				'all_scores': [a_results[dim]['score'] for a_results in multitime_assess_results]
-			}
+			try:
+				assessment_results['dims'][dim] = {
+					'score': avg([a_results[dim]['score'] for a_results in multitime_assess_results]),
+					'all_scores': [a_results[dim]['score'] for a_results in multitime_assess_results]
+				}
+			except:
+				import pdb; pdb.set_trace()
+				
 			
 			if repeat_times > 1:
 				assessment_results['dims'][dim]['inter_std'] = std([a_results[dim]['score'] for a_results in multitime_assess_results])

@@ -11,7 +11,7 @@ Ensure you have correctly installed `ChatHaruhi2` and all necessary dependencies
 
 ```bash
 pip install torch torchvision torchaudio
-pip install transformers openai tiktoken langchain chromadb zhipuai chatharuhi datasets jsonlines
+pip install transformers openai tiktoken langchain chromadb zhipuai chatharuhi datasets jsonlines google-generativeai langchain_openai
 ```
 
 Enter the code folder.

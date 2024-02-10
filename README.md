@@ -13,7 +13,7 @@
 
     ```bash
     pip install torch torchvision torchaudio
-    pip install transformers openai tiktoken langchain chromadb zhipuai chatharuhi datasets jsonlines
+    pip install transformers openai tiktoken langchain chromadb zhipuai chatharuhi datasets jsonlines google-generativeai langchain_openai
     ```
 
 进入code文件夹。

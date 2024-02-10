@@ -78,10 +78,16 @@ class LangChainGPT(BaseLLM):
         self.messages.append(HumanMessage(content=payload))
 
     def get_response(self):
-        with get_openai_callback() as cb:
+        if self.model in ['Mixtral', 'mistral', 'llama2-7b', 'llama2-13b'] and len(self.messages) > 2:
+            self.messages[-1].content = '\n'.join([ m.content for m in self.messages])
+            self.messages = self.messages[-1:]
+            
+    
+        with get_openai_callback() as cb:            
             response = self.chat.invoke(self.messages)
         total_tokens = cb.total_tokens
 
+        print(response.content)
         return response.content
 
     def print_prompt(self):

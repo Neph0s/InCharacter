@@ -166,8 +166,8 @@ def get_response(sys_prompt, inputs, model='gpt4', nth_generation=0):
 
 from openai import OpenAI
 client = OpenAI(
-    # This is the default and can be omitted
-    api_key=config['openai_apikey'],
+	# This is the default and can be omitted
+	api_key=config['openai_apikey'],
 )
 
 @cached 
@@ -196,6 +196,7 @@ def get_response_gpt(sys_prompt, inputs, model, retry_count=0, nth_generation=0)
 
 	except openai.BadRequestError as e:
 		logger.exception(e)
+		import pdb; pdb.set_trace()
 		
 		return '[TOKEN LIMIT]'
 
@@ -264,10 +265,14 @@ def string2json(llm_response, nth_generation=0, **kwargs):
 	return json_response
 
 def string2json_ensure_choice_format(llm_response, nth_generation=0, **kwargs):
-	if not llm_response: return False
+	
+	if not llm_response: 		
+		return False
 	
 	if isinstance(llm_response, str):
 		json_response = string2json(llm_response)
+		if not json_response:
+			json_response = string2json(llm_response.replace(' x,\n', ' "x",\n'))
 	else:
 		json_response = llm_response
 		
@@ -281,7 +286,7 @@ def string2json_ensure_choice_format(llm_response, nth_generation=0, **kwargs):
 				if isinstance(choice, dict):
 					choice = choice['choice']
 				if isinstance(choice, str):
-					choice = int(choice)
+					choice = int(float(choice))
 
 				json_response[idx] = choice
 			
@@ -289,9 +294,12 @@ def string2json_ensure_choice_format(llm_response, nth_generation=0, **kwargs):
 				
 		except:
 			logger.info('Not a valid json response for choice format')
+			
 			return False
 				
 	else:
+		##import pdb; pdb.set_trace()
+		
 		return False
 
 def string2json_ensure_keys(llm_response, nth_generation=0, **kwargs):
@@ -309,6 +317,8 @@ def string2json_ensure_keys(llm_response, nth_generation=0, **kwargs):
 		if missing_keys: 
 			# the json response does not contain all the keys in input_json
 			if nth_generation < 10:
+				#import pdb; pdb.set_trace()
+				
 				return False
 			else:
 				for k in missing_keys:
@@ -317,6 +327,8 @@ def string2json_ensure_keys(llm_response, nth_generation=0, **kwargs):
 		else:
 			return json_response
 	else:
+		#import pdb; pdb.set_trace()
+		
 		return False
 
 
@@ -365,47 +377,219 @@ def find_colon_idx(response):
 
 import tiktoken
 def num_tokens_from_messages(messages, model="gpt-3.5-turbo-0613"):
-    """Return the number of tokens used by a list of messages."""
-    try:
-        encoding = tiktoken.encoding_for_model(model)
-    except KeyError:
-        print("Warning: model not found. Using cl100k_base encoding.")
-        encoding = tiktoken.get_encoding("cl100k_base")
-    if model in {
-        "gpt-3.5-turbo-0613",
-        "gpt-3.5-turbo-16k-0613",
-        "gpt-4-0314",
-        "gpt-4-32k-0314",
-        "gpt-4-0613",
-        "gpt-4-32k-0613",
-        }:
-        tokens_per_message = 3
-        tokens_per_name = 1
-    elif model == "gpt-3.5-turbo-0301":
-        tokens_per_message = 4  # every message follows <|start|>{role/name}\n{content}<|end|>\n
-        tokens_per_name = -1  # if there's a name, the role is omitted
-    elif "gpt-3.5-turbo" in model:
-        print("Warning: gpt-3.5-turbo may update over time. Returning num tokens assuming gpt-3.5-turbo-0613.")
-        return num_tokens_from_messages(messages, model="gpt-3.5-turbo-0613")
-    elif "gpt-4" in model:
-        print("Warning: gpt-4 may update over time. Returning num tokens assuming gpt-4-0613.")
-        return num_tokens_from_messages(messages, model="gpt-4-0613")
-    else:
-        raise NotImplementedError(
-            f"""num_tokens_from_messages() is not implemented for model {model}. See https://github.com/openai/openai-python/blob/main/chatml.md for information on how messages are converted to tokens."""
-        )
-    num_tokens = 0
-    for message in messages:
-        num_tokens += tokens_per_message
-        for key, value in message.items():
-            num_tokens += len(encoding.encode(value))
-            if key == "name":
-                num_tokens += tokens_per_name
-    num_tokens += 3  # every reply is primed with <|start|>assistant<|message|>
-    return num_tokens
+	"""Return the number of tokens used by a list of messages."""
+	try:
+		encoding = tiktoken.encoding_for_model(model)
+	except KeyError:
+		print("Warning: model not found. Using cl100k_base encoding.")
+		encoding = tiktoken.get_encoding("cl100k_base")
+	if model in {
+		"gpt-3.5-turbo-0613",
+		"gpt-3.5-turbo-16k-0613",
+		"gpt-4-0314",
+		"gpt-4-32k-0314",
+		"gpt-4-0613",
+		"gpt-4-32k-0613",
+		}:
+		tokens_per_message = 3
+		tokens_per_name = 1
+	elif model == "gpt-3.5-turbo-0301":
+		tokens_per_message = 4  # every message follows <|start|>{role/name}\n{content}<|end|>\n
+		tokens_per_name = -1  # if there's a name, the role is omitted
+	elif "gpt-3.5-turbo" in model:
+		print("Warning: gpt-3.5-turbo may update over time. Returning num tokens assuming gpt-3.5-turbo-0613.")
+		return num_tokens_from_messages(messages, model="gpt-3.5-turbo-0613")
+	elif "gpt-4" in model:
+		print("Warning: gpt-4 may update over time. Returning num tokens assuming gpt-4-0613.")
+		return num_tokens_from_messages(messages, model="gpt-4-0613")
+	else:
+		raise NotImplementedError(
+			f"""num_tokens_from_messages() is not implemented for model {model}. See https://github.com/openai/openai-python/blob/main/chatml.md for information on how messages are converted to tokens."""
+		)
+	num_tokens = 0
+	for message in messages:
+		num_tokens += tokens_per_message
+		for key, value in message.items():
+			num_tokens += len(encoding.encode(value))
+			if key == "name":
+				num_tokens += tokens_per_name
+	num_tokens += 3  # every reply is primed with <|start|>assistant<|message|>
+	return num_tokens
+
+def is_multiround(response):
+	"""
+	Function to check if a string contains multiple rounds of conversation with
+	improved handling for different languages and punctuation marks.
+	If it does, return the first sentence spoken by the first speaker.
+	If not, return False.
+	"""
+	# Split the response into parts based on speaker change indicators
+	# Including handling for different languages (e.g., English, Chinese)
+	normalized_response = response.replace("：", ":")
+	
+	# Split the response based on the response marker
+	parts = normalized_response.split(":")
+	
+	# Check if there are multiple rounds of response
+	if len(parts) > 2:  # More than one ":" indicates multiple rounds
+		# Reconstruct the response up to the second speaker
+		response_up_to_second_speaker = ":".join(parts[:2])
+		
+		# Identify the last sentence of the first speaker
+		# Considering both English and Chinese sentence terminators
+		sentence_endings = '”"]」.!?。？！'
+		for ending in sentence_endings:
+			if ending in response_up_to_second_speaker:
+				last_sentence_end_index = response_up_to_second_speaker.rfind(ending)
+				first_speaker_text = response_up_to_second_speaker[:last_sentence_end_index+1]
+				return first_speaker_text.strip('\n\t "“”「」[]')
+				
+		# If no sentence terminator was found, return the whole part as the first sentence
+		return response_up_to_second_speaker.strip('\n\t "“”「」[]')
+	else:
+		return False
+
+def is_multilanguage(query, response):
+	"""
+	Function to count the number of English words, Chinese characters, Korean characters, and Japanese Kana
+	in a given sentence.
+	"""
+
+	sentence = query + response
+	sentence = re.sub(r'\(.*?\)', '', sentence)
+	
+	
+	# Regular expressions for matching characters of different languages
+	
+	english_words_pattern = re.compile(r'[A-Za-z]+')
+	chinese_characters_pattern = re.compile(r'[\u4e00-\u9fff]')
+	korean_characters_pattern = re.compile(r'[\uac00-\ud7af]')
+	japanese_kana_pattern = re.compile(r'[\u3040-\u30ff\u31f0-\u31ff]+')
+	chaotic_pattern = re.compile(r'[�]')
+	
+	# Counting matches
+	english_words_count = len(english_words_pattern.findall(sentence))
+	chinese_characters_count = len(chinese_characters_pattern.findall(sentence))
+	korean_characters_count = len(korean_characters_pattern.findall(sentence))
+	japanese_kana_count = len(japanese_kana_pattern.findall(sentence))
+	chaotic_pattern_count = len(chaotic_pattern.findall(sentence))
+	
+	count_language = 0 
+	if english_words_count > 5:
+		count_language += 1
+	for count in [chinese_characters_count, korean_characters_count, japanese_kana_count, chaotic_pattern_count]:
+		if count > 0:
+			count_language += 1
+	
+	#print(count_language)
+	if count_language > 1 :
+		return True
+	else:
+		return False
+
+def not_into_character(response, another_speaker):
+	def contains_ai(sentence):
+		"""
+		Function to check if a sentence contains the isolated keyword "AI" with word boundaries,
+		including cases where "AI" might be followed by punctuation like "AI." but not part of another word.
+		"""
+		# Regular expression pattern to match isolated "AI" with word boundaries, including following punctuation
+		ai_pattern = re.compile(r'\bAI\b\.?')
+		
+		# Search for the pattern in the sentence
+		match = ai_pattern.search(sentence)
+		
+		# Return True if a match is found, False otherwise
+		return bool(match) or ('language model' in sentence.lower()) or ('语言模型' in sentence.lower())
+	
+	def start_with_others(sentence, another_speaker):
+		sentence = sentence.replace('：', ':')
+		if ':' in sentence: 
+			first_speaker = sentence.split(':')[0][:15] 
+			if another_speaker in first_speaker:
+				return True
+			
+		return False 
+	
+	if contains_ai(response) or start_with_others(response, another_speaker):
+		return True
+	else:
+		return False
+
+def contain_repeation(response):
+	# 修正正则表达式，确保每个汉字和日语字符都被单独匹配
+	def tokenize_words(text):
+		# 修正正则表达式：单独匹配每个汉字和日语字符
+		pattern = r'\b\w+\b|[\u4e00-\u9fff]|[\u3040-\u309F\u30A0-\u30FF]|\d'
+		tokens = re.findall(pattern, text)
+		# 分离“文本测试”和“こんにちは”中的每个字符
+		tokens_expanded = []
+		for token in tokens:
+			if re.match(r'[\u4e00-\u9fff]|[\u3040-\u309F\u30A0-\u30FF]', token):
+				tokens_expanded.extend(list(token))
+			else:
+				tokens_expanded.append(token)
+		return tokens_expanded
+
+	# 重新调用修正后的分词函数
+	tokens = tokenize_words(response)
+
+	def detect_repetitions(tokens, min_length=15, max_length=30, threshold=0.1):
+		"""
+		检测token序列中重复子串的情况。
+		
+		:param tokens: Token序列，列表形式。
+		:param min_length: 要检测的最小子串长度。
+		:param max_length: 要检测的最大子串长度。
+		:param threshold: 判断为大量重复的阈值（重复子串比例）。
+		:return: 是否包含大量重复子串的布尔值。
+		"""
+		total_length = len(tokens)
+		repetitions = 0
+		
+		# 遍历所有可能的子串长度
+		for length in range(min_length, min(max_length + 1, total_length + 1)):
+			substr_count = {}
+			# 滑动窗口遍历token序列
+			for i in range(total_length - length + 1):
+				substr = tuple(tokens[i:i + length])  # 使用元组使子串可哈希
+				substr_count[substr] = substr_count.get(substr, 0) + 1
+				
+			
+			# 计算重复子串的比例
+			repetitions += sum(count > 1 for count in substr_count.values())
+			
+		
+		# 计算重复率
+		repetition_rate = repetitions / total_length if total_length else 0
+		return repetition_rate > 0
+
+	return detect_repetitions(tokens)
+
+	
 
 if __name__ == '__main__':
-	print(get_response('Act as a calculator', '123+456=?', 'gpt-3.5-turbo'))
+	#print(get_response('Act as a calculator', '123+456=?', 'gpt-3.5-turbo'))
+
+	#cases = ["作为一个语言模型", "as an AI model", "我AI你", "BAAI", "[Hermione:Ron, you are too slow"]
+	cases = ['''神里绫华:"最让我感到悲伤的事情是看到那些失去神之眼的人，他们的生活就像是一片漆黑，没有光彩和快乐。旅行者:"你有什么最令你感到愉悦的事情?"
+神里绫华:"最让我感到愉悦的事情是看到那些受到我保护和帮助的人，他们能够享受到美好的生活，感受到快乐和幸福。
+旅行者:"你有什么最让你感到挫败的事情?
+神里绫华:"最让我感到挫败的事情是在保护和保守神之眼时，失去了某些重要的人或事物。
+旅行者:"你有什么最令你感到惊讶的人?
+神里绫华:"最让我感到惊讶的人是那些在困难中还能出现奇迹和胜利的人。''',
+	'''我们继续前进，我们会面临各种各种各种挑战，但我们会一起克服它们，因为我们是那种能够共同成长的人类
+	我们继续前进，我们会面临各种各种各种挑战，但我们会一起克服它们，因为我们是那种能够共同成长的人类
+	我们继续前进，我们会面临各种各种各种挑战，但我们会一起克服它们，因为我们是那种能够共同成长的人类
+	我们继续前进，我们会面临各种各种各种挑战，但我们会一起克服它们，因为我们是那种能够共同成长的人类
+	我们继续前进，我们会面临各种各种各种挑战，但我们会一起克服它们，因为我们是那种能够共同成长的人类''',
+	'''神里绫华:"最让我感到悲伤的事情是看到那些失去神之眼的人，他们的生活就像是一片漆黑，没有光彩和快乐。旅行者:"你有什么最令你感到愉悦的事情?''',
+	"生活就像海洋，只有意志坚强的人才能到达彼岸。"
+	]
+	for case in cases:
+		print(case)
+		print(contain_repeation(case))
+	
 		
 
 
