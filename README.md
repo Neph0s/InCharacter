@@ -1,4 +1,4 @@
-中文 | [English](https://github.com/Neph0s/InCharacter-Personality-Assessments-on-Role-Playing-Agents/README_EN.md) |[💡Paper](https://arxiv.org/abs/2310.17976)
+中文 | [English](../README_EN.md) |[💡Paper](https://arxiv.org/abs/2310.17976)
 
 <img src='http://182.92.3.33:3350/screenshot/1.png' alt=''/>
 
