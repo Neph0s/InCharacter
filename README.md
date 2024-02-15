@@ -1,5 +1,7 @@
 中文 | [English](https://github.com/Neph0s/InCharacter-Personality-Assessments-on-Role-Playing-Agents/README_EN.md) |[💡Paper](https://arxiv.org/abs/2310.17976)
 
+<img src='http://182.92.3.33:3350/screenshot/1.png' alt=''/>
+
 # 角色扮演聊天机器人能准确捕捉角色的性格特征吗？角色扮演聊天机器人的性格特质研究。<br>Does Role-Playing Chatbots Capture the Character Personalities? Assessing Personality Traits for Role-Playing Chatbots
 
 
