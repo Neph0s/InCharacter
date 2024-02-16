@@ -67,6 +67,8 @@ class ChatHaruhi:
         if llm == 'openai':
             # self.llm = LangChainGPT()
             self.llm, self.tokenizer = self.get_models('openai')
+        elif llm == 'gemini':
+            self.llm, self.tokenizer = self.get_models('gemini')
         elif llm == 'debug':
             self.llm, self.tokenizer = self.get_models('debug')
         elif llm == 'spark':
@@ -100,9 +102,13 @@ class ChatHaruhi:
             self.llm, self.tokenizer = self.get_models(llm)
         elif "openChat" in llm:
             self.llm, self.tokenizer = self.get_models(llm)
+        elif "characterglm" in llm:
+            self.llm, self.tokenizer = self.get_models(llm)
         else:
             print(f'warning! undefined llm {llm}, use openai instead.')
             self.llm, self.tokenizer = self.get_models('openai')
+            import pdb; pdb.set_trace()
+            
 
         
         if embedding == 'luotuo_openai':
@@ -281,6 +287,8 @@ class ChatHaruhi:
 
         # TODO: if output only require tokenizer model, no need to initialize llm
         
+        print(f'Initializing model {model_name}')
+
         # return the combination of llm, embedding and tokenizer
         if model_name == 'openai':
             from .LangChainGPT import LangChainGPT
@@ -312,27 +320,102 @@ class ChatHaruhi:
         elif model_name == "foo":
             from .FooLLM import FooLLM
             return (FooLLM(), tiktokenizer)
+        elif model_name == 'gemini':
+            from .LangChainGPT import LangChainGPT
+            model = LangChainGPT()
+
+            from langchain_google_genai import ChatGoogleGenerativeAI
+            model.chat = ChatGoogleGenerativeAI(model='gemini-pro', convert_system_message_to_human=True)
+            return (model, tiktokenizer)
+        
         elif "llama" in model_name:
-            from .llama2 import ChatLLaMA
-            return (ChatLLaMA(), tiktokenizer)
+            # from .llama2 import ChatLLaMA
+            # return (ChatLLaMA(), tiktokenizer)
+            from .LangChainGPT import LangChainGPT
+            from langchain.chat_models import ChatOpenAI
+            model = LangChainGPT()
+
+            if model_name == 'llama2-7b':
+                model.chat = ChatOpenAI(model='/data1/wxt/.cache/huggingface/hub/models--meta-llama--Llama-2-7b-chat-hf/snapshots/c1d3cabadba7ec7f1a9ef2ba5467ad31b3b84ff0', api_key='EMPTY', base_url='http://127.0.0.1:8002/v1') 
+                # CUDA_VISIBLE_DEVICES=7 python -u -m vllm.entrypoints.openai.api_server        --host 0.0.0.0        --model ~/.cache/huggingface/hub/models--meta-llama--Llama-2-13b-chat-hf/snapshots/a4ccda4a5be5ea5869b992103384ae5458b26bc3       --port 2183 
+            elif model_name == 'llama2-13b':
+                model.chat = ChatOpenAI(model='/data1/wxt/.cache/huggingface/hub/models--meta-llama--Llama-2-13b-chat-hf/snapshots/a4ccda4a5be5ea5869b992103384ae5458b26bc3', api_key='EMPTY', base_url='http://127.0.0.1:2183/v1')  
+
+            from transformers import AutoTokenizer
+            tokenizer_llama = AutoTokenizer.from_pretrained(
+                "meta-llama/Llama-2-7b-chat-hf", 
+                use_fast=True,
+                trust_remote_code=True
+            )
+
+            def llama_tokenizer(text):
+                return len(tokenizer_llama.encode(text))
+
+            return (model, llama_tokenizer)
+        elif "characterglm6b" == model_name:
+            from .LangChainGPT import LangChainGPT
+            from langchain.chat_models import ChatOpenAI
+            model = LangChainGPT()
+
+            model.chat = ChatOpenAI(model='thu-coai/CharacterGLM-6B', api_key='EMPTY', base_url='http://127.0.0.1:2184/v1') 
+
+            return (model, tiktokenizer)
+
         elif "qwen" in model_name:
-            from.qwen import ChatQwen
-            return (ChatQwen(), tiktokenizer)
+            # from.qwen import ChatQwen
+            # return (ChatQwen(), tiktokenizer)
+            from .LangChainGPT import LangChainGPT
+            from langchain.chat_models import ChatOpenAI
+            model = LangChainGPT()
+            model.chat = ChatOpenAI(model='Qwen/Qwen-7B-Chat', api_key='EMPTY', base_url='http://127.0.0.1:2184/v1') 
+
+            return (model, tiktokenizer)
+        
         elif model_name ==  "phi":
             from.phi import Chatphi
             return (Chatphi(), tiktokenizer)
         elif "Mixtral" in model_name:
-            from.Mixtral import ChatMixtral
-            return (ChatMixtral(), tiktokenizer)
+            # from.Mixtral import ChatMixtral
+            # return (ChatMixtral(), tiktokenizer)
+            from .LangChainGPT import LangChainGPT
+            from langchain.chat_models import ChatOpenAI
+            model = LangChainGPT()
+            model.chat = ChatOpenAI(model='/data1/wxt/.cache/huggingface/hub/models--mistralai--Mixtral-8x7B-Instruct-v0.1/snapshots/125c431e2ff41a156b9f9076f744d2f35dd6e67a', api_key='EMPTY', base_url='http://127.0.0.1:8000/v1') 
+
+            return (model, tiktokenizer)
         elif model_name ==  "Qwen-118k":
             from .Qwen118k2GPT import Qwen118k2GPT
             return (Qwen118k2GPT(), tiktokenizer)
-        elif "mistral" in model_name:
-            from.mistral import ChatMistral
-            return (ChatMistral(), tiktokenizer)
+        elif "mistral" == model_name:
+            # from.mistral import ChatMistral
+            # return (ChatMistral(), tiktokenizer)
+            from .LangChainGPT import LangChainGPT
+            from langchain.chat_models import ChatOpenAI
+            model = LangChainGPT()
+            model.chat = ChatOpenAI(model='mistralai/Mistral-7B-Instruct-v0.2', api_key='EMPTY', base_url='http://127.0.0.1:2903/v1') 
+
+            return (model, tiktokenizer)
+        elif "mistral-rp" == model_name:
+            # from.mistral import ChatMistral
+            # return (ChatMistral(), tiktokenizer)
+            from .LangChainGPT import LangChainGPT
+            from langchain.chat_models import ChatOpenAI
+            model = LangChainGPT()
+            model.chat = ChatOpenAI(model='/data1/wxt/wxt/merged/mistral_lf_setting', api_key='EMPTY', base_url='http://127.0.0.1:8000/v1') 
+
+            return (model, tiktokenizer)
+
         elif "openChat" in model_name:
-            from.openChat import ChatOpenChat
-            return (ChatOpenChat(), tiktokenizer)
+            # from.openChat import ChatOpenChat
+            # return (ChatOpenChat(), tiktokenizer)
+            from .LangChainGPT import LangChainGPT
+            from langchain.chat_models import ChatOpenAI
+            model = LangChainGPT()
+            model.chat = ChatOpenAI(model='/home/huggingface_models/models--openchat--openchat-3.5-1210/snapshots/e5df841b685e5b5ca11ce142f29c6c731bf087a0', api_key='EMPTY', base_url='http://127.0.0.1:8401/v1') 
+  
+
+            return (model, tiktokenizer)
+        
         else:
             print(f'warning! undefined model {model_name}, use openai instead.')
             from .LangChainGPT import LangChainGPT
@@ -458,6 +541,11 @@ class ChatHaruhi:
             self.llm.system_message(self.system_prompt)
 
         query = self.get_query_string(text, role)
+        
+        if 'no_description' in self.llm_type.split('=') and 'no_retrieve' in self.llm_type.split('='):
+            query = text
+            print(query)
+
         if not 'no_retrieve' in self.llm_type.split('='):
             # add story
             self.add_story( query )
@@ -470,9 +558,10 @@ class ChatHaruhi:
         
         # get response
         response_raw = self.llm.get_response()
-
-        response = response_postprocess(response_raw, self.dialogue_bra_token, self.dialogue_ket_token)
         
+        response = response_postprocess(response_raw, self.dialogue_bra_token, self.dialogue_ket_token)
+
+                
         # record dialogue history
         self.dialogue_history.append((query, response))
 
