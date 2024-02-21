@@ -34,33 +34,34 @@ To reproduce our experiments on the 32 RPAs on the BFI and 16Personalities, plea
 
 <br/>
 
-English:
+### Demo
+[[Online Demo](http://182.92.3.33:3350/)]
 
-inCharacter:
 
-Response:
+#### English:
 
-Result:
+Interview Response: 
 
 <img src='http://182.92.3.33:3350/screenshot/1.png' alt=''/>
 
-Chinese:
-
-Interview:
-
-Response:
+Result: 
 
 <img src='http://182.92.3.33:3350/screenshot/2.png' alt=''/>
+
+Self-report Response:
+
+(May give options inconsistent with character behaviors)
+
+<img src='http://182.92.3.33:3350/screenshot/5.png' alt=''/>
+
+#### Chinese:
+
+Interview Response:
 
 <img src='http://182.92.3.33:3350/screenshot/3.png' alt=''/>
 
 Result:
 
-Self-reported Method
-
-May give options inconsistent with character behaviors 
-
 <img src='http://182.92.3.33:3350/screenshot/4.png' alt=''/>
 
-<img src='http://182.92.3.33:3350/screenshot/5.png' alt=''/>
 
