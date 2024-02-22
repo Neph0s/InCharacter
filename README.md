@@ -42,26 +42,26 @@ To reproduce our experiments on the 32 RPAs on the BFI and 16Personalities, plea
 
 Interview Response: 
 
-<img src='http://182.92.3.33:3350/screenshot/1.png' alt=''/>
+<img src='figures/demo1.png' alt=''/>
 
 Result: 
 
-<img src='http://182.92.3.33:3350/screenshot/2.png' alt=''/>
+<img src='figures/demo2.png' alt=''/>
 
 Self-report Response:
 
 (May give options inconsistent with character behaviors)
 
-<img src='http://182.92.3.33:3350/screenshot/5.png' alt=''/>
+<img src='figures/demo5.png' alt=''/>
 
 #### Chinese:
 
 Interview Response:
 
-<img src='http://182.92.3.33:3350/screenshot/3.png' alt=''/>
+<img src='figures/demo3.png' alt=''/>
 
 Result:
 
-<img src='http://182.92.3.33:3350/screenshot/4.png' alt=''/>
+<img src='figures/demo4.png' alt=''/>
 
 
