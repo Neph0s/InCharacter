@@ -22,7 +22,7 @@ Set your openai apikey in config.json .
 
 ### Personality Assessment
 
-To assess the personality of a specific ChatHaruhi Bot, use the following commands:
+To assess the personality of a specific role-playing agent (RPA), use the following commands:
 
 Conduct personality test on a specific character:
 
@@ -30,7 +30,7 @@ Conduct personality test on a specific character:
 python personality_tests.py --questionnaire_name bfi --character hutao --agent_type ChatHaruhi --agent_llm gpt-3.5 --evaluator_llm gpt-4 --eval_method interview_assess_batch_anonymous
 ```
 
-To reproduce our experiments on the 32 RPAs on the BFI and 16Personalities, please refer to code/test_eval_methods.py
+To reproduce our experiments on the 32 RPAs, please refer to code/run_experiments.py
 
 <br/>
 
