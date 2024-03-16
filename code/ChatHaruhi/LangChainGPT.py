@@ -47,6 +47,7 @@ class LangChainGPT(BaseLLM):
     def __init__(self, model="gpt-3.5-turbo"):
         super(LangChainGPT, self).__init__()
         self.model = model
+
         if "OPENAI_API_BASE" in os.environ:
             from dotenv import load_dotenv
             load_dotenv()
@@ -54,7 +55,6 @@ class LangChainGPT(BaseLLM):
             api_key = os.environ["OPENAI_API_KEY"]
             self.chat = ChatOpenAI(model=self.model, openai_api_base=api_base)
         else:
-
             api_key = os.environ.get("OPENAI_API_KEY", None)
 
             if api_key is None:
@@ -62,6 +62,7 @@ class LangChainGPT(BaseLLM):
                 os.environ["OPENAI_API_KEY"] = "not_a_key"
 
             self.chat = ChatOpenAI(model=self.model)
+                
         # add api_base        
         self.messages = []
 
@@ -78,12 +79,13 @@ class LangChainGPT(BaseLLM):
         self.messages.append(HumanMessage(content=payload))
 
     def get_response(self):
-        if self.model in ['Mixtral', 'mistral', 'llama2-7b', 'llama2-13b'] and len(self.messages) > 2:
+        if self.model in ['Mixtral', 'mistral', 'mistral-rp', 'llama2-7b', 'llama2-13b', 'gemini'] and len(self.messages) > 2:
             self.messages[-1].content = '\n'.join([ m.content for m in self.messages])
             self.messages = self.messages[-1:]
+
             
     
-        with get_openai_callback() as cb:            
+        with get_openai_callback() as cb:        
             response = self.chat.invoke(self.messages)
         total_tokens = cb.total_tokens
 

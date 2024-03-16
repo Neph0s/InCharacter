@@ -336,10 +336,9 @@ class ChatHaruhi:
             model = LangChainGPT()
 
             if model_name == 'llama2-7b':
-                model.chat = ChatOpenAI(model='/data1/wxt/.cache/huggingface/hub/models--meta-llama--Llama-2-7b-chat-hf/snapshots/c1d3cabadba7ec7f1a9ef2ba5467ad31b3b84ff0', api_key='EMPTY', base_url='http://127.0.0.1:8002/v1') 
-                # CUDA_VISIBLE_DEVICES=7 python -u -m vllm.entrypoints.openai.api_server        --host 0.0.0.0        --model ~/.cache/huggingface/hub/models--meta-llama--Llama-2-13b-chat-hf/snapshots/a4ccda4a5be5ea5869b992103384ae5458b26bc3       --port 2183 
+                model.chat = ChatOpenAI(model='<your model path>', api_key='EMPTY', base_url='<your url>') 
             elif model_name == 'llama2-13b':
-                model.chat = ChatOpenAI(model='/data1/wxt/.cache/huggingface/hub/models--meta-llama--Llama-2-13b-chat-hf/snapshots/a4ccda4a5be5ea5869b992103384ae5458b26bc3', api_key='EMPTY', base_url='http://127.0.0.1:2183/v1')  
+                model.chat = ChatOpenAI(model='<your model path>', api_key='EMPTY', base_url='<your url>') 
 
             from transformers import AutoTokenizer
             tokenizer_llama = AutoTokenizer.from_pretrained(
@@ -380,7 +379,7 @@ class ChatHaruhi:
             from .LangChainGPT import LangChainGPT
             from langchain.chat_models import ChatOpenAI
             model = LangChainGPT()
-            model.chat = ChatOpenAI(model='/data1/wxt/.cache/huggingface/hub/models--mistralai--Mixtral-8x7B-Instruct-v0.1/snapshots/125c431e2ff41a156b9f9076f744d2f35dd6e67a', api_key='EMPTY', base_url='http://127.0.0.1:8000/v1') 
+            model.chat = ChatOpenAI(model='<your model path>', api_key='EMPTY', base_url='<your url>') 
 
             return (model, tiktokenizer)
         elif model_name ==  "Qwen-118k":
@@ -392,7 +391,7 @@ class ChatHaruhi:
             from .LangChainGPT import LangChainGPT
             from langchain.chat_models import ChatOpenAI
             model = LangChainGPT()
-            model.chat = ChatOpenAI(model='mistralai/Mistral-7B-Instruct-v0.2', api_key='EMPTY', base_url='http://127.0.0.1:2903/v1') 
+            model.chat = ChatOpenAI(model='mistralai/Mistral-7B-Instruct-v0.2', api_key='EMPTY', base_url='<your url>') 
 
             return (model, tiktokenizer)
         elif "mistral-rp" == model_name:
@@ -401,7 +400,7 @@ class ChatHaruhi:
             from .LangChainGPT import LangChainGPT
             from langchain.chat_models import ChatOpenAI
             model = LangChainGPT()
-            model.chat = ChatOpenAI(model='/data1/wxt/wxt/merged/mistral_lf_setting', api_key='EMPTY', base_url='http://127.0.0.1:8000/v1') 
+            model.chat = ChatOpenAI(model='<your model path>', api_key='EMPTY', base_url='<your url>') 
 
             return (model, tiktokenizer)
 
@@ -411,7 +410,7 @@ class ChatHaruhi:
             from .LangChainGPT import LangChainGPT
             from langchain.chat_models import ChatOpenAI
             model = LangChainGPT()
-            model.chat = ChatOpenAI(model='/home/huggingface_models/models--openchat--openchat-3.5-1210/snapshots/e5df841b685e5b5ca11ce142f29c6c731bf087a0', api_key='EMPTY', base_url='http://127.0.0.1:8401/v1') 
+            model.chat = ChatOpenAI(model='<your model path>', api_key='EMPTY', base_url='<your url>') 
   
 
             return (model, tiktokenizer)

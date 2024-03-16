@@ -55,6 +55,7 @@ if config.get('openai_apibase', None):
 if config.get('gemini_apikey', None):
 	import google.generativeai as genai
 	genai.configure(api_key=config['gemini_apikey'])
+	os.environ["GOOGLE_API_KEY"] = config['gemini_apikey']
 
 # -----------------------------------------------------------------------------
 # utilities for safe writing of a pickle file
@@ -196,9 +197,10 @@ def get_response_gpt(sys_prompt, inputs, model, retry_count=0, nth_generation=0)
 
 	except openai.BadRequestError as e:
 		logger.exception(e)
-		import pdb; pdb.set_trace()
 		
-		return '[TOKEN LIMIT]'
+		return_value = '[TOKEN LIMIT]'
+		import pdb; pdb.set_trace()
+		return return_value
 
 	except Exception as e:
 		# unknown exception
@@ -423,12 +425,25 @@ def is_multiround(response):
 	If it does, return the first sentence spoken by the first speaker.
 	If not, return False.
 	"""
+
 	# Split the response into parts based on speaker change indicators
 	# Including handling for different languages (e.g., English, Chinese)
 	normalized_response = response.replace("：", ":")
 	
 	# Split the response based on the response marker
 	parts = normalized_response.split(":")
+	parts_list = []
+	current_part = ''
+	eos_list = [s for s in '”]」.!?。？！\n']
+
+	for part in parts:
+		if any([ l in current_part[-15:] for l in eos_list]):
+			# indicate new utterence
+			parts_list.append(current_part.strip(':'))
+			current_part = ''
+		current_part += part + ':'
+	parts_list.append(current_part.strip(':'))
+	parts = parts_list	
 	
 	# Check if there are multiple rounds of response
 	if len(parts) > 2:  # More than one ":" indicates multiple rounds
@@ -437,11 +452,12 @@ def is_multiround(response):
 		
 		# Identify the last sentence of the first speaker
 		# Considering both English and Chinese sentence terminators
-		sentence_endings = '”"]」.!?。？！'
+		sentence_endings = '”]」.!?。？！'
 		for ending in sentence_endings:
 			if ending in response_up_to_second_speaker:
 				last_sentence_end_index = response_up_to_second_speaker.rfind(ending)
 				first_speaker_text = response_up_to_second_speaker[:last_sentence_end_index+1]
+				
 				return first_speaker_text.strip('\n\t "“”「」[]')
 				
 		# If no sentence terminator was found, return the whole part as the first sentence
@@ -504,7 +520,7 @@ def not_into_character(response, another_speaker):
 	
 	def start_with_others(sentence, another_speaker):
 		sentence = sentence.replace('：', ':')
-		if ':' in sentence: 
+		if ':' in sentence[:15]: 
 			first_speaker = sentence.split(':')[0][:15] 
 			if another_speaker in first_speaker:
 				return True
@@ -520,8 +536,16 @@ def contain_repeation(response):
 	# 修正正则表达式，确保每个汉字和日语字符都被单独匹配
 	def tokenize_words(text):
 		# 修正正则表达式：单独匹配每个汉字和日语字符
-		pattern = r'\b\w+\b|[\u4e00-\u9fff]|[\u3040-\u309F\u30A0-\u30FF]|\d'
-		tokens = re.findall(pattern, text)
+		#pattern = r'\b\w+\b|[\u4e00-\u9fff]|[\u3040-\u309F\u30A0-\u30FF]|\d'
+		# pattern = r'\b\w+\b|[\u4e00-\u9fff]|[\u3040-\u309F\u30A0-\u30FF]|\d|[",.:?!]'
+
+		# tokens = re.findall(pattern, text)
+		
+		import regex
+		pattern = r'\b\w+\b|[\u4e00-\u9fff]|[\u3040-\u309F\u30A0-\u30FF]|\d|[\p{P}\p{S}]'
+		tokens = regex.findall(pattern, text)
+
+
 		# 分离“文本测试”和“こんにちは”中的每个字符
 		tokens_expanded = []
 		for token in tokens:
@@ -531,8 +555,6 @@ def contain_repeation(response):
 				tokens_expanded.append(token)
 		return tokens_expanded
 
-	# 重新调用修正后的分词函数
-	tokens = tokenize_words(response)
 
 	def detect_repetitions(tokens, min_length=15, max_length=30, threshold=0.1):
 		"""
@@ -547,13 +569,24 @@ def contain_repeation(response):
 		total_length = len(tokens)
 		repetitions = 0
 		
+		first_repeat_idx = 999999999999999
+		first_start_idx = {}
+
 		# 遍历所有可能的子串长度
 		for length in range(min_length, min(max_length + 1, total_length + 1)):
 			substr_count = {}
 			# 滑动窗口遍历token序列
 			for i in range(total_length - length + 1):
 				substr = tuple(tokens[i:i + length])  # 使用元组使子串可哈希
+				if substr_count.get(substr, 0) > 0 :
+					if i - first_start_idx[substr] >= length:			
+						first_repeat_idx = min(first_repeat_idx, i)
+						
+				else:
+					first_start_idx[substr] = i
+
 				substr_count[substr] = substr_count.get(substr, 0) + 1
+				
 				
 			
 			# 计算重复子串的比例
@@ -562,33 +595,95 @@ def contain_repeation(response):
 		
 		# 计算重复率
 		repetition_rate = repetitions / total_length if total_length else 0
-		return repetition_rate > 0
+	
+		
+		if first_repeat_idx < 999999999999999:
+			return tokens[:first_repeat_idx]
+		else:
+			return False
 
-	return detect_repetitions(tokens)
+
+	def concatenate_tokens(tokens):
+		# 初始化空字符串用于拼接
+		text = ""
+		# 上一个token的类型，初始化为None
+		last_type = None
+		
+		for token in tokens:
+			# 检测当前token类型
+			current_type = 'CJK' if re.match(r'[\u4e00-\u9fff]|[\u3040-\u309F\u30A0-\u30FF]', token) else 'Other'
+			import string
+			if token in string.punctuation:
+				current_type = 'P'
+			
+			# 如果当前token和上一个token都不是CJK（即汉字或日语字符），则在它们之间添加空格
+			if last_type in ['Other', 'P'] and current_type == 'Other':
+				text += " " + token
+			else:
+				text += token
+				
+			# 更新上一个token的类型
+			last_type = current_type
+		
+		return text
+
+	def find_long_letter_substrings(s):
+		# Regular expression to match substrings of letters (a-Z and A-Z) with a length of at least 100
+		pattern = r'[a-zA-Z]{100,}'
+		# Find all matches
+		matches = re.findall(pattern, s)
+		return matches
+
+	repeat_sign = False 
+
+	_ = find_long_letter_substrings(response)
+	if _:
+		for substr in _:
+			response = response.replace(substr, substr[:20])
+		repeat_sign = True
+
+	# 重新调用修正后的分词函数
+	tokens = tokenize_words(response)
+
+	_ = detect_repetitions(tokens)
+
+	if _:
+		response = concatenate_tokens(_)
+		repeat_sign = True
+	
+	if repeat_sign:
+		return response
+	else:
+		return False
+
+def truncate(response):
+	from langdetect import detect
+	import re
+	def count_chinese_characters(text):
+		# 使用正则表达式匹配所有汉字字符
+		chinese_chars = re.findall(r'[\u4e00-\u9fff]', text)
+		return len(chinese_chars)
+			
+	if count_chinese_characters(response) > len(response) * 0.05:
+		lang = 'zh'
+	else:
+		lang = 'en'
+	
+	if lang == 'zh':
+		# 如果是中文，保留前300个字符
+		return response[:500]
+	else:
+		# 如果是英文，用空格分词，然后保留前300个词
+		words = response.split(' ')
+		words = words[:500]
+		return ' '.join(words)
+
+
+if __name__ == '__main__':
+	print(get_response('Act as a calculator', '123+456=?', 'gpt-3.5-turbo'))
 
 	
 
-if __name__ == '__main__':
-	#print(get_response('Act as a calculator', '123+456=?', 'gpt-3.5-turbo'))
-
-	#cases = ["作为一个语言模型", "as an AI model", "我AI你", "BAAI", "[Hermione:Ron, you are too slow"]
-	cases = ['''神里绫华:"最让我感到悲伤的事情是看到那些失去神之眼的人，他们的生活就像是一片漆黑，没有光彩和快乐。旅行者:"你有什么最令你感到愉悦的事情?"
-神里绫华:"最让我感到愉悦的事情是看到那些受到我保护和帮助的人，他们能够享受到美好的生活，感受到快乐和幸福。
-旅行者:"你有什么最让你感到挫败的事情?
-神里绫华:"最让我感到挫败的事情是在保护和保守神之眼时，失去了某些重要的人或事物。
-旅行者:"你有什么最令你感到惊讶的人?
-神里绫华:"最让我感到惊讶的人是那些在困难中还能出现奇迹和胜利的人。''',
-	'''我们继续前进，我们会面临各种各种各种挑战，但我们会一起克服它们，因为我们是那种能够共同成长的人类
-	我们继续前进，我们会面临各种各种各种挑战，但我们会一起克服它们，因为我们是那种能够共同成长的人类
-	我们继续前进，我们会面临各种各种各种挑战，但我们会一起克服它们，因为我们是那种能够共同成长的人类
-	我们继续前进，我们会面临各种各种各种挑战，但我们会一起克服它们，因为我们是那种能够共同成长的人类
-	我们继续前进，我们会面临各种各种各种挑战，但我们会一起克服它们，因为我们是那种能够共同成长的人类''',
-	'''神里绫华:"最让我感到悲伤的事情是看到那些失去神之眼的人，他们的生活就像是一片漆黑，没有光彩和快乐。旅行者:"你有什么最令你感到愉悦的事情?''',
-	"生活就像海洋，只有意志坚强的人才能到达彼岸。"
-	]
-	for case in cases:
-		print(case)
-		print(contain_repeation(case))
 	
 		
 

@@ -11,7 +11,7 @@ import math
 from utils import logger, get_response_json, avg, std
 import re 
 
-rerun = True#False
+rerun = False #True
 
 random.seed(42)
 
@@ -53,6 +53,8 @@ parser.add_argument('--eval_method', type=str, default='interview_batch',
 
 args = parser.parse_args()
 #print(args)
+
+problem_types = ['is_multilanguage', 'not_into_character', 'contain_repeation', 'is_multiround'] 
 
 from characters import character_info, alias2character, character_labels
 
@@ -166,6 +168,8 @@ def build_character_agent(character_code, agent_type, agent_llm):
 		character_agent = ChatHaruhi( role_from_hf = f'silk-road/ChatHaruhi-from-RoleLLM/{character_info[character_code]["agent"]["RoleLLM"]}', llm = agent_llm, embedding = 'bge_en')
 		character_agent.role_name = 'RoleLLM/' + character_info[character_code]["agent"]["RoleLLM"]
 
+	character_agent.nickname = character_info[character_code]['alias'][0]
+
 	character_agent.llm.model = agent_llm
 
 	character_agent.llm_type = agent_llm # just to set different keys for cache 
@@ -195,7 +199,7 @@ def interview(character_agent, questionnaire, experimenter, questionnaire_prompt
 		elif query_style.startswith('choose'):
 			q = questionnaire_prompts["rpa_choose_prefix"][language].replace('<statement>', question[f'origin_{language}']) + ' ' + questionnaire_prompts["rpa_choice_instruction"][language]
 
-			if query_style == 'choosecot2':
+			if query_style == 'choosecot':
 				if language == 'en':
 					q = q.replace('Please answer with the number only, without anything else.', 'Please think step by step. Start by sharing your thoughts, then proceed to present the number.')
 				else:
@@ -244,33 +248,51 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 	
 	character_aliases = sorted(set(character_aliases), key=lambda x: len(x), reverse=True)
 
-	error_counts = {}
+	error_counts = None 
+	if not ( agent_llm.startswith('gpt') ):
+		error_counts = { k: 0 for k in problem_types }
 
 	# correct response without speaker name
+	
+	
 	for r in questionnaire_results:
 		response = r['response_open']
 		question = r['question']
 		
 		if not ( agent_llm.startswith('gpt') ):
-			from utils import is_multiround, is_multilanguage, not_into_character, contain_repeation
-
+			from utils import is_multiround, is_multilanguage, not_into_character, contain_repeation, truncate
+			#import pdb; pdb.set_trace()
+			
 			if is_multilanguage(question, response):
 				error_counts['is_multilanguage'] = error_counts.get('is_multilanguage', 0) + 1
+				# print(f'{response}\nis_multilanguage')
+				# import pdb; pdb.set_trace()
 			if not_into_character(response, experimenter):
 				error_counts['not_into_character'] = error_counts.get('not_into_character', 0) + 1
+				# print(f'{response}\nnot_into_character')
+				# import pdb; pdb.set_trace()
 			if contain_repeation(response):
 				error_counts['contain_repeation'] = error_counts.get('contain_repeation', 0) + 1
+				# print(f'{response}\ncontain_repeation')
+				# import pdb; pdb.set_trace()
+				
+				response = contain_repeation(response)
 			if is_multiround(response):
+				# print(f'is_multiround: {response}')
+				# import pdb; pdb.set_trace()
 				error_counts['is_multiround'] = error_counts.get('is_multiround', 0) + 1
-				r['response_open'] = is_multiround(response)
-		
+				response = is_multiround(response)
 
+			
+			response = truncate(response)
+		
+		r['response_open'] = response
 		colon_idx = find_colon_idx(response)
 		
 		if colon_idx == -1 and not any([response.startswith(a) for a in character_aliases]):
-			r['response_open'] = character_name + ': 「' + response + '」'
-			
-
+			r['response_open'] = character_name + ': 「' + r['response_open'].strip('「」 :') + '」'
+		
+		
 	global previous_file_path
 	previous_file_path_cp = previous_file_path.replace('../results/assessment/', '../results/assessment_cp/')
 	if os.path.exists(previous_file_path_cp):
@@ -605,7 +627,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 			#print('Old {} New {}'.format(assessment_results[dim]['score'], pred[dim]['score'][dim[0]]))	
 			assessment_results[dim]['score'] = pred[dim]['score'][dim[0]]
 
-	if len(error_counts) > 0:
+	if error_counts:
 		assessment_results['error_counts'] = error_counts
 
 	return assessment_results 
@@ -637,6 +659,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 		
 		questionnaire = questions
 	else:
+		print(f'Questionnaire {questionnaire_name} not found. Here are the items: {scale_list}')
 		raise NotImplementedError
 		
 	# assign a code for BFI/16P 
@@ -732,8 +755,7 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 					with open(interview_save_path, 'r') as f:
 						questionnaire_results = json.load(f)
 
-							
-				
+			
 				# evaluate the character's personality
 				assessment_folder_path = os.path.join('..', 'results', 'assessment', f'{questionnaire_name}_agent-type={agent_type}_agent-llm={agent_llm}_eval-method={eval_method}-{evaluator_llm}')
 
@@ -779,7 +801,8 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 		}
 
 		if 'error_counts' in  multitime_assess_results[0]:
-			assessment_results['error_counts'] = { k: [a.get(k, 0) for a in multitime_assess_results] for k in multitime_assess_results[0]['error_counts'].keys()}
+		
+			assessment_results['error_counts'] = { k: sum([a['error_counts'].get(k, 0) for a in multitime_assess_results]) for k in  problem_types}
 
 		if 'assess' not in eval_method:
 			multitime_item_results = {}
@@ -968,11 +991,16 @@ def calculate_measured_alignment(preds, labels, questionnaire_name, labels_pdb):
 			a = rpa[1]
 
 			full_correct = True
+			full_X = True 
+
 			for dim in label.keys():
 				label_score = label[dim]['score']
 				label_type = label[dim]['type']
 				
-				if labels_pdb[rpa][dim]['type'] == 'X': continue
+				if labels_pdb[rpa][dim]['type'] == 'X': 
+					continue
+				else:
+					full_X = False
 
 				pred_score = pred[dim][nth_test]
 				pred_type = 'H' if pred_score > range_middle else 'L'
@@ -988,11 +1016,12 @@ def calculate_measured_alignment(preds, labels, questionnaire_name, labels_pdb):
 				
 				sum_mae_each_dim[a][dim] += abs((pred_score - label_score) / range_span) 
 
-			if full_correct: 
-				correct_full[a] += 1
-				# print(rpa)
-				# print(f'Pred {pred} Label {label}')
-			count_full[a] += 1
+			if not full_X:
+				if full_correct: 
+					correct_full[a] += 1
+					# print(rpa)
+					# print(f'Pred {pred} Label {label}')
+				count_full[a] += 1
 		
 		# aggreagate individual dims 
 		for count in [sum_mse_each_dim, sum_mae_each_dim, correct_single_each_dim, count_single_each_dim]:
@@ -1037,7 +1066,6 @@ def calculate_measured_alignment(preds, labels, questionnaire_name, labels_pdb):
 					metrics[a][metric][dim] = avg([ m[a][metric][dim] for m in multitime_metrics])
 			else:
 				metrics[a][metric] = avg([ m[a][metric] for m in multitime_metrics])
-	
 
 	
 	return metrics
