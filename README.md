@@ -36,7 +36,7 @@ To reproduce our experiments on the 32 RPAs, please refer to code/run_experiment
 
 ### BFI Personalities of Selected Characters/RPAs
 
-<img src='figures/bfi_radars.pdf' alt=''/>
+<img src='figures/bfi_radars.png' alt=''/>
 
 Radar chart of BFI personalities of state-of-the-art RPAs (yellow) and the characters (blue). O, C, E, A, N stands for openness, consciousness, extroversion, agreeableness and neuroticism in the BFI. 
 
