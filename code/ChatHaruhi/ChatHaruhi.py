@@ -64,7 +64,7 @@ class ChatHaruhi:
         self.role_name = role_name 
         
         # TODO: embedding should be the seperately defined, so refactor this part later
-        if llm == 'openai':
+        if llm == 'openai' or llm.startswith('gpt'):
             # self.llm = LangChainGPT()
             self.llm, self.tokenizer = self.get_models('openai')
         elif llm == 'gemini':
@@ -107,7 +107,7 @@ class ChatHaruhi:
         else:
             print(f'warning! undefined llm {llm}, use openai instead.')
             self.llm, self.tokenizer = self.get_models('openai')
-            import pdb; pdb.set_trace()
+            
             
 
         
