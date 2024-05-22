@@ -1,0 +1,14 @@
+torch 
+torchvision 
+torchaudio
+transformers 
+openai 
+tiktoken 
+langchain 
+chromadb 
+zhipuai 
+datasets 
+jsonlines 
+google-generativeai 
+langchain_openai
+langchain-community

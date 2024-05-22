@@ -1,4 +1,4 @@
 {
-    "openai_apikey": "sk-",
-    "gemini_apikey": ""
+    "openai_apikey": "sk",
+    "gemini_apikey": "AI"
 }
