@@ -34,6 +34,8 @@ Conduct personality test on a specific character:
 python personality_tests.py --questionnaire_name BFI --character hutao --agent_type ChatHaruhi --agent_llm gpt-3.5 --evaluator_llm gpt-4 --eval_method interview_assess_batch_anonymous
 ```
 
+Supported choices for eval_method include ['self_report' (SR), 'self_report_cot' (SR-CoT), 'expert_rating' (ER_batch), 'expert_rating_collective' (ER_all), 'option_conversion' (OC),'dimension_option_conversion' (d-OC)].
+
 To reproduce our experiments on the 32 RPAs, please refer to code/run_experiments.py
 
 <br/>

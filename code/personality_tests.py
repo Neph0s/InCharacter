@@ -1073,9 +1073,23 @@ def calculate_measured_alignment(preds, labels, questionnaire_name, labels_pdb):
 		
 	
 if __name__ == '__main__':
+	eval_method_map = {
+		'self_report': 'choose',
+		'self_report_cot': 'choosecot',
+		'expert_rating': 'interview_assess_batch_anonymous',
+		'expert_rating_collective': 'interview_assess_collective_anonymous',
+		'option_conversion': 'interview_convert',
+		'dimension_option_conversion': 'interview_convert_adjoption_anonymous'
+	}
+
+	args.eval_method = eval_method_map.get(args.eval_method, args.eval_method)
+	
+	
 	personality_assessment(
 		args.character, args.agent_type, args.agent_llm, 
 		args.questionnaire_name, args.eval_method, args.evaluator_llm)
+	
+	
 			
 
 # python personality_tests.py --eval_method direct_ask --questionnaire_name 16Personalities --character hutao
