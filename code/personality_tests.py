@@ -409,14 +409,13 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 
 				if evaluator_llm.startswith('gpt'):
 					# call llm to convert to choices
-					try:
-						converted_choices = get_response_json([string2json_ensure_keys], sys_prompt = sys_prompt, inputs = user_input, model=evaluator_llm)		
-					except:
-						import pdb; pdb.set_trace()
+					converted_choices = get_response_json([string2json_ensure_keys], sys_prompt = sys_prompt, inputs = user_input, model=evaluator_llm)		
+
 											
 				else:
 					from utils import string2json_ensure_choice_format
 					sys_prompt = sys_prompt + '\n===OUTPUT EXAMPLE===\n{\n    \"1\": 1,\n    ...\n    \"9\": 0\n}===My Input Is==='
+					
 					
 					converted_choices = get_response_json([string2json_ensure_choice_format, string2json_ensure_keys], sys_prompt = sys_prompt, inputs = user_input, model=evaluator_llm)	
 					
@@ -546,10 +545,13 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 
 				llm_response = get_response_json(sys_prompt=sys_prompt, inputs=user_input, model=evaluator_llm)
 				
+				
 					
 
 				if questionnaire_name == '16Personalities':
 					llm_response['result'] = {k: float(str(v).strip("%")) for k, v in llm_response['result'].items()}
+					
+						
 					assert (sum(llm_response['result'].values()) == 100)
 					# use the score of dim_cls1
 					llm_response['result'] = llm_response['result'][dim_cls1]

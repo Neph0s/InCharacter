@@ -164,6 +164,8 @@ def get_response(sys_prompt, inputs, model='gpt4', nth_generation=0):
 	elif model.startswith('gemini'):
 		model = 'gemini-pro'
 		return get_response_gemini(sys_prompt, inputs, model, nth_generation=nth_generation)
+	elif model == 'qwen-110B'.lower():		
+		return get_response_qwen(sys_prompt, inputs, model, nth_generation=nth_generation)
 
 from openai import OpenAI
 client = OpenAI(
@@ -248,6 +250,57 @@ def get_response_gemini(sys_prompt, inputs, model='gemini-pro', retry_count=0, n
 			# blocked ... gpt instead ? 
 			return get_response(sys_prompt, inputs, model='gpt-4')
 
+@cached 
+def get_response_qwen(sys_prompt, inputs, model, retry_count=0, nth_generation=0):
+
+	query = [ {'role': 'system', 'content': sys_prompt}]
+	if len(inputs) > 0:
+		query.append({'role': 'user', 'content': inputs})
+	
+	openai_api_key = "EMPTY"
+	openai_api_base = "http://0.0.0.0:8000/v1/"
+	
+	client = OpenAI(
+		api_key=openai_api_key,
+		base_url=openai_api_base,
+	)
+
+	try:
+		temperature = 0.2 if nth_generation else 0 
+		logger.info('Qwen SysPrompt:  ' + sys_prompt[:100])
+		logger.info('Qwen Input:  ' + inputs[:100])
+		response = client.chat.completions.create(
+			model= "Qwen/Qwen1.5-110B-Chat" ,  # 对话模型的名称
+			messages=query,
+			temperature=temperature,  # 值在[0,1]之间，越大表示回复越具有不确定性
+			top_p=1,
+			frequency_penalty=0.0,  # [-2,2]之间，该值越大则更倾向于产生不同的内容
+			presence_penalty=0.0,  # [-2,2]之间，该值越大则更倾向于产生不同的内容,
+			timeout=60
+		)
+
+		logger.info('Qwen Output: ' + response.choices[0].message.content[:100])		
+
+		return response.choices[0].message.content
+
+	except openai.BadRequestError as e:
+		logger.exception(e)
+		
+		return_value = '[TOKEN LIMIT]'
+		import pdb; pdb.set_trace()
+		return return_value
+
+	except Exception as e:
+		# unknown exception
+		logger.exception(e)
+
+		if retry_count < 2:
+			time.sleep(5)
+			logger.warn("[OPEN_AI] RateLimit exceed, 第{}次重试".format(retry_count+1))
+			return get_response_gpt(sys_prompt, inputs, model, retry_count+1, nth_generation) 
+
+		print(f'Fail to get response after {retry_count} retry')
+
 def string2json(llm_response, nth_generation=0, **kwargs):
 	llm_response = llm_response.strip("`")
 	if llm_response.startswith('json'):
@@ -256,15 +309,47 @@ def string2json(llm_response, nth_generation=0, **kwargs):
 	try:
 		json_response = json.loads(llm_response)
 	except:
+		orig_response = llm_response 
+
 		try:
 			llm_response = llm_response[llm_response.find("{"):]
 			llm_response = '\n'.join([line.split("//")[0] for line in llm_response.splitlines()])
 
 			json_response = json.loads(llm_response)
 		except:
-			return False
+			try:
+				llm_response = orig_response 
+				# Use regex to find the JSON string in the provided text
+				json_string_match = re.search(r"```json\n(.+?)\n```", llm_response, re.DOTALL)
+
+				# Extract the JSON string if found
+				json_string = json_string_match.group(0)[8:-4] 
+				json_response = json.loads(json_string)
+				
+			except:
+				try:
+					llm_response = orig_response
+
+					json_string_match = re.search(r'\{\s*"analysis":\s*"([^"]+)",\s*"result":\s*(\{.*?\})\s*\}', llm_response, re.DOTALL)
+					
+
+					# Extract the JSON string if found
+					json_string = json_string_match.group(0)
+
+					def fix_json_percentages(json_str):
+						# Transform 20% to 
+						fixed_json = re.sub(r'(?<![\'"])(\d+)%', r'"\1%"', json_str)
+						return fixed_json
+					
+					json_string = fix_json_percentages(json_string)
+					json_response = json.loads(json_string)
+					
+				
+				except:
+					return False
 	
 	return json_response
+
 
 def string2json_ensure_choice_format(llm_response, nth_generation=0, **kwargs):
 	
@@ -352,9 +437,11 @@ def get_response_json(post_processing_funcs=[string2json], **kwargs):
 		else:
 			nth_generation += 1
 			if nth_generation > 12:
+				import pdb; pdb.set_trace()
+				
 				break	
 
-
+	
 	return json_response
 
 
