@@ -261,29 +261,18 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 		
 		if not ( agent_llm.startswith('gpt') ):
 			from utils import is_multiround, is_multilanguage, not_into_character, contain_repeation, truncate
-			#import pdb; pdb.set_trace()
 			
 			if is_multilanguage(question, response):
 				error_counts['is_multilanguage'] = error_counts.get('is_multilanguage', 0) + 1
-				# print(f'{response}\nis_multilanguage')
-				# import pdb; pdb.set_trace()
 			if not_into_character(response, experimenter):
 				error_counts['not_into_character'] = error_counts.get('not_into_character', 0) + 1
-				# print(f'{response}\nnot_into_character')
-				# import pdb; pdb.set_trace()
 			if contain_repeation(response):
 				error_counts['contain_repeation'] = error_counts.get('contain_repeation', 0) + 1
-				# print(f'{response}\ncontain_repeation')
-				# import pdb; pdb.set_trace()
-				
 				response = contain_repeation(response)
 			if is_multiround(response):
-				# print(f'is_multiround: {response}')
-				# import pdb; pdb.set_trace()
 				error_counts['is_multiround'] = error_counts.get('is_multiround', 0) + 1
 				response = is_multiround(response)
 
-			
 			response = truncate(response)
 		
 		r['response_open'] = response
@@ -322,7 +311,14 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 			
 			need_convert = []
 			for r in questionnaire_results:
-				# r = {'id': '20', 'question': '你认为"你往往担心事情会变得更糟。"这个说法适用于你吗？请用1到7的等级来回答，1代表“非常同意”，4代表“既同意也不同意”，7代表“非常不同意”。请你只回答这一个数字，不要说其他内容。', 'response_open': '胡桃: 4', 'query_style': 'choose'}
+				# The format is like: 
+				# r = {
+				# 	'id': '20',
+				# 	'question': 'Do you think the statement "You often worry that things will get worse." applies to you? Please answer using a scale from 1 to 7, where 1 means "strongly agree," 4 means "neither agree nor disagree," and 7 means "strongly disagree." Please only respond with a single number and do not say anything else.',
+				# 	'response_open': 'Hu Tao: 4',
+				# 	'query_style': 'choose'
+				# }
+
 				
 				# replace character name
 				response = r['response_open'].replace(character_name, '') 
@@ -478,7 +474,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 			eval_setting = eval_args[2]
 
 			if eval_setting == 'batch':
-				# 将dim_responses分成多个子列表，每个列表3-4个元素
+				# split dim_responses into multiple lists, each containing 3-4 responses
 				dim_responses_list = split_list(dim_responses)
 			else:
 				dim_responses_list = [dim_responses] 
@@ -507,7 +503,6 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 					
 					output_format_prompt = prompts["general"]['two_score_output'].format(dim_cls1, dim_cls2)
 
-					# 等改完数据再来搞一版
 				else:
 					neutural_score = (questionnaire_metadata['range'][0] + questionnaire_metadata['range'][1]) / 2
 					# if neutural_score is integer 
@@ -622,11 +617,7 @@ def assess(character_aliases, experimenter, questionnaire_results, questionnaire
 		from api_16personality import submit_16personality_api
 		pred = submit_16personality_api(answers)
 		
-			
-		
-		#assessment_results = { dim: {'score': pred[dim]['score'][dim[0]]} for dim in dims }
 		for dim in dims:
-			#print('Old {} New {}'.format(assessment_results[dim]['score'], pred[dim]['score'][dim[0]]))	
 			assessment_results[dim]['score'] = pred[dim]['score'][dim[0]]
 
 	if error_counts:
@@ -701,7 +692,6 @@ def personality_assessment(character, agent_type, agent_llm, questionnaire_name,
 			response = character_agent.chat(role = experimenter, text = query)
 			logger.info(f'Response from {character_name}: {response} ')
 
-			#return 
 		else:
 			query_style = eval_args[0]
 			
@@ -1091,8 +1081,7 @@ if __name__ == '__main__':
 		args.character, args.agent_type, args.agent_llm, 
 		args.questionnaire_name, args.eval_method, args.evaluator_llm)
 	
-	
-			
+
 
 # python personality_tests.py --eval_method direct_ask --questionnaire_name 16Personalities --character hutao
 # python personality_tests.py --eval_method interview_sample --questionnaire_name 16Personalities --character hutao
