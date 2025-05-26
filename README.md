@@ -4,7 +4,7 @@
 
 ### News
 
-- *May. 2025*: If you are interested in more comprehensive character datasets for RPAs, please check out [**CoSER**](https://arxiv.org/abs/2502.09082), which will be presented at ICML 2025.
+- *May. 2025*: If you are interested in more comprehensive character datasets for RPAs, please check out [**CoSER**](https://arxiv.org/abs/2502.09082), our latest work to be presented at ICML 2025.
 - *May. 2024*: InCharacter got accepted to **ACL 2024**! See you in Bangkok.
 
 ### Setup
